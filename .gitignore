@@ -1,0 +1,16 @@
+# Ignore Visual Studio user state
+*.suo
+
+# Ignore .db/.opendb files
+*.db
+*.opendb
+
+#ignore output from Debug/Release
+Debug/
+Release/
+
+# Ignore xcuserdata
+xcuserdata/
+
+# Ignore OS X temporary files
+.DS_Store
