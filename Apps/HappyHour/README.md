@@ -1,2 +1,2 @@
 # HappyHour
-Tell HappyHour what ingredients you have, give your phone a shake (or hit the mix button on desktop) and make some drinks!
+A complete bartending companion app. Tap the ingredients you have in your kitchen, give your phone a shake, and make some drinks!

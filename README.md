@@ -12,6 +12,10 @@ The Windows Bridge for iOS (also referred to as WinObjC) is a Microsoft open-sou
 
 ## Sample apps
 The WinObjC sample apps can be found in */Apps*. They include:
+- [**HappyHour**](/Apps/HappyHour)
+
+  A complete bartending companion app. Tap the ingredients you have in your kitchen, give your phone a shake, and make some drinks!
+
 - [**ToDoList**](/Apps/ToDoList)
 
   A simple to do list app created for a [Building Apps for Windows tutorial blog post](https://blogs.windows.com/buildingapps/2016/01/20/building-a-simple-app-with-the-windows-bridge-for-ios/).
@@ -29,7 +33,7 @@ Sample code and projects for common scenarios can be found under */Scenarios*. T
 - [Using Projections: **Toast Notifications**](/Scenarios/Toast Notifications)
 
   This example demonstrates popping local toast notifications on Windows 10 using Objective-C projections.
-  
+
 - [Using Projections: **In-App Purchases**](/Scenarios/In-App Purchases)
 
   This example shows how to replace StoreKit in your app and add support for in-app purchases on Windows 10 using Objective-C projections.
@@ -53,7 +57,7 @@ Sample code and projects for common scenarios can be found under */Scenarios*. T
 - Using Projections: **Game controllers** - *Coming soon*
 
   This sample will introduce you to handle key and controller input in Windows using Objective-C.
-  
+
 - Using Projections: **Games for Windows 10** - *Coming soon*
 
   This sample will instruct you in the addition of leaderboards and other Windows game components using Objective-C.
