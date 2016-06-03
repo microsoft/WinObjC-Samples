@@ -161,9 +161,6 @@ You can find the Toast Notification sample project under */Scenarios/Toast Notif
 You will now update this app to have the top button send a toast notification with rich content, and the bottom one send a toast notification with 2 actions: one action will activate the Maps app via protocol activation, and the other will reactivate the app in the foreground.
 
 ### Setting Up
-<<<<<<< HEAD
-First, we need the public headers for the relevant UWP frameworks. In the extracted SDK (or your built SDK directory, if you’ve cloned [WinObjC from GitHub and built the project from source](https://github.com/Microsoft/WinObjC)), go to the [include\Platform\Universal Windows\UWP](https://github.com/Microsoft/WinObjC/tree/master/include/Platform/Universal Windows/UWP) directory and take a look at what you find. Each header file represents a different namespace within the [Windows Runtime APIs](https://msdn.microsoft.com/en-us/library/windows/apps/br211377.aspx). For our purposes, we will need APIs from:
-=======
 
 First, open up the *ToastNotificationSample* directory in your Windows command prompt. You will run the [VSImporter tool](https://github.com/Microsoft/WinObjC/wiki/Using-vsimporter) from the WinObjC SDK on the ToastNotificationSample project to generate a Visual Studio solution file (.sln).
 
@@ -180,7 +177,6 @@ c:\winobjc-samples\Scenarios\Toast Notifications\ToastNotificationSample>
 Once you've generated the .sln file, open it in Visual Studio.
 
 To implement toast notifications, you will need the public headers for the relevant UWP frameworks. In the extracted SDK (or your built SDK directory, if you’ve cloned [WinObjC from GitHub and built the project from source](https://github.com/Microsoft/WinObjC)), go to the [include\Platform\Universal Windows\UWP](https://github.com/Microsoft/WinObjC/tree/master/include/Platform/Universal Windows/UWP) directory and take a look at what you find. Each header file represents a different namespace within the [Windows Runtime APIs](https://msdn.microsoft.com/en-us/library/windows/apps/br211377.aspx). For our purposes, you will need APIs from:
->>>>>>> develop
 
 -	[Windows.UI.Notifications](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.notifications.aspx)
 -	[Windows.Data.Xml.Dom](https://msdn.microsoft.com/en-us/library/windows/apps/windows.data.xml.dom.aspx)
