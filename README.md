@@ -12,10 +12,6 @@ The Windows Bridge for iOS (also referred to as WinObjC) is a Microsoft open-sou
 
 ## Sample apps
 The WinObjC sample apps can be found in */Apps*. They include:
-- [**HappyHour**](/Apps/HappyHour)
-
-  A complete bartending companion app. Tap the ingredients you have in your kitchen, give your phone a shake and make some drinks!
-
 - [**ToDoList**](/Apps/ToDoList)
 
   A simple to do list app created for a [Building Apps for Windows tutorial blog post](https://blogs.windows.com/buildingapps/2016/01/20/building-a-simple-app-with-the-windows-bridge-for-ios/).
@@ -33,31 +29,31 @@ Sample code and projects for common scenarios can be found under */Scenarios*. T
 - [Using Projections: **Toast Notifications**](/Scenarios/Toast Notifications)
 
   This example demonstrates popping local toast notifications on Windows 10 using Objective-C projections.
-
-- [Using Projections: **Cortana**](/Scenarios/Cortana) - *Coming soon*
-
-  Cortana is your personal assistant on Windows 10. This example shows how to integrate Cortana voice commands into your app using Objective-C projections.
-
-- [Using Projections: **In-App Purchases**](/Scenarios/In-App Purchases) - *Coming soon*
+  
+- [Using Projections: **In-App Purchases**](/Scenarios/In-App Purchases)
 
   This example shows how to replace StoreKit in your app and add support for in-app purchases on Windows 10 using Objective-C projections.
 
-- [Using Projections: **Push Notifications**](/Scenarios/Push Notifications) - *Coming soon*
+- Using Projections: **Cortana** - *Coming soon*
+
+  Cortana is your personal assistant on Windows 10. This example shows how to integrate Cortana voice commands into your app using Objective-C projections.
+
+- Using Projections: **Push Notifications** - *Coming soon*
 
   This example demonstrates how to replace Apple Push Notification Service with Windows Notification Service using Objective-C so you can send push notifications to Windows 10 devices.
 
-- [Using Projections: **Maps**](/Scenarios/Maps) - *Coming soon*
+- Using Projections: **Maps** - *Coming soon*
 
   This example demonstrates how to replace MapKit or Google Maps-based maps in your Objective-C code base with XAML controls and Bing Maps.
 
-- [Using Projections: **Ads**](/Scenarios/Ads) - *Coming soon*
+- Using Projections: **Ads** - *Coming soon*
 
   This example will demonstrate the addition of Microsoft ads to your Objective-C code base.
 
-- [Using Projections: **Game controllers**](/Scenarios/GameControllers) - *Coming soon*
+- Using Projections: **Game controllers** - *Coming soon*
 
   This sample will introduce you to handle key and controller input in Windows using Objective-C.
   
-- [Using Projections: **Games for Windows 10**](/Scenarios/GameKit) - *Coming soon*
+- Using Projections: **Games for Windows 10** - *Coming soon*
 
   This sample will instruct you in the addition of leaderboards and other Windows game components using Objective-C.

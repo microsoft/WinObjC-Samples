@@ -161,7 +161,26 @@ You can find the Toast Notification sample project under */Scenarios/Toast Notif
 You will now update this app to have the top button send a toast notification with rich content, and the bottom one send a toast notification with 2 actions: one action will activate the Maps app via protocol activation, and the other will reactivate the app in the foreground.
 
 ### Setting Up
+<<<<<<< HEAD
 First, we need the public headers for the relevant UWP frameworks. In the extracted SDK (or your built SDK directory, if you’ve cloned [WinObjC from GitHub and built the project from source](https://github.com/Microsoft/WinObjC)), go to the [include\Platform\Universal Windows\UWP](https://github.com/Microsoft/WinObjC/tree/master/include/Platform/Universal Windows/UWP) directory and take a look at what you find. Each header file represents a different namespace within the [Windows Runtime APIs](https://msdn.microsoft.com/en-us/library/windows/apps/br211377.aspx). For our purposes, we will need APIs from:
+=======
+
+First, open up the *ToastNotificationSample* directory in your Windows command prompt. You will run the [VSImporter tool](https://github.com/Microsoft/WinObjC/wiki/Using-vsimporter) from the WinObjC SDK on the ToastNotificationSample project to generate a Visual Studio solution file (.sln).
+
+*Example:*
+```
+c:\> cd "\winobjc-samples\Scenarios\Toast Notifications\ToastNotificationSample"
+c:\winobjc-samples\Scenarios\Toast Notifications\ToastNotificationSample> \winobjc-sdk\bin\vsimporter.exe
+Generated c:\winobjc-samples\Scenarios\Toast Notifications\ToastNotificationSample\ToastNotificationsSample.vsimporter\ToastNotificationsSample-Headers-WinStore10\ToastNotificationsSample-Headers.vcxitems
+Generated c:\winobjc-samples\Scenarios\Toast Notifications\ToastNotificationSample\ToastNotificationsSample.vsimporter\ToastNotificationsSample-WinStore10\ToastNotificationsSample.vcxproj
+Generated c:\winobjc-samples\Scenarios\Toast Notifications\ToastNotificationSample\ToastNotificationsSample-WinStore10.sln
+
+c:\winobjc-samples\Scenarios\Toast Notifications\ToastNotificationSample>
+```
+Once you've generated the .sln file, open it in Visual Studio.
+
+To implement toast notifications, you will need the public headers for the relevant UWP frameworks. In the extracted SDK (or your built SDK directory, if you’ve cloned [WinObjC from GitHub and built the project from source](https://github.com/Microsoft/WinObjC)), go to the [include\Platform\Universal Windows\UWP](https://github.com/Microsoft/WinObjC/tree/master/include/Platform/Universal Windows/UWP) directory and take a look at what you find. Each header file represents a different namespace within the [Windows Runtime APIs](https://msdn.microsoft.com/en-us/library/windows/apps/br211377.aspx). For our purposes, you will need APIs from:
+>>>>>>> develop
 
 -	[Windows.UI.Notifications](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.notifications.aspx)
 -	[Windows.Data.Xml.Dom](https://msdn.microsoft.com/en-us/library/windows/apps/windows.data.xml.dom.aspx)
@@ -522,6 +541,8 @@ Once that is done, simply create a **WUNToastNotifier** object and pass your not
 That’s it! You’re done. Now, press the buttons and see your toast notifications in action.
 
 ## Additional Reading
+For more code examples of additional toast notification functionalities, check out the [WinRTSample](https://github.com/Microsoft/WinObjC/tree/master/samples/WinRTSample) of the Windows Bridge for IOS SDK, and in particular the [ToastViewController.m](https://github.com/Microsoft/WinObjC/blob/master/samples/WinRTSample/WinRTSample/ToastsViewController.m) file.
+
 Want a deeper dive into everything a toast notification can do? Check out:
 - The [Adaptive and interactive toast notifications documentation](https://msdn.microsoft.com/windows/uwp/controls-and-patterns/tiles-and-notifications-adaptive-interactive-toasts)
 - The [Quickstart: Sending a local toast notification and handling activations from it (Windows 10)](https://blogs.msdn.microsoft.com/tiles_and_toasts/2015/07/08/quickstart-sending-a-local-toast-notification-and-handling-activations-from-it-windows-10/205/)
