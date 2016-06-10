@@ -17,7 +17,6 @@
 #import <UIKit/UIKit.h>
 @import MapKit;
 @import CoreLocation;
-@import UIKit;
 
 @interface ViewController : UIViewController
 
