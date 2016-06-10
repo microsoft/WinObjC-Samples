@@ -114,7 +114,6 @@
                                                                       options:0
                                                                       metrics:metrics
                                                                         views:views]];
-
     // in iOS, we can use constraints to layout the MKMapview, doesn't work with UIView in UWP
     #ifndef WINOBJC
     [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-[map]-|"
@@ -122,14 +121,8 @@
                                                                       metrics:metrics
                                                                         views:views]];
     #endif
-    
-
-    
-    
-    
-    
-    
 }
+
 // Toggle the traffic on and off
 - (void)trafficTogglePressed {
     #ifdef WINOBJC
@@ -153,9 +146,7 @@
     } else {
         self.mapView.mapType = MKMapTypeStandard;
     }
-    #endif
-    
-    
+    #endif   
 }
 
 // Dispose of any resources that can be recreated.
