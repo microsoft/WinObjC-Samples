@@ -20,6 +20,20 @@
 
 @end
 
+#ifdef WINOBJC
+// Tell the WinObjC runtime how large to render the application
+// (Found at github.com/Microsoft/WinObjC/samples/HelloUI)
+@implementation UIApplication (UIApplicationInitialStartupMode)
++ (void)setStartupDisplayMode:(WOCDisplayMode*)mode {
+    mode.autoMagnification = TRUE;
+    mode.sizeUIWindowToFit = TRUE;
+    mode.fixedWidth = 0;
+    mode.fixedHeight = 0;
+    mode.magnification = 1.0;
+}
+@end
+#endif
+
 @implementation AppDelegate
 
 
