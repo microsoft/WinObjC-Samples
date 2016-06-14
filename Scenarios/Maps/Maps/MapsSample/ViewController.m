@@ -46,6 +46,8 @@ NSString * const kOverlayToggleString = @"Toggle Overlay";
     
     // set up traffic toggle button
     self.trafficToggle = [UIButton buttonWithType:UIButtonTypeSystem];
+	CGRect trafficFrame = CGRectMake(100, 500, 100, 100);
+	self.trafficToggle.frame = trafficFrame;
     [self.trafficToggle setTitle:kTrafficToggleString
                    forState:UIControlStateNormal];
     [self.trafficToggle setTranslatesAutoresizingMaskIntoConstraints:NO];
@@ -83,8 +85,12 @@ NSString * const kOverlayToggleString = @"Toggle Overlay";
     self.winMap.center = newYorkGeopoint;
     self.winMap.zoomLevel = 11;
     self.winMap.mapServiceToken = @"YOUR_API_KEY_HERE";
-    CGRect mapFrame = CGRectMake(offset, 10, 400, 400);
+	self.winMap.maxHeight = 450;
+	self.winMap.maxWidth = 300;
+    CGRect mapFrame = CGRectMake(offset, 10, 300, 450);
     self.winMapView = [[UIView alloc] initWithFrame:mapFrame];
+	self.winMapView.frame = mapFrame;
+	self.winMapView.backgroundColor = [UIColor blackColor];
     [self.winMapView setNativeElement:self.winMap];
     [self.trafficToggle setTranslatesAutoresizingMaskIntoConstraints:NO];
     [self.view addSubview:self.winMapView];
@@ -108,17 +114,20 @@ NSString * const kOverlayToggleString = @"Toggle Overlay";
 	mapView = self.mkMapView;
 	#endif
 
+	
+
     // set platform agnostic constraints
-    NSDictionary *metrics = @{ @"pad": @80.0, @"margin": @40, @"mapHeight": @350};
+    NSDictionary *metrics = @{ @"pad": @80.0, @"margin": @40, @"mapHeight": @450};
     NSDictionary *views = @{ @"trafficToggle"   : self.trafficToggle,
                              @"overlayToggle"   : self.overlayToggle,
                              @"map"    : mapView
                              };
-    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-50-[map(mapHeight)]-[overlayToggle][trafficToggle]"
+    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-1-[map(mapHeight)]-10-[overlayToggle][trafficToggle]"
                                                                      options:0
                                                                      metrics:metrics
                                                                        views:views]];
-    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-[overlayToggle]-|"
+    
+	[self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-[overlayToggle]-|"
                                                                       options:0
                                                                       metrics:metrics
                                                                         views:views]];
@@ -130,7 +139,10 @@ NSString * const kOverlayToggleString = @"Toggle Overlay";
 	[self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-[map]-|"
                                                                       options:0
                                                                       metrics:metrics
-                                                                        views:views]];
+                                                                        views:views]]; 
+																		
+																	
+
 }
 
 // Toggle the traffic on and off
@@ -171,7 +183,7 @@ NSString * const kOverlayToggleString = @"Toggle Overlay";
 - (void)viewWillLayoutSubviews{
     [super viewWillLayoutSubviews];
     double offset = [self mapFrameOffset];
-    CGRect mapFrame = CGRectMake(offset, 10, 400, 600);
+    CGRect mapFrame = CGRectMake(offset, 10, 300, 450);
     self.winMapView.frame = mapFrame;
 }
 #endif
@@ -180,7 +192,7 @@ NSString * const kOverlayToggleString = @"Toggle Overlay";
 - (double)mapFrameOffset {
     CGRect screenBounds = [UIScreen mainScreen].bounds;
     float screenwidth = screenBounds.size.width;
-    float offset = (screenwidth-400)/2.0;
+    float offset = (screenwidth-300)/2.0;
     return offset;
 }
 
