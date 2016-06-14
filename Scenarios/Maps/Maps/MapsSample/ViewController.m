@@ -122,7 +122,7 @@ NSString * const kOverlayToggleString = @"Toggle Overlay";
                              @"overlayToggle"   : self.overlayToggle,
                              @"map"    : mapView
                              };
-    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-1-[map(mapHeight)]-10-[overlayToggle][trafficToggle]"
+    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-20-[map(mapHeight)]-10-[overlayToggle][trafficToggle]"
                                                                      options:0
                                                                      metrics:metrics
                                                                        views:views]];
