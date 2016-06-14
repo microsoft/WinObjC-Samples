@@ -46,8 +46,6 @@ NSString * const kOverlayToggleString = @"Toggle Overlay";
     
     // set up traffic toggle button
     self.trafficToggle = [UIButton buttonWithType:UIButtonTypeSystem];
-	CGRect trafficFrame = CGRectMake(100, 500, 100, 100);
-	self.trafficToggle.frame = trafficFrame;
     [self.trafficToggle setTitle:kTrafficToggleString
                    forState:UIControlStateNormal];
     [self.trafficToggle setTranslatesAutoresizingMaskIntoConstraints:NO];
@@ -188,7 +186,7 @@ NSString * const kOverlayToggleString = @"Toggle Overlay";
 }
 #endif
 
-// Calculate the offset that will allow the 400 width map to sit in the center of the parent view
+// Calculate the offset that will allow the 300 width map to sit in the center of the parent view
 - (double)mapFrameOffset {
     CGRect screenBounds = [UIScreen mainScreen].bounds;
     float screenwidth = screenBounds.size.width;
