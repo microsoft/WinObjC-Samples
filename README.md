@@ -34,6 +34,10 @@ Sample code and projects for common scenarios can be found under */Scenarios*. T
 
   This example shows how to replace StoreKit in your app and add support for in-app purchases on Windows 10 using Objective-C projections.
 
+- [Using Projections: **Maps**](Scenarios/Maps)
+
+  This example demonstrates how to replace MapKit-based maps in your Objective-C code base with XAML controls and Bing Maps.
+
 - Using Projections: **Cortana** - *Coming soon*
 
   Cortana is your personal assistant on Windows 10. This example shows how to integrate Cortana voice commands into your app using Objective-C projections.
