@@ -46,10 +46,6 @@ Sample code and projects for common scenarios can be found under */Scenarios*. T
 
   This example demonstrates how to replace Apple Push Notification Service with Windows Notification Service using Objective-C so you can send push notifications to Windows 10 devices.
 
-- Using Projections: **Maps** - *Coming soon*
-
-  This example demonstrates how to replace MapKit or Google Maps-based maps in your Objective-C code base with XAML controls and Bing Maps.
-
 - Using Projections: **Ads** - *Coming soon*
 
   This example will demonstrate the addition of Microsoft ads to your Objective-C code base.
