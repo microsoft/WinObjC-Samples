@@ -43,6 +43,10 @@ The code for creating a Live Tile using Objective-C looks like this:
 Read on for a complete explanation of how the above code works.
 
 ## Tutorial
+
+[![Video](https://sec.ch9.ms/ch9/1577/fab4cdde-d0a9-4d7d-8e4d-449038841577/LiveTileswithBridgeforiOS_960.jpg)](https://channel9.msdn.com/Blogs/One-Dev-Minute/Live-Tiles-with-the-Windows-Bridge-for-iOS)
+###### [*Watch the video tutorial on Channel9*](https://channel9.msdn.com/Blogs/One-Dev-Minute/Live-Tiles-with-the-Windows-Bridge-for-iOS)
+
 You can find the Live Tiles sample project under */Scenarios/Live Tiles/LiveTileSample*. The project consists of a button and a label; when the button is pressed, the label is updated with the date/time that the button was pressed.
 
 ```Objective-C
