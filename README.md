@@ -20,6 +20,10 @@ The WinObjC sample apps can be found in */Apps*. They include:
 
   A simple, Storyboard/Auto Layout-based calculator app created for a [Building Apps for Windows tutorial blog post](https://blogs.windows.com/buildingapps/2016/02/18/using-the-ios-bridge-to-bring-storyboards-and-auto-layout-to-windows-10/).
 
+- [**BitcoinWallet**](/Apps/BitcoinWallet)
+
+  A Bitcoin wallet app which runs on the Bitcoin test3 network, a developer sandbox where the coins have no value other than to demonstrate the usage of the blockchain technology. With this app, a user can create new addresses under their control, create contacts, send and receive bitcoins, and view past transactions.
+
 ## Example code
 Sample code and projects for common scenarios can be found under */Scenarios*. They include:
 - [Using Projections: **Live Tiles**](/Scenarios/Live Tiles)
@@ -29,7 +33,7 @@ Sample code and projects for common scenarios can be found under */Scenarios*. T
 - [Using Projections: **Toast Notifications**](/Scenarios/Toast Notifications)
 
   This example demonstrates popping local toast notifications on Windows 10 using Objective-C projections.
-  
+
 - [Using Projections: **In-App Purchases**](/Scenarios/In-App Purchases)
 
   This example shows how to replace StoreKit in your app and add support for in-app purchases on Windows 10 using Objective-C projections.
@@ -37,6 +41,10 @@ Sample code and projects for common scenarios can be found under */Scenarios*. T
 - [Using Projections: **Maps**](Scenarios/Maps)
 
   This example demonstrates how to replace MapKit-based maps in your Objective-C code base with XAML controls and Bing Maps.
+
+- [Writing a sprite-based Objective-C game for Windows 10](Scenarios/Sprites)
+
+  In this tutorial, we’ll look at how a sprite-based game written for iOS can be converted to become a Windows 10 UWP app.
 
 - Using Projections: **Cortana** - *Coming soon*
 
@@ -53,7 +61,7 @@ Sample code and projects for common scenarios can be found under */Scenarios*. T
 - Using Projections: **Game controllers** - *Coming soon*
 
   This sample will introduce you to handle key and controller input in Windows using Objective-C.
-  
+
 - Using Projections: **Games for Windows 10** - *Coming soon*
 
   This sample will instruct you in the addition of leaderboards and other Windows game components using Objective-C.
