@@ -17,4 +17,3 @@ You will run the [VSImporter tool](https://github.com/Microsoft/WinObjC/wiki/Usi
 - Add IAP-Sample\IAP-sample\in-app-purchase.xml
 
 Build. 
-

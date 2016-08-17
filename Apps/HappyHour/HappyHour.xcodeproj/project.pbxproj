@@ -1,0 +1,437 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		34125B881C7658780085384A /* UIView+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 34125B871C7658780085384A /* UIView+Additions.m */; };
+		34125B8B1C7658FC0085384A /* HHIngredient.m in Sources */ = {isa = PBXBuildFile; fileRef = 34125B8A1C7658FC0085384A /* HHIngredient.m */; };
+		34125B8E1C7659050085384A /* HHRecipe.m in Sources */ = {isa = PBXBuildFile; fileRef = 34125B8D1C7659050085384A /* HHRecipe.m */; };
+		341738621C69503500C3F55C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 341738611C69503500C3F55C /* main.m */; };
+		341738651C69503500C3F55C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 341738641C69503500C3F55C /* AppDelegate.m */; };
+		3417386D1C69503500C3F55C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3417386C1C69503500C3F55C /* Assets.xcassets */; };
+		341738701C69503500C3F55C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3417386E1C69503500C3F55C /* LaunchScreen.storyboard */; };
+		3417387F1C6AAE1700C3F55C /* HHIngredientsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3417387D1C6AAE1700C3F55C /* HHIngredientsViewController.m */; };
+		341738841C6AAE9600C3F55C /* HHIngredientsCategoryCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 341738821C6AAE9600C3F55C /* HHIngredientsCategoryCollectionView.m */; };
+		3436F1811C6ADDEA000FF193 /* HHConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 3436F1801C6ADDEA000FF193 /* HHConstants.m */; };
+		3494868E1C79574600AB4BFB /* Ingredients.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3494868D1C79574600AB4BFB /* Ingredients.plist */; };
+		349486901C79574C00AB4BFB /* Recipes.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3494868F1C79574C00AB4BFB /* Recipes.plist */; };
+		34B46BA51C6BD5CF00801050 /* HHIngredientCategoriesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34B46BA31C6BD5CF00801050 /* HHIngredientCategoriesTableViewController.m */; };
+		34B46BAA1C6BF90200801050 /* HHIngredientCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 34B46BA81C6BF90200801050 /* HHIngredientCollectionViewCell.m */; };
+		34F48A3F1C6D384500BE3741 /* HHRecipesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34F48A3E1C6D384500BE3741 /* HHRecipesTableViewController.m */; };
+		34F48A421C6D3EDD00BE3741 /* HHRecipeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34F48A411C6D3EDD00BE3741 /* HHRecipeViewController.m */; };
+		34FD32511C7BD7E00040B23A /* UIColor+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 34FD32501C7BD7E00040B23A /* UIColor+Additions.m */; };
+		34FD32581C7E7BD00040B23A /* HHRecipesTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 34FD32561C7E7BD00040B23A /* HHRecipesTableViewCell.m */; };
+		34FD325E1C810C940040B23A /* HHIngredientsCategoryTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 34FD325D1C810C940040B23A /* HHIngredientsCategoryTableViewCell.m */; };
+		34FD32611C825B3F0040B23A /* HHContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 34FD32601C825B3F0040B23A /* HHContainer.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		34125B861C7658780085384A /* UIView+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Additions.h"; sourceTree = "<group>"; };
+		34125B871C7658780085384A /* UIView+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Additions.m"; sourceTree = "<group>"; };
+		34125B891C7658FC0085384A /* HHIngredient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HHIngredient.h; sourceTree = "<group>"; };
+		34125B8A1C7658FC0085384A /* HHIngredient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HHIngredient.m; sourceTree = "<group>"; };
+		34125B8C1C7659050085384A /* HHRecipe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HHRecipe.h; sourceTree = "<group>"; };
+		34125B8D1C7659050085384A /* HHRecipe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HHRecipe.m; sourceTree = "<group>"; };
+		3417385D1C69503500C3F55C /* HappyHour.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HappyHour.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		341738611C69503500C3F55C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		341738631C69503500C3F55C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		341738641C69503500C3F55C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		3417386C1C69503500C3F55C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3417386F1C69503500C3F55C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		341738711C69503500C3F55C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3417387C1C6AAE1700C3F55C /* HHIngredientsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HHIngredientsViewController.h; sourceTree = "<group>"; };
+		3417387D1C6AAE1700C3F55C /* HHIngredientsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HHIngredientsViewController.m; sourceTree = "<group>"; };
+		341738811C6AAE9600C3F55C /* HHIngredientsCategoryCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HHIngredientsCategoryCollectionView.h; sourceTree = "<group>"; };
+		341738821C6AAE9600C3F55C /* HHIngredientsCategoryCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HHIngredientsCategoryCollectionView.m; sourceTree = "<group>"; };
+		3436F17F1C6ADDEA000FF193 /* HHConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HHConstants.h; sourceTree = "<group>"; };
+		3436F1801C6ADDEA000FF193 /* HHConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HHConstants.m; sourceTree = "<group>"; };
+		3494868D1C79574600AB4BFB /* Ingredients.plist */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = Ingredients.plist; sourceTree = "<group>"; };
+		3494868F1C79574C00AB4BFB /* Recipes.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Recipes.plist; sourceTree = "<group>"; };
+		34B46BA21C6BD5CF00801050 /* HHIngredientCategoriesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HHIngredientCategoriesTableViewController.h; sourceTree = "<group>"; };
+		34B46BA31C6BD5CF00801050 /* HHIngredientCategoriesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HHIngredientCategoriesTableViewController.m; sourceTree = "<group>"; };
+		34B46BA71C6BF90200801050 /* HHIngredientCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HHIngredientCollectionViewCell.h; sourceTree = "<group>"; };
+		34B46BA81C6BF90200801050 /* HHIngredientCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HHIngredientCollectionViewCell.m; sourceTree = "<group>"; };
+		34F48A3D1C6D384500BE3741 /* HHRecipesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HHRecipesTableViewController.h; sourceTree = "<group>"; };
+		34F48A3E1C6D384500BE3741 /* HHRecipesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HHRecipesTableViewController.m; sourceTree = "<group>"; };
+		34F48A401C6D3EDD00BE3741 /* HHRecipeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HHRecipeViewController.h; sourceTree = "<group>"; };
+		34F48A411C6D3EDD00BE3741 /* HHRecipeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HHRecipeViewController.m; sourceTree = "<group>"; };
+		34FD324F1C7BD7E00040B23A /* UIColor+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Additions.h"; sourceTree = "<group>"; };
+		34FD32501C7BD7E00040B23A /* UIColor+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Additions.m"; sourceTree = "<group>"; };
+		34FD32551C7E7BD00040B23A /* HHRecipesTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HHRecipesTableViewCell.h; sourceTree = "<group>"; };
+		34FD32561C7E7BD00040B23A /* HHRecipesTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HHRecipesTableViewCell.m; sourceTree = "<group>"; };
+		34FD325C1C810C940040B23A /* HHIngredientsCategoryTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HHIngredientsCategoryTableViewCell.h; sourceTree = "<group>"; };
+		34FD325D1C810C940040B23A /* HHIngredientsCategoryTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HHIngredientsCategoryTableViewCell.m; sourceTree = "<group>"; };
+		34FD325F1C825B3F0040B23A /* HHContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HHContainer.h; sourceTree = "<group>"; };
+		34FD32601C825B3F0040B23A /* HHContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HHContainer.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3417385A1C69503500C3F55C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		34125B991C76778E0085384A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3436F17F1C6ADDEA000FF193 /* HHConstants.h */,
+				3436F1801C6ADDEA000FF193 /* HHConstants.m */,
+				34125B891C7658FC0085384A /* HHIngredient.h */,
+				34125B8A1C7658FC0085384A /* HHIngredient.m */,
+				34125B8C1C7659050085384A /* HHRecipe.h */,
+				34125B8D1C7659050085384A /* HHRecipe.m */,
+				34FD325F1C825B3F0040B23A /* HHContainer.h */,
+				34FD32601C825B3F0040B23A /* HHContainer.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		34125B9A1C76779E0085384A /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				34125B861C7658780085384A /* UIView+Additions.h */,
+				34125B871C7658780085384A /* UIView+Additions.m */,
+				34FD324F1C7BD7E00040B23A /* UIColor+Additions.h */,
+				34FD32501C7BD7E00040B23A /* UIColor+Additions.m */,
+			);
+			name = Utility;
+			sourceTree = "<group>";
+		};
+		341738541C69503500C3F55C = {
+			isa = PBXGroup;
+			children = (
+				3417385F1C69503500C3F55C /* HappyHour */,
+				3417385E1C69503500C3F55C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3417385E1C69503500C3F55C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3417385D1C69503500C3F55C /* HappyHour.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3417385F1C69503500C3F55C /* HappyHour */ = {
+			isa = PBXGroup;
+			children = (
+				341738631C69503500C3F55C /* AppDelegate.h */,
+				341738641C69503500C3F55C /* AppDelegate.m */,
+				34FD324D1C7B9A1B0040B23A /* Data */,
+				34125B9A1C76779E0085384A /* Utility */,
+				34125B991C76778E0085384A /* Model */,
+				34FD324B1C7B9A0B0040B23A /* Recipes */,
+				34FD324C1C7B9A110040B23A /* Ingredients */,
+				3417386C1C69503500C3F55C /* Assets.xcassets */,
+				3417386E1C69503500C3F55C /* LaunchScreen.storyboard */,
+				341738711C69503500C3F55C /* Info.plist */,
+				341738601C69503500C3F55C /* Supporting Files */,
+			);
+			path = HappyHour;
+			sourceTree = "<group>";
+		};
+		341738601C69503500C3F55C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				341738611C69503500C3F55C /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		34FD324B1C7B9A0B0040B23A /* Recipes */ = {
+			isa = PBXGroup;
+			children = (
+				34F48A401C6D3EDD00BE3741 /* HHRecipeViewController.h */,
+				34F48A411C6D3EDD00BE3741 /* HHRecipeViewController.m */,
+				34F48A3D1C6D384500BE3741 /* HHRecipesTableViewController.h */,
+				34F48A3E1C6D384500BE3741 /* HHRecipesTableViewController.m */,
+				34FD32551C7E7BD00040B23A /* HHRecipesTableViewCell.h */,
+				34FD32561C7E7BD00040B23A /* HHRecipesTableViewCell.m */,
+			);
+			name = Recipes;
+			sourceTree = "<group>";
+		};
+		34FD324C1C7B9A110040B23A /* Ingredients */ = {
+			isa = PBXGroup;
+			children = (
+				3417387C1C6AAE1700C3F55C /* HHIngredientsViewController.h */,
+				3417387D1C6AAE1700C3F55C /* HHIngredientsViewController.m */,
+				341738811C6AAE9600C3F55C /* HHIngredientsCategoryCollectionView.h */,
+				341738821C6AAE9600C3F55C /* HHIngredientsCategoryCollectionView.m */,
+				34B46BA71C6BF90200801050 /* HHIngredientCollectionViewCell.h */,
+				34B46BA81C6BF90200801050 /* HHIngredientCollectionViewCell.m */,
+				34FD324E1C7BA94C0040B23A /* Categories */,
+			);
+			name = Ingredients;
+			sourceTree = "<group>";
+		};
+		34FD324D1C7B9A1B0040B23A /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				3494868D1C79574600AB4BFB /* Ingredients.plist */,
+				3494868F1C79574C00AB4BFB /* Recipes.plist */,
+			);
+			name = Data;
+			sourceTree = "<group>";
+		};
+		34FD324E1C7BA94C0040B23A /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				34B46BA21C6BD5CF00801050 /* HHIngredientCategoriesTableViewController.h */,
+				34B46BA31C6BD5CF00801050 /* HHIngredientCategoriesTableViewController.m */,
+				34FD325C1C810C940040B23A /* HHIngredientsCategoryTableViewCell.h */,
+				34FD325D1C810C940040B23A /* HHIngredientsCategoryTableViewCell.m */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3417385C1C69503500C3F55C /* HappyHour */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 341738741C69503500C3F55C /* Build configuration list for PBXNativeTarget "HappyHour" */;
+			buildPhases = (
+				341738591C69503500C3F55C /* Sources */,
+				3417385A1C69503500C3F55C /* Frameworks */,
+				3417385B1C69503500C3F55C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HappyHour;
+			productName = HappyHour;
+			productReference = 3417385D1C69503500C3F55C /* HappyHour.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		341738551C69503500C3F55C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = Microsoft;
+				TargetAttributes = {
+					3417385C1C69503500C3F55C = {
+						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = TJRPA499LU;
+					};
+				};
+			};
+			buildConfigurationList = 341738581C69503500C3F55C /* Build configuration list for PBXProject "HappyHour" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 341738541C69503500C3F55C;
+			productRefGroup = 3417385E1C69503500C3F55C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3417385C1C69503500C3F55C /* HappyHour */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3417385B1C69503500C3F55C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3494868E1C79574600AB4BFB /* Ingredients.plist in Resources */,
+				349486901C79574C00AB4BFB /* Recipes.plist in Resources */,
+				341738701C69503500C3F55C /* LaunchScreen.storyboard in Resources */,
+				3417386D1C69503500C3F55C /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		341738591C69503500C3F55C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				34B46BAA1C6BF90200801050 /* HHIngredientCollectionViewCell.m in Sources */,
+				34125B8E1C7659050085384A /* HHRecipe.m in Sources */,
+				341738651C69503500C3F55C /* AppDelegate.m in Sources */,
+				34FD32611C825B3F0040B23A /* HHContainer.m in Sources */,
+				34125B8B1C7658FC0085384A /* HHIngredient.m in Sources */,
+				34FD32511C7BD7E00040B23A /* UIColor+Additions.m in Sources */,
+				34F48A421C6D3EDD00BE3741 /* HHRecipeViewController.m in Sources */,
+				341738621C69503500C3F55C /* main.m in Sources */,
+				34F48A3F1C6D384500BE3741 /* HHRecipesTableViewController.m in Sources */,
+				34B46BA51C6BD5CF00801050 /* HHIngredientCategoriesTableViewController.m in Sources */,
+				3436F1811C6ADDEA000FF193 /* HHConstants.m in Sources */,
+				341738841C6AAE9600C3F55C /* HHIngredientsCategoryCollectionView.m in Sources */,
+				34125B881C7658780085384A /* UIView+Additions.m in Sources */,
+				34FD325E1C810C940040B23A /* HHIngredientsCategoryTableViewCell.m in Sources */,
+				3417387F1C6AAE1700C3F55C /* HHIngredientsViewController.m in Sources */,
+				34FD32581C7E7BD00040B23A /* HHRecipesTableViewCell.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		3417386E1C69503500C3F55C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3417386F1C69503500C3F55C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		341738721C69503500C3F55C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		341738731C69503500C3F55C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		341738751C69503500C3F55C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = HappyHour/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.microsoft.HappyHour;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Debug;
+		};
+		341738761C69503500C3F55C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = HappyHour/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.microsoft.HappyHour;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		341738581C69503500C3F55C /* Build configuration list for PBXProject "HappyHour" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				341738721C69503500C3F55C /* Debug */,
+				341738731C69503500C3F55C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		341738741C69503500C3F55C /* Build configuration list for PBXNativeTarget "HappyHour" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				341738751C69503500C3F55C /* Debug */,
+				341738761C69503500C3F55C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 341738551C69503500C3F55C /* Project object */;
+}

@@ -1,0 +1,1832 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>ingredients</key>
+		<dict>
+			<key>brandy</key>
+			<string>1 oz of brandy</string>
+			<key>Benedictine</key>
+			<string>1 oz of Benedictine</string>
+		</dict>
+		<key>name</key>
+		<string>B and B</string>
+		<key>recipe</key>
+		<string>Float the brandy on top of the Benedictine. Some people prefer it on the rocks, some prefer it slightly warmed. Serve after dinner, or as a nightcap.</string>
+		<key>glass</key>
+		<string>brandy</string>
+		<key>color</key>
+		<string>brown</string>
+	</dict>
+	<dict>
+		<key>ingredients</key>
+		<dict>
+			<key>tequila</key>
+			<string>2 oz tequila</string>
+			<key>orange juice</key>
+			<string>4 oz orange juice</string>
+			<key>grenadine</key>
+			<string>1 dash grenadine</string>
+		</dict>
+		<key>name</key>
+		<string>Tequila Sunrise</string>
+		<key>recipe</key>
+		<string>Pour tequila into a tall glass containing ice cubes. Add the orange juice, then carefully pour in the grenadine, letting it sink gradually into the glass creating the illusion of a sunrise.</string>
+		<key>glass</key>
+		<string>collins</string>
+		<key>color</key>
+		<string>orange</string>
+	</dict>
+	<dict>
+		<key>ingredients</key>
+		<dict>
+			<key>egg white</key>
+			<string>1 egg white</string>
+			<key>gin</key>
+			<string>1 measure gin</string>
+			<key>ice</key>
+			<string>Cracked ice</string>
+			<key>club soda</key>
+			<string>Chilled soda water</string>
+			<key>lemon</key>
+			<string>Juice of 1/2 lemon</string>
+			<key>optional</key>
+			<string>Juice of 1/2 lime (optional)</string>
+			<key>sugar</key>
+			<string>Dash of sugar</string>
+		</dict>
+		<key>name</key>
+		<string>Silver Gin Fizz</string>
+		<key>recipe</key>
+		<string>Place the juice, sugar, egg white and gin into a cocktail shaker with cracked ice. Give it a good shake, and strain into a Highball glass. Top off the frothy mix with a few ounces of cold soda water.</string>
+		<key>glass</key>
+		<string>highball</string>
+		<key>color</key>
+		<string>grey</string>
+	</dict>
+	<dict>
+		<key>ingredients</key>
+		<dict>
+			<key>tequila</key>
+			<string>1.5 oz gold tequila</string>
+			<key>sweet vermouth</key>
+			<string>Several dashes sweet vermouth</string>
+			<key>ice</key>
+			<string>Cracked ice</string>
+			<key>optional</key>
+			<string>Slice of lime (optional)</string>
+		</dict>
+		<key>name</key>
+		<string>Tequila Manhattan</string>
+		<key>recipe</key>
+		<string>Mix the tequila and vermouth with some cracked ice in a cocktail shaker. Strain into a chilled cocktail glass, and garnish with a slice of lime.</string>
+		<key>glass</key>
+		<string>cocktail</string>
+		<key>color</key>
+		<string>red</string>
+	</dict>
+	<dict>
+		<key>ingredients</key>
+		<dict>
+			<key>Tia Maria</key>
+			<string>2 measures of Tia Maria</string>
+			<key>Irish Cream liqueur</key>
+			<string>1 measure of Irish Cream liqueur</string>
+		</dict>
+		<key>name</key>
+		<string>Baby Guinness</string>
+		<key>recipe</key>
+		<string>Pour the Tia Maria into a shot glass, and pour the Irish Cream over a spoon so it floats on top. It should look like a miniature pint of stout.</string>
+		<key>glass</key>
+		<string>shot</string>
+		<key>color</key>
+		<string>black</string>
+	</dict>
+	<dict>
+		<key>ingredients</key>
+		<dict>
+			<key>vodka</key>
+			<string>1.5 oz vodka</string>
+			<key>dry vermouth</key>
+			<string>1.5 oz dry vermouth</string>
+			<key>ice</key>
+			<string>Ice</string>
+			<key>lemon</key>
+			<string>Lemon peel</string>
+		</dict>
+		<key>name</key>
+		<string>Soviet</string>
+		<key>recipe</key>
+		<string>Place the vodka and vermouth into a shaker with ice. Mix, and then pour into a chilled glass. Add the twist of lemon peel and serve.</string>
+		<key>glass</key>
+		<string>cocktail</string>
+		<key>color</key>
+		<string>white</string>
+	</dict>
+	<dict>
+		<key>ingredients</key>
+		<dict>
+			<key>creme de menthe</key>
+			<string>1.5 oz green creme de menthe</string>
+			<key>creme de cacao</key>
+			<string>1 oz white creme de cacao</string>
+			<key>ice</key>
+			<string>Ice</string>
+		</dict>
+		<key>name</key>
+		<string>Grasshopper</string>
+		<key>recipe</key>
+		<string>Shake the ingredients with ice, and serve in a chilled glass.</string>
+		<key>glass</key>
+		<string>cocktail</string>
+		<key>color</key>
+		<string>green</string>
+	</dict>
+	<dict>
+		<key>ingredients</key>
+		<dict>
+			<key>light rum</key>
+			<string>1.5 oz light rum</string>
+			<key>pineapple</key>
+			<string>4 pineapple chunks</string>
+			<key>sugar</key>
+			<string>1/2 a tsp sugar.</string>
+			<key>ice</key>
+			<string>Ice</string>
+		</dict>
+		<key>name</key>
+		<string>Frozen Pineapple Daiquiri</string>
+		<key>recipe</key>
+		<string>Place the ingredients in a blender with ice, and blend until smooth. Frozen pineapple can be used if fresh pineapple is not available. Place in freezer for a few hours before serving.</string>
+		<key>glass</key>
+		<string>lowball</string>
+		<key>color</key>
+		<string>yellow</string>
+	</dict>
+	<dict>
+		<key>ingredients</key>
+		<dict>
+			<key>champagne</key>
+			<string>1 measure chilled champagne</string>
+			<key>orange juice</key>
+			<string>1 measure freshly-squeezed orange juice</string>
+		</dict>
+		<key>name</key>
+		<string>Mimosa</string>
+		<key>recipe</key>
+		<string>Couldn't be simpler: pour the orange juice into a champagne flute, then add the champagne.</string>
+		<key>glass</key>
+		<string>champagne</string>
+		<key>color</key>
+		<string>orange</string>
+	</dict>
+	<dict>
+		<key>ingredients</key>
+		<dict>
+			<key>Stout beer</key>
+			<string>Stout beer</string>
+			<key>Lager beer</key>
+			<string>Lager beer</string>
+		</dict>
+		<key>name</key>
+		<string>Black and Tan</string>
+		<key>recipe</key>
+		<string>Fill the glass half full of the light beer, and then carefully pour the dark beer in over an upside-down spoon so that the two don't mix.</string>
+		<key>glass</key>
+		<string>beer</string>
+		<key>color</key>
+		<string>brown</string>
+	</dict>
+	<dict>
+		<key>ingredients</key>
+		<dict>
+			<key>vodka</key>
+			<string>1 measure vodka</string>
+			<key>peach schnapps</key>
+			<string>1 measure peach schnapps</string>
+			<key>orange juice</key>
+			<string>Splash of orange juice.</string>
+		</dict>
+		<key>name</key>
+		<string>Fuzzy Navel</string>
+		<key>recipe</key>
+		<string>Mix the vodka and schnapps in a glass with ice cubes, and then add the orange juice.</string>
+		<key>glass</key>
+		<string>highball</string>
+		<key>color</key>
+		<string>orange</string>
+	</dict>
+	<dict>
+		<key>ingredients</key>
+		<dict>
+			<key>gin</key>
+			<string>1 oz gin</string>
+			<key>vodka</key>
+			<string>1 oz vodka</string>
+			<key>whiskey</key>
+			<string>1 oz whiskey</string>
+			<key>raspberry sour puss</key>
+			<string>1 oz raspberry sour puss</string>
+			<key>lime juice</key>
+			<string>Splash of lime juice</string>
+		</dict>
+		<key>name</key>
+		<string>The Saugeen Slammer</string>
+		<key>recipe</key>
+		<string>Mix all the ingredients in a glass, and forget about going to work tomorrow.</string>
+		<key>glass</key>
+		<string>collins</string>
+		<key>color</key>
+		<string>red</string>
+	</dict>
+	<dict>
+		<key>ingredients</key>
+		<dict>
+			<key>champagne</key>
+			<string>3 oz champagne</string>
+			<key>creme de cassis</key>
+			<string>0.5 oz creme de cassis.</string>
+		</dict>
+		<key>name</key>
+		<string>Kir Royale</string>
+		<key>recipe</key>
+		<string>Pour the creme de cassis into the glass, and add the champagne. Stir until the color is pale. Serve cold.</string>
+		<key>glass</key>
+		<string>champagne</string>
+		<key>color</key>
+		<string>red</string>
+	</dict>
+	<dict>
+		<key>ingredients</key>
+		<dict>
+			<key>vodka</key>
+			<string>2 measures vodka</string>
+			<key>orange juice</key>
+			<string>4.5 measures orange juice</string>
+			<key>optional</key>
+			<string>Slice of orange (optional)</string>
+		</dict>
+		<key>name</key>
+		<string>Screwdriver</string>
+		<key>recipe</key>
+		<string>Mix both the ingredients in a highball glass with ice. Garnish with a slice of orange.</string>
+		<key>glass</key>
+		<string>highball</string>
+		<key>color</key>
+		<string>orange</string>
+	</dict>
+	<dict>
+		<key>ingredients</key>
+		<dict>
+			<key>bourbon</key>
+			<string>2 oz bourbon</string>
+			<key>creme de menthe</key>
+			<string>1/2 tsp creme de menthe (white)</string>
+			<key>ice</key>
+			<string>Ice</string>
+		</dict>
+		<key>name</key>
+		<string>Dixie Dew</string>
+		<key>recipe</key>
+		<string>Place all the ingredients into a cocktail shaker with ice, shake well, and then strain into a cocktail glass.</string>
+		<key>glass</key>
+		<string>cocktail</string>
+		<key>color</key>
+		<string>brown</string>
+	</dict>
+	<dict>
+		<key>ingredients</key>
+		<dict>
+			<key>rum</key>
+			<string>2 oz of rum</string>
+			<key>lime juice</key>
+			<string>Juice from one fresh lime</string>
+			<key>Rock Candy Syrup</key>
+			<string>0.25 oz Rock Candy Syrup</string>
+			<key>French Garnier Orgeat Syrup</key>
+			<string>0.5 oz French Garnier Orgeat Syrup.</string>
+			<key>ice</key>
+			<string>Crushed ice</string>
+			<key>optional</key>
+			<string>Mint (optional)</string>
+		</dict>
+		<key>name</key>
+		<string>Mai Tai</string>
+		<key>recipe</key>
+		<string>Place ingredients into a cocktail shaker with crushed ice, and shake vigorously. Serve with a sprig of fresh mint over shaved ice.</string>
+		<key>glass</key>
+		<string>collins</string>
+		<key>color</key>
+		<string>orange</string>
+	</dict>
+	<dict>
+		<key>ingredients</key>
+		<dict>
+			<key>cognac</key>
+			<string>1 oz cognac</string>
+			<key>orange liqueur</key>
+			<string>1 oz orange liqueur</string>
+		</dict>
+		<key>name</key>
+		<string>Beautiful</string>
+		<key>recipe</key>
+		<string>Pour each ingredient into a brandy snifter and serve without ice.</string>
+		<key>glass</key>
+		<string>brandy</string>
+		<key>color</key>
+		<string>brown</string>
+	</dict>
+	<dict>
+		<key>ingredients</key>
+		<dict>
+			<key>vodka</key>
+			<string>1 measure vodka</string>
+			<key>Kahlua</key>
+			<string>1 measure Kahlua</string>
+			<key>milk</key>
+			<string>1 measure milk</string>
+			<key>ice</key>
+			<string>Ice</string>
+		</dict>
+		<key>name</key>
+		<string>Mudslide</string>
+		<key>recipe</key>
+		<string>Put all ingredients in blender with some ice. Blend for 30 seconds, and serve over ice cubes.</string>
+		<key>glass</key>
+		<string>highball</string>
+		<key>color</key>
+		<string>white</string>
+	</dict>
+	<dict>
+		<key>ingredients</key>
+		<dict>
+			<key>vodka</key>
+			<string>1.5 oz vodka</string>
+			<key>Kahlua</key>
+			<string>0.5 oz Kahlua</string>
+			<key>cream</key>
+			<string>Cream</string>
+		</dict>
+		<key>name</key>
+		<string>White Russian</string>
+		<key>recipe</key>
+		<string>Mix the ingredients together in the glass, with ice cubes. Add fresh cream to top off glass and stir until well-mixed.</string>
+		<key>glass</key>
+		<string>highball</string>
+		<key>color</key>
+		<string>white</string>
+	</dict>
+	<dict>
+		<key>ingredients</key>
+		<dict>
+			<key>vodka</key>
+			<string>1 oz vodka</string>
+			<key>tomato juice</key>
+			<string>3 oz tomato juice</string>
+			<key>Worcestershire sauce</key>
+			<string>7 drops Worcestershire sauce</string>
+			<key>pepper</key>
+			<string>1 pinch freshly ground pepper</string>
+			<key>horseradish</key>
+			<string>1/4 tsp of freshly grated horseradish</string>
+			<key>ice</key>
+			<string>Ice</string>
+		</dict>
+		<key>name</key>
+		<string>Bloody Mary</string>
+		<key>recipe</key>
+		<string>Shake well with ice, and strain into a tall glass filled with ice. Garnish with pickled asparagus sprig or slice of celery.</string>
+		<key>glass</key>
+		<string>collins</string>
+		<key>color</key>
+		<string>red</string>
+	</dict>
+	<dict>
+		<key>ingredients</key>
+		<dict>
+			<key>tequila</key>
+			<string>1.5 oz tequila</string>
+			<key>triple sec</key>
+			<string>0.5 oz triple sec</string>
+			<key>lime juice</key>
+			<string>Juice of four fresh limes</string>
+			<key>ice</key>
+			<string>Ice</string>
+		</dict>
+		<key>name</key>
+		<string>Rude Cosmopolitan</string>
+		<key>recipe</key>
+		<string>Shake the ingredients well with ice, and finely strain into a Martini glass. Garnish with flamed orange rind.</string>
+		<key>glass</key>
+		<string>martini</string>
+		<key>color</key>
+		<string>pink</string>
+	</dict>
+	<dict>
+		<key>ingredients</key>
+		<dict>
+			<key>rum</key>
+			<string>2 oz rum</string>
+			<key>pineapple juice</key>
+			<string>3 oz pineapple juice</string>
+			<key>ice</key>
+			<string>Ice</string>
+			<key>optional</key>
+			<string>Pineapple slice (optional)</string>
+		</dict>
+		<key>name</key>
+		<string>Pina Colada</string>
+		<key>recipe</key>
+		<string>Combine all the ingredients in a blender, mixing until the ice is crushed to a slushy consistency. Garnish with a pineapple slice.</string>
+		<key>glass</key>
+		<string>highball</string>
+		<key>color</key>
+		<string>orange</string>
+	</dict>
+	<dict>
+		<key>ingredients</key>
+		<dict>
+			<key>Irish Cream liqueur</key>
+			<string>1 oz Irish Cream</string>
+			<key>lime juice</key>
+			<string>1 oz lime juice</string>
+		</dict>
+		<key>name</key>
+		<string>Cement Mixer</string>
+		<key>recipe</key>
+		<string>Fill a shot glass 2/3 full with Irish Cream and gently float the lime juice on top. Drink immediately.</string>
+		<key>glass</key>
+		<string>shot</string>
+		<key>color</key>
+		<string>yellow</string>
+	</dict>
+	<dict>
+		<key>ingredients</key>
+		<dict>
+			<key>citrus vodka</key>
+			<string>1.5 oz citrus vodka</string>
+			<key>Cointreau</key>
+			<string>0.75 oz Cointreau</string>
+			<key>lemon juice</key>
+			<string>0.75 oz freshly squeezed lemon juice</string>
+			<key>ice</key>
+			<string>Ice</string>
+			<key>optional</key>
+			<string>Lemon wheel (optional)</string>
+		</dict>
+		<key>name</key>
+		<string>Lemon Drop</string>
+		<key>recipe</key>
+		<string>Pour contents into cocktail shaker with ice, and shake vigorously. Strain into a sugar rimmed cocktail glass garnished with a lemon wheel.</string>
+		<key>glass</key>
+		<string>cocktail</string>
+		<key>color</key>
+		<string>yellow</string>
+	</dict>
+	<dict>
+		<key>ingredients</key>
+		<dict>
+			<key>grenadine</key>
+			<string>1 dash grenadine</string>
+			<key>club soda</key>
+			<string>Club soda to fill</string>
+		</dict>
+		<key>name</key>
+		<string>Shirley Temple</string>
+		<key>recipe</key>
+		<string>Add club soda to a tall glass with ice, and add a dash of grenadine.</string>
+		<key>glass</key>
+		<string>highball</string>
+		<key>color</key>
+		<string>pink</string>
+	</dict>
+	<dict>
+		<key>ingredients</key>
+		<dict>
+			<key>peppermint schnapps</key>
+			<string>1 measure peppermint schnapps</string>
+			<key>bourbon</key>
+			<string>1 measure bourbon</string>
+		</dict>
+		<key>name</key>
+		<string>Snowshoe</string>
+		<key>recipe</key>
+		<string>Pour the ingredients into a shot glass. That's it.</string>
+		<key>glass</key>
+		<string>shot</string>
+		<key>color</key>
+		<string>brown</string>
+	</dict>
+	<dict>
+		<key>ingredients</key>
+		<dict>
+			<key>mint</key>
+			<string>Mint leaves</string>
+			<key>sugar</key>
+			<string>1 tsp of sugar</string>
+			<key>lime juice</key>
+			<string>0.25 oz fresh lime juice</string>
+			<key>light rum</key>
+			<string>1.5 oz white rum</string>
+			<key>ice</key>
+			<string>Ice cubes</string>
+		</dict>
+		<key>name</key>
+		<string>Mojito</string>
+		<key>recipe</key>
+		<string>Gently bruise the mint leaves with a muddler or similar implement in the bottom of an empty tall glass. Add the sugar, lime, and the rum. Fill the glass with ice cubes. Stir well, and top the glass with club soda.</string>
+		<key>glass</key>
+		<string>highball</string>
+		<key>color</key>
+		<string>clear</string>
+	</dict>
+	<dict>
+		<key>ingredients</key>
+		<dict>
+			<key>rum</key>
+			<string>2 jiggers rum</string>
+			<key>lime juice</key>
+			<string>1 jigger lime juice</string>
+		</dict>
+		<key>name</key>
+		<string>Planter's Punch</string>
+		<key>recipe</key>
+		<string>Shake well and pour into tall glass with ice. Decorate with fruit.</string>
+		<key>glass</key>
+		<string>highball</string>
+		<key>color</key>
+		<string>orange</string>
+	</dict>
+	<dict>
+		<key>ingredients</key>
+		<dict>
+			<key>light rum</key>
+			<string>1.3 oz light-dry rum</string>
+			<key>lime juice</key>
+			<string>0.7 oz lime juice</string>
+			<key>ice</key>
+			<string>Ice cubes</string>
+			<key>optional</key>
+			<string>Simple syrup (optional)</string>
+		</dict>
+		<key>name</key>
+		<string>Daiquiri</string>
+		<key>recipe</key>
+		<string>Mix the ingredients well in a cocktail shaker with ice cubes, and strain into a chilled glass. Add a sweetener (for example, simple syrup) to taste.</string>
+		<key>glass</key>
+		<string>cocktail</string>
+		<key>color</key>
+		<string>green</string>
+	</dict>
+	<dict>
+		<key>ingredients</key>
+		<dict>
+			<key>triple sec</key>
+			<string>1 measure triple sec</string>
+			<key>gin</key>
+			<string>1 measure gin</string>
+			<key>club soda</key>
+			<string>Club soda</string>
+			<key>optional</key>
+			<string>Maraschino cherry (optional)</string>
+		</dict>
+		<key>name</key>
+		<string>Swank Motel</string>
+		<key>recipe</key>
+		<string>Mix the ingredients in a glass, and top with soda water. Garnish with a maraschino cherry.</string>
+		<key>glass</key>
+		<string>highball</string>
+		<key>color</key>
+		<string>clear</string>
+	</dict>
+	<dict>
+		<key>ingredients</key>
+		<dict>
+			<key>bourbon</key>
+			<string>1.5 measure bourbon</string>
+			<key>sweet vermouth</key>
+			<string>0.25 measure sweet vermouth</string>
+			<key>bitters</key>
+			<string>2 shakes of bitters</string>
+			<key>ice</key>
+			<string>Ice</string>
+			<key>optional</key>
+			<string>Maraschino cherry (optional)</string>
+		</dict>
+		<key>name</key>
+		<string>Manhattan</string>
+		<key>recipe</key>
+		<string>Mix ingredients in a large glass with ice. Strain into chilled cocktail glass, and garnish with a maraschino cherry.</string>
+		<key>glass</key>
+		<string>cocktail</string>
+		<key>color</key>
+		<string>brown</string>
+	</dict>
+	<dict>
+		<key>ingredients</key>
+		<dict>
+			<key>light rum</key>
+			<string>2 measures white rum</string>
+			<key>sweet vermouth</key>
+			<string>2 measures sweet vermouth</string>
+			<key>cherry juice</key>
+			<string>Splash of cherry juice</string>
+			<key>lemon</key>
+			<string>Twist of lemon peel</string>
+		</dict>
+		<key>name</key>
+		<string>Latin Manhattan</string>
+		<key>recipe</key>
+		<string>Shake ingredients in a cocktail shaker. Serve without ice in a martini glass, with a twist of lemon peel as garnish.</string>
+		<key>glass</key>
+		<string>martini</string>
+		<key>color</key>
+		<string>orange</string>
+	</dict>
+	<dict>
+		<key>ingredients</key>
+		<dict>
+			<key>gin</key>
+			<string>1.5 oz of gin</string>
+			<key>sweet vermouth</key>
+			<string>0.5 oz sweet vermouth</string>
+			<key>Benedictine</key>
+			<string>1 tsp of Benedictine</string>
+			<key>ice</key>
+			<string>Ice</string>
+		</dict>
+		<key>name</key>
+		<string>Rolls Royce</string>
+		<key>recipe</key>
+		<string>Mix the ingredients with ice, and strain into a cocktail glass.</string>
+		<key>glass</key>
+		<string>lowball</string>
+		<key>color</key>
+		<string>brown</string>
+	</dict>
+	<dict>
+		<key>ingredients</key>
+		<dict>
+			<key>red vermouth</key>
+			<string>1 part Italian red vermouth</string>
+			<key>whiskey</key>
+			<string>2 parts scotch whiskey.</string>
+			<key>ice</key>
+			<string>Ice</string>
+			<key>optional</key>
+			<string>Cherry (optional)</string>
+		</dict>
+		<key>name</key>
+		<string>Rob Roy</string>
+		<key>recipe</key>
+		<string>Mix the ingredients in a glass with ice, and strain into a chilled cocktail glass. Garnish with a cherry.</string>
+		<key>glass</key>
+		<string>cocktail</string>
+		<key>color</key>
+		<string>brown</string>
+	</dict>
+	<dict>
+		<key>ingredients</key>
+		<dict>
+			<key>light rum</key>
+			<string>2 measures light rum</string>
+			<key>banana liqueur</key>
+			<string>1 measure banana liqueur</string>
+			<key>lime juice</key>
+			<string>1 measure lime juice</string>
+			<key>banana</key>
+			<string>Half a banana</string>
+			<key>ice</key>
+			<string>Ice</string>
+		</dict>
+		<key>name</key>
+		<string>Banana Daiquiri</string>
+		<key>recipe</key>
+		<string>Mix the rum, the banana liqueur, the lime juice, the banana and the ice well in a blender. Strain into a cocktail glass.</string>
+		<key>glass</key>
+		<string>cocktail</string>
+		<key>color</key>
+		<string>yellow</string>
+	</dict>
+	<dict>
+		<key>ingredients</key>
+		<dict>
+			<key>gin</key>
+			<string>1.5 oz gin</string>
+			<key>lemon juice</key>
+			<string>Juice of one lemon</string>
+			<key>club soda</key>
+			<string>Club soda</string>
+			<key>ice</key>
+			<string>Cracked ice</string>
+			<key>sugar</key>
+			<string>Dash of sugar</string>
+			<key>optional</key>
+			<string>Maraschino cherry (optional)</string>
+		</dict>
+		<key>name</key>
+		<string>Tom Collins</string>
+		<key>recipe</key>
+		<string>Fill a Collins glass up about two-thirds with cracked ice. Add a little sugar, the lemon juice and the gin. Stir well. Top off glass with club soda. Garnish with a maraschino cherry.</string>
+		<key>glass</key>
+		<string>collins</string>
+		<key>color</key>
+		<string>clear</string>
+	</dict>
+	<dict>
+		<key>ingredients</key>
+		<dict>
+			<key>Angostura bitters</key>
+			<string>1 dash Angostura bitters</string>
+			<key>gin</key>
+			<string>1 oz gin</string>
+			<key>ice</key>
+			<string>Ice</string>
+		</dict>
+		<key>name</key>
+		<string>Pink Gin</string>
+		<key>recipe</key>
+		<string>Add a few drops of the bitters to the glass, and then pour in the gin. Add an ice cube and top up with water to taste.</string>
+		<key>glass</key>
+		<string>cocktail</string>
+		<key>color</key>
+		<string>brown</string>
+	</dict>
+	<dict>
+		<key>ingredients</key>
+		<dict>
+			<key>whiskey</key>
+			<string>1 part whiskey</string>
+			<key>light rum</key>
+			<string>1 part white rum</string>
+			<key>Malibu</key>
+			<string>1 part Malibu</string>
+			<key>cola</key>
+			<string>Flat cola</string>
+			<key>ice</key>
+			<string>Ice</string>
+		</dict>
+		<key>name</key>
+		<string>Careless Memory</string>
+		<key>recipe</key>
+		<string>Pour over ice and mix with flat cola. Drink with caution: this is quite strong.</string>
+		<key>glass</key>
+		<string>highball</string>
+		<key>color</key>
+		<string>brown</string>
+	</dict>
+	<dict>
+		<key>ingredients</key>
+		<dict>
+			<key>dry vermouth</key>
+			<string>0.5 oz dry vermouth</string>
+			<key>gin</key>
+			<string>2.5 oz gin</string>
+			<key>olive</key>
+			<string>Olives</string>
+		</dict>
+		<key>name</key>
+		<string>Martini</string>
+		<key>recipe</key>
+		<string>Pour a splash of vermouth into a mixing glass, and add gin. Stir and serve with olives.</string>
+		<key>glass</key>
+		<string>martini</string>
+		<key>color</key>
+		<string>clear</string>
+	</dict>
+	<dict>
+		<key>ingredients</key>
+		<dict>
+			<key>vodka</key>
+			<string>2 measures vodka</string>
+			<key>kahlua</key>
+			<string>1 measure kahlua</string>
+			<key>ice</key>
+			<string>Ice</string>
+		</dict>
+		<key>name</key>
+		<string>Black Russian</string>
+		<key>recipe</key>
+		<string>Mix ingredients, and pour over ice.</string>
+		<key>glass</key>
+		<string>lowball</string>
+		<key>color</key>
+		<string>brown</string>
+	</dict>
+	<dict>
+		<key>ingredients</key>
+		<dict>
+			<key>dry vermouth</key>
+			<string>Splash of dry vermouth</string>
+			<key>gin</key>
+			<string>3 oz dry gin</string>
+			<key>olive</key>
+			<string>Green olive</string>
+			<key>lemon</key>
+			<string>Lemon zest</string>
+			<key>ice</key>
+			<string>Ice</string>
+		</dict>
+		<key>name</key>
+		<string>Dry Martini</string>
+		<key>recipe</key>
+		<string>Pour a splash of dry vermouth into a mixing glass. Add ice, stir and empty the liquid out of the glass. Pour the gin. Stir well. Strain into a chilled martini glass. Squeeze lemon zest and garnish with green olive.</string>
+		<key>glass</key>
+		<string>martini</string>
+		<key>color</key>
+		<string>clear</string>
+	</dict>
+	<dict>
+		<key>ingredients</key>
+		<dict>
+			<key>sweet vermouth</key>
+			<string>0.75 oz sweet vermouth</string>
+			<key>gin</key>
+			<string>0.75 oz gin</string>
+			<key>orange bitters</key>
+			<string>1 dash orange bitters</string>
+			<key>optional</key>
+			<string>Cherry (optional)</string>
+		</dict>
+		<key>name</key>
+		<string>Tailspin</string>
+		<key>recipe</key>
+		<string>Add the ingredients to a cocktail glass, and garnish with a cherry.</string>
+		<key>glass</key>
+		<string>cocktail</string>
+		<key>color</key>
+		<string>brown</string>
+	</dict>
+	<dict>
+		<key>ingredients</key>
+		<dict>
+			<key>gin</key>
+			<string>2 measures dry gin</string>
+			<key>Dubonnet</key>
+			<string>2 measures Dubonnet</string>
+			<key>cherry brandy</key>
+			<string>1/6 measure of cherry brandy</string>
+			<key>ice</key>
+			<string>Ice</string>
+			<key>orange</key>
+			<string>Twist of orange</string>
+		</dict>
+		<key>name</key>
+		<string>Wedding Belle</string>
+		<key>recipe</key>
+		<string>Shake the ingredients well with ice, and strain into a cocktail glass. Garish with a twist of orange.</string>
+		<key>glass</key>
+		<string>cocktail</string>
+		<key>color</key>
+		<string>orange</string>
+	</dict>
+	<dict>
+		<key>ingredients</key>
+		<dict>
+			<key>silver tequila</key>
+			<string>1 measure silver (white) tequila</string>
+			<key>grapefruit soda</key>
+			<string>2 measure grapefruit flavoured soda</string>
+			<key>lemon juice</key>
+			<string>Lemon juice</string>
+			<key>salt</key>
+			<string>Salt and a small dish for frosting</string>
+			<key>ice</key>
+			<string>Ice</string>
+		</dict>
+		<key>name</key>
+		<string>Paloma</string>
+		<key>recipe</key>
+		<string>Chill a high glass. Twist some lemon juice on the mouth of the glass and turn it upside-down into a salt-filled dish to create the frosting. Add some ice. Pour in the tequila, then the grapefruit soda. Stir as needed then decorate with a lemon rind.</string>
+		<key>glass</key>
+		<string>highball</string>
+		<key>color</key>
+		<string>orange</string>
+	</dict>
+	<dict>
+		<key>ingredients</key>
+		<dict>
+			<key>cognac</key>
+			<string>1 oz cognac</string>
+			<key>lemon juice</key>
+			<string>1 oz lemon juice</string>
+			<key>ice</key>
+			<string>Ice</string>
+		</dict>
+		<key>name</key>
+		<string>Sidecar</string>
+		<key>recipe</key>
+		<string>Shake the ingredients with ice, and then strain into a cocktail glass. Sugar rim on the glass.</string>
+		<key>glass</key>
+		<string>cocktail</string>
+		<key>color</key>
+		<string>orange</string>
+	</dict>
+	<dict>
+		<key>ingredients</key>
+		<dict>
+			<key>gin</key>
+			<string>1.5 oz gin</string>
+			<key>grapefruit juice</key>
+			<string>5 oz grapefruit juice</string>
+		</dict>
+		<key>name</key>
+		<string>Greyhound</string>
+		<key>recipe</key>
+		<string>Pour ingredients into a highball glass over ice cubes. Stir well and serve.</string>
+		<key>glass</key>
+		<string>highball</string>
+		<key>color</key>
+		<string>orange</string>
+	</dict>
+	<dict>
+		<key>ingredients</key>
+		<dict>
+			<key>vodka</key>
+			<string>1.5 measures vodka</string>
+			<key>triple sec</key>
+			<string>1 measure triple sec</string>
+			<key>cranberry juice</key>
+			<string>1 measure of cranberry juice</string>
+			<key>lime juice</key>
+			<string>Dash of lime juice</string>
+			<key>ice</key>
+			<string>Ice</string>
+		</dict>
+		<key>name</key>
+		<string>Cosmopolitan</string>
+		<key>recipe</key>
+		<string>Add the ingredients to a cocktail shaker with ice, and mix well. Strain into a cocktail glass.</string>
+		<key>glass</key>
+		<string>cocktail</string>
+		<key>color</key>
+		<string>red</string>
+	</dict>
+	<dict>
+		<key>ingredients</key>
+		<dict>
+			<key>Kahlua</key>
+			<string>1 part Kahlua</string>
+			<key>tequila</key>
+			<string>1 part tequila</string>
+		</dict>
+		<key>name</key>
+		<string>Cucaracha</string>
+		<key>recipe</key>
+		<string>Pour the Kahlua into a shot glass, then slowly pour in the tequila so that two distinct layers are formed. Set fire to the tequila with a lighter and allow the blue flame to burn.</string>
+		<key>glass</key>
+		<string>shot</string>
+		<key>color</key>
+		<string>brown</string>
+	</dict>
+	<dict>
+		<key>ingredients</key>
+		<dict>
+			<key>sugar</key>
+			<string>1 tsp of sugar</string>
+			<key>orange</key>
+			<string>A slice of orange</string>
+			<key>maraschino cherry</key>
+			<string>1 maraschino cherry</string>
+			<key>Angostura bitters</key>
+			<string>2 dashes of Angostura bitters</string>
+			<key>bourbon</key>
+			<string>2 measures of bourbon</string>
+			<key>ice</key>
+			<string>Ice</string>
+		</dict>
+		<key>name</key>
+		<string>Old Fashioned</string>
+		<key>recipe</key>
+		<string>Add the orange and 1 tsp of sugar or simple syrup into an Old Fashioned glass. Add a maraschino cherry (without stem) and the bitters. Fill glass with ice. Add bourbon and stir. Serve with short straw.</string>
+		<key>glass</key>
+		<string>lowball</string>
+		<key>color</key>
+		<string>orange</string>
+	</dict>
+	<dict>
+		<key>ingredients</key>
+		<dict>
+			<key>orange juice</key>
+			<string>0.5 measure orange juice</string>
+			<key>lemon juice</key>
+			<string>0.5 measure lemon juice</string>
+			<key>amber rum</key>
+			<string>0.5 oz amber rum</string>
+			<key>cherry brandy</key>
+			<string>0.5 oz cherry brandy</string>
+			<key>orange</key>
+			<string>Orange slice</string>
+			<key>optional</key>
+			<string>Cherry (optional)</string>
+		</dict>
+		<key>name</key>
+		<string>Zombie</string>
+		<key>recipe</key>
+		<string>Mix the ingredients, and serve in a Collins glass garnished with an orange slice and cherry.</string>
+		<key>glass</key>
+		<string>collins</string>
+		<key>color</key>
+		<string>brown</string>
+	</dict>
+	<dict>
+		<key>ingredients</key>
+		<dict>
+			<key>whiskey</key>
+			<string>2.5 oz bourbon whiskey</string>
+			<key>simple syrup</key>
+			<string>3 tsp simple syrup</string>
+			<key>mint</key>
+			<string>Sprig of mint</string>
+			<key>ice</key>
+			<string>Ice</string>
+		</dict>
+		<key>name</key>
+		<string>Mint Julep</string>
+		<key>recipe</key>
+		<string>Muddle the mint leaves and the syrup in a tall glass. Add shaved or crushed ice and then the bourbon. Garnish with another sprig of mint.</string>
+		<key>glass</key>
+		<string>highball</string>
+		<key>color</key>
+		<string>green</string>
+	</dict>
+	<dict>
+		<key>ingredients</key>
+		<dict>
+			<key>lime</key>
+			<string>Lime</string>
+			<key>ice</key>
+			<string>Ice</string>
+			<key>cola</key>
+			<string>3 oz cola</string>
+			<key>rum</key>
+			<string>1 oz rum</string>
+			<key>optional</key>
+			<string>2 dashes bitters (optional)</string>
+		</dict>
+		<key>name</key>
+		<string>Cuba Libre</string>
+		<key>recipe</key>
+		<string>Rub the rim of a highball glass with the lime. Fill the glass with ice, and add the rum. Fill the glass with cola, and drop in the lime.</string>
+		<key>glass</key>
+		<string>highball</string>
+		<key>color</key>
+		<string>brown</string>
+	</dict>
+	<dict>
+		<key>ingredients</key>
+		<dict>
+			<key>stout beer</key>
+			<string>6 oz cold stout beer</string>
+			<key>champagne</key>
+			<string>6 oz cold dry champagne or other dry sparkling wine</string>
+		</dict>
+		<key>name</key>
+		<string>Black Velvet</string>
+		<key>recipe</key>
+		<string>Fill a tall flute glass half way full of chilled stout and float the sparkling wine on top of the stout. The differing densities of the liquids allow them to remain largely in separate layers. The effect is best achieved if it is poured over a spoon turned upside down over the top of the glass so that the liquid runs gently down the sides rather than splashing into the lower layer and mixing with it.</string>
+		<key>glass</key>
+		<string>champagne</string>
+		<key>color</key>
+		<string>brown</string>
+	</dict>
+	<dict>
+		<key>ingredients</key>
+		<dict>
+			<key>tequila</key>
+			<string>1 measure tequila</string>
+			<key>triple sec</key>
+			<string>0.5 measure triple sec</string>
+			<key>ice</key>
+			<string>Crushed ice</string>
+		</dict>
+		<key>name</key>
+		<string>Margarita</string>
+		<key>recipe</key>
+		<string>Add the ingredients with crushed ice to a cocktail shaker. Mix well, and serve.</string>
+		<key>glass</key>
+		<string>lowball</string>
+		<key>color</key>
+		<string>green</string>
+	</dict>
+	<dict>
+		<key>ingredients</key>
+		<dict>
+			<key>ginger beer</key>
+			<string>2 oz ginger beer</string>
+			<key>vodka</key>
+			<string>2 oz vodka</string>
+			<key>ice</key>
+			<string>Crushed ice</string>
+		</dict>
+		<key>name</key>
+		<string>Moscow Mule</string>
+		<key>recipe</key>
+		<string>Mix all the ingredients, serve in a copper mug with ice.</string>
+		<key>glass</key>
+		<string>mug</string>
+		<key>color</key>
+		<string>clear</string>
+	</dict>
+	<dict>
+		<key>ingredients</key>
+		<dict>
+			<key>Irish Cream liqueur</key>
+			<string>0.5 measure of Irish Cream liqueur</string>
+			<key>Goldschlager</key>
+			<string>0.5 measure of Goldschlager</string>
+		</dict>
+		<key>name</key>
+		<string>Bailey's Comet</string>
+		<key>recipe</key>
+		<string>Fill a shot glass half way with Irish Cream, then layer half a shot off Goldschlager on top. Add splash of flammable alcohol. Dim the lights and ignite. Sprinkling cinnamon into the flame will cause sparks to appear in an otherwise dim blue flame.</string>
+		<key>glass</key>
+		<string>shot</string>
+		<key>color</key>
+		<string>black</string>
+	</dict>
+	<dict>
+		<key>ingredients</key>
+		<dict>
+			<key>orange juice</key>
+			<string>4 oz orange juice</string>
+			<key>orange liqueur</key>
+			<string>2 oz orange liqueur</string>
+			<key>lime juice</key>
+			<string>1 oz lime juice</string>
+			<key>ice</key>
+			<string>Ice</string>
+		</dict>
+		<key>name</key>
+		<string>Maria Teresa</string>
+		<key>recipe</key>
+		<string>Combine all the ingredients in a shaker, and mix with ice. Strain into a sugar-rimmed glass.</string>
+		<key>glass</key>
+		<string>collins</string>
+		<key>color</key>
+		<string>orange</string>
+	</dict>
+	<dict>
+		<key>ingredients</key>
+		<dict>
+			<key>Tia Maria</key>
+			<string>1 measure Tia Maria</string>
+			<key>Grand Marnier</key>
+			<string>1 measure Grand Marnier</string>
+			<key>orange</key>
+			<string>Slice of orange</string>
+		</dict>
+		<key>name</key>
+		<string>Roadrunner</string>
+		<key>recipe</key>
+		<string>Mix the ingredients, and serve in a cocktail glass with a slice of orange.</string>
+		<key>glass</key>
+		<string>cocktail</string>
+		<key>color</key>
+		<string>yellow</string>
+	</dict>
+	<dict>
+		<key>ingredients</key>
+		<dict>
+			<key>vodka</key>
+			<string>1 oz vodka</string>
+			<key>blue curacao</key>
+			<string>Dash of blue curacao</string>
+			<key>lemonade</key>
+			<string>Lemonade</string>
+		</dict>
+		<key>name</key>
+		<string>Electric Lemonade</string>
+		<key>recipe</key>
+		<string>Mix the ingredients in a cocktail shaker, and serve in a highball glass.</string>
+		<key>glass</key>
+		<string>highball</string>
+		<key>color</key>
+		<string>blue</string>
+	</dict>
+	<dict>
+		<key>ingredients</key>
+		<dict>
+			<key>Frangelico</key>
+			<string>1 measure Frangelico</string>
+			<key>pineapple juice</key>
+			<string>3 measures pineapple juice</string>
+			<key>ice</key>
+			<string>Crushed ice</string>
+			<key>pineapple</key>
+			<string>Slice of pineapple</string>
+		</dict>
+		<key>name</key>
+		<string>Frangelico Luau</string>
+		<key>recipe</key>
+		<string>Mix ingredients in blender, and serve in tall glass with ice. Garnish with slice of pineapple.</string>
+		<key>glass</key>
+		<string>highball</string>
+		<key>color</key>
+		<string>orange</string>
+	</dict>
+	<dict>
+		<key>ingredients</key>
+		<dict>
+			<key>tequila</key>
+			<string>1.5 oz tequila</string>
+			<key>dry vermouth</key>
+			<string>1/2 oz dry vermouth</string>
+			<key>bitters</key>
+			<string>Dash of bitters</string>
+			<key>ice</key>
+			<string>Ice</string>
+			<key>lemon</key>
+			<string>1 twist of lemon peel</string>
+			<key>olive</key>
+			<string>1 olive</string>
+		</dict>
+		<key>name</key>
+		<string>Tequini Martini</string>
+		<key>recipe</key>
+		<string>Stir tequila, vermouth and bitters with ice and strain into a cocktail glass. Add the twist of lemon peel and top with the olive then serve.</string>
+		<key>glass</key>
+		<string>martini</string>
+		<key>color</key>
+		<string>clear</string>
+	</dict>
+	<dict>
+		<key>ingredients</key>
+		<dict>
+			<key>whiskey</key>
+			<string>A double shot of whiskey</string>
+			<key>lemon juice</key>
+			<string>1 oz of lemon juice</string>
+			<key>Angostura bitters</key>
+			<string>2 dashes of Angostura bitters</string>
+			<key>ice</key>
+			<string>Ice</string>
+			<key>lemon</key>
+			<string>Lemon twist</string>
+		</dict>
+		<key>name</key>
+		<string>Whiskey Sour</string>
+		<key>recipe</key>
+		<string>Shake the ingredients and strain into an Old Fashioned glass over ice cubes. Garnished with a lemon twist.</string>
+		<key>glass</key>
+		<string>lowball</string>
+		<key>color</key>
+		<string>brown</string>
+	</dict>
+	<dict>
+		<key>ingredients</key>
+		<dict>
+			<key>apple brandy</key>
+			<string>1.5 oz  apple brandy</string>
+			<key>apple juice</key>
+			<string>2.5 oz apple juice</string>
+			<key>ice</key>
+			<string>Ice</string>
+			<key>club soda</key>
+			<string>Club soda</string>
+			<key>optional</key>
+			<string>Lime wheel (optional)</string>
+		</dict>
+		<key>name</key>
+		<string>Steeplejack</string>
+		<key>recipe</key>
+		<string>Mix ingredients and serve in a Collins glass with ice and filled with soda. Garnish with lime wheel.</string>
+		<key>glass</key>
+		<string>collins</string>
+		<key>color</key>
+		<string>yellow</string>
+	</dict>
+	<dict>
+		<key>ingredients</key>
+		<dict>
+			<key>dark rum</key>
+			<string>2 oz dark rum</string>
+			<key>lime juice</key>
+			<string>1 oz lime juice</string>
+			<key>orange juice</key>
+			<string>1 oz orange juice</string>
+			<key>ice</key>
+			<string>Ice</string>
+			<key>orange</key>
+			<string>Orange slice</string>
+			<key>optional</key>
+			<string>Cherry (optional)</string>
+		</dict>
+		<key>name</key>
+		<string>Rum Swizzle</string>
+		<key>recipe</key>
+		<string>Add ingredients to a cocktail shaker, and mix with ice. Strain into a highball glass filled with ice cubes. Garnish with a slice of orange and a cherry.</string>
+		<key>glass</key>
+		<string>highball</string>
+		<key>color</key>
+		<string>brown</string>
+	</dict>
+	<dict>
+		<key>ingredients</key>
+		<dict>
+			<key>gin</key>
+			<string>2 oz gin</string>
+			<key>lemon juice</key>
+			<string>Juice of half a lemon</string>
+			<key>sugar</key>
+			<string>Dash of sugar</string>
+			<key>ice</key>
+			<string>Ice</string>
+			<key>club soda</key>
+			<string>Club soda</string>
+		</dict>
+		<key>name</key>
+		<string>Gin Fizz</string>
+		<key>recipe</key>
+		<string>Shake the gin, the lemon juice and sugar with ice. Strain into a highball glass over two ice cubes. Fill with carbonated water or club soda, stir and serve.</string>
+		<key>glass</key>
+		<string>highball</string>
+		<key>color</key>
+		<string>clear</string>
+	</dict>
+	<dict>
+		<key>ingredients</key>
+		<dict>
+			<key>ice</key>
+			<string>Crushed ice</string>
+			<key>light rum</key>
+			<string>2 measures of light rum</string>
+			<key>honey</key>
+			<string>1 measure of honey</string>
+			<key>cream</key>
+			<string>1 tsp of cream</string>
+		</dict>
+		<key>name</key>
+		<string>Bee's Kiss</string>
+		<key>recipe</key>
+		<string>Put the crushed ice, rum, honey and cream in a blender. Blend until the mixture is smooth. Strain into a cocktail glass. Serve without garnish.</string>
+		<key>glass</key>
+		<string>cocktail</string>
+		<key>color</key>
+		<string>white</string>
+	</dict>
+	<dict>
+		<key>ingredients</key>
+		<dict>
+			<key>absinthe</key>
+			<string>1 oz absinthe</string>
+			<key>champagne</key>
+			<string>5 oz champagne</string>
+		</dict>
+		<key>name</key>
+		<string>Death In The Afternoon</string>
+		<key>recipe</key>
+		<string>Pour the absinthe into a flute glass, and top with the champagne.</string>
+		<key>glass</key>
+		<string>champagne</string>
+		<key>color</key>
+		<string>yellow</string>
+	</dict>
+	<dict>
+		<key>ingredients</key>
+		<dict>
+			<key>Kahlua</key>
+			<string>1 measure Kahlua</string>
+			<key>ginger ale</key>
+			<string>3 measures ginger ale</string>
+		</dict>
+		<key>name</key>
+		<string>Bandito</string>
+		<key>recipe</key>
+		<string>Pour Kahlua into glass with ice. Top off with ginger ale.</string>
+		<key>glass</key>
+		<string>highball</string>
+		<key>color</key>
+		<string>brown</string>
+	</dict>
+	<dict>
+		<key>ingredients</key>
+		<dict>
+			<key>whiskey</key>
+			<string>1.5 oz rye whiskey</string>
+			<key>dark rum</key>
+			<string>1/2 oz dark rum</string>
+			<key>orange bitters</key>
+			<string>dash of orange bitters</string>
+			<key>ice</key>
+			<string>Cracked ice</string>
+		</dict>
+		<key>name</key>
+		<string>Suburban</string>
+		<key>recipe</key>
+		<string>Stir all ingredients in a cocktail shaker, and mix with cracked ice. Strain into a chilled cocktail glass.</string>
+		<key>glass</key>
+		<string>cocktail</string>
+		<key>color</key>
+		<string>brown</string>
+	</dict>
+	<dict>
+		<key>ingredients</key>
+		<dict>
+			<key>gin</key>
+			<string>1.5 oz gin</string>
+			<key>cherry liqueur</key>
+			<string>0.5 oz Peter Cherry Heering</string>
+			<key>Benedictine</key>
+			<string>0.25 oz Benedictine</string>
+			<key>Angostura bitters</key>
+			<string>Dash of Angostura bitters</string>
+			<key>club soda</key>
+			<string>Club soda</string>
+			<key>lime juice</key>
+			<string>Half a fresh lime, squeezed</string>
+			<key>orange</key>
+			<string>Orange slice</string>
+			<key>optional</key>
+			<string>Cherry (optional)</string>
+		</dict>
+		<key>name</key>
+		<string>Singapore Sling</string>
+		<key>recipe</key>
+		<string>Mix all ingredient (except the soda) in a cocktail shaker, and strain into highball glass. Top with soda. Garnish with orange slice and cherry.</string>
+		<key>glass</key>
+		<string>highball</string>
+		<key>color</key>
+		<string>brown</string>
+	</dict>
+	<dict>
+		<key>ingredients</key>
+		<dict>
+			<key>light rum</key>
+			<string>1 oz light rum</string>
+			<key>rum</key>
+			<string>1 oz gold rum</string>
+			<key>cranberry juice</key>
+			<string>Cranberry juice</string>
+			<key>ice</key>
+			<string>Ice</string>
+			<key>optional</key>
+			<string>Lime (optional)</string>
+		</dict>
+		<key>name</key>
+		<string>Bellbird</string>
+		<key>recipe</key>
+		<string>Place ingredients into an iced highball glass then pour into a shaker for a few shakes. Pour back into glass. Garnish with a squeeze of lime and serve.</string>
+		<key>glass</key>
+		<string>highball</string>
+		<key>color</key>
+		<string>brown</string>
+	</dict>
+	<dict>
+		<key>ingredients</key>
+		<dict>
+			<key>light rum</key>
+			<string>1 part light rum</string>
+			<key>blue curacao</key>
+			<string>1 part blue curacao</string>
+			<key>pineapple juice</key>
+			<string>1 part pineapple juice</string>
+			<key>coconut milk</key>
+			<string>1 part cream of coconut</string>
+			<key>maraschino cherry</key>
+			<string>1 maraschino cherry</string>
+			<key>pineapple</key>
+			<string>Slice of pineapple</string>
+		</dict>
+		<key>name</key>
+		<string>Blue Hawaiian</string>
+		<key>recipe</key>
+		<string>Mix the rum, the blue curacao, the pineapple juice and the cream of coconut with ice in a cocktail shaker. Strain into a highball glass and garnish with a cherry and a piece of pineapple.</string>
+		<key>glass</key>
+		<string>highball</string>
+		<key>color</key>
+		<string>blue</string>
+	</dict>
+	<dict>
+		<key>ingredients</key>
+		<dict>
+			<key>gin</key>
+			<string>2 oz gin</string>
+			<key>lemon juice</key>
+			<string>1 oz lemon juice</string>
+			<key>ice</key>
+			<string>Crushed ice</string>
+			<key>lemon</key>
+			<string>Lemon twist</string>
+		</dict>
+		<key>name</key>
+		<string>White Lady</string>
+		<key>recipe</key>
+		<string>Shake or stir with ice. Strain into a cocktail glass and garnish with a lemon twist.</string>
+		<key>glass</key>
+		<string>cocktail</string>
+		<key>color</key>
+		<string>clear</string>
+	</dict>
+	<dict>
+		<key>ingredients</key>
+		<dict>
+			<key>whiskey</key>
+			<string>1 measure blended whiskey</string>
+			<key>drambuie</key>
+			<string>1 measure drambuie</string>
+			<key>ice</key>
+			<string>Ice</string>
+		</dict>
+		<key>name</key>
+		<string>Rusty Nail</string>
+		<key>recipe</key>
+		<string>Pour the drambuie over ice. Add the scotch and give it a quick stir.</string>
+		<key>glass</key>
+		<string>lowball</string>
+		<key>color</key>
+		<string>brown</string>
+	</dict>
+	<dict>
+		<key>ingredients</key>
+		<dict>
+			<key>blue curacao</key>
+			<string>1 part blue curacao</string>
+			<key>orange liqueur</key>
+			<string>1 part orange liqueur</string>
+			<key>grenadine</key>
+			<string>1 dash grenadine</string>
+		</dict>
+		<key>name</key>
+		<string>Bastille Bomb</string>
+		<key>recipe</key>
+		<string>First add the grenadine into a tall glass, then the curacao and then the orange liqueur.</string>
+		<key>glass</key>
+		<string>highball</string>
+		<key>color</key>
+		<string>clear</string>
+	</dict>
+	<dict>
+		<key>ingredients</key>
+		<dict>
+			<key>vodka</key>
+			<string>1 measure vodka</string>
+			<key>club soda</key>
+			<string>3 measures club soda</string>
+			<key>ice</key>
+			<string>Ice</string>
+			<key>lime</key>
+			<string>Slice of lime</string>
+		</dict>
+		<key>name</key>
+		<string>Rene</string>
+		<key>recipe</key>
+		<string>Pour the ingredients over ice and squeeze in a slice of lime.</string>
+		<key>glass</key>
+		<string>highball</string>
+		<key>color</key>
+		<string>clear</string>
+	</dict>
+	<dict>
+		<key>ingredients</key>
+		<dict>
+			<key>ice</key>
+			<string>Ice cubes</string>
+			<key>vodka</key>
+			<string>2 measures vodka</string>
+			<key>orange juice</key>
+			<string>5 measures orange juice</string>
+			<key>galliano</key>
+			<string>1 measure of Galliano liqueur</string>
+			<key>orange</key>
+			<string>Orange slice</string>
+		</dict>
+		<key>name</key>
+		<string>Harvey Wallbanger</string>
+		<key>recipe</key>
+		<string>Half-fill a cocktail shaker with ice cubes, add the vodka and orange juice and mix well. Strain into an ice-filled highball glass. Gently float the Galliano on top and garnish with the orange slice.</string>
+		<key>glass</key>
+		<string>highball</string>
+		<key>color</key>
+		<string>orange</string>
+	</dict>
+	<dict>
+		<key>ingredients</key>
+		<dict>
+			<key>brandy</key>
+			<string>1.5 oz brandy</string>
+			<key>creme de menthe</key>
+			<string>0.5 oz white creme de menthe.</string>
+		</dict>
+		<key>name</key>
+		<string>Stinger</string>
+		<key>recipe</key>
+		<string>Combine the ingredients in a cocktail shaker and strain into a cocktail glass.</string>
+		<key>glass</key>
+		<string>cocktail</string>
+		<key>color</key>
+		<string>brown</string>
+	</dict>
+	<dict>
+		<key>ingredients</key>
+		<dict>
+			<key>gin</key>
+			<string>1 oz gin</string>
+			<key>kirschwasser</key>
+			<string>1 oz kirschwasser (cherry brandy)</string>
+			<key>lemon juice</key>
+			<string>1 oz lemon juice</string>
+			<key>ice</key>
+			<string>Crushed ice</string>
+		</dict>
+		<key>name</key>
+		<string>Lady Finger</string>
+		<key>recipe</key>
+		<string>Mix all the ingredients in a cocktail shaker with ice, and strain into a cocktail glass.</string>
+		<key>glass</key>
+		<string>cocktail</string>
+		<key>color</key>
+		<string>clear</string>
+	</dict>
+	<dict>
+		<key>ingredients</key>
+		<dict>
+			<key>coffee</key>
+			<string>Strong black coffee</string>
+			<key>brown sugar</key>
+			<string>Brown sugar</string>
+			<key>whiskey</key>
+			<string>1 oz of whiskey</string>
+			<key>whipped cream</key>
+			<string>Very lightly whipped cream</string>
+		</dict>
+		<key>name</key>
+		<string>Irish Coffee</string>
+		<key>recipe</key>
+		<string>Put a metal spoon in a wine glass and pour in the hot coffee. Leave about 1.5 cm space above the coffee. Mix two tsps of sugar and the whiskey into the coffee and remove the spoon. Hold a tablespoon upside down over the glass and slowly pour the cream over the back of the spoon onto the surface of the coffee mixture. It should float.</string>
+		<key>glass</key>
+		<string>wine</string>
+		<key>color</key>
+		<string>brown</string>
+	</dict>
+	<dict>
+		<key>ingredients</key>
+		<dict>
+			<key>tequila</key>
+			<string>1 oz tequila</string>
+			<key>pineapple juice</key>
+			<string>2 oz pineapple juice</string>
+			<key>ice</key>
+			<string>Crushed ice</string>
+			<key>pineapple</key>
+			<string>Pineapple stick</string>
+		</dict>
+		<key>name</key>
+		<string>Frozen Matador</string>
+		<key>recipe</key>
+		<string>Mix the ingredients with crushed ice in a blender and served with a pineapple stick in an lowball glass.</string>
+		<key>glass</key>
+		<string>lowball</string>
+		<key>color</key>
+		<string>yellow</string>
+	</dict>
+	<dict>
+		<key>ingredients</key>
+		<dict>
+			<key>tequila</key>
+			<string>1.5 oz of tequila</string>
+			<key>Tabasco sauce</key>
+			<string>Splash of Tabasco sauce</string>
+		</dict>
+		<key>name</key>
+		<string>TNT</string>
+		<key>recipe</key>
+		<string>Pour the tequila into a shot glass. Splash in a couple drops of Tabasco sauce.</string>
+		<key>glass</key>
+		<string>shot</string>
+		<key>color</key>
+		<string>clear</string>
+	</dict>
+	<dict>
+		<key>ingredients</key>
+		<dict>
+			<key>bourbon</key>
+			<string>2 oz bourbon</string>
+			<key>dark rum</key>
+			<string>1 oz dark rum</string>
+			<key>ice</key>
+			<string>Crushed ice</string>
+		</dict>
+		<key>name</key>
+		<string>Midnight Cowboy</string>
+		<key>recipe</key>
+		<string>Mix ingredients in a cocktail shaker with ice, and strain into a cocktail glass.</string>
+		<key>glass</key>
+		<string>cocktail</string>
+		<key>color</key>
+		<string>brown</string>
+	</dict>
+	<dict>
+		<key>ingredients</key>
+		<dict>
+			<key>Kahlua</key>
+			<string>1 measure Kahlua or other coffee liqueur</string>
+			<key>Grand Marnier</key>
+			<string>1 measure Grand Marnier</string>
+			<key>Irish Cream liqueur</key>
+			<string>1 measure Irish Cream liqueur</string>
+		</dict>
+		<key>name</key>
+		<string>B52</string>
+		<key>recipe</key>
+		<string>Mix the ingredients in a glass with ice, and pour into a shot glass.</string>
+		<key>glass</key>
+		<string>shot</string>
+		<key>color</key>
+		<string>brown</string>
+	</dict>
+	<dict>
+		<key>ingredients</key>
+		<dict>
+			<key>gin</key>
+			<string>1 part gin</string>
+			<key>rum</key>
+			<string>1 part rum</string>
+			<key>lime juice</key>
+			<string>Squeeze of lime</string>
+			<key>ice</key>
+			<string>Ice</string>
+			<key>club soda</key>
+			<string>Club soda</string>
+			<key>ice</key>
+			<string>Ice</string>
+			<key>maraschino cherry</key>
+			<string>Maraschino cherry (garnish)</string>
+		</dict>
+		<key>name</key>
+		<string>Caribbean Sling</string>
+		<key>recipe</key>
+		<string>Pour the ingredients into a highball glass half-full of ice. Top off with club soda and garnish with maraschino cherry.</string>
+		<key>glass</key>
+		<string>highball</string>
+		<key>color</key>
+		<string>clear</string>
+	</dict>
+	<dict>
+		<key>ingredients</key>
+		<dict>
+			<key>vodka</key>
+			<string>1.5 oz vodka</string>
+			<key>triple sec</key>
+			<string>1/2 oz triple sec</string>
+			<key>strawberry orange juice</key>
+			<string>1.5 oz strawberry orange juice (chambord)</string>
+			<key>ice</key>
+			<string>Ice</string>
+		</dict>
+		<key>name</key>
+		<string>Pink Shock</string>
+		<key>recipe</key>
+		<string>Mix all of the ingredients (except for the chambord) in a cocktail shaker with ice and pour into a Martini glass. Then add the chambord to the glass and allow it to sink to the bottom.</string>
+		<key>glass</key>
+		<string>martini</string>
+		<key>color</key>
+		<string>pink</string>
+	</dict>
+	<dict>
+		<key>ingredients</key>
+		<dict>
+			<key>cream</key>
+			<string>2 oz cream</string>
+			<key>banana liqueur</key>
+			<string>1 oz banana liqueur</string>
+			<key>ice</key>
+			<string>Crushed ice</string>
+		</dict>
+		<key>name</key>
+		<string>Banana Banshee</string>
+		<key>recipe</key>
+		<string>Mix the ingredients well in a cocktail shaker of ice. Pour into a cocktail glass, with a garnish of nutmeg powder.</string>
+		<key>glass</key>
+		<string>cocktail</string>
+		<key>color</key>
+		<string>yellow</string>
+	</dict>
+	<dict>
+		<key>ingredients</key>
+		<dict>
+			<key>vodka</key>
+			<string>0.5 oz vodka</string>
+			<key>tequila</key>
+			<string>0.5 oz tequila</string>
+			<key>gin</key>
+			<string>0.5 oz gin</string>
+			<key>triple sec</key>
+			<string>0.5 oz triple sec</string>
+			<key>sweet and sour</key>
+			<string>1.5 oz sweet and sour mix</string>
+			<key>lemon</key>
+			<string>Lemon twist (garnish)</string>
+		</dict>
+		<key>name</key>
+		<string>Long Island Iced Tea</string>
+		<key>recipe</key>
+		<string>Add the ingredients to a Collins glass, with plenty of ice. Stir well, and add a splash of coke. Garnish with lemon twist.</string>
+		<key>glass</key>
+		<string>collins</string>
+		<key>color</key>
+		<string>brown</string>
+	</dict>
+</array>
+</plist>
