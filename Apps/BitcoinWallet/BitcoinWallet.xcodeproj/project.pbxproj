@@ -1,0 +1,422 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E50AF2141D42C1D600D20AB2 /* ContactManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E50AF2131D42C1D600D20AB2 /* ContactManager.m */; };
+		E50AF2171D42C85700D20AB2 /* ContactViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E50AF2161D42C85700D20AB2 /* ContactViewController.m */; };
+		E50AF21A1D42CC0C00D20AB2 /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E50AF2191D42CC0C00D20AB2 /* MenuViewController.m */; };
+		E5270CD51D5D2E45005648C5 /* DEREncoder.m in Sources */ = {isa = PBXBuildFile; fileRef = E5270CD31D5D2E45005648C5 /* DEREncoder.m */; };
+		E5270CD61D5D2E45005648C5 /* uECC.c in Sources */ = {isa = PBXBuildFile; fileRef = E5270CD41D5D2E45005648C5 /* uECC.c */; };
+		E55732F01D2EC31D00EC416A /* CryptoOps.m in Sources */ = {isa = PBXBuildFile; fileRef = E55732EF1D2EC31D00EC416A /* CryptoOps.m */; };
+		E57928AC1D34486000FF77D4 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E57928AB1D34486000FF77D4 /* MainViewController.m */; };
+		E580F49D1D492DDC00500780 /* APINetworkOps.m in Sources */ = {isa = PBXBuildFile; fileRef = E580F49C1D492DDC00500780 /* APINetworkOps.m */; };
+		E58869B01D4D78B6005663CC /* TransactionListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E58869AF1D4D78B6005663CC /* TransactionListViewController.m */; };
+		E5AB5E771D2C24660034B3EF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E5AB5E761D2C24660034B3EF /* main.m */; };
+		E5AB5E7A1D2C24660034B3EF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E5AB5E791D2C24660034B3EF /* AppDelegate.m */; };
+		E5AB5E801D2C24660034B3EF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5AB5E7E1D2C24660034B3EF /* Main.storyboard */; };
+		E5AB5E821D2C24660034B3EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5AB5E811D2C24660034B3EF /* Assets.xcassets */; };
+		E5AB5E851D2C24660034B3EF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5AB5E831D2C24660034B3EF /* LaunchScreen.storyboard */; };
+		E5C32C2A1D402CF40020486B /* AddressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5C32C291D402CF40020486B /* AddressViewController.m */; };
+		E5C4B5451D46B6E50008EC1A /* SendTransactionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5C4B5441D46B6E50008EC1A /* SendTransactionViewController.m */; };
+		E5C4B5481D46EDBE0008EC1A /* AddressListView.m in Sources */ = {isa = PBXBuildFile; fileRef = E5C4B5471D46EDBE0008EC1A /* AddressListView.m */; };
+		E5D4989C1D46F7EB00C605DB /* TransactionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E5D4989B1D46F7EB00C605DB /* TransactionManager.m */; };
+		E5EE67A71D304F5A00BEF981 /* NetworkOps.m in Sources */ = {isa = PBXBuildFile; fileRef = E5EE67A61D304F5A00BEF981 /* NetworkOps.m */; };
+		E5F31DF01D6388010033BF51 /* AddressManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E5F31DEE1D6388010033BF51 /* AddressManager.m */; };
+		E5F7C7DB1D4590BB0064D06F /* CreateContactViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5F7C7DA1D4590BB0064D06F /* CreateContactViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		E50AF2131D42C1D600D20AB2 /* ContactManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactManager.m; sourceTree = "<group>"; };
+		E50AF2151D42C27C00D20AB2 /* ContactManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ContactManager.h; sourceTree = "<group>"; };
+		E50AF2161D42C85700D20AB2 /* ContactViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactViewController.m; sourceTree = "<group>"; };
+		E50AF2181D42C8B700D20AB2 /* ContactViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ContactViewController.h; sourceTree = "<group>"; };
+		E50AF2191D42CC0C00D20AB2 /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
+		E50AF21B1D42CC2400D20AB2 /* MenuViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
+		E5270CD21D5D2E45005648C5 /* DEREncoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DEREncoder.h; sourceTree = "<group>"; };
+		E5270CD31D5D2E45005648C5 /* DEREncoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DEREncoder.m; sourceTree = "<group>"; };
+		E5270CD41D5D2E45005648C5 /* uECC.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = uECC.c; sourceTree = "<group>"; };
+		E55732EF1D2EC31D00EC416A /* CryptoOps.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CryptoOps.m; sourceTree = "<group>"; };
+		E57283381D2ED117009117CC /* CryptoOps.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CryptoOps.h; sourceTree = "<group>"; };
+		E5789F141D3D46E0009670CF /* AddressManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddressManager.h; sourceTree = "<group>"; };
+		E57928AB1D34486000FF77D4 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		E57928AD1D34488400FF77D4 /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		E580F49C1D492DDC00500780 /* APINetworkOps.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APINetworkOps.m; sourceTree = "<group>"; };
+		E580F49F1D49309600500780 /* APINetworkOps.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = APINetworkOps.h; sourceTree = "<group>"; };
+		E58869AF1D4D78B6005663CC /* TransactionListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransactionListViewController.m; sourceTree = "<group>"; };
+		E58869B11D4D78C7005663CC /* TransactionListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TransactionListViewController.h; sourceTree = "<group>"; };
+		E5AB5E721D2C24660034B3EF /* BitcoinWallet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BitcoinWallet.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E5AB5E761D2C24660034B3EF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E5AB5E781D2C24660034B3EF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		E5AB5E791D2C24660034B3EF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		E5AB5E7F1D2C24660034B3EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E5AB5E811D2C24660034B3EF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E5AB5E841D2C24660034B3EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E5AB5E861D2C24660034B3EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E5C32C291D402CF40020486B /* AddressViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddressViewController.m; sourceTree = "<group>"; };
+		E5C32C2B1D402D040020486B /* AddressViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddressViewController.h; sourceTree = "<group>"; };
+		E5C4B5441D46B6E50008EC1A /* SendTransactionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SendTransactionViewController.m; sourceTree = "<group>"; };
+		E5C4B5461D46B6F60008EC1A /* SendTransactionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SendTransactionViewController.h; sourceTree = "<group>"; };
+		E5C4B5471D46EDBE0008EC1A /* AddressListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddressListView.m; sourceTree = "<group>"; };
+		E5C4B5491D46EDD20008EC1A /* AddressListView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddressListView.h; sourceTree = "<group>"; };
+		E5D4989B1D46F7EB00C605DB /* TransactionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransactionManager.m; sourceTree = "<group>"; };
+		E5D4989D1D46F7FA00C605DB /* TransactionManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TransactionManager.h; sourceTree = "<group>"; };
+		E5EE67A61D304F5A00BEF981 /* NetworkOps.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkOps.m; sourceTree = "<group>"; };
+		E5EE67A81D30650400BEF981 /* NetworkOps.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkOps.h; sourceTree = "<group>"; };
+		E5F31DEE1D6388010033BF51 /* AddressManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddressManager.m; sourceTree = "<group>"; };
+		E5F31DEF1D6388010033BF51 /* uECC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = uECC.h; sourceTree = "<group>"; };
+		E5F7C7DA1D4590BB0064D06F /* CreateContactViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateContactViewController.m; sourceTree = "<group>"; };
+		E5F7C7DC1D4590C60064D06F /* CreateContactViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CreateContactViewController.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E5AB5E6F1D2C24660034B3EF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E5AB5E691D2C24660034B3EF = {
+			isa = PBXGroup;
+			children = (
+				E5AB5E741D2C24660034B3EF /* BitcoinWallet */,
+				E5AB5E731D2C24660034B3EF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E5AB5E731D2C24660034B3EF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E5AB5E721D2C24660034B3EF /* BitcoinWallet.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E5AB5E741D2C24660034B3EF /* BitcoinWallet */ = {
+			isa = PBXGroup;
+			children = (
+				E5C4B5491D46EDD20008EC1A /* AddressListView.h */,
+				E5C4B5471D46EDBE0008EC1A /* AddressListView.m */,
+				E5789F141D3D46E0009670CF /* AddressManager.h */,
+				E5F31DEE1D6388010033BF51 /* AddressManager.m */,
+				E5C32C2B1D402D040020486B /* AddressViewController.h */,
+				E5C32C291D402CF40020486B /* AddressViewController.m */,
+				E580F49F1D49309600500780 /* APINetworkOps.h */,
+				E580F49C1D492DDC00500780 /* APINetworkOps.m */,
+				E5AB5E781D2C24660034B3EF /* AppDelegate.h */,
+				E5AB5E791D2C24660034B3EF /* AppDelegate.m */,
+				E5AB5E811D2C24660034B3EF /* Assets.xcassets */,
+				E50AF2151D42C27C00D20AB2 /* ContactManager.h */,
+				E50AF2131D42C1D600D20AB2 /* ContactManager.m */,
+				E50AF2181D42C8B700D20AB2 /* ContactViewController.h */,
+				E50AF2161D42C85700D20AB2 /* ContactViewController.m */,
+				E5F7C7DC1D4590C60064D06F /* CreateContactViewController.h */,
+				E5F7C7DA1D4590BB0064D06F /* CreateContactViewController.m */,
+				E57283381D2ED117009117CC /* CryptoOps.h */,
+				E55732EF1D2EC31D00EC416A /* CryptoOps.m */,
+				E5270CD21D5D2E45005648C5 /* DEREncoder.h */,
+				E5270CD31D5D2E45005648C5 /* DEREncoder.m */,
+				E5AB5E861D2C24660034B3EF /* Info.plist */,
+				E5AB5E831D2C24660034B3EF /* LaunchScreen.storyboard */,
+				E5AB5E7E1D2C24660034B3EF /* Main.storyboard */,
+				E57928AD1D34488400FF77D4 /* MainViewController.h */,
+				E57928AB1D34486000FF77D4 /* MainViewController.m */,
+				E50AF21B1D42CC2400D20AB2 /* MenuViewController.h */,
+				E50AF2191D42CC0C00D20AB2 /* MenuViewController.m */,
+				E5EE67A81D30650400BEF981 /* NetworkOps.h */,
+				E5EE67A61D304F5A00BEF981 /* NetworkOps.m */,
+				E5C4B5461D46B6F60008EC1A /* SendTransactionViewController.h */,
+				E5C4B5441D46B6E50008EC1A /* SendTransactionViewController.m */,
+				E5AB5E751D2C24660034B3EF /* Supporting Files */,
+				E58869B11D4D78C7005663CC /* TransactionListViewController.h */,
+				E58869AF1D4D78B6005663CC /* TransactionListViewController.m */,
+				E5D4989D1D46F7FA00C605DB /* TransactionManager.h */,
+				E5D4989B1D46F7EB00C605DB /* TransactionManager.m */,
+				E5270CD41D5D2E45005648C5 /* uECC.c */,
+				E5F31DEF1D6388010033BF51 /* uECC.h */,
+			);
+			path = BitcoinWallet;
+			sourceTree = "<group>";
+		};
+		E5AB5E751D2C24660034B3EF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E5AB5E761D2C24660034B3EF /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E5AB5E711D2C24660034B3EF /* BitcoinWallet */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E5AB5E891D2C24660034B3EF /* Build configuration list for PBXNativeTarget "BitcoinWallet" */;
+			buildPhases = (
+				E5AB5E6E1D2C24660034B3EF /* Sources */,
+				E5AB5E6F1D2C24660034B3EF /* Frameworks */,
+				E5AB5E701D2C24660034B3EF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BitcoinWallet;
+			productName = BitcoinWallet;
+			productReference = E5AB5E721D2C24660034B3EF /* BitcoinWallet.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E5AB5E6A1D2C24660034B3EF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0800;
+				TargetAttributes = {
+					E5AB5E711D2C24660034B3EF = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = UBF8T346G9;
+						DevelopmentTeamName = "Microsoft Corporation";
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = E5AB5E6D1D2C24660034B3EF /* Build configuration list for PBXProject "BitcoinWallet" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E5AB5E691D2C24660034B3EF;
+			productRefGroup = E5AB5E731D2C24660034B3EF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E5AB5E711D2C24660034B3EF /* BitcoinWallet */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E5AB5E701D2C24660034B3EF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E5AB5E851D2C24660034B3EF /* LaunchScreen.storyboard in Resources */,
+				E5AB5E821D2C24660034B3EF /* Assets.xcassets in Resources */,
+				E5AB5E801D2C24660034B3EF /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E5AB5E6E1D2C24660034B3EF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E55732F01D2EC31D00EC416A /* CryptoOps.m in Sources */,
+				E50AF2171D42C85700D20AB2 /* ContactViewController.m in Sources */,
+				E50AF2141D42C1D600D20AB2 /* ContactManager.m in Sources */,
+				E50AF21A1D42CC0C00D20AB2 /* MenuViewController.m in Sources */,
+				E58869B01D4D78B6005663CC /* TransactionListViewController.m in Sources */,
+				E5AB5E7A1D2C24660034B3EF /* AppDelegate.m in Sources */,
+				E5D4989C1D46F7EB00C605DB /* TransactionManager.m in Sources */,
+				E5C4B5481D46EDBE0008EC1A /* AddressListView.m in Sources */,
+				E5270CD61D5D2E45005648C5 /* uECC.c in Sources */,
+				E5F7C7DB1D4590BB0064D06F /* CreateContactViewController.m in Sources */,
+				E580F49D1D492DDC00500780 /* APINetworkOps.m in Sources */,
+				E5AB5E771D2C24660034B3EF /* main.m in Sources */,
+				E57928AC1D34486000FF77D4 /* MainViewController.m in Sources */,
+				E5C4B5451D46B6E50008EC1A /* SendTransactionViewController.m in Sources */,
+				E5C32C2A1D402CF40020486B /* AddressViewController.m in Sources */,
+				E5270CD51D5D2E45005648C5 /* DEREncoder.m in Sources */,
+				E5F31DF01D6388010033BF51 /* AddressManager.m in Sources */,
+				E5EE67A71D304F5A00BEF981 /* NetworkOps.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		E5AB5E7E1D2C24660034B3EF /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E5AB5E7F1D2C24660034B3EF /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		E5AB5E831D2C24660034B3EF /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E5AB5E841D2C24660034B3EF /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E5AB5E871D2C24660034B3EF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E5AB5E881D2C24660034B3EF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E5AB5E8A1D2C24660034B3EF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_OBJC_ARC = NO;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/BitcoinWallet/cbheaders/**",
+					"$(PROJECT_DIR)/BitcoinWallet",
+				);
+				INFOPLIST_FILE = BitcoinWallet/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Islandwood.BitcoinWallet;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				USE_HEADERMAP = YES;
+			};
+			name = Debug;
+		};
+		E5AB5E8B1D2C24660034B3EF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_OBJC_ARC = NO;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/BitcoinWallet/cbheaders/**",
+					"$(PROJECT_DIR)/BitcoinWallet",
+				);
+				INFOPLIST_FILE = BitcoinWallet/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Islandwood.BitcoinWallet;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				USE_HEADERMAP = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E5AB5E6D1D2C24660034B3EF /* Build configuration list for PBXProject "BitcoinWallet" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E5AB5E871D2C24660034B3EF /* Debug */,
+				E5AB5E881D2C24660034B3EF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E5AB5E891D2C24660034B3EF /* Build configuration list for PBXNativeTarget "BitcoinWallet" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E5AB5E8A1D2C24660034B3EF /* Debug */,
+				E5AB5E8B1D2C24660034B3EF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E5AB5E6A1D2C24660034B3EF /* Project object */;
+}
