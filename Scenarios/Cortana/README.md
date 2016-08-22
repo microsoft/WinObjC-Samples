@@ -2,15 +2,17 @@
 
 Cortana offers a robust and comprehensive extensibility framework that enables you to seamlessly incorporate functionality from your app into the Cortana experience. Using voice commands, your app can be activated to the foreground and an action or command executed within the app.
 
-These are the basic steps to add voice-command functionality and integrate Cortana with your app using speech or keyboard input: 
-1. Create a Voice Command Definition (VCD) file. This is an XML document that defines all the spoken commands that the user can say to initiate actions or invoke commands when activating your app. [VCD elements and attributes v1.2](https://msdn.microsoft.com/library/windows/apps/dn706593). 
-2. Register the command sets in the VCD file when the app is launched. 
-3. Handle the activation-by-voice-command.
+These are the basic steps to add voice-command functionality and integrate Cortana with your app using speech or keyboard input:
+
+1.  Create a Voice Command Definition (VCD) file. This is an XML document that defines all the spoken commands that the user can say to initiate actions or invoke commands when activating your app. [VCD elements and attributes v1.2](https://msdn.microsoft.com/library/windows/apps/dn706593).
+2.  Register the command sets in the VCD file when the app is launched.
+3.  Handle the activation-by-voice-command.
 
 ## The Code
 
 The code for incorporating Cortana functionality using Objective-C looks like this:
-```VCD XML document
+#### VCD XML File
+```xml
 <?xml version="1.0" encoding="utf-8"?>
 <VoiceCommands xmlns="http://schemas.microsoft.com/voicecommands/1.2">
   <CommandSet xml:lang="en-us" Name="CortanaSampleCommandSet_en-us">
@@ -34,27 +36,29 @@ The code for incorporating Cortana functionality using Objective-C looks like th
     </PhraseList>
   </CommandSet>
 </VoiceCommands>
+```
+
+#### Register VCD File and handle the activation-by-voice-command
 
 ```Objective-C
-	// register VCD
 	- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 	#ifdef WINOBJC
 		WAPackage *package = [WAPackage current];
 		WSStorageFolder *installedLocation = package.installedLocation;
 
 		// load command file from app installation location
-		[installedLocation getFileAsync:@"CortanaSampleCommands.xml" 
+		[installedLocation getFileAsync:@"CortanaSampleCommands.xml"
 										success:^(WSStorageFile *storageFile) {
 											// install commands
 											[WAVVoiceCommandDefinitionManager installCommandDefinitionsFromStorageFileAsync:storageFile];
-										} 
+										}
 										failure:^(NSError *error) {
 											NSLog(@"Failed to load commands file: %@", error);
 										}];
-		
+
 		// handle the activation-by-voice-command
 		if (launchOptions != nil) {
-			// check for the key containing WMSSpeechRecognitionResults 
+			// check for the key containing WMSSpeechRecognitionResults
 			if(launchOptions[UIApplicationLaunchOptionsVoiceCommandKey]){
 				WMSSpeechRecognitionResult* result = launchOptions[UIApplicationLaunchOptionsVoiceCommandKey];
 				ViewController* viewController = (ViewController*) [[application keyWindow] rootViewController];
@@ -64,11 +68,11 @@ The code for incorporating Cortana functionality using Objective-C looks like th
 	#endif
 		return YES;
 	}
-	
+
 	#ifdef WINOBJC
-	// 
+	//
 	- (void)setSpeechRecognitionLabelsWithSpeechRecognitionResult:(WMSSpeechRecognitionResult*)result {
-		
+
 		// the recognized phrase from what the user said
 		NSString* destination = result.semanticInterpretation.properties[@"destination"][0];
 
@@ -80,8 +84,6 @@ The code for incorporating Cortana functionality using Objective-C looks like th
 
 		// the command name of the speech recognition result
 		NSString* voiceCommandName = result.rulePath[0];
-
-		...
 	}
 	#endif
 ```
@@ -92,10 +94,10 @@ Read on for a complete explanation of how the above code works.
 
 You can find the Cortana sample project under */Scenarios/Cortana/CortanaSample*. The project consists of a number of labels; when the a activation-by-voice-command is received, the labels are updated with the command, spoken text, phrase and how the app was activated with.
 
-Let’s update this app to send that information to the tile.
+Let’s update this app to add Cortana functionality.
 
 ### Setting up
-First, open up the *CortanaSample* directory at your windows prompt. 
+First, open up the *CortanaSample* directory at your windows prompt.
 You will run the [VSImporter tool](https://github.com/Microsoft/WinObjC/wiki/Using-vsimporter) from the WinObjC SDK on the CortanaSample project to generate a Windows solution file (.sln).
 
 *Example:*
@@ -105,9 +107,16 @@ c:\winobjc-samples\Scenarios\Cortana\CortanaSample> \winobjc-sdk\bin\vsimporter.
 Generated c:\winobjc-samples\Scenarios\Cortana\CortanaSample\CortanaSample.vsimporter\CortanaSample-Headers-WinStore10\CortanaSample-Headers.vcxitems
 Generated c:\winobjc-samples\Scenarios\Cortana\CortanaSample\CortanaSample.vsimporter\LiveTileSampleSample-WinStore10\CortanaSample.vcxproj
 Generated c:\winobjc-samples\Scenarios\Cortana\CortanaSample\CortanaSample-WinStore10.sln
+```
 
 Once you've generated the .sln file, open it in Visual Studio.
 
+### Add VCD XML file to *CortanaSample-WinStore10* project
+A sample VCD XML file has already been created and is present in the Xcode project, you'll need to add the VCD XML file to your project so it's present in the apps installed location
+In Visual Studio menu bar choose **Project**->**Add Existing Item**
+Add the VCD XML file (CortanaSampleCommands.xml) located in the original Xcode folder
+
+### Add UWP framework headers
 We need the public headers for the relevant UWP frameworks. In the extracted SDK (or your built SDK directory, if you’ve cloned [WinObjC from GitHub and built the project from source](https://github.com/Microsoft/WinObjC)), go to the [include\Platform\Universal Windows\UWP](https://github.com/Microsoft/WinObjC/tree/master/include/Platform/Universal Windows/UWP) directory and take a look at what you find. Each header file represents a different namespace within the [Windows Runtime APIs](https://msdn.microsoft.com/en-us/library/windows/apps/br211377.aspx). For our purposes, we will need APIs from:
 
 -	[Windows.ApplicationModel](https://msdn.microsoft.com/en-us/library/windows/apps/windows.applicationmodel.aspx)
@@ -124,7 +133,7 @@ To include these frameworks – and make sure they’re only included when the 
 #endif
 ```
 
-Next, we’ll extend the application delete :didFinishLaunchingWithOptions handler method with the code to register the command sets in the VCD file when the app is launched.
+Next, we’ll extend the application delegate `application:didFinishLaunchingWithOptions` method with the code to register the command sets in the VCD XML file when the app is launched.
 
 ```Objective-C
 #ifdef WINOBJC
@@ -132,45 +141,56 @@ Next, we’ll extend the application delete :didFinishLaunchingWithOptions handl
 	WSStorageFolder *installedLocation = package.installedLocation;
 
 	// load command file from app installation location
-	[installedLocation getFileAsync:@"CortanaSampleCommands.xml" 
+	[installedLocation getFileAsync:@"CortanaSampleCommands.xml"
 									success:^(WSStorageFile *storageFile) {
 										// install commands
 										[WAVVoiceCommandDefinitionManager installCommandDefinitionsFromStorageFileAsync:storageFile];
-									} 
+									}
 									failure:^(NSError *error) {
 										NSLog(@"Failed to load commands file: %@", error);
 									}];
-	...
 #endif
 ```
 
-### Add the XML VCD file to the project
-For this sample a VCD file has already been created and is present in the Xcode project, you'll need to add the VCD file to the project so it's present in the apps installed location 
-Right click on the project CortanaSample (Universal Windows)
-Choose Add Existing Item
-Add the XML Document (CortanaSampleCommands.xml) located in the original Xcode folder
+Now when you run the application the VCD XML file's commands will be registered with the system.
 
-Now when you run the application the XML VCD file's commands will be registered with the system
-```
 ### Handle the activation-by-voice-command.
-Depending on how the app is launched: Start Menu, previously launched, Cortana, you'll need to handle the WMSSpeechRecognitionResult result in application:didReceiveVoiceCommand, application:didFinishLaunchingWithOptions, application:willFinishLaunchingWithOptions
+Depending on how the user launched your app (Start Menu, previously launched, Cortana), you'll need to handle the `WMSSpeechRecognitionResult` result in `application:didReceiveVoiceCommand`, `application:didFinishLaunchingWithOptions`, `application:willFinishLaunchingWithOptions`
+
+Update *AppDelegate.m* `application:didFinishLaunchingWithOptions` to handle the activation-by-voice-command by looking up in the `LaunchOptions` dictionary for `UIApplicationLaunchOptionsVoiceCommandKey` and grabbing the `WMSSpeechRecognitionResult` value.
 
 ```Objective-C
-	- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-	#ifdef WINOBJC
-		...
-		if (launchOptions != nil) {
-			// check for the key containing WMSSpeechRecognitionResults 
-			if(launchOptions[UIApplicationLaunchOptionsVoiceCommandKey]){
-				WMSSpeechRecognitionResult* result = launchOptions[UIApplicationLaunchOptionsVoiceCommandKey];
-				ViewController* viewController = (ViewController*) [[application keyWindow] rootViewController];
-				[viewController setSpeechRecognitionLabelsWithSpeechRecognitionResult:result];
-			}
-		}
-	#endif
-		return YES;
-	}
+  - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+  #ifdef WINOBJC
+  	WAPackage *package = [WAPackage current];
+  	WSStorageFolder *installedLocation = package.installedLocation;
 
+  	// load command file from app installation location
+  	[installedLocation getFileAsync:@"CortanaSampleCommands.xml"
+  									success:^(WSStorageFile *storageFile) {
+  										// install commands
+  										[WAVVoiceCommandDefinitionManager installCommandDefinitionsFromStorageFileAsync:storageFile];
+  									}
+  									failure:^(NSError *error) {
+  										NSLog(@"Failed to load commands file: %@", error);
+  									}];
+
+      if (launchOptions != nil) {
+  		// check for the key containing WMSSpeechRecognitionResults
+  		if(launchOptions[UIApplicationLaunchOptionsVoiceCommandKey]){
+  			WMSSpeechRecognitionResult* result = launchOptions[UIApplicationLaunchOptionsVoiceCommandKey];
+  			ViewController* viewController = (ViewController*) [[application keyWindow] rootViewController];
+  			[viewController setSpeechRecognitionLabelsWithSpeechRecognitionResult:result];
+  		}
+  	}
+  #endif
+  	return YES;
+  }
+```
+
+Add the new `application:didReceiveVoiceCommand` delegate for responding to voice commands.
+
+```Objective-C
 	#ifdef WINOBJC
 	// Called when a voice command is received.
 	- (void)application:(UIApplication *)application didReceiveVoiceCommand:(WMSSpeechRecognitionResult*)result {
@@ -178,7 +198,11 @@ Depending on how the app is launched: Start Menu, previously launched, Cortana, 
 		[viewController setSpeechRecognitionLabelsWithSpeechRecognitionResult:result];
 	}
 	#endif
+```
 
+`application:willFinishLaunchingWithOptions` can also be updated to respond to voice commands also.
+
+```Objective-C
 	- (BOOL)application:(UIApplication *)application willFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 		if(launchOptions != nil){
 	#ifdef WINOBJC
@@ -191,23 +215,22 @@ Depending on how the app is launched: Start Menu, previously launched, Cortana, 
 	}
 ```
 
-TODO ADD MORE
+#### Update the UI to respond to the users voice command.
+The *CortanaSample* contains code to display the results of voice commands in text labels in the UI.  You'll want to add your own functionality to respond to users voice commands.
 
 That’s it! You’re done. Now, try asking Cortana to show your trip's.
+
+When Cortana is listening, here are some of the following voice commands.
+*  "Cortana Sample, show trip to London"
+
+Infix and suffix forms are also supported.
+*  "Show trip to Rioin Cortana Sample"
+* "Show my Cortana Sample trip to London"
 
 ## Additional Reading
 Want a deeper dive into everything a Cortana can do? Check out:
 - The [Cortana interactions in UWP apps](https://msdn.microsoft.com/windows/uwp/input-and-devices/cortana-interactions)
-- The iOS bridge [UWP header libraries](https://github.com/Microsoft/WinObjC/tree/master/include/Platform/Universal Windows/UWP) to find the exact API you need.
+- The iOS bridge [UWP header libraries](https://github.com/Microsoft/WinObjC/tree/master/include/Platform/Universal Windows/UWP) to find the exact API's you need.
+- The iOS bridge [DEV DESIGN Specification for Cortana Activation] (https://github.com/Microsoft/WinObjC/blob/develop/docs/Foundation/CortanaForegroundActivation.md) to learn more about how Cortana is exposed to apps.
 
 Microsoft also hosts an excellent [design guide to Cortana user experience](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/dn974233.aspx) on MSDN.
-
-
-
-
-
-
-
-
-
-
