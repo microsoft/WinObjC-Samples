@@ -15,7 +15,7 @@
 //******************************************************************************
 
 //////////////////////////////////////
-// WinObjC Sample - Cortana    ///////
+// WinObjC Sample - Cortana //////////
 // github.com/Microsoft/WinObjC //////
 //////////////////////////////////////
 
@@ -46,7 +46,7 @@ static NSString * kInfoString = @"This WinObjC sample project demonstrates how t
 static NSString * kLabelVoiceCommandInitialText = @"VOICECOMMAND";
 static NSString * kLabelTextSpokenInitialText = @"TEXTSPOKEN";
 static NSString * kLabelDestinationInitialText = @"DESTINATION";
-static NSString * klabelCommandModeText = @"COMMANDMODE";
+static NSString * kLabelCommandModeText = @"COMMANDMODE";
 
 - (void) viewDidLoad
 {
@@ -94,7 +94,7 @@ static NSString * klabelCommandModeText = @"COMMANDMODE";
     self.labelDestination.translatesAutoresizingMaskIntoConstraints = NO;
 
 	self.labelCommandMode = [UILabel new];
-    self.labelCommandMode.text = klabelCommandModeText;
+    self.labelCommandMode.text = kLabelCommandModeText;
     self.labelCommandMode.font = [UIFont systemFontOfSize:[UIFont smallSystemFontSize]];
     self.labelCommandMode.numberOfLines = 0;
     self.labelCommandMode.lineBreakMode = NSLineBreakByWordWrapping;
@@ -157,42 +157,46 @@ static NSString * klabelCommandModeText = @"COMMANDMODE";
     return YES;
 }
 
-- (void)voiceCommand: (NSString*)text{
+- (void)voiceCommand: (NSString*)text
+{
 	kLabelVoiceCommandInitialText = text;
     self.labelVoiceCommand.text = kLabelVoiceCommandInitialText;
 }
 
-- (void)textSpoken: (NSString*)text{
+- (void)textSpoken: (NSString*)text
+{
 	kLabelTextSpokenInitialText = text;
     self.labelTextSpoken.text = kLabelTextSpokenInitialText;
 }
 
-- (void)launchedBy: (NSString*)text{
-	klabelCommandModeText = text;
-	self.labelCommandMode.text = klabelCommandModeText;
+- (void)launchedBy: (NSString*)text
+{
+	kLabelCommandModeText = text;
+	self.labelCommandMode.text = kLabelCommandModeText;
 }
 
-- (void)semanticInterpretation: (NSString*)text{
+- (void)semanticInterpretation: (NSString*)text
+{
 	kLabelDestinationInitialText = text;
 	self.labelDestination.text = kLabelDestinationInitialText;
 }
 
 #ifdef WINOBJC
-- (void)setSpeechRecognitionLabelsWithSpeechRecognitionResult:(WMSSpeechRecognitionResult*)result {
-	
-	// the recognized phrase from what the user said
+- (void)setSpeechRecognitionLabelsWithSpeechRecognitionResult:(WMSSpeechRecognitionResult*)result
+{
+	// The recognized phrase from what the user said
 	NSString* destination = result.semanticInterpretation.properties[@"destination"][0];
 
-	// what the user said
+	// What the user said
 	NSString* spokenText = result.text;
 
-	// was the voice command actually spoken or typed in
+	// Was the voice command actually spoken or typed in
 	NSString* commandMode = result.semanticInterpretation.properties[@"commandMode"][0];
 
-	// the command name of the speech recognition result
+	// The command name of the speech recognition result
 	NSString* voiceCommandName = result.rulePath[0];
 
-	// set labels
+	// Set labels
 	[self semanticInterpretation:destination];
 	[self textSpoken:spokenText];
 	[self launchedBy:commandMode];

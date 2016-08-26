@@ -15,7 +15,7 @@
 //******************************************************************************
 
 //////////////////////////////////////
-// WinObjC Sample - Live Tiles ///////
+// WinObjC Sample - Cortana //////////
 // github.com/Microsoft/WinObjC //////
 //////////////////////////////////////
 
@@ -30,7 +30,7 @@
 - (void)voiceCommand: (NSString*)text;
 - (void)textSpoken: (NSString*)text;
 - (void)semanticInterpretation: (NSString*)text;
-- (void)launchedBy : (NSString*)text;
+- (void)launchedBy: (NSString*)text;
 
 #ifdef WINOBJC
 - (void)setSpeechRecognitionLabelsWithSpeechRecognitionResult: (WMSSpeechRecognitionResult*)result;
