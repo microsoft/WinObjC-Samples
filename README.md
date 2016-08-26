@@ -24,8 +24,13 @@ The WinObjC sample apps can be found in */Apps*. They include:
 
   A Bitcoin wallet app which runs on the Bitcoin test3 network, a developer sandbox where the coins have no value other than to demonstrate the usage of the blockchain technology. With this app, a user can create new addresses under their control, create contacts, send and receive bitcoins, and view past transactions.
 
+- [**Writing a sprite-based Objective-C game for Windows 10**](Scenarios/Sprites)
+
+  In this tutorial, we’ll look at how a sprite-based game written for iOS can be converted to become a Windows 10 UWP app.
+
 ## Example code
 Sample code and projects for common scenarios can be found under */Scenarios*. They include:
+
 - [Using Projections: **Live Tiles**](/Scenarios/Live Tiles)
 
   Live Tiles allow Windows users to see parts of an app’s content directly from the Start menu. This example shows how to create and update adaptive Live Tiles using Objective-C projections.
@@ -42,13 +47,9 @@ Sample code and projects for common scenarios can be found under */Scenarios*. T
 
   This example demonstrates how to replace MapKit-based maps in your Objective-C code base with XAML controls and Bing Maps.
 
-- [Writing a sprite-based Objective-C game for Windows 10](Scenarios/Sprites)
+- [Using Projections: **Cortana**](Scenarios/Cortana)
 
-  In this tutorial, we’ll look at how a sprite-based game written for iOS can be converted to become a Windows 10 UWP app.
-
-- Using Projections: **Cortana** - *Coming soon*
-
-  Cortana is your personal assistant on Windows 10. This example shows how to integrate Cortana voice commands into your app using Objective-C projections.
+  Cortana is your personal assistant on Windows 10. This example shows how to integrate Cortana commands into your app using Objective-C projections.
 
 - Using Projections: **Push Notifications** - *Coming soon*
 
