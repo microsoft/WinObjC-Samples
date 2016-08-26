@@ -67,14 +67,14 @@
 	WSStorageFolder *installedLocation = package.installedLocation;
 
 	// Load VCD XML file describing voice commands from app installation location
-	[installedLocation getFileAsync:@"CortanaSampleCommands.xml" 
-									success:^(WSStorageFile *storageFile) {
-										// install commands
-										[WAVVoiceCommandDefinitionManager installCommandDefinitionsFromStorageFileAsync:storageFile];
-									} 
-									failure:^(NSError *error) {
-										NSLog(@"Failed to load commands file: %@", error);
-									}];
+	[installedLocation getFileAsync:@"CortanaSampleCommands.xml"
+                            success:^(WSStorageFile *storageFile) {
+                                // Install commands
+                                [WAVVoiceCommandDefinitionManager installCommandDefinitionsFromStorageFileAsync:storageFile];
+                            }
+                            failure:^(NSError *error) {
+                                NSLog(@"Failed to load commands file: %@", error);
+                            }];
     
     // Handle activation-by-voice command
     if (launchOptions != nil) {

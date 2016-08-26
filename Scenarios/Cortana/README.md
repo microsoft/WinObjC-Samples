@@ -4,9 +4,8 @@ Cortana offers a robust and comprehensive extensibility framework that enables y
 
 These are the basic steps to add voice command functionality and integrate Cortana with your app using speech or keyboard input:
 
-1.  Create a Voice Command Definition (VCD) file. This is an XML document that defines all the spoken commands that the user can say to initiate actions or invoke commands when activating your app. [VCD elements and attributes v1.2](https://msdn.microsoft.com/library/windows/apps/dn706593).
-2.  Register the command sets in the VCD file when the app is launched.
-3.  Handle the activation-by-voice-command.
+1. **Create a Voice Command Definition (VCD) file and register it when the app is launched.** The VCD file is an XML document that defines all the spoken commands that the user can say to initiate actions or invoke commands when activating your app. For more information, see [VCD elements and attributes v1.2](https://msdn.microsoft.com/library/windows/apps/dn706593).
+2. **Handle the activation-by-voice command.** You may want to handle launch differently depending on the method by which a user launched your app.
 
 ## The Code
 
@@ -43,40 +42,41 @@ The code for incorporating Cortana functionality using Objective-C looks like th
 **AppDelegate.m**
 *Registers VCD file and handles the activation-by-voice command*
 ```Objective-C
-	- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-	#ifdef WINOBJC
-		WAPackage *package = [WAPackage current];
-		WSStorageFolder *installedLocation = package.installedLocation;
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+{
+#ifdef WINOBJC
+	WAPackage *package = [WAPackage current];
+	WSStorageFolder *installedLocation = package.installedLocation;
 
-		// Load VCD XML file describing voice commands from app installation location
-		[installedLocation getFileAsync:@"CortanaSampleCommands.xml"
-										success:^(WSStorageFile *storageFile) {
-											// install commands
-											[WAVVoiceCommandDefinitionManager installCommandDefinitionsFromStorageFileAsync:storageFile];
-										}
-										failure:^(NSError *error) {
-											NSLog(@"Failed to load commands file: %@", error);
-										}];
+	// Load VCD XML file describing voice commands from app installation location
+	[installedLocation getFileAsync:@"CortanaSampleCommands.xml"
+							success:^(WSStorageFile *storageFile) {
+								// Install commands
+								[WAVVoiceCommandDefinitionManager installCommandDefinitionsFromStorageFileAsync:storageFile];
+							}
+							failure:^(NSError *error) {
+								NSLog(@"Failed to load commands file: %@", error);
+							}];
 
-		// Handle activation-by-voice command
-		if (launchOptions != nil) {
-			// Check for the key containing WMSSpeechRecognitionResults
-			if(launchOptions[UIApplicationLaunchOptionsVoiceCommandKey]){
-				WMSSpeechRecognitionResult* result = launchOptions[UIApplicationLaunchOptionsVoiceCommandKey];
-				ViewController* viewController = (ViewController*) [[application keyWindow] rootViewController];
-				[viewController setSpeechRecognitionLabelsWithSpeechRecognitionResult:result];
-			}
+	// Handle activation-by-voice command
+	if (launchOptions != nil) {
+		// Check for the key containing WMSSpeechRecognitionResults
+		if(launchOptions[UIApplicationLaunchOptionsVoiceCommandKey]){
+			WMSSpeechRecognitionResult* result = launchOptions[UIApplicationLaunchOptionsVoiceCommandKey];
+			ViewController* viewController = (ViewController*) [[application keyWindow] rootViewController];
+			[viewController setSpeechRecognitionLabelsWithSpeechRecognitionResult:result];
 		}
-	#endif
-		return YES;
 	}
+#endif
+	return YES;
+}
 ```
 **ViewController.m**
 *Updates views using WMSSpeechRecognitionResult*
 ```Objective-C
 #ifdef WINOBJC
-- (void)setSpeechRecognitionLabelsWithSpeechRecognitionResult:(WMSSpeechRecognitionResult*)result {
-
+- (void)setSpeechRecognitionLabelsWithSpeechRecognitionResult:(WMSSpeechRecognitionResult*)result
+{
 	// The recognized phrase from what the user said
 	NSString* destination = result.semanticInterpretation.properties[@"destination"][0];
 
@@ -140,22 +140,23 @@ To include these frameworks – and make sure they’re only included when the 
 Next, we’ll extend the application delegate `application:didFinishLaunchingWithOptions` method to register the voice command set in the VCD XML file when the app is launched:
 
 ```Objective-C
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+{
 #ifdef WINOBJC
 	WAPackage *package = [WAPackage current];
 	WSStorageFolder *installedLocation = package.installedLocation;
 
 	// Load VCD XML file describing voice commands from app installation location
 	[installedLocation getFileAsync:@"CortanaSampleCommands.xml"
-									success:^(WSStorageFile *storageFile) {
-										// install commands
-										[WAVVoiceCommandDefinitionManager installCommandDefinitionsFromStorageFileAsync:storageFile];
-									}
-									failure:^(NSError *error) {
-										NSLog(@"Failed to load commands file: %@", error);
-									}];
+							success:^(WSStorageFile *storageFile) {
+								// Install commands
+								[WAVVoiceCommandDefinitionManager installCommandDefinitionsFromStorageFileAsync:storageFile];
+							}
+							failure:^(NSError *error) {
+								NSLog(@"Failed to load commands file: %@", error);
+							}];
 #endif
-  return YES;
+	return YES;
 }
 ```
 
@@ -167,47 +168,51 @@ You may want to handle app activation differently depending on how the user laun
 Update the *AppDelegate.m* method `application:didFinishLaunchingWithOptions` to handle the activation-by-voice command by checking the `LaunchOptions` dictionary for `UIApplicationLaunchOptionsVoiceCommandKey` and grabbing the `WMSSpeechRecognitionResult` value:
 
 ```Objective-C
-  - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-  #ifdef WINOBJC
-  	[...]
-      if (launchOptions != nil) {
-  		// Check for the key containing WMSSpeechRecognitionResults
-  		if(launchOptions[UIApplicationLaunchOptionsVoiceCommandKey]){
-  			WMSSpeechRecognitionResult* result = launchOptions[UIApplicationLaunchOptionsVoiceCommandKey];
-  			ViewController* viewController = (ViewController*) [[application keyWindow] rootViewController];
-  			[viewController setSpeechRecognitionLabelsWithSpeechRecognitionResult:result];
-  		}
-  	}
-  #endif
-  	return YES;
-  }
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+{
+#ifdef WINOBJC
+	[...]
+	// Handle activation-by-voice command
+	if (launchOptions != nil) {
+		// Check for the key containing WMSSpeechRecognitionResults
+		if(launchOptions[UIApplicationLaunchOptionsVoiceCommandKey]){
+			WMSSpeechRecognitionResult* result = launchOptions[UIApplicationLaunchOptionsVoiceCommandKey];
+			ViewController* viewController = (ViewController*) [[application keyWindow] rootViewController];
+			[viewController setSpeechRecognitionLabelsWithSpeechRecognitionResult:result];
+		}
+	}
+#endif
+	return YES;
+}
 ```
 
 Add the new `application:didReceiveVoiceCommand` delegate method for responding to voice commands:
 
 ```Objective-C
-	#ifdef WINOBJC
-	// Called when a voice command is received.
-	- (void)application:(UIApplication *)application didReceiveVoiceCommand:(WMSSpeechRecognitionResult*)result {
-		ViewController* viewController = (ViewController*) [[application keyWindow] rootViewController];
-		[viewController setSpeechRecognitionLabelsWithSpeechRecognitionResult:result];
-	}
-	#endif
+#ifdef WINOBJC
+// Called when a voice command is received
+- (void)application:(UIApplication *)application didReceiveVoiceCommand:(WMSSpeechRecognitionResult*)result
+{
+	ViewController* viewController = (ViewController*) [[application keyWindow] rootViewController];
+	[viewController setSpeechRecognitionLabelsWithSpeechRecognitionResult:result];
+}
+#endif
 ```
 
 `application:willFinishLaunchingWithOptions` can also be updated to respond to voice commands as well:
 
 ```Objective-C
-	- (BOOL)application:(UIApplication *)application willFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-		if(launchOptions != nil){
-	#ifdef WINOBJC
-			if(launchOptions[UIApplicationLaunchOptionsVoiceCommandKey]){
-				// you could handle WMSSpeechRecognitionResult in here also
-			}
-	#endif
+- (BOOL)application:(UIApplication *)application willFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+{
+	if(launchOptions != nil){
+#ifdef WINOBJC
+		if(launchOptions[UIApplicationLaunchOptionsVoiceCommandKey]) {
+			// You could handle WMSSpeechRecognitionResult in here also
 		}
-		return YES;
+#endif
 	}
+	return YES;
+}
 ```
 
 #### Update the UI to respond to users' voice commands
