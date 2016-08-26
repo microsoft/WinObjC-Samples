@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<VoiceCommands xmlns="http://schemas.microsoft.com/voicecommands/1.2">
+  <CommandSet xml:lang="en-us" Name="CortanaSampleCommandSet_en-us">
+    <AppName>Cortana Sample</AppName>
+    <Example>Show trip to London</Example>
+
+    <Command Name="showTripToDestination">
+      <Example>Show trip to London</Example>
+      <ListenFor RequireAppName="BeforeOrAfterPhrase">show [my] trip to {destination}</ListenFor>
+      <ListenFor RequireAppName="ExplicitlySpecified">show [my] {builtin:AppName} trip to {destination}</ListenFor>
+      <Feedback>Showing trip to {destination}</Feedback>
+      <Navigate />
+    </Command>
+    <PhraseList Label="destination">
+      <Item>London</Item>
+      <Item>Long Island</Item>
+      <Item>Melbourne</Item>
+      <Item>North Dakota</Item>
+      <Item>Rio</Item>
+      <Item>Yosemite National Park</Item>
+    </PhraseList>
+  </CommandSet>
+</VoiceCommands>
