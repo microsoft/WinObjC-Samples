@@ -40,9 +40,9 @@ NSString * const kOverlayToggleString = @"Toggle Overlay";
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-	#ifdef WINOBJC
-	[[UIApplication sharedApplication] setStatusBarHidden:YES]; // Deprecated in iOS
-	#endif
+    #ifdef WINOBJC
+    [[UIApplication sharedApplication] setStatusBarHidden:YES]; // Deprecated in iOS
+    #endif
     
     // set up traffic toggle button
     self.trafficToggle = [UIButton buttonWithType:UIButtonTypeSystem];
@@ -83,13 +83,13 @@ NSString * const kOverlayToggleString = @"Toggle Overlay";
     self.winMap.center = newYorkGeopoint;
     self.winMap.zoomLevel = 11;
     self.winMap.mapServiceToken = @"YOUR_API_KEY_HERE";
-	self.winMap.maxHeight = 450;
-	self.winMap.maxWidth = 300;
+    self.winMap.maxHeight = 450;
+    self.winMap.maxWidth = 300;
     CGRect mapFrame = CGRectMake(offset, 10, 300, 450);
     self.winMapView = [[UIView alloc] initWithFrame:mapFrame];
-	self.winMapView.frame = mapFrame;
-	self.winMapView.backgroundColor = [UIColor blackColor];
-    [self.winMapView setNativeElement:self.winMap];
+    self.winMapView.frame = mapFrame;
+    self.winMapView.backgroundColor = [UIColor blackColor];
+    [self.winMapView setXamlElement:self.winMap];
     [self.trafficToggle setTranslatesAutoresizingMaskIntoConstraints:NO];
     [self.view addSubview:self.winMapView];
     
@@ -106,13 +106,13 @@ NSString * const kOverlayToggleString = @"Toggle Overlay";
 
     
     UIView *mapView;
-	#ifdef WINOBJC
-	mapView = self.winMapView;
-	#else
-	mapView = self.mkMapView;
-	#endif
+    #ifdef WINOBJC
+    mapView = self.winMapView;
+    #else
+    mapView = self.mkMapView;
+    #endif
 
-	
+    
 
     // set platform agnostic constraints
     NSDictionary *metrics = @{ @"pad": @80.0, @"margin": @40, @"mapHeight": @450};
@@ -125,7 +125,7 @@ NSString * const kOverlayToggleString = @"Toggle Overlay";
                                                                      metrics:metrics
                                                                        views:views]];
     
-	[self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-[overlayToggle]-|"
+    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-[overlayToggle]-|"
                                                                       options:0
                                                                       metrics:metrics
                                                                         views:views]];
@@ -134,12 +134,12 @@ NSString * const kOverlayToggleString = @"Toggle Overlay";
                                                                       metrics:metrics
                                                                         views:views]];
     
-	[self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-[map]-|"
+    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-[map]-|"
                                                                       options:0
                                                                       metrics:metrics
                                                                         views:views]]; 
-																		
-																	
+                                                                        
+                                                                    
 
 }
 
