@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "ViewController.h"
 
 #ifdef WINOBJC
 #import <UWP/WindowsApplicationModelActivation.h>
@@ -48,7 +49,7 @@
 }
 
 #ifdef WINOBJC
-- (void)application:(UIApplication*)application didReceiveFile:(WWAFileActivatedEventArgs*)args {
+- (void)application:(UIApplication*)application didReceiveFile:(WAAFileActivatedEventArgs*)args {
     ViewController* vc = (ViewController*)[[application keyWindow] rootViewController];
     [vc handleFilesActivated:args.files];
 }

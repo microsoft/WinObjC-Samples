@@ -8,6 +8,10 @@
 
 #import "ViewController.h"
 
+#ifdef WINOBJC
+#import <UWP/WindowsStorage.h>
+#endif
+
 @interface ViewController ()
 
 @property UILabel* demoTitle;
@@ -22,8 +26,8 @@
 static NSString* const kTitleString = @"File activation";
 static NSString* const kInfoString = @"This WinObjC sample project demonstrates how to register file types in a WinOBJC app and handle the files when the app is activated by opening the registered file(s). ";
 
-static NSString * const kFilesCountString = @"Please launch app by double clicking on a file with .faa extension";
-static NSString * const kFileNamesString = @"No files were opened.";
+static NSString * const kFilesCountString = @"No files were opened.";
+static NSString * const kFileNamesString = @"Please launch app by double clicking on a file with .faa extension.  ";
 
 - (void) viewDidLoad
 {
@@ -67,7 +71,7 @@ static NSString * const kFileNamesString = @"No files were opened.";
     [self.view addSubview:self.namesInfo];
     
     // Layout constraints
-    NSDictionary *metrics = @{ @"pad": @80.0, @"margin": @40, @"demoInfoHeight": @120 };
+    NSDictionary *metrics = @{ @"pad": @80.0, @"namesHeight": @120, @"demoInfoHeight": @120 };
     NSDictionary *views = @{ @"title"   : self.demoTitle,
                              @"info"    : self.demoInfo,
                              @"count"   : self.countInfo,
@@ -90,7 +94,7 @@ static NSString * const kFileNamesString = @"No files were opened.";
                                                                       options:0
                                                                       metrics:metrics
                                                                         views:views]];
-    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-pad-[title]-[info(demoInfoHeight)]-margin-[count]-[names]"
+    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-pad-[title]-[info(demoInfoHeight)]-[count]-[names(namesHeight)]"
                                                                       options:0
                                                                       metrics:metrics
                                                                         views:views]];
@@ -106,13 +110,20 @@ static NSString * const kFileNamesString = @"No files were opened.";
 }
 
 #ifdef WINOBJC
-- (void) handleFilesActivated:NSArray<WSIStorageItem>* files {
-    self.countInfo.text = [NSString stringWithFormat:@"File activation opened %d files", files.count];
-    NSMutableSting* fileNames = @"";
-    for (WSIStorageItem* item in files) {
-        [fileNames appendFormat:@"%s:%s\n", item.name, item.path];
+- (void) handleFilesActivated:(NSArray*) files {
+    self.countInfo.text = [NSString stringWithFormat:@"File activation opened %d file(s)", files.count];
+    NSMutableString* fileNames = [NSMutableString string];
+    for (int i=0; i < files.count; ++i) {
+        // rt_dynamic_cast<> below is required because of a known issue with projection.
+        WSIStorageFile* item = rt_dynamic_cast([WSIStorageFile class], files[i]);
+        NSString* name = item.name;
+        NSString* path = item.path;
+        NSString* type = item.fileType;
+        [fileNames appendFormat:@"%@ %@ ", name, path];
     }
     self.namesInfo.text = fileNames;
+    [self.namesInfo setNeedsLayout];
+    [self.view setNeedsLayout];
 }
 #endif
 
