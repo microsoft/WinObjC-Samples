@@ -7,15 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
-
-#ifdef WINOBJC
-#import <UWP/WindowsStorage.h>
-#endif
+#import <Foundation/NSArray.h>
 
 @interface ViewController : UIViewController
 
 #ifdef WINOBJC
-- (void) handleFilesActivated:NSArray<WSIStorageItem>* files;
+- (void) handleFilesActivated:(NSArray*) files;
 #endif
 
 @end
