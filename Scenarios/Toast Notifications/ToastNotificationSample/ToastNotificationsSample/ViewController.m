@@ -110,7 +110,7 @@ static NSString * const kLabelInitialText = @"Press the button to generate a toa
     [self.view addSubview:self.actionNotificationLabel];
     
     // Layout constraints
-    NSDictionary *metrics = @{@"pad":@80.0, @"margin":@40, @"demoInfoHeight":@160 };
+    NSDictionary *metrics = @{@"pad":@80.0, @"margin":@40, @"demoInfoHeight":@200 };
     NSDictionary *views = @{@"title":self.demoTitle,
                             @"info":self.demoInfo,
                             @"richNotificationButton":self.richNotificationButton,
