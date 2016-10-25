@@ -116,14 +116,9 @@ static NSString * const kFileNamesString = @"Please launch app by double clickin
     for (int i=0; i < files.count; ++i) {
         // rt_dynamic_cast<> below is required because of a known issue with projection.
         WSIStorageFile* item = rt_dynamic_cast([WSIStorageFile class], files[i]);
-        NSString* name = item.name;
-        NSString* path = item.path;
-        NSString* type = item.fileType;
-        [fileNames appendFormat:@"%@ %@ ", name, path];
+        [fileNames appendFormat:@"%@\r\n", item.name];
     }
     self.namesInfo.text = fileNames;
-    [self.namesInfo setNeedsLayout];
-    [self.view setNeedsLayout];
 }
 #endif
 
