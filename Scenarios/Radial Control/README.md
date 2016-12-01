@@ -86,9 +86,9 @@ To include this framework – and make sure it's only included when the code is
   #endif
 
 ```
-### Add a New Menu Item to the Radial Controller Tool
+### Adding a New Menu Item to the Radial Controller Tool
 
-First, you need to add a property to the view controller that will represent the radial controller. In C++ wheel input devices are represented by the [RadialController](https://msdn.microsoft.com/library/windows/apps/windows.ui.input.radialcontroller) class. However, as you build using Objective-C projections, you will notice that the standard naming scheme for these objects has been modified to match Objective-C conventions, where classes are prefixed with the letters that constitute their containing namespace:
+To interact with the radial controller you first need to add a property to the view controller of your app that will allow you to access it. In C++ wheel input devices are represented by the [RadialController](https://msdn.microsoft.com/library/windows/apps/windows.ui.input.radialcontroller) class. However, as you build using Objective-C projections, you will notice that the standard naming scheme for these objects has been modified to match Objective-C conventions, where classes are prefixed with the letters that constitute their containing namespace:
 
 - **Windows.UI.Input.RadialController** becomes **WUIRadialController**
 
@@ -149,7 +149,7 @@ Call this property to get a reference to the radial controller menu:
     self.radialController = [WUIRadialController createForCurrentView];
     
     // Get the radial controller menu
-	  WUIRadialControllerMenu* menu = self.radialController.menu; 
+    WUIRadialControllerMenu* menu = self.radialController.menu; 
   #endif
   }
 ```
@@ -169,10 +169,10 @@ Call this property to get a reference to the menu items:
     [...]
     
     // Get the radial controller menu
-	  WUIRadialControllerMenu* menu = self.radialController.menu;
+    WUIRadialControllerMenu* menu = self.radialController.menu;
     
     // Get the menu items
-	  NSMutableArray* menuItems = menu.items;
+    NSMutableArray* menuItems = menu.items;
   #endif
   }
 ```
@@ -190,16 +190,15 @@ Call this method to create the new menu item:
     [...]
     
     // Get the menu items
-	  NSMutableArray* menuItems = menu.items;
+    NSMutableArray* menuItems = menu.items;
     
     // Create a new menu item
-	WUIRadialControllerMenuItem* newMenuItem = [WUIRadialControllerMenuItem createFromKnownIcon:@"Custom Tool" value:WUIRadialControllerMenuKnownIconRuler];
+    WUIRadialControllerMenuItem* newMenuItem = [WUIRadialControllerMenuItem createFromKnownIcon:@"Custom Tool" value:WUIRadialControllerMenuKnownIconRuler];
   #endif
   }
 ```
 
-Note that we re-used an existing icon for our tool from the [RadialControllerMenuKnownIcon](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.input.radialcontrollermenuknownicon) enumeration, but you can create your own and use the  
-[CreateFromIcon](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.input.radialcontrollermenuitem.createfromicon) method instead.
+Note that we re-used an existing icon for our tool from the [RadialControllerMenuKnownIcon](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.input.radialcontrollermenuknownicon) enumeration, but you can create your own and use the [CreateFromIcon](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.input.radialcontrollermenuitem.createfromicon) method instead.
 
 Finally, add your new menu item to the menu items array:
 
@@ -208,20 +207,56 @@ Finally, add your new menu item to the menu items array:
     [...]
     
     // Create a new menu item
-	WUIRadialControllerMenuItem* newMenuItem = [WUIRadialControllerMenuItem createFromKnownIcon:@"Custom Tool" value:WUIRadialControllerMenuKnownIconRuler];
+    WUIRadialControllerMenuItem* newMenuItem = [WUIRadialControllerMenuItem createFromKnownIcon:@"Custom Tool" value:WUIRadialControllerMenuKnownIconRuler];
   #endif
   
-  // Add a new menu item
-	[menuItems addObject:newMenuItem];
+    // Add a new menu item
+    [menuItems addObject:newMenuItem];
   }
 ```
 
 That's it! Now build and run your application and press and hold the Surface Dial to see the new menu item appear.
 
-### Add a Handler for Click Input
+### Adding a Handler for Click Input
 
-*Coming soon*
+In this example, you will add a handler for click input that will toggle the application switch control if the radial controller is clicked when the new tool you added to the menu is selected. Taking a look at the at the  [WindowsUIInput.h](https://github.com/Microsoft/WinObjC/tree/master/include/Platform/Universal Windows/UWP/WindowsUIInput.h) header you'll see you need the**addButtonClickedEvent** method:
 
-### Add a Handler for Rotation Input
+```Objective-C
+   @interface WUIRadialController : RTObject
+   [...]
+   - (EventRegistrationToken)addButtonClickedEvent:(void(^)(WUIRadialController*, WUIRadialControllerButtonClickedEventArgs*))del;
+```
+Since the callback relies on Objective-C blocks, you need to mark the self reference with the **__block** keyword before using it to access the switch to avoid creating a retain cycle. Add the following code at the end of the **viewDidLoad** method to do this:
+
+```Objective-C
+  - (void)viewDidLoad {
+    [...]
+  
+    // Add a new menu item
+    [menuItems addObject:newMenuItem];
+    
+    __block ViewController* blockSelf = self; // Ensures self will not be retained
+  }
+```
+
+Now you can safely toggle the switch in the radial controller click callback:
+
+```Objective-C
+  - (void)viewDidLoad {
+    [...]
+      
+    __block ViewController* blockSelf = self; // Ensures self will not be retained
+    
+    // Add a handler for click input from the radial controller
+    [self.radialController addButtonClickedEvent:^(WUIRadialController* controller, WUIRadialControllerButtonClickedEventArgs* args)
+     {
+         [blockSelf.switchControl setOn:!(blockSelf.switchControl.on) animated:YES];
+     }];
+  }
+```
+
+You can now build and run your application, select the new menu item and click on the radial controller to see the switch toggle.
+
+### Adding a Handler for Rotation Input
 
 *Coming soon*
