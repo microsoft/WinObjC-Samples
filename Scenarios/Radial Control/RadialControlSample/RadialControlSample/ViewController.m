@@ -127,11 +127,20 @@ static NSString * const kInfoString = @"This WinObjC sample project demonstrates
     
     // Create a reference to the radial controller
     self.radialController = [WUIRadialController createForCurrentView];
-    
+
+    // Get the radial controller menu
+    WUIRadialControllerMenu* menu = self.radialController.menu;
+
+    // Get the menu items
+    NSMutableArray* menuItems = menu.items;
+
+    // Create a new menu item
+    WUIRadialControllerMenuItem* newMenuItem = [WUIRadialControllerMenuItem createFromKnownIcon:@"Custom Tool" value:WUIRadialControllerMenuKnownIconRuler];
+
+    // Add a new menu item
+    [menuItems addObject:newMenuItem];
+	
     __block ViewController* blockSelf = self; // Ensures self will not be retained
-    
-    // Add a menu item for the new radial control tool
-    [[[self.radialController menu] items] addObject:[WUIRadialControllerMenuItem createFromKnownIcon:@"MenuItem" value:WUIRadialControllerMenuKnownIconRuler]];
     
     // Add a handler for click input from the radial controller
     [self.radialController addButtonClickedEvent:^(WUIRadialController* controller, WUIRadialControllerButtonClickedEventArgs* args)
