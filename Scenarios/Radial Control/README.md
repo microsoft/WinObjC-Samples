@@ -259,4 +259,37 @@ You can now build and run your application, select the new menu item and click o
 
 ### Adding a Handler for Rotation Input
 
-*Coming soon*
+In this example, you will add a handler for rotation input that will move the application slider control if the radial controller is rotated when the new tool you added to the menu is selected. Taking a look at the at the  [WindowsUIInput.h](https://github.com/Microsoft/WinObjC/tree/master/include/Platform/Universal Windows/UWP/WindowsUIInput.h) header you'll see you need the**addRotationChangedEvent** method:
+
+```Objective-C
+   @interface WUIRadialController : RTObject
+   [...]
+   - (EventRegistrationToken)addRotationChangedEvent:(void(^)(WUIRadialController*, WUIRadialControllerRotationChangedEventArgs*))del;
+```
+
+As for the click event handler, simply call the method and update the slider value in callback block:
+
+```Objective-C
+  - (void)viewDidLoad {
+    [...]
+      
+    __block ViewController* blockSelf = self; // Ensures self will not be retained
+    
+    [...]
+    
+    // Add a handler for rotation input from the radial controller
+    [self.radialController addRotationChangedEvent:^(WUIRadialController* controller, WUIRadialControllerRotationChangedEventArgs* args)
+     {
+         [blockSelf.slider setValue:(blockSelf.slider.value + ([args rotationDeltaInDegrees]/360.0f)) animated:YES];
+     }];
+  }
+```
+
+That's it! Now build and run your application, select the new menu item and rotate the radial controller to see the slider value change.
+
+## Additional Reading
+
+- For an overview of Windows wheel devices and UX and developer guidance see [Surface Dial interactions](https://msdn.microsoft.com/en-us/windows/uwp/input-and-devices/windows-wheel-interactions) on MSDN.
+- For more code samples check out the [RadialController sample](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/RadialController) on the [Universal Windows Platform (UWP) app samples](https://github.com/Microsoft/Windows-universal-samples) repo.
+- For developer documentation on the Windows input system & classes go to the [Windows.UI.Input](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.input.aspx) namespace documentation on MSDN.
+- To find the iOS bridge API you need check the [UWP header libraries](https://github.com/Microsoft/WinObjC/tree/master/include/Platform/Universal Windows/UWP).
