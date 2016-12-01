@@ -23,18 +23,18 @@ Using Objective-C, the code for adding a custom menu item to the radial controll
     // Add a new menu item
     [menuItems addObject:newMenuItem];
 	
-    __block ViewController* blockSelf = self; // Ensures self will not be retained
+    __weak ViewController* weakSelf = self; // Ensures self will not be retained
     
     // Add a handler for click input from the radial controller
     [self.radialController addButtonClickedEvent:^(WUIRadialController* controller, WUIRadialControllerButtonClickedEventArgs* args)
      {
-         [blockSelf.switchControl setOn:!(blockSelf.switchControl.on) animated:YES];
+         [weakSelf.switchControl setOn:!(weakSelf.switchControl.on) animated:YES];
      }];
     
     // Add a handler for rotation input from the radial controller
     [self.radialController addRotationChangedEvent:^(WUIRadialController* controller, WUIRadialControllerRotationChangedEventArgs* args)
      {
-         [blockSelf.slider setValue:(blockSelf.slider.value + ([args rotationDeltaInDegrees]/360.0f)) animated:YES];
+         [weakSelf.slider setValue:(weakSelf.slider.value + ([args rotationDeltaInDegrees]/360.0f)) animated:YES];
      }];
   #endif
 ```
@@ -245,7 +245,7 @@ Since the callback relies on Objective-C blocks, you need to mark the self refer
     // Add a new menu item
     [menuItems addObject:newMenuItem];
     
-    __block ViewController* blockSelf = self; // Ensures self will not be retained
+    __weak ViewController* weakSelf = self; // Ensures self will not be retained
   }
 ```
 
@@ -255,12 +255,12 @@ Now you can safely toggle the switch in the radial controller click callback:
   - (void)viewDidLoad {
     [...]
       
-    __block ViewController* blockSelf = self; // Ensures self will not be retained
+    __weak ViewController* weakSelf = self; // Ensures self will not be retained
     
     // Add a handler for click input from the radial controller
     [self.radialController addButtonClickedEvent:^(WUIRadialController* controller, WUIRadialControllerButtonClickedEventArgs* args)
      {
-         [blockSelf.switchControl setOn:!(blockSelf.switchControl.on) animated:YES];
+         [weakSelf.switchControl setOn:!(weakSelf.switchControl.on) animated:YES];
      }];
   }
 ```
@@ -283,14 +283,14 @@ As for the click event handler, simply call the method and update the slider val
   - (void)viewDidLoad {
     [...]
       
-    __block ViewController* blockSelf = self; // Ensures self will not be retained
+    __weak ViewController* weakSelf = self; // Ensures self will not be retained
     
     [...]
     
     // Add a handler for rotation input from the radial controller
     [self.radialController addRotationChangedEvent:^(WUIRadialController* controller, WUIRadialControllerRotationChangedEventArgs* args)
      {
-         [blockSelf.slider setValue:(blockSelf.slider.value + ([args rotationDeltaInDegrees]/360.0f)) animated:YES];
+         [weakSelf.slider setValue:(weakSelf.slider.value + ([args rotationDeltaInDegrees]/360.0f)) animated:YES];
      }];
   }
 ```
