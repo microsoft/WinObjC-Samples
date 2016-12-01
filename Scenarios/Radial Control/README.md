@@ -217,6 +217,8 @@ Finally, add your new menu item to the menu items array:
 
 That's it! Now build and run your application and press and hold the Surface Dial to see the new menu item appear.
 
+![](https://github.com/Microsoft/WinObjC-Samples/blob/radialControl/Scenarios/Radial%20Control/Images/new_menu_item.png)
+
 ### Adding a Handler for Click Input
 
 In this example, you will add a handler for click input that will toggle the application switch control if the radial controller is clicked when the new tool you added to the menu is selected. Taking a look at the at the  [WindowsUIInput.h](https://github.com/Microsoft/WinObjC/tree/master/include/Platform/Universal Windows/UWP/WindowsUIInput.h) header you'll see you need the**addButtonClickedEvent** method:
