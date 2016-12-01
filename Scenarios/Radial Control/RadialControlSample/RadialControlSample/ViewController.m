@@ -140,18 +140,18 @@ static NSString * const kInfoString = @"This WinObjC sample project demonstrates
     // Add a new menu item
     [menuItems addObject:newMenuItem];
 	
-    __block ViewController* blockSelf = self; // Ensures self will not be retained
+    __weak ViewController* weakSelf = self; // Ensures self will not be retained
     
     // Add a handler for click input from the radial controller
     [self.radialController addButtonClickedEvent:^(WUIRadialController* controller, WUIRadialControllerButtonClickedEventArgs* args)
      {
-         [blockSelf.switchControl setOn:!(blockSelf.switchControl.on) animated:YES];
+         [weakSelf.switchControl setOn:!(weakSelf.switchControl.on) animated:YES];
      }];
     
     // Add a handler for rotation input from the radial controller
     [self.radialController addRotationChangedEvent:^(WUIRadialController* controller, WUIRadialControllerRotationChangedEventArgs* args)
      {
-         [blockSelf.slider setValue:(blockSelf.slider.value + ([args rotationDeltaInDegrees]/360.0f)) animated:YES];
+         [weakSelf.slider setValue:(weakSelf.slider.value + ([args rotationDeltaInDegrees]/360.0f)) animated:YES];
      }];
 #endif
 }
