@@ -88,10 +88,140 @@ To include this framework – and make sure it's only included when the code is
 ```
 ### Add a New Menu Item to the Radial Controller Tool
 
-First, you need to add a property to your ViewController that will reference the RadialController. In C++, the radial controller is represented by the [RadialController](https://msdn.microsoft.com/library/windows/apps/windows.ui.input.radialcontroller) class. However, as you build using Objective-C projections, you will notice that the standard naming scheme for these objects has been modified to match Objective-C conventions, where classes are prefixed with the letters that constitute their containing namespace:
+First, you need to add a property to the view controller that will represent the radial controller. In C++ wheel input devices are represented by the [RadialController](https://msdn.microsoft.com/library/windows/apps/windows.ui.input.radialcontroller) class. However, as you build using Objective-C projections, you will notice that the standard naming scheme for these objects has been modified to match Objective-C conventions, where classes are prefixed with the letters that constitute their containing namespace:
 
-- **Windows.Data.Xml.Dom.XmlDocument** becomes **WDXDXmlDocument**
-- **Windows.UI.Notifications.ToastNotification** becomes **WUNToastNotification**
-- **Windows.UI.Notifications.ToastNotificationManager** becomes **WUNToastNotificationManager**
+- **Windows.UI.Input.RadialController** becomes **WUIRadialController**
+
+As a result, add a **WUIRadialController** property to the **@interface** section of the view controller implementation file:
+
+```Objective-C
+  @interface ViewController()
+
+  @property UILabel *demoTitle;
+  @property UILabel *demoInfo;
+  @property UISlider *slider;
+  @property UILabel *sliderLabel;
+  @property UISwitch *switchControl;
+
+  #ifdef WINOBJC
+  @property WUIRadialController* radialController;
+  #endif
+
+  @end
+ ```
+Next, you need to get a reference to the **WUIRadialController** object with the [CreateForCurrentView](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.input.radialcontroller.createforcurrentview) as explained in the [RadialController](https://msdn.microsoft.com/library/windows/apps/windows.ui.input.radialcontroller) class documentation. Looking at the  [WindowsUIInput.h](https://github.com/Microsoft/WinObjC/tree/master/include/Platform/Universal Windows/UWP/WindowsUIInput.h) header you'll find the equivalent Ojective-C projection under the **WUIRadialController** class interface:
+
+```Objective-C
+  @interface WUIRadialController : RTObject
+  [...]
+  + (WUIRadialController*)createForCurrentView;
+```
+
+Call this method at the end of the **viewDidLoad** method of the view controller file to instanciate the **WUIRadialController** property:
+
+```Objective-C
+  - (void)viewDidLoad {
+    [...]
+  
+  #ifdef WINOBJC    
+    // Create a reference to the radial controller
+    self.radialController = [WUIRadialController createForCurrentView];
+  #endif
+  }
+```
+
+Now you need to get a reference to the radial controller menu and its items. This is done via the [Menu](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.input.radialcontroller.menu) property of the [RadialController](https://msdn.microsoft.com/library/windows/apps/windows.ui.input.radialcontroller) class that returns a [RadialControllerMenu](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.input.radialcontrollermenu) object. Looking back at the  [WindowsUIInput.h](https://github.com/Microsoft/WinObjC/tree/master/include/Platform/Universal Windows/UWP/WindowsUIInput.h) header you'll find the equivalent Ojective-C property under the **WUIRadialController** class interface that returns a **WUIRadialControllerMenu** object:
+
+```Objective-C
+  @interface WUIRadialController : RTObject
+  [...]
+  @property (readonly) WUIRadialControllerMenu* menu;
+```
+
+Call this property to get a reference to the radial controller menu:
+
+```Objective-C
+  - (void)viewDidLoad {
+    [...]
+  
+  #ifdef WINOBJC    
+    // Create a reference to the radial controller
+    self.radialController = [WUIRadialController createForCurrentView];
+    
+    // Get the radial controller menu
+	  WUIRadialControllerMenu* menu = self.radialController.menu; 
+  #endif
+  }
+```
+
+The menu items are accessile via the [Item](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.input.radialcontrollermenu.items) property of the [RadialControllerMenu](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.input.radialcontrollermenu) class. As before, the interface of the **WUIRadialControllerMenu** class in the [WindowsUIInput.h](https://github.com/Microsoft/WinObjC/tree/master/include/Platform/Universal Windows/UWP/WindowsUIInput.h) header gives you the equivalent Objective-C property:
+
+```Objective-C
+  @interface WUIRadialControllerMenu : RTObject
+  [...]
+  @property (readonly) NSMutableArray* /* WUIRadialControllerMenuItem* */ items;
+```
+
+Call this property to get a reference to the menu items:
+
+```Objective-C
+  - (void)viewDidLoad {
+    [...]
+    
+    // Get the radial controller menu
+	  WUIRadialControllerMenu* menu = self.radialController.menu;
+    
+    // Get the menu items
+	  NSMutableArray* menuItems = menu.items;
+  #endif
+  }
+```
+
+Next, you need to create a new [RadialControllerMenuItem](https://msdn.microsoft.com/library/windows/apps/windows.ui.input.radialcontrollermenuitem) to add to the menu with the projection of the [CreateFromKnownIcon](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.input.radialcontrollermenuitem.createfromknownicon) class method:
+
+```Objective-C
+  @interface WUIRadialControllerMenuItem : RTObject
+  + (WUIRadialControllerMenuItem*)createFromIcon:(NSString *)displayText icon:(WSSRandomAccessStreamReference*)icon;
+```
+Call this method to create the new menu item:
+
+```Objective-C
+  - (void)viewDidLoad {
+    [...]
+    
+    // Get the menu items
+	  NSMutableArray* menuItems = menu.items;
+    
+    // Create a new menu item
+	WUIRadialControllerMenuItem* newMenuItem = [WUIRadialControllerMenuItem createFromKnownIcon:@"Custom Tool" value:WUIRadialControllerMenuKnownIconRuler];
+  #endif
+  }
+```
+
+Note that we re-used an existing icon for our tool from the [RadialControllerMenuKnownIcon](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.input.radialcontrollermenuknownicon) enumeration, but you can create your own and use the  
+[CreateFromIcon](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.input.radialcontrollermenuitem.createfromicon) method instead.
+
+Finally, add your new menu item to the menu items array:
+
+```Objective-C
+  - (void)viewDidLoad {
+    [...]
+    
+    // Create a new menu item
+	WUIRadialControllerMenuItem* newMenuItem = [WUIRadialControllerMenuItem createFromKnownIcon:@"Custom Tool" value:WUIRadialControllerMenuKnownIconRuler];
+  #endif
+  
+  // Add a new menu item
+	[menuItems addObject:newMenuItem];
+  }
+```
+
+That's it! Now build and run your application and press and hold the Surface Dial to see the new menu item appear.
+
+### Add a Handler for Click Input
+
+*Coming soon*
+
+### Add a Handler for Rotation Input
 
 *Coming soon*
