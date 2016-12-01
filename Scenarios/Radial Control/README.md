@@ -7,14 +7,23 @@ Radial controllers like the Surface Dial allow Windows users to enable a host of
 Using Objective-C, the code for adding a custom menu item to the radial controller tool that responds to rotate and click actions looks like this:
 
 ```Objective-C
-  #ifdef WINOBJC
-  // Create a reference to the radial controller
+  #ifdef WINOBJC    
+    // Create a reference to the radial controller
     self.radialController = [WUIRadialController createForCurrentView];
-    
+
+    // Get the radial controller menu
+    WUIRadialControllerMenu* menu = self.radialController.menu;
+
+    // Get the menu items
+    NSMutableArray* menuItems = menu.items;
+
+    // Create a new menu item
+    WUIRadialControllerMenuItem* newMenuItem = [WUIRadialControllerMenuItem createFromKnownIcon:@"Custom Tool" value:WUIRadialControllerMenuKnownIconRuler];
+
+    // Add a new menu item
+    [menuItems addObject:newMenuItem];
+	
     __block ViewController* blockSelf = self; // Ensures self will not be retained
-    
-    // Add a menu item for the new radial control tool
-    [[[self.radialController menu] items] addObject:[WUIRadialControllerMenuItem createFromKnownIcon:@"MenuItem" value:WUIRadialControllerMenuKnownIconRuler]];
     
     // Add a handler for click input from the radial controller
     [self.radialController addButtonClickedEvent:^(WUIRadialController* controller, WUIRadialControllerButtonClickedEventArgs* args)
@@ -28,7 +37,6 @@ Using Objective-C, the code for adding a custom menu item to the radial controll
          [blockSelf.slider setValue:(blockSelf.slider.value + ([args rotationDeltaInDegrees]/360.0f)) animated:YES];
      }];
   #endif
-
 ```
 
 Read on for a complete explanation of how the code above works.
