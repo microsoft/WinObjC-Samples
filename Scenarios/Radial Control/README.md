@@ -117,7 +117,7 @@ As a result, add a **WUIRadialController** property to the **@interface** sectio
 
   @end
  ```
-Next, you need to get a reference to the **WUIRadialController** object with the [CreateForCurrentView](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.input.radialcontroller.createforcurrentview) as explained in the [RadialController](https://msdn.microsoft.com/library/windows/apps/windows.ui.input.radialcontroller) class documentation. Looking at the  [WindowsUIInput.h](https://github.com/Microsoft/WinObjC/tree/master/include/Platform/Universal Windows/UWP/WindowsUIInput.h) header you'll find the equivalent Ojective-C projection under the **WUIRadialController** class interface:
+Next, you need to get a reference to the **WUIRadialController** object with the [CreateForCurrentView](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.input.radialcontroller.createforcurrentview) method as explained in the [RadialController](https://msdn.microsoft.com/library/windows/apps/windows.ui.input.radialcontroller) class documentation. Looking at the  [WindowsUIInput.h](https://github.com/Microsoft/WinObjC/tree/master/include/Platform/Universal Windows/UWP/WindowsUIInput.h) header you'll find the equivalent Ojective-C projection under the **WUIRadialController** class interface:
 
 ```Objective-C
   @interface WUIRadialController : RTObject
@@ -162,7 +162,7 @@ Call this property to get a reference to the radial controller menu:
   }
 ```
 
-The menu items are accessile via the [Item](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.input.radialcontrollermenu.items) property of the [RadialControllerMenu](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.input.radialcontrollermenu) class. As before, the interface of the **WUIRadialControllerMenu** class in the [WindowsUIInput.h](https://github.com/Microsoft/WinObjC/tree/master/include/Platform/Universal Windows/UWP/WindowsUIInput.h) header gives you the equivalent Objective-C property:
+The menu items are accessile via the [Items](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.input.radialcontrollermenu.items) property of the [RadialControllerMenu](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.input.radialcontrollermenu) class. As before, the interface of the **WUIRadialControllerMenu** class in the [WindowsUIInput.h](https://github.com/Microsoft/WinObjC/tree/master/include/Platform/Universal Windows/UWP/WindowsUIInput.h) header gives you the equivalent Objective-C property:
 
 ```Objective-C
   @interface WUIRadialControllerMenu : RTObject
@@ -185,7 +185,7 @@ Call this property to get a reference to the menu items:
   }
 ```
 
-Next, you need to create a new [RadialControllerMenuItem](https://msdn.microsoft.com/library/windows/apps/windows.ui.input.radialcontrollermenuitem) to add to the menu with the projection of the [CreateFromKnownIcon](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.input.radialcontrollermenuitem.createfromknownicon) class method:
+Next, you need to create a new [RadialControllerMenuItem](https://msdn.microsoft.com/library/windows/apps/windows.ui.input.radialcontrollermenuitem) object to add to the menu with the projection of the [CreateFromKnownIcon](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.input.radialcontrollermenuitem.createfromknownicon) class method:
 
 ```Objective-C
   @interface WUIRadialControllerMenuItem : RTObject
@@ -229,7 +229,7 @@ That's it! Now build and run your application and press and hold the Surface Dia
 
 ### Adding a Handler for Click Input
 
-In this example, you will add a handler for click input that will toggle the application switch control if the radial controller is clicked when the new tool you added to the menu is selected. Taking a look at the at the  [WindowsUIInput.h](https://github.com/Microsoft/WinObjC/tree/master/include/Platform/Universal Windows/UWP/WindowsUIInput.h) header you'll see you need the**addButtonClickedEvent** method:
+In this example, you will add a handler for click input that will toggle the application switch control if the radial controller is clicked when the new tool you added to the menu is selected. Taking a look at the at the  [WindowsUIInput.h](https://github.com/Microsoft/WinObjC/tree/master/include/Platform/Universal Windows/UWP/WindowsUIInput.h) header you'll see you need the **addButtonClickedEvent** method:
 
 ```Objective-C
    @interface WUIRadialController : RTObject
@@ -269,7 +269,7 @@ You can now build and run your application, select the new menu item and click o
 
 ### Adding a Handler for Rotation Input
 
-In this example, you will add a handler for rotation input that will move the application slider control if the radial controller is rotated when the new tool you added to the menu is selected. Taking a look at the at the  [WindowsUIInput.h](https://github.com/Microsoft/WinObjC/tree/master/include/Platform/Universal Windows/UWP/WindowsUIInput.h) header you'll see you need the**addRotationChangedEvent** method:
+In this example, you will add a handler for rotation input that will move the application slider control if the radial controller is rotated when the new tool you added to the menu is selected. Taking a look at the at the  [WindowsUIInput.h](https://github.com/Microsoft/WinObjC/tree/master/include/Platform/Universal Windows/UWP/WindowsUIInput.h) header you'll see you need the **addRotationChangedEvent** method:
 
 ```Objective-C
    @interface WUIRadialController : RTObject
@@ -277,7 +277,7 @@ In this example, you will add a handler for rotation input that will move the ap
    - (EventRegistrationToken)addRotationChangedEvent:(void(^)(WUIRadialController*, WUIRadialControllerRotationChangedEventArgs*))del;
 ```
 
-As for the click event handler, simply call the method and update the slider value in callback block:
+As for the click event handler, simply call the method and update the slider value in the callback block:
 
 ```Objective-C
   - (void)viewDidLoad {
