@@ -135,6 +135,7 @@ static NSString * const kInfoString = @"This WinObjC sample project demonstrates
     NSMutableArray* menuItems = menu.items;
 
     // Create a new menu item
+    // To use your own custom icon for the menu item, use the createFromIcon method instead
     WUIRadialControllerMenuItem* newMenuItem = [WUIRadialControllerMenuItem createFromKnownIcon:@"Custom Tool" value:WUIRadialControllerMenuKnownIconRuler];
 
     // Add a new menu item
