@@ -18,6 +18,7 @@ Using Objective-C, the code for adding a custom menu item to the radial controll
     NSMutableArray* menuItems = menu.items;
 
     // Create a new menu item
+    // To use your own custom icon for the menu item, use the createFromIcon method instead
     WUIRadialControllerMenuItem* newMenuItem = [WUIRadialControllerMenuItem createFromKnownIcon:@"Custom Tool" value:WUIRadialControllerMenuKnownIconRuler];
 
     // Add a new menu item
@@ -201,6 +202,7 @@ Call this method to create the new menu item:
     NSMutableArray* menuItems = menu.items;
     
     // Create a new menu item
+    // To use your own custom icon for the menu item, use the createFromIcon method instead
     WUIRadialControllerMenuItem* newMenuItem = [WUIRadialControllerMenuItem createFromKnownIcon:@"Custom Tool" value:WUIRadialControllerMenuKnownIconRuler];
   #endif
   }
@@ -215,6 +217,7 @@ Finally, add your new menu item to the menu items array:
     [...]
     
     // Create a new menu item
+    // To use your own custom icon for the menu item, use the createFromIcon method instead
     WUIRadialControllerMenuItem* newMenuItem = [WUIRadialControllerMenuItem createFromKnownIcon:@"Custom Tool" value:WUIRadialControllerMenuKnownIconRuler];
   #endif
   
