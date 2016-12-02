@@ -1,6 +1,6 @@
 # Using Projections: Radial Control
 
-Radial controllers like the Surface Dial allow Windows users to enable a host of compelling and unique user interaction experiences for Windows and Windows apps. They support a rotate action, a click action and a press and hold action. For more radial controllers terms and concepts, see [Surface Dial interactions](https://msdn.microsoft.com/en-us/windows/uwp/input-and-devices/windows-wheel-interactions).
+Radial controllers like the Surface Dial allow Windows users to enable a host of compelling and unique user interaction experiences for Windows and Windows apps. They support a rotate action, a click action and a press and hold action. For more radial controller terms and concepts, see [Surface Dial interactions](https://msdn.microsoft.com/en-us/windows/uwp/input-and-devices/windows-wheel-interactions).
 
 ## The Code
 
@@ -66,7 +66,7 @@ You can find the Radial Control sample project under */Scenarios/Radial Control/
   @end
 ```
 
-You will now update this app to add a custom menu item to the radial controller tool that will respond to rotate and click actions by changing the slider value and toggling the swicth.
+You will now update this app to add a custom menu item to the radial controller tool that will respond to rotate and click actions by changing the slider value and toggling the switch.
 
 ### Setting Up
 
