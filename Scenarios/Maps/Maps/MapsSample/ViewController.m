@@ -86,10 +86,9 @@ NSString * const kOverlayToggleString = @"Toggle Overlay";
     self.winMap.maxHeight = 450;
     self.winMap.maxWidth = 300;
     CGRect mapFrame = CGRectMake(offset, 10, 300, 450);
-    self.winMapView = [[UIView alloc] initWithFrame:mapFrame];
+    self.winMapView = [[UIView alloc] initWithFrame:mapFrame xamlElement:self.winMap];
     self.winMapView.frame = mapFrame;
     self.winMapView.backgroundColor = [UIColor blackColor];
-    [self.winMapView setXamlElement:self.winMap];
     [self.trafficToggle setTranslatesAutoresizingMaskIntoConstraints:NO];
     [self.view addSubview:self.winMapView];
     
