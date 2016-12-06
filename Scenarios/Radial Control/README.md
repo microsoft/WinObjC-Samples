@@ -228,7 +228,7 @@ Finally, add your new menu item to the menu items array:
 
 That's it! Now build and run your application and press and hold the Surface Dial to see the new menu item appear.
 
-![](https://github.com/Microsoft/WinObjC-Samples/blob/radialControl/Scenarios/Radial%20Control/Images/new_menu_item.png)
+![](https://github.com/Microsoft/WinObjC-Samples/blob/master/Scenarios/Radial%20Control/Images/new_menu_item.png)
 
 ### Adding a Handler for Click Input
 
