@@ -1,12 +1,15 @@
-The sample uses weather.com free subscription rest API to demonstrate the Bolts usage. Please register for free and use the token generated from Weather.com and replace it 
+﻿The sample uses weather.com free subscription rest API to demonstrate the Bolts usage. Please register for free and use the token generated from Weather.com and replace it
 with apiKey placeholder in the Constants.m file
 
 This project uses bolts as a dependency.When you first clone the repo if you have included ‘—recursive’ skip the next statement. Else
 	Navigate to samples root directory and run the ‘git submodule update --init --recursive’ git command.
+Make sure you are using the Bolts 1.8.4 version submodule which has hash
+	e64deecb2f0e10ac0dbb71f522c7a5b9cafb0b4d
+	
 Then follow the steps from WinObjC github repo documentation to create a visual studio solution.
 
 In the BoltsInClassPath sample app to make this app run on Windows I have found two issues in the app build phase.
- 
+
 1) When you start building app you may encounter
  Bolts.lib (BFExecutor_F456FB2F.obj) : error LNK 2019: unresolved external symbol _pthread_get_stackaddr_np referenced in function remaining_stack_size
  Bolts.lib (BFExecutor_F456FB2F.obj) : error LNK 2019: unresolved external symbol _pthread_get_stacksize_np referenced in function remaining_stack_size
@@ -19,19 +22,19 @@ __attribute__((noinline)) static size_t remaining_stack_size(size_t *restrict to
 
     pthread_t currentThread = pthread_self();
 
-    
+
 	// NOTE: We must store stack pointers as uint8_t so that the pointer math is well-defined
-    
+
 	uint8_t *endStack = 0;//pthread_get_stackaddr_np(currentThread);
-    
+
 	*totalSize = 0;//pthread_get_stacksize_np(currentThread);
 
-    
+
 	// NOTE: If the function is inlined, this value could be incorrect
-    
+
 	uint8_t *frameAddr = __builtin_frame_address(0);
 
-    
+
 	return (*totalSize) - (endStack - frameAddr);
 
 }
