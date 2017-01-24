@@ -1,9 +1,11 @@
 The sample uses weather.com free subscription rest API to demonstrate the Bolts usage. Please register for free and use the token generated from Weather.com and replace it 
 with apiKey placeholder in the Constants.m file
 
-Note: Make sure this folder and Winobjc release folders exist in the same directory. otherwise it may not run.
+This project uses bolts as a dependency.When you first clone the repo if you have included ‘—recursive’ skip the next statement. Else
+	Navigate to samples root directory and run the ‘git submodule update --init --recursive’ git command.
+Then follow the steps from WinObjC github repo documentation to create a visual studio solution.
 
-In the BoltsInClassPath sample app to make this app run on WINOBJC I have found two issues in the app build phase.
+In the BoltsInClassPath sample app to make this app run on Windows I have found two issues in the app build phase.
  
 1) When you start building app you may encounter
  Bolts.lib (BFExecutor_F456FB2F.obj) : error LNK 2019: unresolved external symbol _pthread_get_stackaddr_np referenced in function remaining_stack_size

@@ -278,7 +278,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0820;
-				ORGANIZATIONNAME = "venkat kongaraSiva";
+				ORGANIZATIONNAME = Microsoft;
 				TargetAttributes = {
 					47D1983E1E2A9643007EC0AA = {
 						CreatedOnToolsVersion = 8.2.1;
@@ -571,7 +571,7 @@
 				INFOPLIST_FILE = BoltsInClasspath/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = Com.Siva.BoltsInClasspath;
+				PRODUCT_BUNDLE_IDENTIFIER = Com.Sample.BoltsInClasspath;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -584,7 +584,7 @@
 				INFOPLIST_FILE = BoltsInClasspath/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = Com.Siva.BoltsInClasspath;
+				PRODUCT_BUNDLE_IDENTIFIER = Com.Sample.BoltsInClasspath;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
