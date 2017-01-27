@@ -1,11 +1,14 @@
-﻿The sample uses weather.com free subscription rest API to demonstrate the Bolts usage. Please register for free and use the token generated from https://home.openweathermap.org/users/sign_up and replace it with apiKey placeholder in the Constants.m file
+﻿The sample uses openweathermap.org free subscription rest API to demonstrate the Bolts usage. Please register for free and use the token generated from https://home.openweathermap.org/users/sign_up and replace it with apiKey placeholder in the Constants.m file
 
-This project uses bolts as a dependency.When you first clone the repo if you have included ‘—recursive’ skip the next statement. Else
+This project uses bolts as a dependency.When you first clone the repo if you have included ‘--recursive’ skip the next statement. Else
 	Navigate to samples root directory and run the ‘git submodule update --init --recursive’ git command.
-Make sure you are using the Bolts 1.8.4 version submodule which has hash
+Now Make sure you are using the Bolts 1.8.4 version submodule which has hash
 	e64deecb2f0e10ac0dbb71f522c7a5b9cafb0b4d
+	(you can do that by navigating to the WinObjC-Samples/ThirdParty/Bolts/BoltsInClasspath directory in cmd and type in git checkout 1.8.4)
 	
 Then follow the steps from WinObjC github repo documentation to create a visual studio solution.
+
+In Visual Studio expand the solution and navigate to Bolts folder. Then right click on Bolts target go to properties->clang->Enable ObjectiveC ARC and set it to YES(-fobjc-arc).Do this for the other target BoltsInClassPath also in subsequent BoltsInClassPath folder.
 
 In the BoltsInClassPath sample app to make this app run on Windows I have found two issues in the app build phase.
 
