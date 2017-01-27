@@ -2,6 +2,7 @@
 
 This project uses bolts as a dependency.When you first clone the repo if you have included ‘--recursive’ skip the next statement. Else
 	Navigate to samples root directory and run the ‘git submodule update --init --recursive’ git command.
+
 Now Make sure you are using the Bolts 1.8.4 version submodule which has hash
 	e64deecb2f0e10ac0dbb71f522c7a5b9cafb0b4d
 	(you can do that by navigating to the WinObjC-Samples/ThirdParty/Bolts/BoltsInClasspath directory in cmd and type in git checkout 1.8.4)
