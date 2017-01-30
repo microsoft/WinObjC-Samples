@@ -5,7 +5,7 @@ This project uses bolts as a dependency.When you first clone the repo if you hav
 Now Make sure you are using the Bolts 1.8.4 version submodule which has hash Bolts1.8.4@e64deecb2f0e10ac0dbb71f522c7a5b9cafb0b4d
 	(you can do that by navigating to the WinObjC-Samples/ThirdParty/Bolts/BoltsInClasspath directory in cmd and type in git checkout 1.8.4)
 	
-Then follow the steps from WinObjC github repo documentation to create a visual studio solution.
+Then follow the steps from WinObjC (https://github.com/Microsoft/WinObjC/) github repo documentation to create a visual studio solution.
 
 In Visual Studio expand the solution and navigate to Bolts folder. Then right click on Bolts target go to properties->clang->Enable ObjectiveC ARC and set it to YES(-fobjc-arc).Do this for the other target BoltsInClassPath also in subsequent BoltsInClassPath folder.
 
