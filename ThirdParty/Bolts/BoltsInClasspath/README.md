@@ -1,4 +1,4 @@
-The sample uses openweathermap.org free subscription rest API to demonstrate the Bolts usage. Please register for free and use the token generated from https://home.openweathermap.org/users/sign_up and replace it with apiKey placeholder in the Constants.m file
+﻿The sample uses openweathermap.org free subscription rest API to demonstrate the Bolts usage. Please register for free and use the token generated from https://home.openweathermap.org/users/sign_up and replace it with apiKey placeholder in the Constants.m file
 This project uses bolts as a dependency.When you first clone the repo if you have included ‘--recursive’ skip the next statement. Else
 	Navigate to samples root directory and run the ‘git submodule update --init --recursive’ git command.
 
@@ -11,13 +11,11 @@ In Visual Studio expand the solution and navigate to Bolts folder. Then right cl
 
 In the BoltsInClassPath sample app to make this app run on Windows I have found two issues in the app build phase.
 
-1) When you start building app you may encounter
+1) When you start building the app you may encounter
  Bolts.lib (BFExecutor_F456FB2F.obj) : error LNK 2019: unresolved external symbol _pthread_get_stackaddr_np referenced in function remaining_stack_size
  Bolts.lib (BFExecutor_F456FB2F.obj) : error LNK 2019: unresolved external symbol _pthread_get_stacksize_np referenced in function remaining_stack_size
 
-This happens because I see a different implementations for pThread on Winobjc. so my temp workaround is
-
-go to your Bolts dependency in the solution and navigate to Bolts/Bolts/Common/BFExecutor.m file. change the below method implementation like this.
+"This happens because WinObjC uses a different implementation for pThread. On Windows, you'll have to go to your Bolts dependency in the solution and navigate to the Bolts/Bolts/Common/BFExecutor.m file. Change the below method implementation as shown:
 
 ```Objective-c
 __attribute__((noinline)) static size_t remaining_stack_size(size_t *restrict totalSize) {
