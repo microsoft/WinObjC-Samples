@@ -17,5 +17,5 @@
 #import "Constants.h"
 
 @implementation Constants
-NSString *const apiKey = @"f57e60b933be2bb8181fd64ff573983d";
+NSString *const apiKey = @"xxxxxxxxxxxxxxxxxxxx";// replace this with your api token/key
 @end
