@@ -1,4 +1,4 @@
-						**BOLTS Sample Application**
+#BOLTS Sample Application
 
 The sample uses openweathermap.org free subscription rest API to demonstrate the Bolts usage. Please register for free and use the token generated from https://home.openweathermap.org/users/sign_up and replace it with apiKey placeholder in the Constants.m file
 This project uses bolts as a dependency. When you first clone the repo if you have included ‘--recursive’ skip the next statement. Else navigate to WinObjC-samples root directory and run the ‘git submodule update --init --recursive’ git command.
