@@ -15,7 +15,7 @@ In the BoltsInClassPath sample app to make this app run on Windows I have found 
  Bolts.lib (BFExecutor_F456FB2F.obj) : error LNK 2019: unresolved external symbol _pthread_get_stackaddr_np referenced in function remaining_stack_size
  Bolts.lib (BFExecutor_F456FB2F.obj) : error LNK 2019: unresolved external symbol _pthread_get_stacksize_np referenced in function remaining_stack_size
 
-"This happens because WinObjC uses a different implementation for pThread. On Windows, you'll have to go to your Bolts dependency in the solution and navigate to the Bolts/Bolts/Common/BFExecutor.m file. Change the below method implementation as shown:
+This happens because WinObjC uses a different implementation for pThread. On Windows, you'll have to go to your Bolts dependency in the solution and navigate to the Bolts/Bolts/Common/BFExecutor.m file. Change the below method implementation as shown:
 
 ```Objective-c
 __attribute__((noinline)) static size_t remaining_stack_size(size_t *restrict totalSize) {
