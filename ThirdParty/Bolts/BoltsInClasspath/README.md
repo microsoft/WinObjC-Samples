@@ -1,6 +1,7 @@
 #BOLTS Sample Application
 
-This sample uses openweathermap.org free subscription rest API to demonstrate the Bolts usage. 
+##Prerequisites
+This sample uses the free openweathermap.org rest API to demonstrate the Bolts usage. 
 
 Please register for free and use the token generated from https://home.openweathermap.org/users/sign_up and replace it with apiKey placeholder in the Constants.m file
 
