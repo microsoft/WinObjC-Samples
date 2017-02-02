@@ -27,8 +27,7 @@ Right-click on Bolts target. Go to properties->clang->Enable ObjectiveC ARC and 
 You will find two issues in the app build phase. Here's how to work around them.
 
 1) When you start building the app you may encounter
-```
-Bolts.lib (BFExecutor_F456FB2F.obj) : error LNK 2019: unresolved external symbol _pthread_get_stackaddr_np referenced in function remaining_stack_size
+```Bolts.lib (BFExecutor_F456FB2F.obj) : error LNK 2019: unresolved external symbol _pthread_get_stackaddr_np referenced in function remaining_stack_size
  Bolts.lib (BFExecutor_F456FB2F.obj) : error LNK 2019: unresolved external symbol _pthread_get_stacksize_np referenced in function remaining_stack_size
 ```
 
@@ -69,7 +68,7 @@ APPLinks part of BoltsAPI was not yet implemented.
 
 ###Coverage
 All the methods listed below are used in sample and are tested on both iOS and Windows environment.
-
+```
 BFExecutor mainThreadExecutor
 BFExecutor defaultExecutor
 BFExecutor executorWithDispatchQueue:
@@ -91,3 +90,4 @@ BFCancellationToken registerCancellationObserverWithBlock:
 BFCancellationToken cancelationRequested
 
 BFCancellationTokenRegistration dispose
+```
