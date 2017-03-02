@@ -66,9 +66,9 @@
 
 -(void)constructViewWithTableView {
     buttonArray = [[NSArray alloc] initWithObjects:@"Forecast Weather At Microsoft using a custom block",@"Forecast Weather At Apple using immediate BFThread Executor",
-												@"Forecast For all corner cities",@"start long task",@"cancel long task",@"Get last cancelled task",@"Get last completed task",
-												@"Get last error task",@"Notify upon any task completion",@"Forecast Weather in China after 5 seconds delay",
-												@"start delayed task with cancel token",@"cancel delayed task with cancel token", nil];
+                   @"Forecast For all corner cities",@"start long task",@"cancel long task",@"Get last cancelled task",@"Get last completed task",
+                   @"Get last error task",@"Notify upon any task completion",@"Forecast Weather in China after 5 seconds delay",
+                   @"start delayed task with cancel token",@"cancel delayed task with cancel token", nil];
     
     //defines all views
     _delegateOutputTextView = [[UITextView alloc] init];
@@ -195,13 +195,13 @@
         case 7:
             [self getLatestTaskWithError];
             break;
-	case 8:
+        case 8:
             [self getNotifiedUponCompletionOfAnyFromABunchOfTasks];
             break;
-	case 9:
+        case 9:
             [self delayFiveSecondsAndGetWeather];
             break;
-	case 10:
+        case 10:
             [self startDelayedTaskWithCancellationToken];
             break;
         case 11:
