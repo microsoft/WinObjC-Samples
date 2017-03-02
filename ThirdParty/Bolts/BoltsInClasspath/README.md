@@ -62,11 +62,16 @@ BFTaskCompletionSource taskCompletionSource
 BFTaskCompletionSource setResult:
 BFTaskCompletionSource completion setError:
 
-
+BFTask taskWithResult:
+BFTask cancelledTask
+BFTask taskWithError:
 BFTask continueWithBlock:
+BFTask taskForCompletionOfAnyTask:
 BFTask taskForCompletionOfAllTasksWithResults:
 BFTask continueWithExecutor:   withBlock:
 BFTask continueWithSuccessBlock:  cancellationToken:
+BFTask taskWithDelay:
+BFTask taskWithDelay: cancellationToken:
 
 
 BFCancellationTokenSource cancellationTokenSource
