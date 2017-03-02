@@ -22,11 +22,11 @@
 @interface ViewController () {
     BFCancellationTokenSource* cancelSource;
     BFCancellationTokenRegistration* cancelRegistration;
-	BFCancellationTokenSource* delayedCancelSource;
+    BFCancellationTokenSource* delayedCancelSource;
     UITextView* _delegateOutputTextView;
     __block id latestResult;
     __block id latestError;
-	NSArray* buttonArray;
+    NSArray* buttonArray;
 }
 @end
 
@@ -95,7 +95,7 @@
     [container setBackgroundColor:[UIColor colorWithWhite:0.5 alpha:1.0]];
     [APITestTableView setBackgroundColor:[UIColor grayColor]];
     
-	[container addSubview:label1];
+    [container addSubview:label1];
     [container addSubview:APITestTableView];
     [[self view] addSubview:container];
     [[self view] addSubview:_delegateOutputTextView];
@@ -168,7 +168,7 @@
     [[self view] addConstraint:bottomTLayoutConstraints];
 }
 
--(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 	[tableView deselectRowAtIndexPath:indexPath animated:true];
     switch (indexPath.row) {
         case 0:
@@ -195,13 +195,13 @@
         case 7:
             [self getLatestTaskWithError];
             break;
-		case 8:
+	case 8:
             [self getNotifiedUponCompletionOfAnyFromABunchOfTasks];
             break;
-		case 9:
+	case 9:
             [self delayFiveSecondsAndGetWeather];
             break;
-		case 10:
+	case 10:
             [self startDelayedTaskWithCancellationToken];
             break;
         case 11:
@@ -216,7 +216,7 @@
     return [buttonArray count];
 }
 
--(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+-(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     NSString* cellID = @"buttonCell";
     UITableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:cellID];
     if (cell == nil) {
@@ -257,7 +257,7 @@
     }
 }
 
-- (void)findWeatherInAllCornerCitiesOfUSA{
+- (void)findWeatherInAllCornerCitiesOfUSA {
     NSArray* cities = [[NSArray alloc] initWithObjects:@"seattle",@"sandiego",@"miami",@"boston", nil];
     NSMutableArray* tasksArray = [NSMutableArray array];
     TaskManager *manager = [TaskManager sharedManager];
@@ -294,7 +294,7 @@
     }];
 }
 
-- (void)getCurrentWeatherAtApplePaloAlto{
+- (void)getCurrentWeatherAtApplePaloAlto {
     TaskManager *manager = [TaskManager sharedManager];
     printf("%s", "\n\n");
     [self _printOutput:(@"processing weather report for paloalto from an immediate BFThread Executor")];
@@ -311,7 +311,7 @@
     }];
 }
 
-- (void)getCurrentWeatherAtMicrosoftRedmond{
+- (void)getCurrentWeatherAtMicrosoftRedmond {
     TaskManager *manager = [TaskManager sharedManager];
     printf("%s", "\n\n");
     [self _printOutput:(@"processing weather report for redmond from a custom block.")];
@@ -329,7 +329,7 @@
     }];
 }
 
-- (void)fetchWeatherAndWaitFiveSeconds: (BFCancellationToken*) cancelToken{
+- (void)fetchWeatherAndWaitFiveSeconds: (BFCancellationToken*) cancelToken {
     TaskManager *manager = [TaskManager sharedManager];
     [self _printOutput:(@"started long running task. This task gets weather forecast in Moscow,Russia and waits for 5 seconds to finish.")];
     BFTask* longRunningTask = [manager fetchCurrentWeatherAsyncFromAPIandparseResponseAsyncFor:@"moscow" andCountry:@"russia"];
@@ -372,7 +372,7 @@
     [self _printOutput:[BFTask taskWithError:latestError]];
 }
 
-- (void)getNotifiedUponCompletionOfAnyFromABunchOfTasks{
+- (void)getNotifiedUponCompletionOfAnyFromABunchOfTasks {
     NSArray* cities = [[NSArray alloc] initWithObjects:@"los angeles",@"phoenix",@"washington d.c.",@"detroit", nil];
     NSMutableArray* tasksArray = [NSMutableArray array];
     TaskManager *manager = [TaskManager sharedManager];
@@ -398,7 +398,7 @@
     }];
 }
 
-- (void)delayFiveSecondsAndGetWeather{
+- (void)delayFiveSecondsAndGetWeather {
     [self _printOutput:(@"processing delayed weather report for Beijing, China from an immediate BFThread Executor")];
     [[BFTask taskWithDelay:5000] continueWithExecutor:[TaskExecutionResource dispatchQueueBFThreadExecutor] withBlock:^id _Nullable(BFTask * _Nonnull t) {
         TaskManager *manager = [TaskManager sharedManager];
@@ -431,7 +431,7 @@
     }
 }
 
-- (void)delayedTaskWithCancellationToken: (BFCancellationToken*) cancelToken{
+- (void)delayedTaskWithCancellationToken: (BFCancellationToken*) cancelToken {
     [self _printOutput:(@"started delayed task with cancellation token.")];
     __weak __typeof__(self) weakSelf = self;
     __strong __typeof__(self) strongSelf = weakSelf;
