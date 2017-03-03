@@ -26,12 +26,7 @@ Right-click on Bolts target. Go to properties->clang->Enable ObjectiveC ARC and 
 ##Workaround
 You will find two issues in the app build phase. Here's how to work around them.
 
-1) When you start building the app you may encounter
-```Bolts.lib (BFExecutor_F456FB2F.obj) : error LNK 2019: unresolved external symbol _pthread_get_stackaddr_np referenced in function remaining_stack_size
- Bolts.lib (BFExecutor_F456FB2F.obj) : error LNK 2019: unresolved external symbol _pthread_get_stacksize_np referenced in function remaining_stack_size
-```
-
-This happens because WinObjC uses a different implementation for pThread. On Windows, you'll have to go to your Bolts dependency in the solution and navigate to the Bolts/Bolts/Common/BFExecutor.m file. Change the below method's (remaining_stack_size) implementation as shown:
+- WinObjC uses a different implementation for pThread. On Windows, you'll have to go to your Bolts dependency in the solution and navigate to **Bolts/Bolts/Common/BFExecutor.m**. Change the below method's (remaining_stack_size) implementation as shown:
 
 ```Objective-c
 __attribute__((noinline)) static size_t remaining_stack_size(size_t *restrict totalSize) {
@@ -55,7 +50,7 @@ __attribute__((noinline)) static size_t remaining_stack_size(size_t *restrict to
 
 }
 ```
-2) You need to replace TARGET_OS_IOS in your Bolts dependency in the solution. Navigate to Bolts/Public Headers/Bolts.h file. change the line in the import statement.
+- You need to replace TARGET_OS_IOS in your Bolts dependency in the solution. Navigate to Bolts/Public **Headers/Bolts.h**. change the line in the import statement.
 
 ```Objective-c
 	#if __has_include(<Bolts/BFAppLink.h>) && WINOBJC && !TARGET_OS_WATCH && !TARGET_OS_TV
