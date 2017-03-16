@@ -169,7 +169,7 @@
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-	[tableView deselectRowAtIndexPath:indexPath animated:true];
+    [tableView deselectRowAtIndexPath:indexPath animated:true];
     switch (indexPath.row) {
         case 0:
             [self forecastAtMicrosoftButtonTapped];
