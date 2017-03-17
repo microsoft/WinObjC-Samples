@@ -1,1 +1,0 @@
-MainPackage=D:\src\winobjc-samples\Scenarios\FileActivation\FileActivationSample\Release\FileActivation\FileActivation_1.0.0.0_Win32.appx
