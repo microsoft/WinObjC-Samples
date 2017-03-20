@@ -1,0 +1,80 @@
+<?xml version="1.0"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Common">
+      <UniqueIdentifier>{2e08e153-765d-4d98-a363-a88982fcd13c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets">
+      <UniqueIdentifier>{19222c90-8383-455e-ae30-e53420f5a995}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="RadialControlSample">
+      <UniqueIdentifier>{E0AB340B-6647-4226-B5C0-59E6833C7903}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="RadialControlSample\Base">
+      <UniqueIdentifier>{F0015EF1-E0C6-4DBB-B749-ACE3BC0B673E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="RadialControlSample\Supporting Files">
+      <UniqueIdentifier>{21F2B093-1798-4415-89F8-066697F6D185}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Xcode Variable Files">
+      <UniqueIdentifier>{AB197B4E-1D2D-4B8E-B659-425C2F02C139}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Xml Include="default.rd.xml" />
+    <AppxManifest Include="Package.appxmanifest" />
+    <None Include="RadialControlSample_TemporaryKey.pfx" />
+    <Image Include="Assets\LockScreenLogo.scale-200.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\SplashScreen.scale-200.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Square150x150Logo.scale-200.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Square44x44Logo.scale-200.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\StoreLogo.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Wide310x150Logo.scale-200.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <AssetCatalogCompile Include="..\..\RadialControlSample\Assets.xcassets">
+      <Filter>RadialControlSample</Filter>
+    </AssetCatalogCompile>
+    <ClInclude Include="..\..\RadialControlSample\AppDelegate.h">
+      <Filter>RadialControlSample</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\RadialControlSample\ViewController.h">
+      <Filter>RadialControlSample</Filter>
+    </ClInclude>
+    <ClangCompile Include="..\..\RadialControlSample\AppDelegate.m">
+      <Filter>RadialControlSample</Filter>
+    </ClangCompile>
+    <ClangCompile Include="..\..\RadialControlSample\ViewController.m">
+      <Filter>RadialControlSample</Filter>
+    </ClangCompile>
+    <ClangCompile Include="..\..\RadialControlSample\main.m">
+      <Filter>RadialControlSample\Supporting Files</Filter>
+    </ClangCompile>
+    <SBInfoPlistCopy Include="..\..\RadialControlSample\Info.plist" />
+    <StoryboardCompile Include="..\..\RadialControlSample\Base.lproj\LaunchScreen.storyboard">
+      <Filter>RadialControlSample\Base</Filter>
+    </StoryboardCompile>
+    <StoryboardCompile Include="..\..\RadialControlSample\Base.lproj\Main.storyboard">
+      <Filter>RadialControlSample\Base</Filter>
+    </StoryboardCompile>
+    <Text Include="RadialControlSample-Debug-xcvars.txt">
+      <Filter>Xcode Variable Files</Filter>
+    </Text>
+    <Text Include="RadialControlSample-Release-xcvars.txt">
+      <Filter>Xcode Variable Files</Filter>
+    </Text>
+  </ItemGroup>
+</Project>

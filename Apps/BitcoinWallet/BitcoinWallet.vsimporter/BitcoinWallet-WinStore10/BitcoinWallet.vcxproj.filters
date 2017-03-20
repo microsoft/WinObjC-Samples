@@ -1,0 +1,170 @@
+<?xml version="1.0"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Common">
+      <UniqueIdentifier>{95b7cdfa-5c6c-4f4b-b1bf-ed7328faeb48}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets">
+      <UniqueIdentifier>{c477e8e7-38d3-4883-890e-b956325d6f82}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="BitcoinWallet">
+      <UniqueIdentifier>{65AD820E-09E3-45CF-B08F-D2CD12FF7537}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="BitcoinWallet\Base">
+      <UniqueIdentifier>{83248AD1-AE8F-4AE9-9801-D0E4C6A5C4A7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="BitcoinWallet\Supporting Files">
+      <UniqueIdentifier>{372877F2-A4A6-4801-96D8-3CFCE876B941}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Xcode Variable Files">
+      <UniqueIdentifier>{02253D88-1EEE-4AEA-B8E6-58B21B744FB0}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Xml Include="default.rd.xml" />
+    <AppxManifest Include="Package.appxmanifest" />
+    <None Include="BitcoinWallet_TemporaryKey.pfx" />
+    <Image Include="Assets\LockScreenLogo.scale-200.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\SplashScreen.scale-200.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Square150x150Logo.scale-200.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Square44x44Logo.scale-200.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\StoreLogo.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Wide310x150Logo.scale-200.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <AssetCatalogCompile Include="..\..\BitcoinWallet\Assets.xcassets">
+      <Filter>BitcoinWallet</Filter>
+    </AssetCatalogCompile>
+    <ClInclude Include="..\..\BitcoinWallet\APINetworkOps.h">
+      <Filter>BitcoinWallet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\BitcoinWallet\AddressListView.h">
+      <Filter>BitcoinWallet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\BitcoinWallet\AddressManager.h">
+      <Filter>BitcoinWallet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\BitcoinWallet\AddressViewController.h">
+      <Filter>BitcoinWallet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\BitcoinWallet\AppDelegate.h">
+      <Filter>BitcoinWallet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\BitcoinWallet\ContactManager.h">
+      <Filter>BitcoinWallet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\BitcoinWallet\ContactViewController.h">
+      <Filter>BitcoinWallet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\BitcoinWallet\CreateContactViewController.h">
+      <Filter>BitcoinWallet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\BitcoinWallet\CryptoOps.h">
+      <Filter>BitcoinWallet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\BitcoinWallet\DEREncoder.h">
+      <Filter>BitcoinWallet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\BitcoinWallet\MainViewController.h">
+      <Filter>BitcoinWallet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\BitcoinWallet\MenuViewController.h">
+      <Filter>BitcoinWallet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\BitcoinWallet\NetworkOps.h">
+      <Filter>BitcoinWallet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\BitcoinWallet\SendTransactionViewController.h">
+      <Filter>BitcoinWallet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\BitcoinWallet\TransactionListViewController.h">
+      <Filter>BitcoinWallet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\BitcoinWallet\TransactionManager.h">
+      <Filter>BitcoinWallet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\BitcoinWallet\uECC.h">
+      <Filter>BitcoinWallet</Filter>
+    </ClInclude>
+    <ClangCompile Include="..\..\BitcoinWallet\APINetworkOps.m">
+      <Filter>BitcoinWallet</Filter>
+    </ClangCompile>
+    <ClangCompile Include="..\..\BitcoinWallet\AddressListView.m">
+      <Filter>BitcoinWallet</Filter>
+    </ClangCompile>
+    <ClangCompile Include="..\..\BitcoinWallet\AddressManager.m">
+      <Filter>BitcoinWallet</Filter>
+    </ClangCompile>
+    <ClangCompile Include="..\..\BitcoinWallet\AddressViewController.m">
+      <Filter>BitcoinWallet</Filter>
+    </ClangCompile>
+    <ClangCompile Include="..\..\BitcoinWallet\AppDelegate.m">
+      <Filter>BitcoinWallet</Filter>
+    </ClangCompile>
+    <ClangCompile Include="..\..\BitcoinWallet\ContactManager.m">
+      <Filter>BitcoinWallet</Filter>
+    </ClangCompile>
+    <ClangCompile Include="..\..\BitcoinWallet\ContactViewController.m">
+      <Filter>BitcoinWallet</Filter>
+    </ClangCompile>
+    <ClangCompile Include="..\..\BitcoinWallet\CreateContactViewController.m">
+      <Filter>BitcoinWallet</Filter>
+    </ClangCompile>
+    <ClangCompile Include="..\..\BitcoinWallet\CryptoOps.m">
+      <Filter>BitcoinWallet</Filter>
+    </ClangCompile>
+    <ClangCompile Include="..\..\BitcoinWallet\DEREncoder.m">
+      <Filter>BitcoinWallet</Filter>
+    </ClangCompile>
+    <ClangCompile Include="..\..\BitcoinWallet\MainViewController.m">
+      <Filter>BitcoinWallet</Filter>
+    </ClangCompile>
+    <ClangCompile Include="..\..\BitcoinWallet\MenuViewController.m">
+      <Filter>BitcoinWallet</Filter>
+    </ClangCompile>
+    <ClangCompile Include="..\..\BitcoinWallet\NetworkOps.m">
+      <Filter>BitcoinWallet</Filter>
+    </ClangCompile>
+    <ClangCompile Include="..\..\BitcoinWallet\SendTransactionViewController.m">
+      <Filter>BitcoinWallet</Filter>
+    </ClangCompile>
+    <ClangCompile Include="..\..\BitcoinWallet\TransactionListViewController.m">
+      <Filter>BitcoinWallet</Filter>
+    </ClangCompile>
+    <ClangCompile Include="..\..\BitcoinWallet\TransactionManager.m">
+      <Filter>BitcoinWallet</Filter>
+    </ClangCompile>
+    <ClangCompile Include="..\..\BitcoinWallet\main.m">
+      <Filter>BitcoinWallet\Supporting Files</Filter>
+    </ClangCompile>
+    <ClangCompile Include="..\..\BitcoinWallet\uECC.c">
+      <Filter>BitcoinWallet</Filter>
+    </ClangCompile>
+    <SBInfoPlistCopy Include="..\..\BitcoinWallet\Info.plist" />
+    <StoryboardCompile Include="..\..\BitcoinWallet\Base.lproj\LaunchScreen.storyboard">
+      <Filter>BitcoinWallet\Base</Filter>
+    </StoryboardCompile>
+    <StoryboardCompile Include="..\..\BitcoinWallet\Base.lproj\Main.storyboard">
+      <Filter>BitcoinWallet\Base</Filter>
+    </StoryboardCompile>
+    <Text Include="BitcoinWallet-Debug-xcvars.txt">
+      <Filter>Xcode Variable Files</Filter>
+    </Text>
+    <Text Include="BitcoinWallet-Release-xcvars.txt">
+      <Filter>Xcode Variable Files</Filter>
+    </Text>
+  </ItemGroup>
+</Project>

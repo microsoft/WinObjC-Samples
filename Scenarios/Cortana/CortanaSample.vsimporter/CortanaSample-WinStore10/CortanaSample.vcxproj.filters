@@ -1,0 +1,80 @@
+<?xml version="1.0"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Common">
+      <UniqueIdentifier>{d32c90ce-2c8c-47dd-8804-494861414b12}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets">
+      <UniqueIdentifier>{22902bf0-4b59-403d-a6b4-a1ee6bffa384}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CortanaSample">
+      <UniqueIdentifier>{4FE7638C-A6C5-4A34-84AA-3ADDB427A41D}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CortanaSample\Base">
+      <UniqueIdentifier>{001C5288-90E5-4A4C-BD20-FECC7E0959DE}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CortanaSample\Supporting Files">
+      <UniqueIdentifier>{BCDB3E38-1E1A-4B7F-B2EB-F6A28AA0C3D6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Xcode Variable Files">
+      <UniqueIdentifier>{4369CB5E-42E9-4B86-8985-23E9D6F86577}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Xml Include="default.rd.xml" />
+    <AppxManifest Include="Package.appxmanifest" />
+    <None Include="CortanaSample_TemporaryKey.pfx" />
+    <Image Include="Assets\LockScreenLogo.scale-200.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\SplashScreen.scale-200.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Square150x150Logo.scale-200.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Square44x44Logo.scale-200.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\StoreLogo.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Wide310x150Logo.scale-200.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <AssetCatalogCompile Include="..\..\CortanaSample\Assets.xcassets">
+      <Filter>CortanaSample</Filter>
+    </AssetCatalogCompile>
+    <ClInclude Include="..\..\CortanaSample\AppDelegate.h">
+      <Filter>CortanaSample</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CortanaSample\ViewController.h">
+      <Filter>CortanaSample</Filter>
+    </ClInclude>
+    <ClangCompile Include="..\..\CortanaSample\AppDelegate.m">
+      <Filter>CortanaSample</Filter>
+    </ClangCompile>
+    <ClangCompile Include="..\..\CortanaSample\ViewController.m">
+      <Filter>CortanaSample</Filter>
+    </ClangCompile>
+    <ClangCompile Include="..\..\CortanaSample\main.m">
+      <Filter>CortanaSample\Supporting Files</Filter>
+    </ClangCompile>
+    <SBInfoPlistCopy Include="..\..\CortanaSample\Info.plist" />
+    <StoryboardCompile Include="..\..\CortanaSample\Base.lproj\LaunchScreen.storyboard">
+      <Filter>CortanaSample\Base</Filter>
+    </StoryboardCompile>
+    <StoryboardCompile Include="..\..\CortanaSample\Base.lproj\Main.storyboard">
+      <Filter>CortanaSample\Base</Filter>
+    </StoryboardCompile>
+    <Text Include="CortanaSample-Debug-xcvars.txt">
+      <Filter>Xcode Variable Files</Filter>
+    </Text>
+    <Text Include="CortanaSample-Release-xcvars.txt">
+      <Filter>Xcode Variable Files</Filter>
+    </Text>
+  </ItemGroup>
+</Project>

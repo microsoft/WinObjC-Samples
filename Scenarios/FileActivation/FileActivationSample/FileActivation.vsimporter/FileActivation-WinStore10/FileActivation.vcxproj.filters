@@ -1,23 +1,23 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0"?>
 <Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <Filter Include="Common">
-      <UniqueIdentifier>{08b7c143-f5ff-411a-b4bf-5768f31030a8}</UniqueIdentifier>
+      <UniqueIdentifier>{c227d730-e40a-4f34-8c5c-e61e7a494d80}</UniqueIdentifier>
     </Filter>
     <Filter Include="Assets">
-      <UniqueIdentifier>{05f83a1f-8639-45cc-9cae-f0fb667eae8a}</UniqueIdentifier>
+      <UniqueIdentifier>{3ae34cc6-871d-4c50-9b44-20fe8d149511}</UniqueIdentifier>
     </Filter>
     <Filter Include="FileActivation">
-      <UniqueIdentifier>{0E3C6ACD-1013-4AA8-89F4-153F537BD583}</UniqueIdentifier>
+      <UniqueIdentifier>{04842D4A-77F4-404F-B74E-2D94D5B10ACB}</UniqueIdentifier>
     </Filter>
     <Filter Include="FileActivation\Base">
-      <UniqueIdentifier>{43CF2A7F-1FD9-45F1-9606-D4C776F0688A}</UniqueIdentifier>
+      <UniqueIdentifier>{BA602BC0-05BB-41F4-BDC5-1DC6F6E0C7BD}</UniqueIdentifier>
     </Filter>
     <Filter Include="FileActivation\Supporting Files">
-      <UniqueIdentifier>{71AFB26C-1615-41DC-95BB-CC9ACBCCB844}</UniqueIdentifier>
+      <UniqueIdentifier>{14C2030D-5C28-407F-A6CA-566010497DF5}</UniqueIdentifier>
     </Filter>
     <Filter Include="Xcode Variable Files">
-      <UniqueIdentifier>{644F34D2-A9D4-40E3-894E-CAF3FE079F7B}</UniqueIdentifier>
+      <UniqueIdentifier>{E995DAA2-3AC5-403D-A8C5-91A8EE14AB3E}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -76,16 +76,5 @@
     <Text Include="FileActivation-Release-xcvars.txt">
       <Filter>Xcode Variable Files</Filter>
     </Text>
-  </ItemGroup>
-  <ItemGroup>
-    <ApplicationDefinition Include="App.xaml" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="App.xaml.cpp" />
-    <ClCompile Include="pch.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="pch.h" />
-    <ClInclude Include="App.xaml.h" />
   </ItemGroup>
 </Project>

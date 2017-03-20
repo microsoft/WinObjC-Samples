@@ -1,0 +1,38 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.22823.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MapsSample", "MapsSample", "{536C460C-2D35-4BD2-A06A-2BD4B28E0287}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MapsSample", "MapsSample.vsimporter\MapsSample-WinStore10\MapsSample.vcxproj", "{E0EBD4A7-75E2-4F7E-AF9D-071EC57866AC}"
+EndProject
+Global
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|ARM = Debug|ARM
+		Debug|Win32 = Debug|Win32
+		Release|ARM = Release|ARM
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E0EBD4A7-75E2-4F7E-AF9D-071EC57866AC}.Debug|ARM.ActiveCfg = Debug|ARM
+		{E0EBD4A7-75E2-4F7E-AF9D-071EC57866AC}.Debug|ARM.Build.0 = Debug|ARM
+		{E0EBD4A7-75E2-4F7E-AF9D-071EC57866AC}.Debug|ARM.Deploy.0 = Debug|ARM
+		{E0EBD4A7-75E2-4F7E-AF9D-071EC57866AC}.Debug|Win32.ActiveCfg = Debug|Win32
+		{E0EBD4A7-75E2-4F7E-AF9D-071EC57866AC}.Debug|Win32.Build.0 = Debug|Win32
+		{E0EBD4A7-75E2-4F7E-AF9D-071EC57866AC}.Debug|Win32.Deploy.0 = Debug|Win32
+		{E0EBD4A7-75E2-4F7E-AF9D-071EC57866AC}.Release|ARM.ActiveCfg = Release|ARM
+		{E0EBD4A7-75E2-4F7E-AF9D-071EC57866AC}.Release|ARM.Build.0 = Release|ARM
+		{E0EBD4A7-75E2-4F7E-AF9D-071EC57866AC}.Release|ARM.Deploy.0 = Release|ARM
+		{E0EBD4A7-75E2-4F7E-AF9D-071EC57866AC}.Release|Win32.ActiveCfg = Release|Win32
+		{E0EBD4A7-75E2-4F7E-AF9D-071EC57866AC}.Release|Win32.Build.0 = Release|Win32
+		{E0EBD4A7-75E2-4F7E-AF9D-071EC57866AC}.Release|Win32.Deploy.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{E0EBD4A7-75E2-4F7E-AF9D-071EC57866AC} = {536C460C-2D35-4BD2-A06A-2BD4B28E0287}
+	EndGlobalSection
+EndGlobal

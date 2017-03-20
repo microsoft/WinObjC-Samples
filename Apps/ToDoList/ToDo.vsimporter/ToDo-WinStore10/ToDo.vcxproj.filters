@@ -1,0 +1,104 @@
+<?xml version="1.0"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Common">
+      <UniqueIdentifier>{f2c72930-8a9c-479b-8ca4-1c5e92a2e419}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets">
+      <UniqueIdentifier>{f1f94d7e-e80a-4288-9c1e-04bc5d9b67a6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ToDo">
+      <UniqueIdentifier>{2B89B579-F19D-4BA5-A21C-8399F1A411E1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ToDo\Base">
+      <UniqueIdentifier>{A7E017BE-C7E1-48F0-8E57-DAE7679D8AED}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ToDo\Supporting Files">
+      <UniqueIdentifier>{6BEC1DFD-2C58-40DC-A09C-71FAD03DF276}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Xcode Variable Files">
+      <UniqueIdentifier>{B2EC458B-A91A-4A9A-B0F4-979B6883CE85}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Xml Include="default.rd.xml" />
+    <AppxManifest Include="Package.appxmanifest" />
+    <None Include="ToDo_TemporaryKey.pfx" />
+    <Image Include="Assets\LockScreenLogo.scale-200.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\SplashScreen.scale-200.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Square150x150Logo.scale-200.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Square44x44Logo.scale-200.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\StoreLogo.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Wide310x150Logo.scale-200.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <AssetCatalogCompile Include="..\..\ToDo\Assets.xcassets">
+      <Filter>ToDo</Filter>
+    </AssetCatalogCompile>
+    <ClInclude Include="..\..\ToDo\AppDelegate.h">
+      <Filter>ToDo</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\ToDo\TDInputTableViewCell.h">
+      <Filter>ToDo</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\ToDo\TDItem.h">
+      <Filter>ToDo</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\ToDo\TDLabel.h">
+      <Filter>ToDo</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\ToDo\TDTableViewCell.h">
+      <Filter>ToDo</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\ToDo\TDTableViewController.h">
+      <Filter>ToDo</Filter>
+    </ClInclude>
+    <ClangCompile Include="..\..\ToDo\AppDelegate.m">
+      <Filter>ToDo</Filter>
+    </ClangCompile>
+    <ClangCompile Include="..\..\ToDo\TDInputTableViewCell.m">
+      <Filter>ToDo</Filter>
+    </ClangCompile>
+    <ClangCompile Include="..\..\ToDo\TDItem.m">
+      <Filter>ToDo</Filter>
+    </ClangCompile>
+    <ClangCompile Include="..\..\ToDo\TDLabel.m">
+      <Filter>ToDo</Filter>
+    </ClangCompile>
+    <ClangCompile Include="..\..\ToDo\TDTableViewCell.m">
+      <Filter>ToDo</Filter>
+    </ClangCompile>
+    <ClangCompile Include="..\..\ToDo\TDTableViewController.m">
+      <Filter>ToDo</Filter>
+    </ClangCompile>
+    <ClangCompile Include="..\..\ToDo\main.m">
+      <Filter>ToDo\Supporting Files</Filter>
+    </ClangCompile>
+    <SBInfoPlistCopy Include="..\..\ToDo\Info.plist" />
+    <StoryboardCompile Include="..\..\ToDo\Base.lproj\LaunchScreen.storyboard">
+      <Filter>ToDo\Base</Filter>
+    </StoryboardCompile>
+    <StoryboardCompile Include="..\..\ToDo\Base.lproj\Main.storyboard">
+      <Filter>ToDo\Base</Filter>
+    </StoryboardCompile>
+    <Text Include="ToDo-Debug-xcvars.txt">
+      <Filter>Xcode Variable Files</Filter>
+    </Text>
+    <Text Include="ToDo-Release-xcvars.txt">
+      <Filter>Xcode Variable Files</Filter>
+    </Text>
+  </ItemGroup>
+</Project>

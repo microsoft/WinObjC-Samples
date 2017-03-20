@@ -1,0 +1,80 @@
+<?xml version="1.0"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Common">
+      <UniqueIdentifier>{2581cb0e-a3dd-4c9c-ae71-47aedbd74aa3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets">
+      <UniqueIdentifier>{e9590e96-7ebd-4cf1-aca2-5f3269d72d93}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Calculator">
+      <UniqueIdentifier>{ACF7F432-9934-4904-BF8C-4190E9498A73}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Calculator\Base">
+      <UniqueIdentifier>{C50FD790-BFF5-4365-88C7-69DA80B7B4A7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Calculator\Supporting Files">
+      <UniqueIdentifier>{E9D25A8C-21BB-476B-9B7C-4DA484283695}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Xcode Variable Files">
+      <UniqueIdentifier>{A43C4BBF-AA15-4295-9F64-A8D23CE39302}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Xml Include="default.rd.xml" />
+    <AppxManifest Include="Package.appxmanifest" />
+    <None Include="Calculator_TemporaryKey.pfx" />
+    <Image Include="Assets\LockScreenLogo.scale-200.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\SplashScreen.scale-200.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Square150x150Logo.scale-200.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Square44x44Logo.scale-200.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\StoreLogo.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Wide310x150Logo.scale-200.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <AssetCatalogCompile Include="..\..\Calculator\Assets.xcassets">
+      <Filter>Calculator</Filter>
+    </AssetCatalogCompile>
+    <ClInclude Include="..\..\Calculator\AppDelegate.h">
+      <Filter>Calculator</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Calculator\ViewController.h">
+      <Filter>Calculator</Filter>
+    </ClInclude>
+    <ClangCompile Include="..\..\Calculator\AppDelegate.m">
+      <Filter>Calculator</Filter>
+    </ClangCompile>
+    <ClangCompile Include="..\..\Calculator\ViewController.m">
+      <Filter>Calculator</Filter>
+    </ClangCompile>
+    <ClangCompile Include="..\..\Calculator\main.m">
+      <Filter>Calculator\Supporting Files</Filter>
+    </ClangCompile>
+    <SBInfoPlistCopy Include="..\..\Calculator\Info.plist" />
+    <StoryboardCompile Include="..\..\Calculator\Base.lproj\LaunchScreen.storyboard">
+      <Filter>Calculator\Base</Filter>
+    </StoryboardCompile>
+    <StoryboardCompile Include="..\..\Calculator\Base.lproj\Main.storyboard">
+      <Filter>Calculator\Base</Filter>
+    </StoryboardCompile>
+    <Text Include="Calculator-Debug-xcvars.txt">
+      <Filter>Xcode Variable Files</Filter>
+    </Text>
+    <Text Include="Calculator-Release-xcvars.txt">
+      <Filter>Xcode Variable Files</Filter>
+    </Text>
+  </ItemGroup>
+</Project>

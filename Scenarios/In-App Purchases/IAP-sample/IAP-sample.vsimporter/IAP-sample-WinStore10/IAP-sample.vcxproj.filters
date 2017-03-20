@@ -1,0 +1,80 @@
+<?xml version="1.0"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Common">
+      <UniqueIdentifier>{129b6e69-72a3-45c6-acfd-a0fb2cd97157}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets">
+      <UniqueIdentifier>{5df5c218-bae1-47a8-9346-433551672430}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="IAP-sample">
+      <UniqueIdentifier>{6F3FA163-059D-4A64-B433-01EA4C63110E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="IAP-sample\Base">
+      <UniqueIdentifier>{184A00BF-24BE-4215-89AF-FDAC96FA566F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="IAP-sample\Supporting Files">
+      <UniqueIdentifier>{E72D1AC4-8424-40D9-98D7-EB9241297B0B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Xcode Variable Files">
+      <UniqueIdentifier>{E59F13EE-FF4C-4EFB-861F-0F3DB5E3130E}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Xml Include="default.rd.xml" />
+    <AppxManifest Include="Package.appxmanifest" />
+    <None Include="IAP-sample_TemporaryKey.pfx" />
+    <Image Include="Assets\LockScreenLogo.scale-200.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\SplashScreen.scale-200.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Square150x150Logo.scale-200.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Square44x44Logo.scale-200.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\StoreLogo.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Wide310x150Logo.scale-200.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <AssetCatalogCompile Include="..\..\IAP-sample\Assets.xcassets">
+      <Filter>IAP-sample</Filter>
+    </AssetCatalogCompile>
+    <ClInclude Include="..\..\IAP-sample\AppDelegate.h">
+      <Filter>IAP-sample</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\IAP-sample\ViewController.h">
+      <Filter>IAP-sample</Filter>
+    </ClInclude>
+    <ClangCompile Include="..\..\IAP-sample\AppDelegate.m">
+      <Filter>IAP-sample</Filter>
+    </ClangCompile>
+    <ClangCompile Include="..\..\IAP-sample\ViewController.m">
+      <Filter>IAP-sample</Filter>
+    </ClangCompile>
+    <ClangCompile Include="..\..\IAP-sample\main.m">
+      <Filter>IAP-sample\Supporting Files</Filter>
+    </ClangCompile>
+    <SBInfoPlistCopy Include="..\..\IAP-sample\Info.plist" />
+    <StoryboardCompile Include="..\..\IAP-sample\Base.lproj\LaunchScreen.storyboard">
+      <Filter>IAP-sample\Base</Filter>
+    </StoryboardCompile>
+    <StoryboardCompile Include="..\..\IAP-sample\Base.lproj\Main.storyboard">
+      <Filter>IAP-sample\Base</Filter>
+    </StoryboardCompile>
+    <Text Include="IAP-sample-Debug-xcvars.txt">
+      <Filter>Xcode Variable Files</Filter>
+    </Text>
+    <Text Include="IAP-sample-Release-xcvars.txt">
+      <Filter>Xcode Variable Files</Filter>
+    </Text>
+  </ItemGroup>
+</Project>

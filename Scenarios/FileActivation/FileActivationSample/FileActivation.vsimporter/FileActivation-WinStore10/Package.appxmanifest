@@ -1,37 +1,48 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Package xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10" xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest" xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10" IgnorableNamespaces="uap mp">
-  <Identity Name="ec98b749-6a57-472f-96c6-81c786326f13" Publisher="CN=islandwood" Version="1.0.0.0" />
-  <mp:PhoneIdentity PhoneProductId="ec98b749-6a57-472f-96c6-81c786326f13" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
+<?xml version="1.0" encoding="utf-8"?>
+
+<Package
+  xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10"
+  xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest"
+  xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10"
+  IgnorableNamespaces="uap mp">
+
+  <Identity
+    Name="5e685690-0e50-4a45-bfeb-6484483d02bd"
+    Publisher="CN=islandwood"
+    Version="1.0.0.0" />
+
+  <mp:PhoneIdentity PhoneProductId="5e685690-0e50-4a45-bfeb-6484483d02bd" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
+
   <Properties>
     <DisplayName>FileActivation</DisplayName>
-    <PublisherDisplayName>rajsesh</PublisherDisplayName>
+    <PublisherDisplayName>bbowman</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
+
   <Dependencies>
     <TargetDeviceFamily Name="Windows.Universal" MinVersion="10.0.0.0" MaxVersionTested="10.0.0.0" />
   </Dependencies>
+
   <Resources>
     <Resource Language="x-generate" />
   </Resources>
+
   <Applications>
-    <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="FileActivation.App">
-      <uap:VisualElements DisplayName="FileActivation" Square150x150Logo="Assets\Square150x150Logo.png" Square44x44Logo="Assets\Square44x44Logo.png" Description="FileActivation" BackgroundColor="transparent">
-        <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png">
-        </uap:DefaultTile>
+    <Application Id="App"
+      Executable="$targetnametoken$.exe"
+      EntryPoint="FileActivation.App">
+      <uap:VisualElements
+        DisplayName="FileActivation"
+        Square150x150Logo="Assets\Square150x150Logo.png"
+        Square44x44Logo="Assets\Square44x44Logo.png"
+        Description="FileActivation"
+        BackgroundColor="transparent">
+        <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png"/>
         <uap:SplashScreen Image="Assets\SplashScreen.png" />
       </uap:VisualElements>
-      <Extensions>
-        <uap:Extension Category="windows.fileTypeAssociation">
-          <uap:FileTypeAssociation Name="fast">
-            <uap:DisplayName>File Activation Sample app</uap:DisplayName>
-            <uap:SupportedFileTypes>
-              <uap:FileType ContentType="text/plain">.fast</uap:FileType>
-            </uap:SupportedFileTypes>
-          </uap:FileTypeAssociation>
-        </uap:Extension>
-      </Extensions>
     </Application>
   </Applications>
+
   <Capabilities>
     <Capability Name="internetClient" />
   </Capabilities>
