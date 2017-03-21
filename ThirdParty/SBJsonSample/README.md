@@ -17,7 +17,7 @@ Then follow the steps from WinObjC (https://github.com/Microsoft/WinObjC/#gettin
 Expand the solution in the visual studio solution explorer. Expand SBJson->SBJson5_iOS(Universal Windows). right click on SBJson5_iOS(Universal Windows) and select unload project. Then scroll down to the page end.
 Now change the XML inside the ItemGroup tag to make necessary c headers to be public and importable in other plcaes of the sample code.
 
-change the  existing ItemGroup tag and its contents with :
+Change the  existing ItemGroup tag and its contents with :
 
 ```
 <ItemGroup>

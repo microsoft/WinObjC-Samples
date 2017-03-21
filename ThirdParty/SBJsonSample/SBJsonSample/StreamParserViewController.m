@@ -78,7 +78,7 @@
 
 -(void)parseInitialDataStream {
     id parser = [SBJson5StreamParser parserWithDelegate:self];
-    NSString* dataStringBegin = [self readJsonFrom:@"test1_begin" withExtension:@"json"];
+    NSString* dataStringBegin = [self readJsonFrom:@"PartialJson_begin" withExtension:@"json"];
     
     [data appendData:[dataStringBegin dataUsingEncoding:NSUTF8StringEncoding]];
     SBJson5ParserStatus parseStatus = [parser parse:data];
@@ -91,7 +91,7 @@
 
 -(void)parseRemainingDataStream {
     id parser = [SBJson5StreamParser parserWithDelegate:self];
-    NSString* dataStringEnd = [self readJsonFrom:@"test1_end" withExtension:@"json"];
+    NSString* dataStringEnd = [self readJsonFrom:@"PartialJson_end" withExtension:@"json"];
     
     [data appendData:[dataStringEnd dataUsingEncoding:NSUTF8StringEncoding]];
     SBJson5ParserStatus parseStatus = [parser parse:data];
@@ -104,7 +104,7 @@
 
 -(void)parseLargeDataStream {
     id parser = [SBJson5StreamParser parserWithDelegate:self];
-    NSString* dataStringBegin = [self readJsonFrom:@"test2" withExtension:@"json"];
+    NSString* dataStringBegin = [self readJsonFrom:@"Big" withExtension:@"json"];
     
     id data = [dataStringBegin dataUsingEncoding:NSUTF8StringEncoding];
     SBJson5ParserStatus parseStatus = [parser parse:data];

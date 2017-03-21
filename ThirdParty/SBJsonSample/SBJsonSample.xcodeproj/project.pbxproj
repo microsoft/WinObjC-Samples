@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3545C85E1E7877CC0010EAAD /* test1_begin.json in Resources */ = {isa = PBXBuildFile; fileRef = 3545C85D1E7877CC0010EAAD /* test1_begin.json */; };
-		3545C8651E7892AB0010EAAD /* test1_end.json in Resources */ = {isa = PBXBuildFile; fileRef = 3545C8641E7892AB0010EAAD /* test1_end.json */; };
+		3545C85E1E7877CC0010EAAD /* PartialJson_begin.json in Resources */ = {isa = PBXBuildFile; fileRef = 3545C85D1E7877CC0010EAAD /* PartialJson_begin.json */; };
+		3545C8651E7892AB0010EAAD /* PartialJson_end.json in Resources */ = {isa = PBXBuildFile; fileRef = 3545C8641E7892AB0010EAAD /* PartialJson_end.json */; };
 		3545C8671E789BC10010EAAD /* SBJson5_iOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 35CAC3881E6E203D00E888AB /* SBJson5_iOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		3545C8701E78A4820010EAAD /* ListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3545C86F1E78A4820010EAAD /* ListViewController.m */; };
-		3545C8741E78AC8A0010EAAD /* test2.json in Resources */ = {isa = PBXBuildFile; fileRef = 3545C8731E78AC8A0010EAAD /* test2.json */; };
+		3545C8741E78AC8A0010EAAD /* Big.json in Resources */ = {isa = PBXBuildFile; fileRef = 3545C8731E78AC8A0010EAAD /* Big.json */; };
 		3545C8791E78B2DE0010EAAD /* StreamParserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3545C8781E78B2DE0010EAAD /* StreamParserViewController.m */; };
 		3595BCD21E708CB200C08FB6 /* SBJson5_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35CAC3881E6E203D00E888AB /* SBJson5_iOS.framework */; };
 		35AC05871E79BB9A0050265B /* WriterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35AC05861E79BB9A0050265B /* WriterViewController.m */; };
@@ -95,11 +95,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		3545C85D1E7877CC0010EAAD /* test1_begin.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = test1_begin.json; sourceTree = "<group>"; };
-		3545C8641E7892AB0010EAAD /* test1_end.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = test1_end.json; sourceTree = "<group>"; };
+		3545C85D1E7877CC0010EAAD /* PartialJson_begin.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = PartialJson_begin.json; sourceTree = "<group>"; };
+		3545C8641E7892AB0010EAAD /* PartialJson_end.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = PartialJson_end.json; sourceTree = "<group>"; };
 		3545C86E1E78A4820010EAAD /* ListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListViewController.h; sourceTree = "<group>"; };
 		3545C86F1E78A4820010EAAD /* ListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListViewController.m; sourceTree = "<group>"; };
-		3545C8731E78AC8A0010EAAD /* test2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = test2.json; sourceTree = "<group>"; };
+		3545C8731E78AC8A0010EAAD /* Big.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Big.json; sourceTree = "<group>"; };
 		3545C8771E78B2DE0010EAAD /* StreamParserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StreamParserViewController.h; sourceTree = "<group>"; };
 		3545C8781E78B2DE0010EAAD /* StreamParserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StreamParserViewController.m; sourceTree = "<group>"; };
 		35AC05851E79BB9A0050265B /* WriterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WriterViewController.h; sourceTree = "<group>"; };
@@ -168,9 +168,9 @@
 		35AC058D1E79BF7D0050265B /* TestJson */ = {
 			isa = PBXGroup;
 			children = (
-				3545C85D1E7877CC0010EAAD /* test1_begin.json */,
-				3545C8641E7892AB0010EAAD /* test1_end.json */,
-				3545C8731E78AC8A0010EAAD /* test2.json */,
+				3545C85D1E7877CC0010EAAD /* PartialJson_begin.json */,
+				3545C8641E7892AB0010EAAD /* PartialJson_end.json */,
+				3545C8731E78AC8A0010EAAD /* Big.json */,
 			);
 			name = TestJson;
 			sourceTree = "<group>";
@@ -346,9 +346,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				35CAC3731E6E1EA800E888AB /* Assets.xcassets in Resources */,
-				3545C8741E78AC8A0010EAAD /* test2.json in Resources */,
-				3545C8651E7892AB0010EAAD /* test1_end.json in Resources */,
-				3545C85E1E7877CC0010EAAD /* test1_begin.json in Resources */,
+				3545C8741E78AC8A0010EAAD /* Big.json in Resources */,
+				3545C8651E7892AB0010EAAD /* PartialJson_end.json in Resources */,
+				3545C85E1E7877CC0010EAAD /* PartialJson_begin.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

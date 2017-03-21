@@ -104,19 +104,19 @@
 -(void)parserWithBlockAndAllowMultiRootunwrapRootArray {
     id parser = [SBJson5Parser parserWithBlock:block allowMultiRoot:true unwrapRootArray:true maxDepth:32 errorHandler:eh];
     
-    NSString* dataStringBegin = [self readJsonFrom:@"test2" withExtension:@"json"];
+    NSString* dataStringBegin = [self readJsonFrom:@"Big" withExtension:@"json"];
     id data = [dataStringBegin dataUsingEncoding:NSUTF8StringEncoding];
     [parser parse:data];
 }
 
 -(void)multiRootParserWithBlock {
     id parser = [SBJson5Parser multiRootParserWithBlock:block errorHandler:eh];
-    NSString* dataStringBegin = [self readJsonFrom:@"test1_begin" withExtension:@"json"];
+    NSString* dataStringBegin = [self readJsonFrom:@"PartialJson_begin" withExtension:@"json"];
     id data = [dataStringBegin dataUsingEncoding:NSUTF8StringEncoding];
     [parser parse:data];
 
     // ok, now we add another value and close the array
-    NSString* dataStringEnd = [self readJsonFrom:@"test1_end" withExtension:@"json"];
+    NSString* dataStringEnd = [self readJsonFrom:@"PartialJson_end" withExtension:@"json"];
     data = [dataStringEnd dataUsingEncoding:NSUTF8StringEncoding];
     [parser parse:data];
 }
@@ -124,7 +124,7 @@
 -(void)unwrapRootArrayParserWithBlock {
     id parser = [SBJson5Parser unwrapRootArrayParserWithBlock:block errorHandler:eh];
     
-    NSString* dataStringBegin = [self readJsonFrom:@"test2" withExtension:@"json"];
+    NSString* dataStringBegin = [self readJsonFrom:@"Big" withExtension:@"json"];
     id data = [dataStringBegin dataUsingEncoding:NSUTF8StringEncoding];
     [parser parse:data];
 }
