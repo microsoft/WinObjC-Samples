@@ -15,7 +15,7 @@
 
   <Properties>
     <DisplayName>Calculator</DisplayName>
-    <PublisherDisplayName>bbowman</PublisherDisplayName>
+    <PublisherDisplayName>sampleuser</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
 

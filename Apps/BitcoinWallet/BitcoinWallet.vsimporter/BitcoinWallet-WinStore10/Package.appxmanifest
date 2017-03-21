@@ -15,7 +15,7 @@
 
   <Properties>
     <DisplayName>BitcoinWallet</DisplayName>
-    <PublisherDisplayName>bbowman</PublisherDisplayName>
+    <PublisherDisplayName>sampleuser</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
 
