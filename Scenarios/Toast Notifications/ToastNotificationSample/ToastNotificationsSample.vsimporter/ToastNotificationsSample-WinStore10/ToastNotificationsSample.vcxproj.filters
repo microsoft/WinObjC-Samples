@@ -1,0 +1,80 @@
+<?xml version="1.0"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Common">
+      <UniqueIdentifier>{ce157386-fd55-4818-87f9-81b0c0973125}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets">
+      <UniqueIdentifier>{63f81a3f-faf7-4167-a330-0eef49441e10}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ToastNotificationsSample">
+      <UniqueIdentifier>{A1376E64-C715-47BE-BB73-BF30CC48CE23}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ToastNotificationsSample\Base">
+      <UniqueIdentifier>{840F3D46-2D37-462C-AE51-F431A57D49BD}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ToastNotificationsSample\Supporting Files">
+      <UniqueIdentifier>{09F6B250-E48F-448E-99A0-0381CB57A036}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Xcode Variable Files">
+      <UniqueIdentifier>{82A10D62-6D48-4572-AEB8-AB9D7AA90F3B}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Xml Include="default.rd.xml" />
+    <AppxManifest Include="Package.appxmanifest" />
+    <None Include="ToastNotificationsSample_TemporaryKey.pfx" />
+    <Image Include="Assets\LockScreenLogo.scale-200.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\SplashScreen.scale-200.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Square150x150Logo.scale-200.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Square44x44Logo.scale-200.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\StoreLogo.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Wide310x150Logo.scale-200.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <AssetCatalogCompile Include="..\..\ToastNotificationsSample\Assets.xcassets">
+      <Filter>ToastNotificationsSample</Filter>
+    </AssetCatalogCompile>
+    <ClInclude Include="..\..\ToastNotificationsSample\AppDelegate.h">
+      <Filter>ToastNotificationsSample</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\ToastNotificationsSample\ViewController.h">
+      <Filter>ToastNotificationsSample</Filter>
+    </ClInclude>
+    <ClangCompile Include="..\..\ToastNotificationsSample\AppDelegate.m">
+      <Filter>ToastNotificationsSample</Filter>
+    </ClangCompile>
+    <ClangCompile Include="..\..\ToastNotificationsSample\ViewController.m">
+      <Filter>ToastNotificationsSample</Filter>
+    </ClangCompile>
+    <ClangCompile Include="..\..\ToastNotificationsSample\main.m">
+      <Filter>ToastNotificationsSample\Supporting Files</Filter>
+    </ClangCompile>
+    <SBInfoPlistCopy Include="..\..\ToastNotificationsSample\Info.plist" />
+    <StoryboardCompile Include="..\..\ToastNotificationsSample\Base.lproj\LaunchScreen.storyboard">
+      <Filter>ToastNotificationsSample\Base</Filter>
+    </StoryboardCompile>
+    <StoryboardCompile Include="..\..\ToastNotificationsSample\Base.lproj\Main.storyboard">
+      <Filter>ToastNotificationsSample\Base</Filter>
+    </StoryboardCompile>
+    <Text Include="ToastNotificationsSample-Debug-xcvars.txt">
+      <Filter>Xcode Variable Files</Filter>
+    </Text>
+    <Text Include="ToastNotificationsSample-Release-xcvars.txt">
+      <Filter>Xcode Variable Files</Filter>
+    </Text>
+  </ItemGroup>
+</Project>

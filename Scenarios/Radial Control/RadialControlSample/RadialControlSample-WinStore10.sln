@@ -1,0 +1,38 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.22823.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "RadialControlSample", "RadialControlSample", "{7E0B9B89-2B47-4188-A4D3-CF6E2128F087}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "RadialControlSample", "RadialControlSample.vsimporter\RadialControlSample-WinStore10\RadialControlSample.vcxproj", "{F909512A-0A35-4905-8D04-497BC280BFC8}"
+EndProject
+Global
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|ARM = Debug|ARM
+		Debug|Win32 = Debug|Win32
+		Release|ARM = Release|ARM
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F909512A-0A35-4905-8D04-497BC280BFC8}.Debug|ARM.ActiveCfg = Debug|ARM
+		{F909512A-0A35-4905-8D04-497BC280BFC8}.Debug|ARM.Build.0 = Debug|ARM
+		{F909512A-0A35-4905-8D04-497BC280BFC8}.Debug|ARM.Deploy.0 = Debug|ARM
+		{F909512A-0A35-4905-8D04-497BC280BFC8}.Debug|Win32.ActiveCfg = Debug|Win32
+		{F909512A-0A35-4905-8D04-497BC280BFC8}.Debug|Win32.Build.0 = Debug|Win32
+		{F909512A-0A35-4905-8D04-497BC280BFC8}.Debug|Win32.Deploy.0 = Debug|Win32
+		{F909512A-0A35-4905-8D04-497BC280BFC8}.Release|ARM.ActiveCfg = Release|ARM
+		{F909512A-0A35-4905-8D04-497BC280BFC8}.Release|ARM.Build.0 = Release|ARM
+		{F909512A-0A35-4905-8D04-497BC280BFC8}.Release|ARM.Deploy.0 = Release|ARM
+		{F909512A-0A35-4905-8D04-497BC280BFC8}.Release|Win32.ActiveCfg = Release|Win32
+		{F909512A-0A35-4905-8D04-497BC280BFC8}.Release|Win32.Build.0 = Release|Win32
+		{F909512A-0A35-4905-8D04-497BC280BFC8}.Release|Win32.Deploy.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{F909512A-0A35-4905-8D04-497BC280BFC8} = {7E0B9B89-2B47-4188-A4D3-CF6E2128F087}
+	EndGlobalSection
+EndGlobal

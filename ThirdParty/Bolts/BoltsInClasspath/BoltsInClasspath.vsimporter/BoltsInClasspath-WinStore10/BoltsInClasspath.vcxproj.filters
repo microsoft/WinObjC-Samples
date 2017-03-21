@@ -1,0 +1,98 @@
+<?xml version="1.0"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Common">
+      <UniqueIdentifier>{7717787e-3fc2-4de2-a402-334cf0075a60}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets">
+      <UniqueIdentifier>{8fb9972e-d0e0-4f77-bbdc-a2e97095f116}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="BoltsInClasspath">
+      <UniqueIdentifier>{80FAA2B5-3838-44A7-A6D2-042302DA74F5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="BoltsInClasspath\Base">
+      <UniqueIdentifier>{DD6C6432-6E99-46AA-81AF-2E489E1529F8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="BoltsInClasspath\Supporting Files">
+      <UniqueIdentifier>{8B2A0768-3CEF-475C-8F7B-919869B73BC2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Xcode Variable Files">
+      <UniqueIdentifier>{FE8DC1BB-E6FE-4A1B-B6EF-71E77FB762BA}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Xml Include="default.rd.xml" />
+    <AppxManifest Include="Package.appxmanifest" />
+    <None Include="BoltsInClasspath_TemporaryKey.pfx" />
+    <Image Include="Assets\LockScreenLogo.scale-200.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\SplashScreen.scale-200.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Square150x150Logo.scale-200.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Square44x44Logo.scale-200.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\StoreLogo.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Wide310x150Logo.scale-200.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <AssetCatalogCompile Include="..\..\BoltsInClasspath\Assets.xcassets">
+      <Filter>BoltsInClasspath</Filter>
+    </AssetCatalogCompile>
+    <ClInclude Include="..\..\BoltsInClasspath\AppDelegate.h">
+      <Filter>BoltsInClasspath</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\BoltsInClasspath\Constants.h">
+      <Filter>BoltsInClasspath</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\BoltsInClasspath\TaskExecutionResource.h">
+      <Filter>BoltsInClasspath</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\BoltsInClasspath\TaskManager.h">
+      <Filter>BoltsInClasspath</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\BoltsInClasspath\ViewController.h">
+      <Filter>BoltsInClasspath</Filter>
+    </ClInclude>
+    <ClangCompile Include="..\..\BoltsInClasspath\AppDelegate.m">
+      <Filter>BoltsInClasspath</Filter>
+    </ClangCompile>
+    <ClangCompile Include="..\..\BoltsInClasspath\Constants.m">
+      <Filter>BoltsInClasspath</Filter>
+    </ClangCompile>
+    <ClangCompile Include="..\..\BoltsInClasspath\TaskExecutionResource.m">
+      <Filter>BoltsInClasspath</Filter>
+    </ClangCompile>
+    <ClangCompile Include="..\..\BoltsInClasspath\TaskManager.m">
+      <Filter>BoltsInClasspath</Filter>
+    </ClangCompile>
+    <ClangCompile Include="..\..\BoltsInClasspath\ViewController.m">
+      <Filter>BoltsInClasspath</Filter>
+    </ClangCompile>
+    <ClangCompile Include="..\..\BoltsInClasspath\main.m">
+      <Filter>BoltsInClasspath\Supporting Files</Filter>
+    </ClangCompile>
+    <SBInfoPlistCopy Include="..\..\BoltsInClasspath\Info.plist" />
+    <StoryboardCompile Include="..\..\BoltsInClasspath\Base.lproj\LaunchScreen.storyboard">
+      <Filter>BoltsInClasspath\Base</Filter>
+    </StoryboardCompile>
+    <StoryboardCompile Include="..\..\BoltsInClasspath\Base.lproj\Main.storyboard">
+      <Filter>BoltsInClasspath\Base</Filter>
+    </StoryboardCompile>
+    <Text Include="BoltsInClasspath-Debug-xcvars.txt">
+      <Filter>Xcode Variable Files</Filter>
+    </Text>
+    <Text Include="BoltsInClasspath-Release-xcvars.txt">
+      <Filter>Xcode Variable Files</Filter>
+    </Text>
+  </ItemGroup>
+</Project>

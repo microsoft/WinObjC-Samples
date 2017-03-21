@@ -14,3 +14,14 @@ xcuserdata/
 
 # Ignore OS X temporary files
 .DS_Store
+
+# Ignore nuget generated files
+*.nuget.targets
+*.nuget.props
+project.lock.json
+
+# Ignore generated files
+Generated Files/
+
+# Ignore VS 2017 internal folder
+.vs/

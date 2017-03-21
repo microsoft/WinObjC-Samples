@@ -1,0 +1,80 @@
+<?xml version="1.0"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Common">
+      <UniqueIdentifier>{234723f6-fa73-47b9-ac9f-2cb5074692f5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets">
+      <UniqueIdentifier>{a1cba14a-d5f1-4a3c-a01f-2adeed72606b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MapsSample">
+      <UniqueIdentifier>{88C1C5DD-68A1-456A-8BBA-FCF08D9816C7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MapsSample\Base">
+      <UniqueIdentifier>{02FBA715-C15C-44F9-94DC-3A16514EA4D2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MapsSample\Supporting Files">
+      <UniqueIdentifier>{FCB7066B-7DCB-4A1A-B10D-A699F589AE80}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Xcode Variable Files">
+      <UniqueIdentifier>{E168DB0C-9779-49CB-9B99-A55C0DBF9FD1}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Xml Include="default.rd.xml" />
+    <AppxManifest Include="Package.appxmanifest" />
+    <None Include="MapsSample_TemporaryKey.pfx" />
+    <Image Include="Assets\LockScreenLogo.scale-200.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\SplashScreen.scale-200.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Square150x150Logo.scale-200.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Square44x44Logo.scale-200.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\StoreLogo.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Wide310x150Logo.scale-200.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <AssetCatalogCompile Include="..\..\MapsSample\Assets.xcassets">
+      <Filter>MapsSample</Filter>
+    </AssetCatalogCompile>
+    <ClInclude Include="..\..\MapsSample\AppDelegate.h">
+      <Filter>MapsSample</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\MapsSample\ViewController.h">
+      <Filter>MapsSample</Filter>
+    </ClInclude>
+    <ClangCompile Include="..\..\MapsSample\AppDelegate.m">
+      <Filter>MapsSample</Filter>
+    </ClangCompile>
+    <ClangCompile Include="..\..\MapsSample\ViewController.m">
+      <Filter>MapsSample</Filter>
+    </ClangCompile>
+    <ClangCompile Include="..\..\MapsSample\main.m">
+      <Filter>MapsSample\Supporting Files</Filter>
+    </ClangCompile>
+    <SBInfoPlistCopy Include="..\..\MapsSample\Info.plist" />
+    <StoryboardCompile Include="..\..\MapsSample\Base.lproj\LaunchScreen.storyboard">
+      <Filter>MapsSample\Base</Filter>
+    </StoryboardCompile>
+    <StoryboardCompile Include="..\..\MapsSample\Base.lproj\Main.storyboard">
+      <Filter>MapsSample\Base</Filter>
+    </StoryboardCompile>
+    <Text Include="MapsSample-Debug-xcvars.txt">
+      <Filter>Xcode Variable Files</Filter>
+    </Text>
+    <Text Include="MapsSample-Release-xcvars.txt">
+      <Filter>Xcode Variable Files</Filter>
+    </Text>
+  </ItemGroup>
+</Project>

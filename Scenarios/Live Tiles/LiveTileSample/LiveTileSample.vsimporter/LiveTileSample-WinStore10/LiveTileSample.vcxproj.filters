@@ -1,0 +1,80 @@
+<?xml version="1.0"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Common">
+      <UniqueIdentifier>{be71afd7-4a38-4c8d-aba8-f1ec65117317}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets">
+      <UniqueIdentifier>{d9704de1-7273-4a66-b22e-0706bd83e711}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="LiveTileSample">
+      <UniqueIdentifier>{98E04381-98E1-4CF5-BC42-7BCF7343DD1C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="LiveTileSample\Base">
+      <UniqueIdentifier>{884A742E-235D-46F7-A145-D994D8F045D4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="LiveTileSample\Supporting Files">
+      <UniqueIdentifier>{B17DCCEF-4184-4AF6-A03F-878F2CAD8A53}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Xcode Variable Files">
+      <UniqueIdentifier>{A9992BB4-B296-4BF1-9962-FB20C60F5589}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Xml Include="default.rd.xml" />
+    <AppxManifest Include="Package.appxmanifest" />
+    <None Include="LiveTileSample_TemporaryKey.pfx" />
+    <Image Include="Assets\LockScreenLogo.scale-200.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\SplashScreen.scale-200.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Square150x150Logo.scale-200.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Square44x44Logo.scale-200.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\StoreLogo.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Wide310x150Logo.scale-200.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <AssetCatalogCompile Include="..\..\LiveTileSample\Assets.xcassets">
+      <Filter>LiveTileSample</Filter>
+    </AssetCatalogCompile>
+    <ClInclude Include="..\..\LiveTileSample\AppDelegate.h">
+      <Filter>LiveTileSample</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LiveTileSample\ViewController.h">
+      <Filter>LiveTileSample</Filter>
+    </ClInclude>
+    <ClangCompile Include="..\..\LiveTileSample\AppDelegate.m">
+      <Filter>LiveTileSample</Filter>
+    </ClangCompile>
+    <ClangCompile Include="..\..\LiveTileSample\ViewController.m">
+      <Filter>LiveTileSample</Filter>
+    </ClangCompile>
+    <ClangCompile Include="..\..\LiveTileSample\main.m">
+      <Filter>LiveTileSample\Supporting Files</Filter>
+    </ClangCompile>
+    <SBInfoPlistCopy Include="..\..\LiveTileSample\Info.plist" />
+    <StoryboardCompile Include="..\..\LiveTileSample\Base.lproj\LaunchScreen.storyboard">
+      <Filter>LiveTileSample\Base</Filter>
+    </StoryboardCompile>
+    <StoryboardCompile Include="..\..\LiveTileSample\Base.lproj\Main.storyboard">
+      <Filter>LiveTileSample\Base</Filter>
+    </StoryboardCompile>
+    <Text Include="LiveTileSample-Debug-xcvars.txt">
+      <Filter>Xcode Variable Files</Filter>
+    </Text>
+    <Text Include="LiveTileSample-Release-xcvars.txt">
+      <Filter>Xcode Variable Files</Filter>
+    </Text>
+  </ItemGroup>
+</Project>

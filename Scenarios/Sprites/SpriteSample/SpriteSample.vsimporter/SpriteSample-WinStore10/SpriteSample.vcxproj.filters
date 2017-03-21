@@ -1,0 +1,155 @@
+<?xml version="1.0"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Common">
+      <UniqueIdentifier>{fb7673ae-9b67-4a04-9c89-c5e36723278c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets">
+      <UniqueIdentifier>{26985b46-9c8f-4eb1-ac99-2959e0de63f6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SpriteSample">
+      <UniqueIdentifier>{3CDB96AD-CE9C-49B1-930F-06A2C295B600}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SpriteSample\Base">
+      <UniqueIdentifier>{DA0AD383-F6EA-4CC4-AED3-F4E34BBB13F3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SpriteSample\Supporting Files">
+      <UniqueIdentifier>{57804A16-3358-4600-A593-3B652B2BE7D1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SpriteSample\images">
+      <UniqueIdentifier>{03C992E7-630B-4555-8846-F67CE9DFD127}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Xcode Variable Files">
+      <UniqueIdentifier>{8F1812EC-E3C9-442E-9965-225349DBB222}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Xml Include="default.rd.xml" />
+    <AppxManifest Include="Package.appxmanifest" />
+    <None Include="SpriteSample_TemporaryKey.pfx" />
+    <Image Include="Assets\LockScreenLogo.scale-200.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\SplashScreen.scale-200.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Square150x150Logo.scale-200.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Square44x44Logo.scale-200.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\StoreLogo.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Wide310x150Logo.scale-200.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <AssetCatalogCompile Include="..\..\SpriteSample\Assets.xcassets">
+      <Filter>SpriteSample</Filter>
+    </AssetCatalogCompile>
+    <ClInclude Include="..\..\SpriteSample\AppDelegate.h">
+      <Filter>SpriteSample</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\SpriteSample\Explosions.h">
+      <Filter>SpriteSample</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\SpriteSample\Landscape.h">
+      <Filter>SpriteSample</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\SpriteSample\Lasers.h">
+      <Filter>SpriteSample</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\SpriteSample\Renderer.h">
+      <Filter>SpriteSample</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\SpriteSample\SpriteClass.h">
+      <Filter>SpriteSample</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\SpriteSample\Starfield.h">
+      <Filter>SpriteSample</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\SpriteSample\Ufo.h">
+      <Filter>SpriteSample</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\SpriteSample\UfoSwarm.h">
+      <Filter>SpriteSample</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\SpriteSample\ViewController.h">
+      <Filter>SpriteSample</Filter>
+    </ClInclude>
+    <ClangCompile Include="..\..\SpriteSample\AppDelegate.m">
+      <Filter>SpriteSample</Filter>
+    </ClangCompile>
+    <ClangCompile Include="..\..\SpriteSample\Explosions.m">
+      <Filter>SpriteSample</Filter>
+    </ClangCompile>
+    <ClangCompile Include="..\..\SpriteSample\Landscape.m">
+      <Filter>SpriteSample</Filter>
+    </ClangCompile>
+    <ClangCompile Include="..\..\SpriteSample\Lasers.m">
+      <Filter>SpriteSample</Filter>
+    </ClangCompile>
+    <ClangCompile Include="..\..\SpriteSample\Renderer.m">
+      <Filter>SpriteSample</Filter>
+    </ClangCompile>
+    <ClangCompile Include="..\..\SpriteSample\SpriteClass.m">
+      <Filter>SpriteSample</Filter>
+    </ClangCompile>
+    <ClangCompile Include="..\..\SpriteSample\Starfield.m">
+      <Filter>SpriteSample</Filter>
+    </ClangCompile>
+    <ClangCompile Include="..\..\SpriteSample\Ufo.m">
+      <Filter>SpriteSample</Filter>
+    </ClangCompile>
+    <ClangCompile Include="..\..\SpriteSample\UfoSwarm.m">
+      <Filter>SpriteSample</Filter>
+    </ClangCompile>
+    <ClangCompile Include="..\..\SpriteSample\ViewController.m">
+      <Filter>SpriteSample</Filter>
+    </ClangCompile>
+    <ClangCompile Include="..\..\SpriteSample\main.m">
+      <Filter>SpriteSample\Supporting Files</Filter>
+    </ClangCompile>
+    <SBInfoPlistCopy Include="..\..\SpriteSample\Info.plist" />
+    <SBResourceCopy Include="..\..\SpriteSample\FlyingDisk.png">
+      <Filter>SpriteSample\images</Filter>
+    </SBResourceCopy>
+    <SBResourceCopy Include="..\..\SpriteSample\LandscapeBlock.png">
+      <Filter>SpriteSample\images</Filter>
+    </SBResourceCopy>
+    <SBResourceCopy Include="..\..\SpriteSample\SpaceShip.png">
+      <Filter>SpriteSample\images</Filter>
+    </SBResourceCopy>
+    <SBResourceCopy Include="..\..\SpriteSample\explosion.png">
+      <Filter>SpriteSample\images</Filter>
+    </SBResourceCopy>
+    <SBResourceCopy Include="..\..\SpriteSample\laser.png">
+      <Filter>SpriteSample\images</Filter>
+    </SBResourceCopy>
+    <SBResourceCopy Include="..\..\SpriteSample\star.png">
+      <Filter>SpriteSample\images</Filter>
+    </SBResourceCopy>
+    <SBResourceCopy Include="..\..\SpriteSample\starLittle.png">
+      <Filter>SpriteSample\images</Filter>
+    </SBResourceCopy>
+    <SBResourceCopy Include="..\..\SpriteSample\starfield.jpg">
+      <Filter>SpriteSample\images</Filter>
+    </SBResourceCopy>
+    <StoryboardCompile Include="..\..\SpriteSample\Base.lproj\LaunchScreen.storyboard">
+      <Filter>SpriteSample\Base</Filter>
+    </StoryboardCompile>
+    <StoryboardCompile Include="..\..\SpriteSample\Base.lproj\Main.storyboard">
+      <Filter>SpriteSample\Base</Filter>
+    </StoryboardCompile>
+    <Text Include="SpriteSample-Debug-xcvars.txt">
+      <Filter>Xcode Variable Files</Filter>
+    </Text>
+    <Text Include="SpriteSample-Release-xcvars.txt">
+      <Filter>Xcode Variable Files</Filter>
+    </Text>
+  </ItemGroup>
+</Project>

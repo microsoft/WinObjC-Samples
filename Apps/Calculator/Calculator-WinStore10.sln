@@ -1,0 +1,38 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.22823.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Calculator", "Calculator", "{C17BB900-A0BD-414F-80CA-592A4F8A4DB1}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Calculator", "Calculator.vsimporter\Calculator-WinStore10\Calculator.vcxproj", "{239A448D-3A50-4C5D-835B-899A9BDFB577}"
+EndProject
+Global
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|ARM = Debug|ARM
+		Debug|Win32 = Debug|Win32
+		Release|ARM = Release|ARM
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{239A448D-3A50-4C5D-835B-899A9BDFB577}.Debug|ARM.ActiveCfg = Debug|ARM
+		{239A448D-3A50-4C5D-835B-899A9BDFB577}.Debug|ARM.Build.0 = Debug|ARM
+		{239A448D-3A50-4C5D-835B-899A9BDFB577}.Debug|ARM.Deploy.0 = Debug|ARM
+		{239A448D-3A50-4C5D-835B-899A9BDFB577}.Debug|Win32.ActiveCfg = Debug|Win32
+		{239A448D-3A50-4C5D-835B-899A9BDFB577}.Debug|Win32.Build.0 = Debug|Win32
+		{239A448D-3A50-4C5D-835B-899A9BDFB577}.Debug|Win32.Deploy.0 = Debug|Win32
+		{239A448D-3A50-4C5D-835B-899A9BDFB577}.Release|ARM.ActiveCfg = Release|ARM
+		{239A448D-3A50-4C5D-835B-899A9BDFB577}.Release|ARM.Build.0 = Release|ARM
+		{239A448D-3A50-4C5D-835B-899A9BDFB577}.Release|ARM.Deploy.0 = Release|ARM
+		{239A448D-3A50-4C5D-835B-899A9BDFB577}.Release|Win32.ActiveCfg = Release|Win32
+		{239A448D-3A50-4C5D-835B-899A9BDFB577}.Release|Win32.Build.0 = Release|Win32
+		{239A448D-3A50-4C5D-835B-899A9BDFB577}.Release|Win32.Deploy.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{239A448D-3A50-4C5D-835B-899A9BDFB577} = {C17BB900-A0BD-414F-80CA-592A4F8A4DB1}
+	EndGlobalSection
+EndGlobal
