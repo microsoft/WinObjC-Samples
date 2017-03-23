@@ -14,45 +14,6 @@ Checkout the SBJson v5.0.0 version (SHA: c37ad93a2c1cd29c8a53aab67f4b30454ab0377
 
 Then follow the steps from WinObjC (https://github.com/Microsoft/WinObjC/#getting-started-with-the-bridge) github repo documentation to create a visual studio solution.
 
-Expand the solution in the visual studio solution explorer. Expand SBJson->SBJson5_iOS(Universal Windows). right click on SBJson5_iOS(Universal Windows) and select unload project. Then scroll down to the page end.
-Now change the XML inside the ItemGroup tag to make necessary c headers to be public and importable in other plcaes of the sample code.
-
-Change the  existing ItemGroup tag and its contents with :
-
-```
-<ItemGroup>
-    <ClInclude Include="..\..\Classes\SBJson5.h">
-      <PublicHeader>true</PublicHeader>
-    </ClInclude>
-    <ClInclude Include="..\..\Classes\SBJson5Parser.h">
-      <PublicHeader>true</PublicHeader>
-    </ClInclude>
-    <ClInclude Include="..\..\Classes\SBJson5StreamParser.h">
-      <PublicHeader>true</PublicHeader>
-    </ClInclude>
-    <ClInclude Include="..\..\Classes\SBJson5StreamTokeniser.h">
-      <PublicHeader>true</PublicHeader>
-    </ClInclude>
-    <ClInclude Include="..\..\Classes\SBJson5StreamWriter.h">
-      <PublicHeader>true</PublicHeader>
-    </ClInclude>
-    <ClInclude Include="..\..\Classes\SBJson5Writer.h">
-      <PublicHeader>true</PublicHeader>
-    </ClInclude>
-    <ClInclude Include="..\..\Classes\SBJson5StreamParserState.h" />
-    <ClInclude Include="..\..\Classes\SBJson5StreamWriterState.h" />
-    <ClangCompile Include="..\..\Classes\SBJson5Parser.m" />
-    <ClangCompile Include="..\..\Classes\SBJson5StreamParser.m" />
-    <ClangCompile Include="..\..\Classes\SBJson5StreamParserState.m" />
-    <ClangCompile Include="..\..\Classes\SBJson5StreamTokeniser.m" />
-    <ClangCompile Include="..\..\Classes\SBJson5StreamWriter.m" />
-    <ClangCompile Include="..\..\Classes\SBJson5StreamWriterState.m" />
-    <ClangCompile Include="..\..\Classes\SBJson5Writer.m" />
-  </ItemGroup>
- ```
- 
- Now save this file and right click on SBJson5_iOS in solution explorer and select Reload project.
-
 Now Build and run the sample on to emulator.
 
 ###Coverage
