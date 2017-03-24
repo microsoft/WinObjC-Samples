@@ -1,0 +1,29 @@
+{
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "AA3724F8AD565DB2089C5757B6B76FDB09E52E51" : 9223372036854775807,
+    "9F1681DEA12677EF394D19FB01A97746008EFC40" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "B0739E36-FA68-48C7-A008-DFC117C73BAE",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "AA3724F8AD565DB2089C5757B6B76FDB09E52E51" : "SBJsonSample\/SBJson-framework\/",
+    "9F1681DEA12677EF394D19FB01A97746008EFC40" : ".."
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "SBJsonSample",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "SBJsonSample.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/venkatkongara\/WinObjC-Samples.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "9F1681DEA12677EF394D19FB01A97746008EFC40"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/stig\/json-framework.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "AA3724F8AD565DB2089C5757B6B76FDB09E52E51"
+    }
+  ]
+}
