@@ -76,5 +76,6 @@
     <Text Include="CortanaSample-Release-xcvars.txt">
       <Filter>Xcode Variable Files</Filter>
     </Text>
+    <Xml Include="..\..\CortanaSample\CortanaSampleCommands.xml" />
   </ItemGroup>
 </Project>
