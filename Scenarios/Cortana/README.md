@@ -7,6 +7,17 @@ These are the basic steps to add voice command functionality and integrate Corta
 1. **Create a Voice Command Definition (VCD) file and register it when the app is launched.** The VCD file is an XML document that defines all the spoken commands that the user can say to initiate actions or invoke commands when activating your app. For more information, see [VCD elements and attributes v1.2](https://msdn.microsoft.com/library/windows/apps/dn706593).
 2. **Handle the activation-by-voice command.** You may want to handle launch differently depending on the method by which a user launched your app.
 
+## Running the Sample
+1. Open the CortanaSample-WinStore10.sln Visual Studio solution.
+2. Ensure that the project includes the CortanaSample\CortanaSampleCommands.xml VCD file. If it does not, add it by selecting **Project** > **Add Existing Item**.
+3. Build and deploy the application to your phone or PC.
+4. Start the sample app for the first time, which should automatically register it with Cortana. **Close it immediately.**
+5. Open **Cortana** and try making some of the pre-configured queries. These can be performed via voice or by typing them into Cortana's search bar:
+    * "Cortana Sample, show trip to London."
+    * "Show trip to Long Island in Cortana Sample."
+    * "Show my Cortana Sample trip to Rio."
+6. The sample app should open automatically, and reflect the query made to Cortana.
+
 ## The Code
 
 The code for incorporating Cortana functionality using Objective-C looks like this:
@@ -99,25 +110,6 @@ Read on for a complete explanation of how the above code works.
 You can find the Cortana sample project under */Scenarios/Cortana/CortanaSample*. The project consists of a number of labels; when the activation-by-voice command is received, the labels are updated with the command, spoken text, and method by which the app was activated.
 
 Let’s walk through adding the Cortana functionality.
-
-### Setting up
-First, open up the *CortanaSample* directory at your Windows command prompt. Next, run the [vsimporter tool](https://github.com/Microsoft/WinObjC/wiki/Using-vsimporter) tool from the WinObjC SDK on the CortanaSample directory to generate a Visual Studio solution file (.sln).
-
-*Running vsimporter:*
-```
-c:\> cd "\winobjc-samples\Scenarios\Cortana\CortanaSample"
-c:\winobjc-samples\Scenarios\Cortana\CortanaSample> \winobjc-sdk\bin\vsimporter.exe
-Generated c:\winobjc-samples\Scenarios\Cortana\CortanaSample\CortanaSample.vsimporter\CortanaSample-Headers-WinStore10\CortanaSample-Headers.vcxitems
-Generated c:\winobjc-samples\Scenarios\Cortana\CortanaSample\CortanaSample.vsimporter\LiveTileSampleSample-WinStore10\CortanaSample.vcxproj
-Generated c:\winobjc-samples\Scenarios\Cortana\CortanaSample\CortanaSample-WinStore10.sln
-```
-
-Once you've generated the .sln file, open it in Visual Studio.
-
-### Add the VCD XML file to *CortanaSample-WinStore10* project
-A sample VCD XML file is included in the CortanaSample Xcode project directory. After running *vsimporter*, you'll need to add the VCD XML file reference to your Visual Studio project manually.
-
-In the Visual Studio menu bar choose **Project** > **Add Existing Item**. Add the VCD XML file (*CortanaSampleCommands.xml*) located in the original Xcode project directory.
 
 ### Add UWP framework headers
 We need the public headers for the relevant UWP frameworks. In the extracted SDK (or your built SDK directory, if you’ve cloned [WinObjC from GitHub and built the project from source](https://github.com/Microsoft/WinObjC)), go to the [include\Platform\Universal Windows\UWP](https://github.com/Microsoft/WinObjC/tree/master/include/Platform/Universal Windows/UWP) directory and take a look at what you find. Each header file represents a different namespace within the [Windows Runtime APIs](https://msdn.microsoft.com/en-us/library/windows/apps/br211377.aspx). For our purposes, we will need APIs from:
@@ -224,7 +216,7 @@ When Cortana is listening, here are some of the voice commands that work in the 
 * "Cortana Sample, show trip to London"
 
 Infix and suffix forms are also supported:
-* "Show trip to Rioin Cortana Sample"
+* "Show trip to Rioin in Cortana Sample"
 * "Show my Cortana Sample trip to London"
 
 ## Additional Reading
