@@ -176,6 +176,7 @@
     <AppxManifest Include="Package.appxmanifest">
       <SubType>Designer</SubType>
     </AppxManifest>
+    <Xml Include="..\..\CortanaSample\CortanaSampleCommands.xml" />
     <Xml Include="default.rd.xml" />
     <None Include="CortanaSample_TemporaryKey.pfx" />
     <None Include="project.json" />
