@@ -1,0 +1,498 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		35A410D81E8EE0BA008B7F42 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 35A410D71E8EE0BA008B7F42 /* main.m */; };
+		35A410E31E8EE0BA008B7F42 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35A410E21E8EE0BA008B7F42 /* Assets.xcassets */; };
+		35A410E61E8EE0BA008B7F42 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35A410E41E8EE0BA008B7F42 /* LaunchScreen.storyboard */; };
+		35A410F91E92E5D5008B7F42 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 35A410F21E92E5D5008B7F42 /* AppDelegate.m */; };
+		35A410FA1E92E5D5008B7F42 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35A410F41E92E5D5008B7F42 /* BaseViewController.m */; };
+		35A410FB1E92E5D5008B7F42 /* Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 35A410F61E92E5D5008B7F42 /* Helper.m */; };
+		35A410FC1E92E5D5008B7F42 /* ListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35A410F81E92E5D5008B7F42 /* ListViewController.m */; };
+		35A411231E92F6F4008B7F42 /* test.json in Resources */ = {isa = PBXBuildFile; fileRef = 35A411221E92F6F4008B7F42 /* test.json */; };
+		35A411261E92FB3A008B7F42 /* SerializingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35A411251E92FB3A008B7F42 /* SerializingViewController.m */; };
+		35A4112B1E92FEA1008B7F42 /* NSStringSerializeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35A4112A1E92FEA1008B7F42 /* NSStringSerializeViewController.m */; };
+		35A4112E1E92FEF4008B7F42 /* NSArraySerializeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35A4112D1E92FEF4008B7F42 /* NSArraySerializeViewController.m */; };
+		35A411311E92FF0F008B7F42 /* NSDictionarySerializeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35A411301E92FF0F008B7F42 /* NSDictionarySerializeViewController.m */; };
+		35A411341E92FF71008B7F42 /* DeserializeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35A411331E92FF71008B7F42 /* DeserializeViewController.m */; };
+		35A4113D1E9419AF008B7F42 /* libJSONKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 35A4111A1E92EBF4008B7F42 /* libJSONKit.a */; };
+		35A411481E955B72008B7F42 /* Organization.m in Sources */ = {isa = PBXBuildFile; fileRef = 35A411411E955B72008B7F42 /* Organization.m */; };
+		35A411491E955B72008B7F42 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 35A411431E955B72008B7F42 /* Person.m */; };
+		35A4114A1E955B72008B7F42 /* PersonalDetails.m in Sources */ = {isa = PBXBuildFile; fileRef = 35A411451E955B72008B7F42 /* PersonalDetails.m */; };
+		35A4114B1E955B72008B7F42 /* PersonIdentification.m in Sources */ = {isa = PBXBuildFile; fileRef = 35A411471E955B72008B7F42 /* PersonIdentification.m */; };
+		35A4114F1E9589D5008B7F42 /* DecodingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35A4114E1E9589D5008B7F42 /* DecodingViewController.m */; };
+		35A411561E95A8E0008B7F42 /* NSStringDeserializeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35A411551E95A8E0008B7F42 /* NSStringDeserializeViewController.m */; };
+		35A411591E95AA1C008B7F42 /* NSDataDeserializeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35A411581E95AA1C008B7F42 /* NSDataDeserializeViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		35A411191E92EBF4008B7F42 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 35A411151E92EBF4008B7F42 /* JSONKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 35A411061E92EBA1008B7F42;
+			remoteInfo = JSONKit;
+		};
+		35A4111C1E92EC3F008B7F42 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 35A411151E92EBF4008B7F42 /* JSONKit.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 35A411051E92EBA1008B7F42;
+			remoteInfo = JSONKit;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		35A410D31E8EE0BA008B7F42 /* Middleware-JsonKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Middleware-JsonKit.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		35A410D71E8EE0BA008B7F42 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		35A410E21E8EE0BA008B7F42 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		35A410E51E8EE0BA008B7F42 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		35A410E71E8EE0BA008B7F42 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		35A410F11E92E5D5008B7F42 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		35A410F21E92E5D5008B7F42 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		35A410F31E92E5D5008B7F42 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		35A410F41E92E5D5008B7F42 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		35A410F51E92E5D5008B7F42 /* Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Helper.h; sourceTree = "<group>"; };
+		35A410F61E92E5D5008B7F42 /* Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Helper.m; sourceTree = "<group>"; };
+		35A410F71E92E5D5008B7F42 /* ListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListViewController.h; sourceTree = "<group>"; };
+		35A410F81E92E5D5008B7F42 /* ListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListViewController.m; sourceTree = "<group>"; };
+		35A411151E92EBF4008B7F42 /* JSONKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = JSONKit.xcodeproj; path = JSONKit/JSONKit.xcodeproj; sourceTree = "<group>"; };
+		35A411221E92F6F4008B7F42 /* test.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = test.json; sourceTree = "<group>"; };
+		35A411241E92FB3A008B7F42 /* SerializingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SerializingViewController.h; sourceTree = "<group>"; };
+		35A411251E92FB3A008B7F42 /* SerializingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SerializingViewController.m; sourceTree = "<group>"; };
+		35A411291E92FEA1008B7F42 /* NSStringSerializeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSStringSerializeViewController.h; sourceTree = "<group>"; };
+		35A4112A1E92FEA1008B7F42 /* NSStringSerializeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSStringSerializeViewController.m; sourceTree = "<group>"; };
+		35A4112C1E92FEF4008B7F42 /* NSArraySerializeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSArraySerializeViewController.h; sourceTree = "<group>"; };
+		35A4112D1E92FEF4008B7F42 /* NSArraySerializeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSArraySerializeViewController.m; sourceTree = "<group>"; };
+		35A4112F1E92FF0F008B7F42 /* NSDictionarySerializeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDictionarySerializeViewController.h; sourceTree = "<group>"; };
+		35A411301E92FF0F008B7F42 /* NSDictionarySerializeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDictionarySerializeViewController.m; sourceTree = "<group>"; };
+		35A411321E92FF71008B7F42 /* DeserializeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeserializeViewController.h; sourceTree = "<group>"; };
+		35A411331E92FF71008B7F42 /* DeserializeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeserializeViewController.m; sourceTree = "<group>"; };
+		35A411401E955B72008B7F42 /* Organization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Organization.h; sourceTree = "<group>"; };
+		35A411411E955B72008B7F42 /* Organization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Organization.m; sourceTree = "<group>"; };
+		35A411421E955B72008B7F42 /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		35A411431E955B72008B7F42 /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
+		35A411441E955B72008B7F42 /* PersonalDetails.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonalDetails.h; sourceTree = "<group>"; };
+		35A411451E955B72008B7F42 /* PersonalDetails.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonalDetails.m; sourceTree = "<group>"; };
+		35A411461E955B72008B7F42 /* PersonIdentification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonIdentification.h; sourceTree = "<group>"; };
+		35A411471E955B72008B7F42 /* PersonIdentification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonIdentification.m; sourceTree = "<group>"; };
+		35A4114D1E9589D5008B7F42 /* DecodingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DecodingViewController.h; sourceTree = "<group>"; };
+		35A4114E1E9589D5008B7F42 /* DecodingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DecodingViewController.m; sourceTree = "<group>"; };
+		35A411541E95A8E0008B7F42 /* NSStringDeserializeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSStringDeserializeViewController.h; sourceTree = "<group>"; };
+		35A411551E95A8E0008B7F42 /* NSStringDeserializeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSStringDeserializeViewController.m; sourceTree = "<group>"; };
+		35A411571E95AA1C008B7F42 /* NSDataDeserializeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDataDeserializeViewController.h; sourceTree = "<group>"; };
+		35A411581E95AA1C008B7F42 /* NSDataDeserializeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDataDeserializeViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		35A410D01E8EE0BA008B7F42 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				35A4113D1E9419AF008B7F42 /* libJSONKit.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		35A410CA1E8EE0BA008B7F42 = {
+			isa = PBXGroup;
+			children = (
+				35A411151E92EBF4008B7F42 /* JSONKit.xcodeproj */,
+				35A410D51E8EE0BA008B7F42 /* Middleware-JsonKit */,
+				35A410D41E8EE0BA008B7F42 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		35A410D41E8EE0BA008B7F42 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				35A410D31E8EE0BA008B7F42 /* Middleware-JsonKit.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		35A410D51E8EE0BA008B7F42 /* Middleware-JsonKit */ = {
+			isa = PBXGroup;
+			children = (
+				35A411271E92FDBB008B7F42 /* Json */,
+				35A410F11E92E5D5008B7F42 /* AppDelegate.h */,
+				35A410F21E92E5D5008B7F42 /* AppDelegate.m */,
+				35A410F31E92E5D5008B7F42 /* BaseViewController.h */,
+				35A410F41E92E5D5008B7F42 /* BaseViewController.m */,
+				35A410F51E92E5D5008B7F42 /* Helper.h */,
+				35A410F61E92E5D5008B7F42 /* Helper.m */,
+				35A410F71E92E5D5008B7F42 /* ListViewController.h */,
+				35A410F81E92E5D5008B7F42 /* ListViewController.m */,
+				35A411531E95916C008B7F42 /* Deserializing */,
+				35A411521E959161008B7F42 /* Serializing */,
+				35A411511E95914E008B7F42 /* Decoding */,
+				35A410E21E8EE0BA008B7F42 /* Assets.xcassets */,
+				35A410E41E8EE0BA008B7F42 /* LaunchScreen.storyboard */,
+				35A410E71E8EE0BA008B7F42 /* Info.plist */,
+				35A410D61E8EE0BA008B7F42 /* Supporting Files */,
+			);
+			path = "Middleware-JsonKit";
+			sourceTree = "<group>";
+		};
+		35A410D61E8EE0BA008B7F42 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				35A410D71E8EE0BA008B7F42 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		35A411161E92EBF4008B7F42 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				35A4111A1E92EBF4008B7F42 /* libJSONKit.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		35A411271E92FDBB008B7F42 /* Json */ = {
+			isa = PBXGroup;
+			children = (
+				35A4113E1E955AFC008B7F42 /* Models */,
+				35A411221E92F6F4008B7F42 /* test.json */,
+			);
+			name = Json;
+			sourceTree = "<group>";
+		};
+		35A4113E1E955AFC008B7F42 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				35A411401E955B72008B7F42 /* Organization.h */,
+				35A411411E955B72008B7F42 /* Organization.m */,
+				35A411421E955B72008B7F42 /* Person.h */,
+				35A411431E955B72008B7F42 /* Person.m */,
+				35A411441E955B72008B7F42 /* PersonalDetails.h */,
+				35A411451E955B72008B7F42 /* PersonalDetails.m */,
+				35A411461E955B72008B7F42 /* PersonIdentification.h */,
+				35A411471E955B72008B7F42 /* PersonIdentification.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		35A411511E95914E008B7F42 /* Decoding */ = {
+			isa = PBXGroup;
+			children = (
+				35A4114D1E9589D5008B7F42 /* DecodingViewController.h */,
+				35A4114E1E9589D5008B7F42 /* DecodingViewController.m */,
+			);
+			name = Decoding;
+			sourceTree = "<group>";
+		};
+		35A411521E959161008B7F42 /* Serializing */ = {
+			isa = PBXGroup;
+			children = (
+				35A411241E92FB3A008B7F42 /* SerializingViewController.h */,
+				35A411251E92FB3A008B7F42 /* SerializingViewController.m */,
+				35A4112C1E92FEF4008B7F42 /* NSArraySerializeViewController.h */,
+				35A4112D1E92FEF4008B7F42 /* NSArraySerializeViewController.m */,
+				35A4112F1E92FF0F008B7F42 /* NSDictionarySerializeViewController.h */,
+				35A411301E92FF0F008B7F42 /* NSDictionarySerializeViewController.m */,
+				35A411291E92FEA1008B7F42 /* NSStringSerializeViewController.h */,
+				35A4112A1E92FEA1008B7F42 /* NSStringSerializeViewController.m */,
+			);
+			name = Serializing;
+			sourceTree = "<group>";
+		};
+		35A411531E95916C008B7F42 /* Deserializing */ = {
+			isa = PBXGroup;
+			children = (
+				35A411321E92FF71008B7F42 /* DeserializeViewController.h */,
+				35A411331E92FF71008B7F42 /* DeserializeViewController.m */,
+				35A411541E95A8E0008B7F42 /* NSStringDeserializeViewController.h */,
+				35A411551E95A8E0008B7F42 /* NSStringDeserializeViewController.m */,
+				35A411571E95AA1C008B7F42 /* NSDataDeserializeViewController.h */,
+				35A411581E95AA1C008B7F42 /* NSDataDeserializeViewController.m */,
+			);
+			name = Deserializing;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		35A410D21E8EE0BA008B7F42 /* Middleware-JsonKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 35A410EA1E8EE0BA008B7F42 /* Build configuration list for PBXNativeTarget "Middleware-JsonKit" */;
+			buildPhases = (
+				35A410CF1E8EE0BA008B7F42 /* Sources */,
+				35A410D01E8EE0BA008B7F42 /* Frameworks */,
+				35A410D11E8EE0BA008B7F42 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				35A4111D1E92EC3F008B7F42 /* PBXTargetDependency */,
+			);
+			name = "Middleware-JsonKit";
+			productName = "Middleware-JsonKit";
+			productReference = 35A410D31E8EE0BA008B7F42 /* Middleware-JsonKit.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		35A410CB1E8EE0BA008B7F42 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = microsoft;
+				TargetAttributes = {
+					35A410D21E8EE0BA008B7F42 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = UBF8T346G9;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 35A410CE1E8EE0BA008B7F42 /* Build configuration list for PBXProject "Middleware-JsonKit" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 35A410CA1E8EE0BA008B7F42;
+			productRefGroup = 35A410D41E8EE0BA008B7F42 /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 35A411161E92EBF4008B7F42 /* Products */;
+					ProjectRef = 35A411151E92EBF4008B7F42 /* JSONKit.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				35A410D21E8EE0BA008B7F42 /* Middleware-JsonKit */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		35A4111A1E92EBF4008B7F42 /* libJSONKit.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libJSONKit.a;
+			remoteRef = 35A411191E92EBF4008B7F42 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		35A410D11E8EE0BA008B7F42 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				35A411231E92F6F4008B7F42 /* test.json in Resources */,
+				35A410E61E8EE0BA008B7F42 /* LaunchScreen.storyboard in Resources */,
+				35A410E31E8EE0BA008B7F42 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		35A410CF1E8EE0BA008B7F42 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				35A4114A1E955B72008B7F42 /* PersonalDetails.m in Sources */,
+				35A411341E92FF71008B7F42 /* DeserializeViewController.m in Sources */,
+				35A411261E92FB3A008B7F42 /* SerializingViewController.m in Sources */,
+				35A410FA1E92E5D5008B7F42 /* BaseViewController.m in Sources */,
+				35A410FC1E92E5D5008B7F42 /* ListViewController.m in Sources */,
+				35A410D81E8EE0BA008B7F42 /* main.m in Sources */,
+				35A411561E95A8E0008B7F42 /* NSStringDeserializeViewController.m in Sources */,
+				35A4114B1E955B72008B7F42 /* PersonIdentification.m in Sources */,
+				35A411481E955B72008B7F42 /* Organization.m in Sources */,
+				35A4114F1E9589D5008B7F42 /* DecodingViewController.m in Sources */,
+				35A411491E955B72008B7F42 /* Person.m in Sources */,
+				35A411311E92FF0F008B7F42 /* NSDictionarySerializeViewController.m in Sources */,
+				35A4112E1E92FEF4008B7F42 /* NSArraySerializeViewController.m in Sources */,
+				35A410F91E92E5D5008B7F42 /* AppDelegate.m in Sources */,
+				35A4112B1E92FEA1008B7F42 /* NSStringSerializeViewController.m in Sources */,
+				35A410FB1E92E5D5008B7F42 /* Helper.m in Sources */,
+				35A411591E95AA1C008B7F42 /* NSDataDeserializeViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		35A4111D1E92EC3F008B7F42 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = JSONKit;
+			targetProxy = 35A4111C1E92EC3F008B7F42 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		35A410E41E8EE0BA008B7F42 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				35A410E51E8EE0BA008B7F42 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		35A410E81E8EE0BA008B7F42 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		35A410E91E8EE0BA008B7F42 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		35A410EB1E8EE0BA008B7F42 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				DEVELOPMENT_TEAM = UBF8T346G9;
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/JSONKIT/JSONKIT/";
+				INFOPLIST_FILE = "Middleware-JsonKit/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_LDFLAGS = "-all_load";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.microsoft.iw.Middleware-JsonKit";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		35A410EC1E8EE0BA008B7F42 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				DEVELOPMENT_TEAM = UBF8T346G9;
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/JSONKIT/JSONKIT/";
+				INFOPLIST_FILE = "Middleware-JsonKit/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_LDFLAGS = "-all_load";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.microsoft.iw.Middleware-JsonKit";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		35A410CE1E8EE0BA008B7F42 /* Build configuration list for PBXProject "Middleware-JsonKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				35A410E81E8EE0BA008B7F42 /* Debug */,
+				35A410E91E8EE0BA008B7F42 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		35A410EA1E8EE0BA008B7F42 /* Build configuration list for PBXNativeTarget "Middleware-JsonKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				35A410EB1E8EE0BA008B7F42 /* Debug */,
+				35A410EC1E8EE0BA008B7F42 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 35A410CB1E8EE0BA008B7F42 /* Project object */;
+}
