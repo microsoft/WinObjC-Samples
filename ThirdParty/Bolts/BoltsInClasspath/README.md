@@ -1,11 +1,11 @@
-#BOLTS Sample Application
+# BOLTS Sample Application
 
-##Prerequisites
+## Prerequisites
 This sample uses the free openweathermap.org rest API to demonstrate the Bolts usage. 
 
 Please register for free and use the token generated from https://home.openweathermap.org/users/sign_up and replace it with apiKey placeholder in the Constants.m file
 
-##Setup
+## Setup
 This project uses bolts as a dependency. When you first clone the repo if you have included ‘--recursive’ skip the next statement. Else navigate to WinObjC-samples root directory and run:
 ```
 > git submodule update --init --recursive
@@ -23,7 +23,7 @@ In Visual Studio expand the solution and navigate to Bolts folder.
 
 Right-click on Bolts target. Go to properties->clang->Enable ObjectiveC ARC and set it to YES(-fobjc-arc). Do this for the other target BoltsInClassPath also in subsequent BoltsInClassPath folder.
 
-##Workaround
+## Workaround
 You will find two issues in the app build phase. Here's how to work around them.
 
 - WinObjC uses a different implementation for pThread. On Windows, you'll have to go to your Bolts dependency in the solution and navigate to **Bolts/Bolts/Common/BFExecutor.m**. Change the below method's (remaining_stack_size) implementation as shown:
@@ -58,11 +58,11 @@ __attribute__((noinline)) static size_t remaining_stack_size(size_t *restrict to
 
 Now Build and run the sample on to emulator.
 
-###Please note 
-APPLinks part of BoltsAPI was not yet implemented.
+### Please note 
+AppLinks portion of BoltsAPI is not yet supported.
 
-###Coverage
-All the methods listed below are used in sample and are tested on both iOS and Windows environment.
+### Coverage
+All the methods listed below are used in the sample, tested on both iOS and Windows environment.
 ```
 BFExecutor mainThreadExecutor
 BFExecutor defaultExecutor
@@ -92,4 +92,4 @@ BFCancellationToken cancelationRequested
 
 BFCancellationTokenRegistration dispose
 ```
->>>>>>> master
+
