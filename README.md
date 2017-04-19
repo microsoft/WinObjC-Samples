@@ -31,15 +31,15 @@ The WinObjC sample apps can be found in */Apps*. They include:
 ## Example code
 Sample code and projects for common scenarios can be found under */Scenarios*. They include:
 
-- [Using Projections: **Live Tiles**](/Scenarios/Live Tiles)
+- [Using Projections: **Live Tiles**](Scenarios/Live%20Tiles)
 
   Live Tiles allow Windows users to see parts of an app’s content directly from the Start menu. This example shows how to create and update adaptive Live Tiles using Objective-C projections.
 
-- [Using Projections: **Toast Notifications**](/Scenarios/Toast Notifications)
+- [Using Projections: **Toast Notifications**](Scenarios/Toast%20Notifications)
 
   This example demonstrates popping local toast notifications on Windows 10 using Objective-C projections.
 
-- [Using Projections: **In-App Purchases**](/Scenarios/In-App Purchases)
+- [Using Projections: **In-App Purchases**](Scenarios/In-App%20Purchases)
 
   This example shows how to replace StoreKit in your app and add support for in-app purchases on Windows 10 using Objective-C projections.
 
