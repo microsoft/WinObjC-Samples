@@ -1,6 +1,6 @@
-#SBJson5 Sample Application 
+# SBJson5 Sample Application 
 
-##Setup
+## Setup
 This project uses SBJson5 as a dependency. When you first clone the repo if you have included ‘--recursive’ skip the next statement. Else navigate to WinObjC-samples root directory and run:
 ```
 > git submodule update --init --recursive
@@ -16,7 +16,7 @@ Then follow the steps from WinObjC (https://github.com/Microsoft/WinObjC/#gettin
 
 Now Build and run the sample on to emulator.
 
-###Coverage
+### Coverage
 All the methods listed below are used in sample and are tested on both iOS and Windows environment.
 ```
 SBJson5Parser parserWithBlock: errorHandler:
