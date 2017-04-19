@@ -7,20 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8B31DED11EA1553100C7AD41 /* DemoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B31DED01EA1553100C7AD41 /* DemoTableViewCell.m */; };
+		8B31DED61EA82B3600C7AD41 /* DemoScenario.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B31DED31EA82B3600C7AD41 /* DemoScenario.m */; };
+		8B31DED71EA82B3600C7AD41 /* DemoScenarioIntro.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B31DED51EA82B3600C7AD41 /* DemoScenarioIntro.m */; };
 		8B7845151E9D5CFC0063CB12 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B7845141E9D5CFC0063CB12 /* main.m */; };
 		8B7845181E9D5CFC0063CB12 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B7845171E9D5CFC0063CB12 /* AppDelegate.m */; };
 		8B78451B1E9D5CFC0063CB12 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B78451A1E9D5CFC0063CB12 /* ViewController.m */; };
 		8B78451E1E9D5CFD0063CB12 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B78451C1E9D5CFD0063CB12 /* Main.storyboard */; };
 		8B7845201E9D5CFD0063CB12 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B78451F1E9D5CFD0063CB12 /* Assets.xcassets */; };
 		8B7845231E9D5CFD0063CB12 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B7845211E9D5CFD0063CB12 /* LaunchScreen.storyboard */; };
-		8B9116701E9EB4CA004D661B /* PathDemoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B91166F1E9EB4CA004D661B /* PathDemoTableViewCell.m */; };
 		8BBD62561EA026DA004C8109 /* CGView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BBD62551EA026DA004C8109 /* CGView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		8B31DECF1EA1553100C7AD41 /* DemoTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoTableViewCell.h; sourceTree = "<group>"; };
-		8B31DED01EA1553100C7AD41 /* DemoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoTableViewCell.m; sourceTree = "<group>"; };
+		8B31DED21EA82B3600C7AD41 /* DemoScenario.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoScenario.h; sourceTree = "<group>"; };
+		8B31DED31EA82B3600C7AD41 /* DemoScenario.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoScenario.m; sourceTree = "<group>"; };
+		8B31DED41EA82B3600C7AD41 /* DemoScenarioIntro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoScenarioIntro.h; sourceTree = "<group>"; };
+		8B31DED51EA82B3600C7AD41 /* DemoScenarioIntro.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoScenarioIntro.m; sourceTree = "<group>"; };
 		8B7845101E9D5CFC0063CB12 /* CGCT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CGCT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B7845141E9D5CFC0063CB12 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8B7845161E9D5CFC0063CB12 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -31,8 +33,6 @@
 		8B78451F1E9D5CFD0063CB12 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8B7845221E9D5CFD0063CB12 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8B7845241E9D5CFD0063CB12 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8B91166E1E9EB2A8004D661B /* PathDemoTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PathDemoTableViewCell.h; sourceTree = "<group>"; };
-		8B91166F1E9EB4CA004D661B /* PathDemoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PathDemoTableViewCell.m; sourceTree = "<group>"; };
 		8BBD62551EA026DA004C8109 /* CGView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGView.m; sourceTree = "<group>"; };
 		8BBD62571EA02718004C8109 /* CGView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CGView.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -67,8 +67,10 @@
 		8B7845121E9D5CFC0063CB12 /* CGCT */ = {
 			isa = PBXGroup;
 			children = (
-				8B31DECF1EA1553100C7AD41 /* DemoTableViewCell.h */,
-				8B31DED01EA1553100C7AD41 /* DemoTableViewCell.m */,
+				8B31DED21EA82B3600C7AD41 /* DemoScenario.h */,
+				8B31DED31EA82B3600C7AD41 /* DemoScenario.m */,
+				8B31DED41EA82B3600C7AD41 /* DemoScenarioIntro.h */,
+				8B31DED51EA82B3600C7AD41 /* DemoScenarioIntro.m */,
 				8B7845161E9D5CFC0063CB12 /* AppDelegate.h */,
 				8B7845171E9D5CFC0063CB12 /* AppDelegate.m */,
 				8B7845191E9D5CFC0063CB12 /* ViewController.h */,
@@ -78,8 +80,6 @@
 				8B7845211E9D5CFD0063CB12 /* LaunchScreen.storyboard */,
 				8B7845241E9D5CFD0063CB12 /* Info.plist */,
 				8B7845131E9D5CFC0063CB12 /* Supporting Files */,
-				8B91166E1E9EB2A8004D661B /* PathDemoTableViewCell.h */,
-				8B91166F1E9EB4CA004D661B /* PathDemoTableViewCell.m */,
 				8BBD62551EA026DA004C8109 /* CGView.m */,
 				8BBD62571EA02718004C8109 /* CGView.h */,
 			);
@@ -166,10 +166,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				8B78451B1E9D5CFC0063CB12 /* ViewController.m in Sources */,
+				8B31DED71EA82B3600C7AD41 /* DemoScenarioIntro.m in Sources */,
+				8B31DED61EA82B3600C7AD41 /* DemoScenario.m in Sources */,
 				8B7845181E9D5CFC0063CB12 /* AppDelegate.m in Sources */,
-				8B31DED11EA1553100C7AD41 /* DemoTableViewCell.m in Sources */,
 				8B7845151E9D5CFC0063CB12 /* main.m in Sources */,
-				8B9116701E9EB4CA004D661B /* PathDemoTableViewCell.m in Sources */,
 				8BBD62561EA026DA004C8109 /* CGView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

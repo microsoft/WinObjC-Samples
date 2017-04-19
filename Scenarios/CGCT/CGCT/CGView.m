@@ -18,16 +18,16 @@
 #import "CGView.h"
 
 @implementation CGView {
-    DemoTableViewCell* demoToDraw;
+    DemoScenario* demoToDraw;
 };
 
-- (void)updateCurrentDemo:(DemoTableViewCell*)newDemo {
+- (void)updateCurrentDemo:(DemoScenario*)newDemo {
     demoToDraw = newDemo;
 }
 
 - (void)drawRect:(CGRect)pos {
     CGContextRef context = UIGraphicsGetCurrentContext();
-    [demoToDraw drawDemoIntoContext:context withFrame:self.frame view:self];
+    [demoToDraw drawDemoIntoContext:context withFrame:self.frame];
 }
 
 @end

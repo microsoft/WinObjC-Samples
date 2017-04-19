@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|ARM">
@@ -186,6 +186,8 @@
     <Image Include="Assets\Square44x44Logo.targetsize-24_altform-unplated.png" />
     <Image Include="Assets\StoreLogo.png" />
     <Image Include="Assets\Wide310x150Logo.scale-200.png" />
+    <ClInclude Include="..\..\CGCT\DemoScenario.h" />
+    <ClInclude Include="..\..\CGCT\DemoScenarioIntro.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="App.xaml.h">
       <DependentUpon>App.xaml</DependentUpon>
@@ -199,13 +201,11 @@
     <AssetCatalogCompile Include="..\..\CGCT\Assets.xcassets" />
     <ClInclude Include="..\..\CGCT\AppDelegate.h" />
     <ClInclude Include="..\..\CGCT\CGView.h" />
-    <ClInclude Include="..\..\CGCT\DemoTableViewCell.h" />
-    <ClInclude Include="..\..\CGCT\PathDemoTableViewCell.h" />
     <ClInclude Include="..\..\CGCT\ViewController.h" />
     <ClangCompile Include="..\..\CGCT\AppDelegate.m" />
     <ClangCompile Include="..\..\CGCT\CGView.m" />
-    <ClangCompile Include="..\..\CGCT\DemoTableViewCell.m" />
-    <ClangCompile Include="..\..\CGCT\PathDemoTableViewCell.m" />
+    <ClangCompile Include="..\..\CGCT\DemoScenario.m" />
+    <ClangCompile Include="..\..\CGCT\DemoScenarioIntro.m" />
     <ClangCompile Include="..\..\CGCT\ViewController.m" />
     <ClangCompile Include="..\..\CGCT\main.m" />
     <SBInfoPlistCopy Include="..\..\CGCT\Info.plist">

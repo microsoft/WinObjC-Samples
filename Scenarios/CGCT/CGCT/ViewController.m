@@ -15,17 +15,18 @@
 //******************************************************************************
 
 #import "ViewController.h"
-#import "PathDemoTableViewCell.h"
+#import "DemoScenarioIntro.h"
 #import "CGView.h"
 
-#define VC_WIDTH self.view.frame.size.width
-#define VC_HEIGHT self.view.frame.size.height
+#define VC_WIDTH self.view.bounds.size.width
+#define VC_HEIGHT self.view.bounds.size.height
 
 @interface ViewController ()
 @property UITableView* CGMenu;
 @property CGContextRef stageContext;
 @property CGRect stageBounds;
 @property CGView* stage;
+@property NSMutableArray<DemoScenario*>* demoList;
 @end
 
 @implementation ViewController
@@ -74,6 +75,9 @@
 
     [self.view addSubview:_stage];
     [self.view addSubview:_CGMenu];
+
+	_demoList = [[NSMutableArray alloc] init];
+	[_demoList addObject:[[DemoScenarioIntro alloc] init]];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -81,21 +85,22 @@
 
 - (void)tableView:(UITableView*)tableView didSelectRowAtIndexPath:(NSIndexPath*)indexPath {
     if (tableView == _CGMenu) {
-        _stage.backgroundColor = [UIColor colorWithRed:.1 green:.3 blue:1 alpha:1];
-        [_stage updateCurrentDemo:[tableView cellForRowAtIndexPath:indexPath]];
-        [_stage setNeedsDisplay];
+		_stage.backgroundColor = [UIColor colorWithRed : .1 green : .3 blue : 1 alpha : 1];
+		[_stage updateCurrentDemo:[_demoList objectAtIndex:indexPath.row]];
+        
+		[_stage setNeedsDisplay];
     }
 }
 
 - (NSInteger)tableView:(UITableView*)tableView numberOfRowsInSection:(NSInteger)section {
-    return 1;
+    return _demoList.count;
 }
 
 - (UITableViewCell*)tableView:(UITableView*)tableView cellForRowAtIndexPath:(nonnull NSIndexPath*)indexPath {
     if (tableView == _CGMenu) {
         UITableViewCell* aCell = [tableView dequeueReusableCellWithIdentifier:@"CGStory1"];
         if (aCell == nil) {
-            aCell = [[PathDemoTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"CGStory1"];
+            aCell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"CGStory1"];
         }
         aCell.backgroundColor = [UIColor colorWithRed:1 green:1 blue:1 alpha:1];
         aCell.textLabel.text = @"CoreDemo1";

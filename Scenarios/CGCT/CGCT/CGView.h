@@ -17,7 +17,8 @@
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
 #import <CoreGraphics/CoreGraphics.h>
-#import "DemoTableViewCell.h"
+#import "DemoScenario.h"
+
 @interface CGView : UIView
-- (void)updateCurrentDemo:(DemoTableViewCell*)newDemo;
+- (void)updateCurrentDemo:(DemoScenario*)newDemo;
 @end

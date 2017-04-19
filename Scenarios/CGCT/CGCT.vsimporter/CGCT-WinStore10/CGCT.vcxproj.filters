@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <Filter Include="Common">
@@ -54,12 +54,6 @@
     <ClInclude Include="..\..\CGCT\CGView.h">
       <Filter>CGCT</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\CGCT\DemoTableViewCell.h">
-      <Filter>CGCT</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\CGCT\PathDemoTableViewCell.h">
-      <Filter>CGCT</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\CGCT\ViewController.h">
       <Filter>CGCT</Filter>
     </ClInclude>
@@ -67,12 +61,6 @@
       <Filter>CGCT</Filter>
     </ClangCompile>
     <ClangCompile Include="..\..\CGCT\CGView.m">
-      <Filter>CGCT</Filter>
-    </ClangCompile>
-    <ClangCompile Include="..\..\CGCT\DemoTableViewCell.m">
-      <Filter>CGCT</Filter>
-    </ClangCompile>
-    <ClangCompile Include="..\..\CGCT\PathDemoTableViewCell.m">
       <Filter>CGCT</Filter>
     </ClangCompile>
     <ClangCompile Include="..\..\CGCT\ViewController.m">
@@ -94,5 +82,33 @@
     <Text Include="CGCT-Release-xcvars.txt">
       <Filter>Xcode Variable Files</Filter>
     </Text>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="App.xaml.cpp" />
+    <ClCompile Include="pch.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="pch.h" />
+    <ClInclude Include="App.xaml.h" />
+    <ClInclude Include="..\..\CGCT\DemoScenarioIntro.h">
+      <Filter>CGCT</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CGCT\DemoScenario.h">
+      <Filter>CGCT</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="project.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClangCompile Include="..\..\CGCT\DemoScenarioIntro.m">
+      <Filter>CGCT</Filter>
+    </ClangCompile>
+    <ClangCompile Include="..\..\CGCT\DemoScenario.m">
+      <Filter>CGCT</Filter>
+    </ClangCompile>
   </ItemGroup>
 </Project>
