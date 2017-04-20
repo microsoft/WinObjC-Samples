@@ -86,8 +86,8 @@
 
 - (void)tableView:(UITableView*)tableView didSelectRowAtIndexPath:(NSIndexPath*)indexPath {
     if (tableView == _CGMenu) {
-        _stage.backgroundColor = [UIColor colorWithRed : .1 green : .3 blue : 1 alpha : 1];
-        _stage.demoToDraw = [_demoList objectAtIndex:indexPath.row];
+        _stage.backgroundColor = [UIColor colorWithRed:.1 green:.3 blue:1 alpha:1];
+        _stage.demoScenario = [_demoList objectAtIndex:indexPath.row];
     }
 }
 

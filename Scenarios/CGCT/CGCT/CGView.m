@@ -18,7 +18,7 @@
 #import "CGView.h"
 
 @implementation CGView
-- (void)setDemoToDraw:(DemoScenario*)demo {
+- (void)setDemoScenario:(DemoScenario*)demo {
     _demoToDraw = demo;
     [self setNeedsDisplay];
 }

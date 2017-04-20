@@ -89,7 +89,7 @@
       <HeaderMap>Project</HeaderMap>
       <IncludePaths>%(IncludePaths);$(SolutionPublicHeadersDir)</IncludePaths>
       <ObjectiveCARC>true</ObjectiveCARC>
-      <ObjectiveCModules>false</ObjectiveCModules>
+      <ObjectiveCModules>true</ObjectiveCModules>
       <OptimizationLevel>Disabled</OptimizationLevel>
       <PreprocessorDefinitions>DEBUG=1</PreprocessorDefinitions>
     </ClangCompile>
@@ -209,10 +209,7 @@
     </ClangCompile>
     <ClangCompile Include="..\..\CGCT\DemoScenario.m" />
     <ClangCompile Include="..\..\CGCT\DemoScenarioIntro.m" />
-    <ClangCompile Include="..\..\CGCT\ViewController.m">
-      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">-Wall -Wextra %(AdditionalOptions)</AdditionalOptions>
-      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsObjCpp</CompileAs>
-    </ClangCompile>
+    <ClangCompile Include="..\..\CGCT\ViewController.m" />
     <ClangCompile Include="..\..\CGCT\main.m" />
     <SBInfoPlistCopy Include="..\..\CGCT\Info.plist">
       <ExcludedFromBuild Condition="'$(Configuration)'=='Debug'">false</ExcludedFromBuild>

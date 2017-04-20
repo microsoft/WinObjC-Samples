@@ -20,6 +20,6 @@
 #import "DemoScenario.h"
 
 @interface CGView : UIView
-@property DemoScenario* demoToDraw;
+@property DemoScenario* demoScenario;
 - (void)updateCurrentDemo:(DemoScenario*)newDemo;
 @end
