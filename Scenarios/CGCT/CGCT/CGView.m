@@ -19,12 +19,12 @@
 
 @implementation CGView
 - (void)setDemoScenario:(DemoScenario*)demo {
-    _demoToDraw = demo;
+    _demoScenario = demo;
     [self setNeedsDisplay];
 }
 
 - (void)drawRect:(CGRect)pos {
     CGContextRef context = UIGraphicsGetCurrentContext();
-    [_demoToDraw drawDemoIntoContext:context withFrame:self.bounds];
+    [_demoScenario drawDemoIntoContext:context withFrame:self.bounds];
 }
 @end
