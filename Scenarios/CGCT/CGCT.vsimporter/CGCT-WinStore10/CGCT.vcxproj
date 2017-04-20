@@ -89,7 +89,7 @@
       <HeaderMap>Project</HeaderMap>
       <IncludePaths>%(IncludePaths);$(SolutionPublicHeadersDir)</IncludePaths>
       <ObjectiveCARC>true</ObjectiveCARC>
-      <ObjectiveCModules>true</ObjectiveCModules>
+      <ObjectiveCModules>false</ObjectiveCModules>
       <OptimizationLevel>Disabled</OptimizationLevel>
       <PreprocessorDefinitions>DEBUG=1</PreprocessorDefinitions>
     </ClangCompile>
@@ -203,10 +203,16 @@
     <ClInclude Include="..\..\CGCT\CGView.h" />
     <ClInclude Include="..\..\CGCT\ViewController.h" />
     <ClangCompile Include="..\..\CGCT\AppDelegate.m" />
-    <ClangCompile Include="..\..\CGCT\CGView.m" />
+    <ClangCompile Include="..\..\CGCT\CGView.m">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </AdditionalOptions>
+    </ClangCompile>
     <ClangCompile Include="..\..\CGCT\DemoScenario.m" />
     <ClangCompile Include="..\..\CGCT\DemoScenarioIntro.m" />
-    <ClangCompile Include="..\..\CGCT\ViewController.m" />
+    <ClangCompile Include="..\..\CGCT\ViewController.m">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">-Wall -Wextra %(AdditionalOptions)</AdditionalOptions>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsObjCpp</CompileAs>
+    </ClangCompile>
     <ClangCompile Include="..\..\CGCT\main.m" />
     <SBInfoPlistCopy Include="..\..\CGCT\Info.plist">
       <ExcludedFromBuild Condition="'$(Configuration)'=='Debug'">false</ExcludedFromBuild>

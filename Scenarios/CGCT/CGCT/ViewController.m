@@ -21,12 +21,13 @@
 #define VC_WIDTH self.view.bounds.size.width
 #define VC_HEIGHT self.view.bounds.size.height
 
-@interface ViewController ()
+@interface ViewController() {
+    NSMutableArray<DemoScenario*>* _demoList;
+}
 @property UITableView* CGMenu;
 @property CGContextRef stageContext;
 @property CGRect stageBounds;
 @property CGView* stage;
-@property NSMutableArray<DemoScenario*>* demoList;
 @end
 
 @implementation ViewController
@@ -76,8 +77,8 @@
     [self.view addSubview:_stage];
     [self.view addSubview:_CGMenu];
 
-	_demoList = [[NSMutableArray alloc] init];
-	[_demoList addObject:[[DemoScenarioIntro alloc] init]];
+    _demoList = [[NSMutableArray alloc] init];
+    [_demoList addObject:[[DemoScenarioIntro alloc] init]];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -85,10 +86,8 @@
 
 - (void)tableView:(UITableView*)tableView didSelectRowAtIndexPath:(NSIndexPath*)indexPath {
     if (tableView == _CGMenu) {
-		_stage.backgroundColor = [UIColor colorWithRed : .1 green : .3 blue : 1 alpha : 1];
-		[_stage updateCurrentDemo:[_demoList objectAtIndex:indexPath.row]];
-        
-		[_stage setNeedsDisplay];
+        _stage.backgroundColor = [UIColor colorWithRed : .1 green : .3 blue : 1 alpha : 1];
+        _stage.demoToDraw = [_demoList objectAtIndex:indexPath.row];
     }
 }
 
@@ -98,12 +97,12 @@
 
 - (UITableViewCell*)tableView:(UITableView*)tableView cellForRowAtIndexPath:(nonnull NSIndexPath*)indexPath {
     if (tableView == _CGMenu) {
-        UITableViewCell* aCell = [tableView dequeueReusableCellWithIdentifier:@"CGStory1"];
+        UITableViewCell* aCell = [tableView dequeueReusableCellWithIdentifier:@"demoscenario"];
         if (aCell == nil) {
-            aCell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"CGStory1"];
+            aCell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"demoscenario"];
         }
         aCell.backgroundColor = [UIColor colorWithRed:1 green:1 blue:1 alpha:1];
-        aCell.textLabel.text = @"CoreDemo1";
+        aCell.textLabel.text = ((DemoScenario*)[_demoList objectAtIndex : indexPath.row]).name;
 
         return aCell;
     }

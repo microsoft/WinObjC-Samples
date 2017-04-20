@@ -17,6 +17,9 @@
 #import "DemoScenario.h"
 
 @implementation DemoScenario
+- (NSString*)name {
+    [NSException raise:NSInvalidArgumentException format:@"Scenario %@ must override -name", self];
+}
 - (void)drawDemoIntoContext:(CGContextRef)context withFrame:(CGRect)bounds {
 }
 @end

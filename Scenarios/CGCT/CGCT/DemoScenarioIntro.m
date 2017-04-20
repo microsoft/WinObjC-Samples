@@ -21,6 +21,9 @@
 #import "DemoScenarioIntro.h"
 
 @implementation DemoScenarioIntro
+- (NSString*)name {
+    return @"Intro";
+}
 
 - (void)drawDemoIntoContext:(CGContextRef)context withFrame:(CGRect)bounds {
     CGContextSaveGState(context);

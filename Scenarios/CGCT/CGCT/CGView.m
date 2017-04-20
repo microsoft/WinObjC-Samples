@@ -17,17 +17,14 @@
 
 #import "CGView.h"
 
-@implementation CGView {
-    DemoScenario* demoToDraw;
-};
-
-- (void)updateCurrentDemo:(DemoScenario*)newDemo {
-    demoToDraw = newDemo;
+@implementation CGView
+- (void)setDemoToDraw:(DemoScenario*)demo {
+    _demoToDraw = demo;
+    [self setNeedsDisplay];
 }
 
 - (void)drawRect:(CGRect)pos {
     CGContextRef context = UIGraphicsGetCurrentContext();
-    [demoToDraw drawDemoIntoContext:context withFrame:self.frame];
+    [_demoToDraw drawDemoIntoContext:context withFrame:self.bounds];
 }
-
 @end

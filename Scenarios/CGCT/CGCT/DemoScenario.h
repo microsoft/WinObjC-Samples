@@ -18,5 +18,6 @@
 #import <CoreGraphics/CoreGraphics.h>
 
 @interface DemoScenario : NSObject
+@property(readonly) NSString* name;
 - (void)drawDemoIntoContext:(CGContextRef)context withFrame:(CGRect)bounds;
 @end
