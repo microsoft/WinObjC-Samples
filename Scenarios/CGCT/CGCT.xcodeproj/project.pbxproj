@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		8B31DED61EA82B3600C7AD41 /* DemoScenario.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B31DED31EA82B3600C7AD41 /* DemoScenario.m */; };
 		8B31DED71EA82B3600C7AD41 /* DemoScenarioIntro.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B31DED51EA82B3600C7AD41 /* DemoScenarioIntro.m */; };
+		8B31DEDC1EAFE51100C7AD41 /* DemoScenarioText.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B31DEDB1EAFE51100C7AD41 /* DemoScenarioText.m */; };
 		8B7845151E9D5CFC0063CB12 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B7845141E9D5CFC0063CB12 /* main.m */; };
 		8B7845181E9D5CFC0063CB12 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B7845171E9D5CFC0063CB12 /* AppDelegate.m */; };
 		8B78451B1E9D5CFC0063CB12 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B78451A1E9D5CFC0063CB12 /* ViewController.m */; };
@@ -23,6 +24,8 @@
 		8B31DED31EA82B3600C7AD41 /* DemoScenario.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoScenario.m; sourceTree = "<group>"; };
 		8B31DED41EA82B3600C7AD41 /* DemoScenarioIntro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoScenarioIntro.h; sourceTree = "<group>"; };
 		8B31DED51EA82B3600C7AD41 /* DemoScenarioIntro.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoScenarioIntro.m; sourceTree = "<group>"; };
+		8B31DEDA1EAFE51100C7AD41 /* DemoScenarioText.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoScenarioText.h; sourceTree = "<group>"; };
+		8B31DEDB1EAFE51100C7AD41 /* DemoScenarioText.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoScenarioText.m; sourceTree = "<group>"; };
 		8B7845101E9D5CFC0063CB12 /* CGCT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CGCT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B7845141E9D5CFC0063CB12 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8B7845161E9D5CFC0063CB12 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -67,6 +70,8 @@
 		8B7845121E9D5CFC0063CB12 /* CGCT */ = {
 			isa = PBXGroup;
 			children = (
+				8B31DEDA1EAFE51100C7AD41 /* DemoScenarioText.h */,
+				8B31DEDB1EAFE51100C7AD41 /* DemoScenarioText.m */,
 				8B31DED21EA82B3600C7AD41 /* DemoScenario.h */,
 				8B31DED31EA82B3600C7AD41 /* DemoScenario.m */,
 				8B31DED41EA82B3600C7AD41 /* DemoScenarioIntro.h */,
@@ -169,6 +174,7 @@
 				8B31DED71EA82B3600C7AD41 /* DemoScenarioIntro.m in Sources */,
 				8B31DED61EA82B3600C7AD41 /* DemoScenario.m in Sources */,
 				8B7845181E9D5CFC0063CB12 /* AppDelegate.m in Sources */,
+				8B31DEDC1EAFE51100C7AD41 /* DemoScenarioText.m in Sources */,
 				8B7845151E9D5CFC0063CB12 /* main.m in Sources */,
 				8BBD62561EA026DA004C8109 /* CGView.m in Sources */,
 			);
