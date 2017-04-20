@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Common">
+      <UniqueIdentifier>{c5a9ab5e-d860-4328-8094-07cd1e277229}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets">
+      <UniqueIdentifier>{3fe72059-bf8f-46ea-8d84-9d15fa4deccc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CGCT">
+      <UniqueIdentifier>{74FA4026-373E-411D-9011-0278D80EFD9B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CGCT\Base">
+      <UniqueIdentifier>{D0D31913-5C90-40F0-ADD4-892EB30215B4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CGCT\Supporting Files">
+      <UniqueIdentifier>{4D7C1913-529E-4769-905A-377CFBA670B2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Xcode Variable Files">
+      <UniqueIdentifier>{55857CA3-AC96-4E33-95D7-AEFAA496024F}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Xml Include="default.rd.xml" />
+    <AppxManifest Include="Package.appxmanifest" />
+    <None Include="CGCT_TemporaryKey.pfx" />
+    <Image Include="Assets\LockScreenLogo.scale-200.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\SplashScreen.scale-200.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Square150x150Logo.scale-200.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Square44x44Logo.scale-200.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\StoreLogo.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Wide310x150Logo.scale-200.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <AssetCatalogCompile Include="..\..\CGCT\Assets.xcassets">
+      <Filter>CGCT</Filter>
+    </AssetCatalogCompile>
+    <ClInclude Include="..\..\CGCT\AppDelegate.h">
+      <Filter>CGCT</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CGCT\CGView.h">
+      <Filter>CGCT</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CGCT\ViewController.h">
+      <Filter>CGCT</Filter>
+    </ClInclude>
+    <ClangCompile Include="..\..\CGCT\AppDelegate.m">
+      <Filter>CGCT</Filter>
+    </ClangCompile>
+    <ClangCompile Include="..\..\CGCT\CGView.m">
+      <Filter>CGCT</Filter>
+    </ClangCompile>
+    <ClangCompile Include="..\..\CGCT\ViewController.m">
+      <Filter>CGCT</Filter>
+    </ClangCompile>
+    <ClangCompile Include="..\..\CGCT\main.m">
+      <Filter>CGCT\Supporting Files</Filter>
+    </ClangCompile>
+    <SBInfoPlistCopy Include="..\..\CGCT\Info.plist" />
+    <StoryboardCompile Include="..\..\CGCT\Base.lproj\LaunchScreen.storyboard">
+      <Filter>CGCT\Base</Filter>
+    </StoryboardCompile>
+    <StoryboardCompile Include="..\..\CGCT\Base.lproj\Main.storyboard">
+      <Filter>CGCT\Base</Filter>
+    </StoryboardCompile>
+    <Text Include="CGCT-Debug-xcvars.txt">
+      <Filter>Xcode Variable Files</Filter>
+    </Text>
+    <Text Include="CGCT-Release-xcvars.txt">
+      <Filter>Xcode Variable Files</Filter>
+    </Text>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="App.xaml.cpp" />
+    <ClCompile Include="pch.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="pch.h" />
+    <ClInclude Include="App.xaml.h" />
+    <ClInclude Include="..\..\CGCT\DemoScenarioIntro.h">
+      <Filter>CGCT</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CGCT\DemoScenario.h">
+      <Filter>CGCT</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="project.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClangCompile Include="..\..\CGCT\DemoScenarioIntro.m">
+      <Filter>CGCT</Filter>
+    </ClangCompile>
+    <ClangCompile Include="..\..\CGCT\DemoScenario.m">
+      <Filter>CGCT</Filter>
+    </ClangCompile>
+  </ItemGroup>
+</Project>
