@@ -19,6 +19,9 @@
     <Filter Include="Xcode Variable Files">
       <UniqueIdentifier>{55857CA3-AC96-4E33-95D7-AEFAA496024F}</UniqueIdentifier>
     </Filter>
+    <Filter Include="CGCT\Images">
+      <UniqueIdentifier>{e7c87276-9f5a-4e9a-8657-052cd62a121b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Xml Include="default.rd.xml" />
@@ -99,6 +102,9 @@
     <ClInclude Include="..\..\CGCT\DemoScenario.h">
       <Filter>CGCT</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\CGCT\DemoScenarioText.h">
+      <Filter>CGCT</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="project.json" />
@@ -110,5 +116,19 @@
     <ClangCompile Include="..\..\CGCT\DemoScenario.m">
       <Filter>CGCT</Filter>
     </ClangCompile>
+    <ClangCompile Include="..\..\CGCT\DemoScenarioText.m">
+      <Filter>CGCT</Filter>
+    </ClangCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\..\CGCT\Images\denim.png">
+      <Filter>CGCT\Images</Filter>
+    </Image>
+    <Image Include="..\..\CGCT\Images\plaid.png">
+      <Filter>CGCT\Images</Filter>
+    </Image>
+    <Image Include="..\..\CGCT\Images\checkered.png">
+      <Filter>CGCT\Images</Filter>
+    </Image>
   </ItemGroup>
 </Project>

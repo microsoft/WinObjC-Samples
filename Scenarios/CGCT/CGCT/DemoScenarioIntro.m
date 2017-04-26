@@ -14,18 +14,22 @@
 //
 //******************************************************************************
 
-#import <Foundation/Foundation.h>
+#import "DemoScenarioIntro.h"
 #import <CoreGraphics/CoreGraphics.h>
 #import <CoreText/CoreText.h>
+#import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-#import "DemoScenarioIntro.h"
 
 @implementation DemoScenarioIntro
-- (NSString*)name {
+- (NSString *)name {
     return @"Intro";
 }
 
-- (void)drawDemoIntoContext:(CGContextRef)context withFrame:(CGRect)bounds {
+-(UIColor *)backgroundColor {
+    return[UIColor colorWithRed : .1 green : .3 blue : 1 alpha : 1];
+}
+
+-(void)drawDemoIntoContext:(CGContextRef)context withFrame : (CGRect)bounds {
     CGContextSaveGState(context);
 
     CGMutablePathRef light = CGPathCreateMutable();
@@ -41,11 +45,12 @@
 
     CGMutablePathRef windowTR = CGPathCreateMutable();
 
-    CGPoint windowsCorners[] = { CGPointMake(bounds.size.width * .9, bounds.size.height * .1),
-                                 CGPointMake(bounds.size.width * .9, bounds.size.height * .45),
-                                 CGPointMake(bounds.size.width * .6, bounds.size.height * .45),
-                                 CGPointMake(bounds.size.width * .6, bounds.size.height * .2),
-                                 CGPointMake(bounds.size.width * .9, bounds.size.height * .1) };
+    CGPoint windowsCorners[] = {
+        CGPointMake(bounds.size.width * .9, bounds.size.height * .1),
+        CGPointMake(bounds.size.width * .9, bounds.size.height * .45),
+        CGPointMake(bounds.size.width * .6, bounds.size.height * .45),
+        CGPointMake(bounds.size.width * .6, bounds.size.height * .2),
+        CGPointMake(bounds.size.width * .9, bounds.size.height * .1) };
 
     CGPathAddLines(windowTR, NULL, windowsCorners, 4);
 
@@ -83,14 +88,7 @@
     CGFloat dashes[] = { 5.0, 2.0 };
     CGMutablePathRef dottedLine = CGPathCreateMutable();
     CGPathMoveToPoint(dottedLine, NULL, bounds.size.width * .5, bounds.size.height * .9);
-    CGPathAddCurveToPoint(dottedLine,
-                          NULL,
-                          bounds.size.width * .4,
-                          bounds.size.height * .8,
-                          bounds.size.width * .3,
-                          bounds.size.height,
-                          bounds.size.width * .2,
-                          bounds.size.height * .9);
+    CGPathAddCurveToPoint(dottedLine, NULL, bounds.size.width * .4, bounds.size.height * .8, bounds.size.width * .3, bounds.size.height, bounds.size.width * .2, bounds.size.height * .9);
     CGPathAddArc(dottedLine, NULL, bounds.size.width * .24, bounds.size.height * .87, bounds.size.width * .05, M_PI * .8, 0, false);
 
     CGAffineTransform dottedLineMirrorTransform = CGAffineTransformIdentity;
@@ -121,13 +119,7 @@
     CGContextSaveGState(context);
     CGMutablePathRef ribbon = CGPathCreateMutable();
     CGPathMoveToPoint(ribbon, NULL, bounds.size.width * .2, bounds.size.height * .6);
-    CGPathAddArcToPoint(ribbon,
-                        NULL,
-                        bounds.size.width * .08,
-                        bounds.size.height * .7,
-                        bounds.size.width * .14,
-                        bounds.size.height * .9,
-                        bounds.size.width * .15);
+    CGPathAddArcToPoint(ribbon, NULL, bounds.size.width * .08, bounds.size.height * .7, bounds.size.width * .14, bounds.size.height * .9, bounds.size.width * .15);
     CGPathAddArc(ribbon, NULL, bounds.size.width * .06, bounds.size.height * .81, bounds.size.width * .05, M_PI * 1.9, M_PI * .4, false);
     CGPathAddLineToPoint(ribbon, NULL, bounds.size.width * .1, bounds.size.height * .86);
     CGPathAddArc(ribbon, NULL, bounds.size.width * .06, bounds.size.height * .81, bounds.size.width * .09, M_PI * .4, M_PI * 1.9, true);
@@ -170,14 +162,13 @@
     CTFontRef myCFFont = CTFontCreateWithName((__bridge CFStringRef) @"Segoe UI", bounds.size.height * .1, NULL);
     CFAutorelease(myCFFont);
 
-    NSDictionary* attributesDict = [NSDictionary dictionaryWithObjectsAndKeys:(__bridge id)myCFFont,
-                                                                              (id)kCTFontAttributeName,
-                                                                              [UIColor blackColor].CGColor,
-                                                                              (id)kCTForegroundColorAttributeName,
-                                                                              nil];
+    NSDictionary *attributesDict = [NSDictionary dictionaryWithObjectsAndKeys :
+    (__bridge id)myCFFont,
+        (id)kCTFontAttributeName,
+        [UIColor blackColor].CGColor,
+        (id)kCTForegroundColorAttributeName, nil];
 
-    CFAttributedStringRef attrString =
-        CFAttributedStringCreate(kCFAllocatorDefault, (__bridge CFStringRef) @"Core Demo", (__bridge CFDictionaryRef)attributesDict);
+    CFAttributedStringRef attrString = CFAttributedStringCreate(kCFAllocatorDefault, (__bridge CFStringRef) @"Core Demo", (__bridge CFDictionaryRef)attributesDict);
     CFAutorelease(attrString);
 
     CTFramesetterRef framesetter = CTFramesetterCreateWithAttributedString(attrString);

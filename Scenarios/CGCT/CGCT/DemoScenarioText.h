@@ -14,12 +14,8 @@
 //
 //******************************************************************************
 
-#import <CoreGraphics/CoreGraphics.h>
-#import <Foundation/Foundation.h>
-#import <UIKit/UIKit.h>
+#import "DemoScenario.h"
 
-@interface DemoScenario : NSObject
-@property(readonly) NSString *name;
-@property(readonly) UIColor *backgroundColor;
+@interface DemoScenarioText : DemoScenario
 - (void)drawDemoIntoContext:(CGContextRef)context withFrame:(CGRect)bounds;
 @end

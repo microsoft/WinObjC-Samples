@@ -179,6 +179,9 @@
     <Xml Include="default.rd.xml" />
     <None Include="CGCT_TemporaryKey.pfx" />
     <None Include="project.json" />
+    <Image Include="..\..\CGCT\Images\checkered.png" />
+    <Image Include="..\..\CGCT\Images\denim.png" />
+    <Image Include="..\..\CGCT\Images\plaid.png" />
     <Image Include="Assets\LockScreenLogo.scale-200.png" />
     <Image Include="Assets\SplashScreen.scale-200.png" />
     <Image Include="Assets\Square150x150Logo.scale-200.png" />
@@ -188,6 +191,7 @@
     <Image Include="Assets\Wide310x150Logo.scale-200.png" />
     <ClInclude Include="..\..\CGCT\DemoScenario.h" />
     <ClInclude Include="..\..\CGCT\DemoScenarioIntro.h" />
+    <ClInclude Include="..\..\CGCT\DemoScenarioText.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="App.xaml.h">
       <DependentUpon>App.xaml</DependentUpon>
@@ -209,6 +213,7 @@
     </ClangCompile>
     <ClangCompile Include="..\..\CGCT\DemoScenario.m" />
     <ClangCompile Include="..\..\CGCT\DemoScenarioIntro.m" />
+    <ClangCompile Include="..\..\CGCT\DemoScenarioText.m" />
     <ClangCompile Include="..\..\CGCT\ViewController.m" />
     <ClangCompile Include="..\..\CGCT\main.m" />
     <SBInfoPlistCopy Include="..\..\CGCT\Info.plist">
