@@ -14,15 +14,19 @@
 //
 //******************************************************************************
 
-#import <Foundation/Foundation.h>
+#import "DemoScenarioIntro.h"
 #import <CoreGraphics/CoreGraphics.h>
 #import <CoreText/CoreText.h>
+#import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-#import "DemoScenarioIntro.h"
 
 @implementation DemoScenarioIntro
 - (NSString*)name {
     return @"Intro";
+}
+
+- (UIColor*)backgroundColor {
+    return [UIColor colorWithRed:.1 green:.3 blue:1 alpha:1];
 }
 
 - (void)drawDemoIntoContext:(CGContextRef)context withFrame:(CGRect)bounds {

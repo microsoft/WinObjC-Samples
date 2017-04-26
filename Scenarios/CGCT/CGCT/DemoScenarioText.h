@@ -1,4 +1,3 @@
-//
 //******************************************************************************
 //
 // Copyright (c) Microsoft. All rights reserved.
@@ -15,19 +14,8 @@
 //
 //******************************************************************************
 
-#import "CGView.h"
+#import "DemoScenario.h"
 
-@implementation CGView
-
-- (void)setDemoScenario:(DemoScenario*)demo {
-    _demoScenario = demo;
-    self.backgroundColor = demo.backgroundColor;
-    [self setNeedsDisplay];
-}
-
-- (void)drawRect:(CGRect)pos {
-    CGContextRef context = UIGraphicsGetCurrentContext();
-    [_demoScenario drawDemoIntoContext:context withFrame:self.bounds];
-}
-
+@interface DemoScenarioText : DemoScenario
+- (void)drawDemoIntoContext:(CGContextRef)context withFrame:(CGRect)bounds;
 @end

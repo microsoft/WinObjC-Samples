@@ -14,10 +14,12 @@
 //
 //******************************************************************************
 
-#import <Foundation/Foundation.h>
 #import <CoreGraphics/CoreGraphics.h>
+#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 @interface DemoScenario : NSObject
-@property(readonly) NSString* name;
+@property (readonly) NSString* name;
+@property (readonly) UIColor* backgroundColor;
 - (void)drawDemoIntoContext:(CGContextRef)context withFrame:(CGRect)bounds;
 @end

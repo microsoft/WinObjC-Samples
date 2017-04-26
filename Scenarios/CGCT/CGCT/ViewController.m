@@ -15,13 +15,15 @@
 //******************************************************************************
 
 #import "ViewController.h"
-#import "DemoScenarioIntro.h"
 #import "CGView.h"
+#import "DemoScenario.h"
+#import "DemoScenarioIntro.h"
+#import "DemoScenarioText.h"
 
 #define VC_WIDTH self.view.bounds.size.width
 #define VC_HEIGHT self.view.bounds.size.height
 
-@interface ViewController() {
+@interface ViewController () {
     NSMutableArray<DemoScenario*>* _demoList;
 }
 @property UITableView* CGMenu;
@@ -79,6 +81,7 @@
 
     _demoList = [[NSMutableArray alloc] init];
     [_demoList addObject:[[DemoScenarioIntro alloc] init]];
+    [_demoList addObject:[[DemoScenarioText alloc] init]];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -86,7 +89,6 @@
 
 - (void)tableView:(UITableView*)tableView didSelectRowAtIndexPath:(NSIndexPath*)indexPath {
     if (tableView == _CGMenu) {
-        _stage.backgroundColor = [UIColor colorWithRed:.1 green:.3 blue:1 alpha:1];
         _stage.demoScenario = [_demoList objectAtIndex:indexPath.row];
     }
 }
@@ -102,8 +104,7 @@
             aCell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"demoscenario"];
         }
         aCell.backgroundColor = [UIColor colorWithRed:1 green:1 blue:1 alpha:1];
-        aCell.textLabel.text = ((DemoScenario*)[_demoList objectAtIndex : indexPath.row]).name;
-
+        aCell.textLabel.text = ((DemoScenario*)[_demoList objectAtIndex:indexPath.row]).name;
         return aCell;
     }
 
