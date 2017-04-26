@@ -17,5 +17,4 @@
 #import "DemoScenario.h"
 
 @interface DemoScenarioText : DemoScenario
-- (void)drawDemoIntoContext:(CGContextRef)context withFrame:(CGRect)bounds;
 @end

@@ -105,7 +105,9 @@
     <ClInclude Include="..\..\CGCT\DemoScenarioText.h">
       <Filter>CGCT</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\CGCT\DemoScenarioImages.h" />
+    <ClInclude Include="..\..\CGCT\DemoScenarioImages.h">
+      <Filter>CGCT</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="project.json" />
@@ -120,7 +122,9 @@
     <ClangCompile Include="..\..\CGCT\DemoScenarioText.m">
       <Filter>CGCT</Filter>
     </ClangCompile>
-    <ClangCompile Include="..\..\CGCT\DemoScenarioImages.m" />
+    <ClangCompile Include="..\..\CGCT\DemoScenarioImages.m">
+      <Filter>CGCT</Filter>
+    </ClangCompile>
   </ItemGroup>
   <ItemGroup>
     <Image Include="..\..\CGCT\Images\denim.png">
