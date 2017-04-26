@@ -29,7 +29,7 @@ static NSString *patternName;
 }
 
 -(UIColor *)backgroundColor {
-    return[UIColor colorWithRed : .6 green : .85 blue : 1 alpha : 1];
+    return [UIColor colorWithRed : .6 green : .85 blue : 1 alpha : 1];
 }
 
 static void drawPattern(void *info, CGContextRef context) {
@@ -41,10 +41,7 @@ static void drawPattern(void *info, CGContextRef context) {
     CGContextDrawImage(context, CGRectMake(0, 0, patternImage.size.width, patternImage.size.height), patternImage.CGImage);
 }
 
-static void drawTextWithImagePattern(CGContextRef context, NSString *imageName,
-    CGRect bounds, CGSize imageSize,
-    CGFloat heightLocation,
-    CFStringRef fontName) {
+static void drawTextWithImagePattern(CGContextRef context, NSString *imageName, CGRect bounds, CGSize imageSize, CGFloat heightLocation, CFStringRef fontName) {
     CGContextSaveGState(context);
     CGContextTranslateCTM(context, 0, heightLocation * bounds.size.height);
 
@@ -87,13 +84,13 @@ static void drawTextWithImagePattern(CGContextRef context, NSString *imageName,
 -(void)drawDemoIntoContext:(CGContextRef)context withFrame : (CGRect)bounds {
     CGContextScaleCTM(context, 1.0f, -1.0f);
     CGContextTranslateCTM(context, 0, -bounds.size.height);
-    CGContextSetShadow(context, CGSizeMake(10.f, 10.f), 0.6f);
+    CGContextSetShadowWithColor(context, CGSizeMake(10.f, 10.f), .6f, [UIColor colorWithRed : 0 green : 0 blue : 0 alpha : .1f].CGColor);
     CGContextSaveGState(context);
 
     CGContextTranslateCTM(context, .3 * bounds.size.width, 0);
 
-    drawTextWithImagePattern(context, @"PLAID", bounds, CGSizeMake(97, 95), 0.7f, (__bridge CFStringRef) @"Segoe UI Bold");
-    drawTextWithImagePattern(context, @"DENIM", bounds, CGSizeMake(500, 300), 0.5f, (__bridge CFStringRef) @"Algerian");
+    drawTextWithImagePattern(context, @"PLAID", bounds, CGSizeMake(40, 36), 0.7f, (__bridge CFStringRef) @"Segoe UI Bold");
+    drawTextWithImagePattern(context, @"DENIM", bounds, CGSizeMake(16, 12), 0.5f, (__bridge CFStringRef) @"Algerian");
     CGContextTranslateCTM(context, -.27 * bounds.size.width, 0);
     drawTextWithImagePattern(context, @"CHECKERED", bounds, CGSizeMake(16, 16), 0.28f, (__bridge CFStringRef) @"Arial Bold");
 

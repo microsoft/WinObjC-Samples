@@ -88,7 +88,7 @@
 
 -(void)tableView : (UITableView *)tableView didSelectRowAtIndexPath : (NSIndexPath *)indexPath {
     if (tableView == _CGMenu) {
-        _stage.demoToDraw = [_demoList objectAtIndex : indexPath.row];
+        _stage.demoScenario = [_demoList objectAtIndex : indexPath.row];
     }
 }
 
