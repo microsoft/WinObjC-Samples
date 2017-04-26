@@ -19,6 +19,7 @@
 #import "DemoScenario.h"
 #import "DemoScenarioIntro.h"
 #import "DemoScenarioText.h"
+#import "DemoScenarioImages.h"
 
 #define VC_WIDTH self.view.bounds.size.width
 #define VC_HEIGHT self.view.bounds.size.height
@@ -82,6 +83,7 @@
     _demoList = [[NSMutableArray alloc] init];
     [_demoList addObject:[[DemoScenarioIntro alloc] init]];
     [_demoList addObject:[[DemoScenarioText alloc] init]];
+    [_demoList addObject:[[DemoScenarioImages alloc] init]];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
