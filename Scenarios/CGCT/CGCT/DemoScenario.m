@@ -18,17 +18,17 @@
 
 @implementation DemoScenario
 
--(NSString *)name {
-    [NSException raise : NSInvalidArgumentException format : @"Scenario %@ must override -name", self];
+- (NSString*)name {
+    [NSException raise:NSInvalidArgumentException format:@"Scenario %@ must override -name", self];
     return nil;
 }
 
--(UIColor *)backgroundColor {
-    [NSException raise : NSInvalidArgumentException format : @"Scenario %@ must override -backgroundColor", self];
+- (UIColor*)backgroundColor {
+    [NSException raise:NSInvalidArgumentException format:@"Scenario %@ must override -backgroundColor", self];
     return nil;
 }
 
--(void)drawDemoIntoContext:(CGContextRef)context withFrame : (CGRect)bounds {
+- (void)drawDemoIntoContext:(CGContextRef)context withFrame:(CGRect)bounds {
 }
 
 @end

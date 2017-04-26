@@ -19,7 +19,7 @@
 #import <UIKit/UIKit.h>
 
 @interface DemoScenario : NSObject
-@property(readonly) NSString *name;
-@property(readonly) UIColor *backgroundColor;
+@property (readonly) NSString* name;
+@property (readonly) UIColor* backgroundColor;
 - (void)drawDemoIntoContext:(CGContextRef)context withFrame:(CGRect)bounds;
 @end

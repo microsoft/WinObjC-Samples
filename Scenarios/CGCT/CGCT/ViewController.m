@@ -24,25 +24,25 @@
 #define VC_HEIGHT self.view.bounds.size.height
 
 @interface ViewController () {
-    NSMutableArray<DemoScenario *> *_demoList;
+    NSMutableArray<DemoScenario*>* _demoList;
 }
-@property UITableView *CGMenu;
+@property UITableView* CGMenu;
 @property CGContextRef stageContext;
 @property CGRect stageBounds;
-@property CGView *stage;
+@property CGView* stage;
 @end
 
 @implementation ViewController
 
--(BOOL)prefersStatusBarHidden {
+- (BOOL)prefersStatusBarHidden {
     return YES;
 }
 
--(void)viewWillLayoutSubviews {
+- (void)viewWillLayoutSubviews {
     _stageBounds = self.view.bounds;
 }
 
--(void)viewDidLayoutSubviews {
+- (void)viewDidLayoutSubviews {
     [super viewDidLayoutSubviews];
     [_CGMenu setNeedsLayout];
     [_CGMenu layoutIfNeeded];
@@ -56,15 +56,16 @@
     if (stageSize > _stageBounds.size.height) {
         stageSize = _stageBounds.size.height;
     }
-    CGRect newStageFrame = CGRectMake(_stageBounds.size.width / 5.0, _stageBounds.size.height / 2.0 - stageSize / 2.0, stageSize, stageSize);
+    CGRect newStageFrame =
+        CGRectMake(_stageBounds.size.width / 5.0, _stageBounds.size.height / 2.0 - stageSize / 2.0, stageSize, stageSize);
     _stage.frame = newStageFrame;
 }
 
--(void)viewDidLoad {
+- (void)viewDidLoad {
     [super viewDidLoad];
 
-    _CGMenu = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, VC_WIDTH / 5.0, VC_HEIGHT) style : UITableViewStylePlain];
-    _CGMenu.backgroundColor = [UIColor colorWithRed : 1 green : 1 blue : 1 alpha : 1];
+    _CGMenu = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, VC_WIDTH / 5.0, VC_HEIGHT) style:UITableViewStylePlain];
+    _CGMenu.backgroundColor = [UIColor colorWithRed:1 green:1 blue:1 alpha:1];
     _CGMenu.rowHeight = 30;
     _CGMenu.scrollEnabled = YES;
     _CGMenu.userInteractionEnabled = YES;
@@ -75,35 +76,35 @@
 
     _stage = [[CGView alloc] initWithFrame:self.view.bounds];
 
-    [self.view addSubview : _stage];
-    [self.view addSubview : _CGMenu];
+    [self.view addSubview:_stage];
+    [self.view addSubview:_CGMenu];
 
     _demoList = [[NSMutableArray alloc] init];
-    [_demoList addObject : [[DemoScenarioIntro alloc] init]];
-    [_demoList addObject : [[DemoScenarioText alloc] init]];
+    [_demoList addObject:[[DemoScenarioIntro alloc] init]];
+    [_demoList addObject:[[DemoScenarioText alloc] init]];
 }
 
--(void)viewWillAppear:(BOOL)animated {
+- (void)viewWillAppear:(BOOL)animated {
 }
 
--(void)tableView : (UITableView *)tableView didSelectRowAtIndexPath : (NSIndexPath *)indexPath {
+- (void)tableView:(UITableView*)tableView didSelectRowAtIndexPath:(NSIndexPath*)indexPath {
     if (tableView == _CGMenu) {
-        _stage.demoScenario = [_demoList objectAtIndex : indexPath.row];
+        _stage.demoScenario = [_demoList objectAtIndex:indexPath.row];
     }
 }
 
--(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection : (NSInteger)section {
+- (NSInteger)tableView:(UITableView*)tableView numberOfRowsInSection:(NSInteger)section {
     return _demoList.count;
 }
 
--(UITableViewCell *)tableView : (UITableView *)tableView cellForRowAtIndexPath : (nonnull NSIndexPath *)indexPath {
+- (UITableViewCell*)tableView:(UITableView*)tableView cellForRowAtIndexPath:(nonnull NSIndexPath*)indexPath {
     if (tableView == _CGMenu) {
-        UITableViewCell *aCell = [tableView dequeueReusableCellWithIdentifier : @"demoscenario"];
+        UITableViewCell* aCell = [tableView dequeueReusableCellWithIdentifier:@"demoscenario"];
         if (aCell == nil) {
-            aCell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier : @"demoscenario"];
+            aCell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"demoscenario"];
         }
-        aCell.backgroundColor = [UIColor colorWithRed : 1 green : 1 blue : 1 alpha : 1];
-        aCell.textLabel.text = ((DemoScenario *)[_demoList objectAtIndex : indexPath.row]).name;
+        aCell.backgroundColor = [UIColor colorWithRed:1 green:1 blue:1 alpha:1];
+        aCell.textLabel.text = ((DemoScenario*)[_demoList objectAtIndex:indexPath.row]).name;
         return aCell;
     }
 
