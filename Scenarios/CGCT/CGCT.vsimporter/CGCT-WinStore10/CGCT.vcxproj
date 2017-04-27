@@ -182,6 +182,11 @@
     <Image Include="Assets\Square44x44Logo.targetsize-24_altform-unplated.png" />
     <Image Include="Assets\StoreLogo.png" />
     <Image Include="Assets\Wide310x150Logo.scale-200.png" />
+    <ClInclude Include="..\..\CGCT\DemoScenario.h" />
+    <ClInclude Include="..\..\CGCT\DemoScenarioImages.h" />
+    <ClInclude Include="..\..\CGCT\DemoScenarioIntro.h" />
+    <ClInclude Include="..\..\CGCT\DemoScenarioText.h" />
+    <ClInclude Include="..\..\CGCT\DemoScenarioTextToPath.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="App.xaml.h">
       <DependentUpon>App.xaml</DependentUpon>
@@ -206,6 +211,7 @@
     <ClangCompile Include="..\..\CGCT\DemoScenarioImages.m" />
     <ClangCompile Include="..\..\CGCT\DemoScenarioIntro.m" />
     <ClangCompile Include="..\..\CGCT\DemoScenarioText.m" />
+    <ClangCompile Include="..\..\CGCT\DemoScenarioTextToPath.m" />
     <ClangCompile Include="..\..\CGCT\ViewController.m" />
     <ClangCompile Include="..\..\CGCT\main.m" />
     <SBInfoPlistCopy Include="..\..\CGCT\Info.plist">
