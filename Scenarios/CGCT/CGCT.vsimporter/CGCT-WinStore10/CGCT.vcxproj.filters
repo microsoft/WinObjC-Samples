@@ -108,6 +108,9 @@
     <ClInclude Include="..\..\CGCT\DemoScenarioImages.h">
       <Filter>CGCT</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\CGCT\DemoScenarioTextToPath.h">
+      <Filter>CGCT</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="project.json" />
@@ -123,6 +126,9 @@
       <Filter>CGCT</Filter>
     </ClangCompile>
     <ClangCompile Include="..\..\CGCT\DemoScenarioImages.m">
+      <Filter>CGCT</Filter>
+    </ClangCompile>
+    <ClangCompile Include="..\..\CGCT\DemoScenarioTextToPath.m">
       <Filter>CGCT</Filter>
     </ClangCompile>
   </ItemGroup>

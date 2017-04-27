@@ -194,6 +194,7 @@
     <ClInclude Include="..\..\CGCT\DemoScenarioImages.h" />
     <ClInclude Include="..\..\CGCT\DemoScenarioIntro.h" />
     <ClInclude Include="..\..\CGCT\DemoScenarioText.h" />
+    <ClInclude Include="..\..\CGCT\DemoScenarioTextToPath.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="App.xaml.h">
       <DependentUpon>App.xaml</DependentUpon>
@@ -209,14 +210,12 @@
     <ClInclude Include="..\..\CGCT\CGView.h" />
     <ClInclude Include="..\..\CGCT\ViewController.h" />
     <ClangCompile Include="..\..\CGCT\AppDelegate.m" />
-    <ClangCompile Include="..\..\CGCT\CGView.m">
-      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-      </AdditionalOptions>
-    </ClangCompile>
+    <ClangCompile Include="..\..\CGCT\CGView.m" />
     <ClangCompile Include="..\..\CGCT\DemoScenario.m" />
     <ClangCompile Include="..\..\CGCT\DemoScenarioImages.m" />
     <ClangCompile Include="..\..\CGCT\DemoScenarioIntro.m" />
     <ClangCompile Include="..\..\CGCT\DemoScenarioText.m" />
+    <ClangCompile Include="..\..\CGCT\DemoScenarioTextToPath.m" />
     <ClangCompile Include="..\..\CGCT\ViewController.m" />
     <ClangCompile Include="..\..\CGCT\main.m" />
     <SBInfoPlistCopy Include="..\..\CGCT\Info.plist">
