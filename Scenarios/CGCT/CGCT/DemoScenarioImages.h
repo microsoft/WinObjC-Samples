@@ -16,5 +16,5 @@
 
 #import "DemoScenario.h"
 
-@interface DemoScenarioText : DemoScenario
+@interface DemoScenarioImages : DemoScenario
 @end
