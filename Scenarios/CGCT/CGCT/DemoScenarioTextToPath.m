@@ -31,7 +31,6 @@
 }
 
 static CGPoint connectingPoint;
-static NSMutableArray* threeDPoints;
 
 static struct ThreeDPoly {
     CGFloat grayScale;
@@ -53,14 +52,14 @@ static void drawZoomText(CGContextRef context,
     CGContextSaveGState(context);
     CGContextTranslateCTM(context, startPoint.x, startPoint.y);
     CGRect boundingPath = CGRectMake(0, 0, 0, 0);
-    threeDPoints = [[NSMutableArray alloc] init];
+    NSMutableArray* threeDPoints = [[NSMutableArray alloc] init];
     CGAffineTransform pathTransform = CGAffineTransformIdentity;
     CGMutablePathRef allGlyphPaths = CGPathCreateMutable();
 
     // Convert each glyph in the text to a path object
-    for (int i = 0; i < [string length]; i++) {
+    for (int characterIndex = 0; characterIndex < [string length]; characterIndex++) {
         CGGlyph glyph;
-        UniChar theChar = [string characterAtIndex:i];
+        UniChar theChar = [string characterAtIndex:characterIndex];
         if (CTFontGetGlyphsForCharacters(font, &theChar, &glyph, 1)) {
             pathTransform = CGAffineTransformTranslate(pathTransform, boundingPath.size.width * 1.1, 0);
             CGPathRef path = CTFontCreatePathForGlyph(font, glyph, &pathTransform);
@@ -74,23 +73,23 @@ static void drawZoomText(CGContextRef context,
     }
 
     // Sort which zoom polygon to draw first from vertical perspective
-    for (int i = 0; i < [threeDPoints count]; i++) {
-        for (int j = 1; j < [threeDPoints count]; j++) {
+    for (int polyIndex1 = 0; polyIndex1 < [threeDPoints count]; polyIndex1++) {
+        for (int polyIndex2 = 1; polyIndex2 < [threeDPoints count]; polyIndex2++) {
             struct ThreeDPoly poly1;
             struct ThreeDPoly poly2;
-            NSValue* val1 = [threeDPoints objectAtIndex:i];
-            NSValue* val2 = [threeDPoints objectAtIndex:j];
+            NSValue* val1 = [threeDPoints objectAtIndex:polyIndex1];
+            NSValue* val2 = [threeDPoints objectAtIndex:polyIndex2];
             [val1 getValue:&poly1];
             [val2 getValue:&poly2];
             if (toPoint.y < 0) {
                 if (poly2.point1.y < poly1.point1.y || poly2.point2.y < poly1.point2.y) {
-                    [threeDPoints replaceObjectAtIndex:i withObject:val2];
-                    [threeDPoints replaceObjectAtIndex:j withObject:val1];
+                    [threeDPoints replaceObjectAtIndex:polyIndex1 withObject:val2];
+                    [threeDPoints replaceObjectAtIndex:polyIndex2 withObject:val1];
                 }
             } else {
                 if (poly2.point1.y > poly1.point1.y || poly2.point2.y > poly1.point2.y) {
-                    [threeDPoints replaceObjectAtIndex:i withObject:val2];
-                    [threeDPoints replaceObjectAtIndex:j withObject:val1];
+                    [threeDPoints replaceObjectAtIndex:polyIndex1 withObject:val2];
+                    [threeDPoints replaceObjectAtIndex:polyIndex2 withObject:val1];
                 }
             }
         }
