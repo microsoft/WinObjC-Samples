@@ -1,4 +1,4 @@
-//******************************************************************************
+﻿//******************************************************************************
 //
 // Copyright (c) Microsoft. All rights reserved.
 //
@@ -20,7 +20,37 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-@implementation DemoScenarioTextToPath
+@interface DrawnPoly : NSObject
+@end
+
+// A container for a sorted, finalized set of "zoomed" characters
+@implementation DrawnPoly {
+@public
+    // The sorted polygons to draw
+    NSMutableArray* _polyPaths;
+    // The front facing characters to be drawn
+    CGPathRef _frontPath;
+    // The drawing modes for each set of paths to draw
+    CGPathDrawingMode _zoomMode;
+    CGPathDrawingMode _frontMode;
+    CGPoint _startPoint;
+}
+
+@end
+
+@implementation DemoScenarioTextToPath {
+    // An array of all zoomed text
+    NSMutableArray<DrawnPoly*>* _allZoomText;
+    // The original bounds this scenario is drawn with to use for scaling the pre-calculated polygons
+    CGSize _originalBounds;
+};
+
+- (id)init {
+    if (self = [super init]) {
+        _originalBounds = CGSizeZero;
+    }
+    return self;
+}
 
 - (NSString*)name {
     return @"Text To Path";
@@ -38,19 +68,33 @@ static struct ThreeDPoly {
     CGPoint point2;
 };
 
-static void drawZoomText(CGContextRef context,
-                         NSString* string,
-                         CTFontRef font,
-                         CGRect bounds,
-                         CGPoint startPoint,
-                         CGPoint toPoint,
-                         CGFloat r,
-                         CGFloat g,
-                         CGFloat b,
-                         CGPathDrawingMode frontMode,
-                         CGPathDrawingMode zoomMode) {
+// A single polygon object with its own set of colors to be drawn with
+static struct PolyPathWithColors {
+    CGPathRef path;
+    CGFloat r;
+    CGFloat g;
+    CGFloat b;
+};
+
+// Create a pre-calculated set of characters with zoomed text
+- (DrawnPoly*)drawZoomTextWithContext:(CGContextRef)context
+                               string:(NSString*)string
+                                 font:(CTFontRef)font
+                               bounds:(CGRect)bounds
+                           startPoint:(CGPoint)startPoint
+                              toPoint:(CGPoint)toPoint
+                                    r:(CGFloat)r
+                                    g:(CGFloat)g
+                                    b:(CGFloat)b
+                            frontMode:(CGPathDrawingMode)frontMode
+                             zoomMode:(CGPathDrawingMode)zoomMode {
+    if (_originalBounds.width == 0) {
+        _originalBounds.width = bounds.size.width;
+    }
+    if (_originalBounds.height == 0) {
+        _originalBounds.height = bounds.size.height;
+    }
     CGContextSaveGState(context);
-    CGContextTranslateCTM(context, startPoint.x, startPoint.y);
     CGRect boundingPath = CGRectMake(0, 0, 0, 0);
     NSMutableArray* threeDPoints = [[NSMutableArray alloc] init];
     CGAffineTransform pathTransform = CGAffineTransformIdentity;
@@ -111,35 +155,39 @@ static void drawZoomText(CGContextRef context,
         }
     }
 
-    // Draw the polygons
+    DrawnPoly* poly = [[DrawnPoly alloc] init];
+    poly->_polyPaths = [[NSMutableArray alloc] init];
+    // Draw the polygons to a path
     for (int k = 0; k < [threeDPoints count]; k++) {
+        struct PolyPathWithColors finalPolyPath;
         struct ThreeDPoly polyToDraw;
         NSValue* valPoly = [threeDPoints objectAtIndex:k];
         [valPoly getValue:&polyToDraw];
 
-        CGContextMoveToPoint(context, (polyToDraw.point1.x + toPoint.x) / 2.0, (polyToDraw.point1.y + toPoint.y) / 2.0);
-        CGContextAddLineToPoint(context, (polyToDraw.point2.x + toPoint.x) / 2.0, (polyToDraw.point2.y + toPoint.y) / 2.0);
-        CGContextAddLineToPoint(context, polyToDraw.point2.x, polyToDraw.point2.y);
-        CGContextAddLineToPoint(context, polyToDraw.point1.x, polyToDraw.point1.y);
-        CGContextClosePath(context);
+        CGMutablePathRef polyPath = CGPathCreateMutable();
+        CGPathMoveToPoint(polyPath, NULL, (polyToDraw.point1.x + toPoint.x) / 2.0, (polyToDraw.point1.y + toPoint.y) / 2.0);
+        CGPathAddLineToPoint(polyPath, NULL, (polyToDraw.point2.x + toPoint.x) / 2.0, (polyToDraw.point2.y + toPoint.y) / 2.0);
+        CGPathAddLineToPoint(polyPath, NULL, polyToDraw.point2.x, polyToDraw.point2.y);
+        CGPathAddLineToPoint(polyPath, NULL, polyToDraw.point1.x, polyToDraw.point1.y);
+        CGPathCloseSubpath(polyPath);
 
-        CGContextSetRGBFillColor(context, polyToDraw.grayScale * r, polyToDraw.grayScale * g, polyToDraw.grayScale * b, 1);
-        CGContextDrawPath(context, zoomMode);
+        finalPolyPath.path = polyPath;
+        finalPolyPath.r = r * polyToDraw.grayScale;
+        finalPolyPath.g = g * polyToDraw.grayScale;
+        finalPolyPath.b = b * polyToDraw.grayScale;
+
+        [poly->_polyPaths addObject:[NSValue valueWithBytes:&finalPolyPath objCType:@encode(struct PolyPathWithColors)]];
     }
 
-    // Fill the front face of the text after the "zoom" effect has been added.
-    CGContextSetRGBFillColor(context, .7, .7, .7, 1);
-    CGContextAddPath(context, allGlyphPaths);
-    CGContextDrawPath(context, frontMode);
-    CGPathRelease(allGlyphPaths);
-    CGContextRestoreGState(context);
+    poly->_frontPath = allGlyphPaths;
+    poly->_frontMode = frontMode;
+    poly->_zoomMode = zoomMode;
+    poly->_startPoint = startPoint;
+    return poly;
 }
 
-- (void)drawDemoIntoContext:(CGContextRef)context withFrame:(CGRect)bounds {
-    CGContextScaleCTM(context, 1.0f, -1.0f);
-    CGContextTranslateCTM(context, bounds.size.width * .05, -bounds.size.height * 1.1);
-    CGContextSaveGState(context);
-
+// Create all of the zoom text only once according to this method
+- (NSMutableArray*)createAllZoomText:(CGContextRef)context bounds:(CGRect)bounds {
     // Different fonts to show off different paths
     CTFontRef arialFont = CTFontCreateWithName((__bridge CFStringRef) @"Arial Bold", bounds.size.height * .15, NULL);
     CTFontRef gillFont = CTFontCreateWithName((__bridge CFStringRef) @"Palatino", bounds.size.height * .15, NULL);
@@ -148,43 +196,93 @@ static void drawZoomText(CGContextRef context,
     CFAutorelease(gillFont);
     CFAutorelease(parchmentFont);
 
+    NSMutableArray* allText = [[NSMutableArray alloc] init];
+
+    // Create all path objects
+    DrawnPoly* coreGraphicsPreDrawn = [self drawZoomTextWithContext:context
+                                                             string:@"CoreGraphics"
+                                                               font:gillFont
+                                                             bounds:bounds
+                                                         startPoint:CGPointMake(bounds.size.width * .1, bounds.size.height * .75)
+                                                            toPoint:CGPointMake(bounds.size.width * .4, -bounds.size.height * .15)
+                                                                  r:.5
+                                                                  g:.1
+                                                                  b:1
+                                                          frontMode:kCGPathFillStroke
+                                                           zoomMode:kCGPathFillStroke];
+    DrawnPoly* winOBJCPreDrawn = [self drawZoomTextWithContext:context
+                                                        string:@"WinOBJC"
+                                                          font:arialFont
+                                                        bounds:bounds
+                                                    startPoint:CGPointMake(bounds.size.width * .2, bounds.size.height * .55)
+                                                       toPoint:CGPointMake(bounds.size.width * .35, bounds.size.height * .05)
+                                                             r:1
+                                                             g:1
+                                                             b:1
+                                                     frontMode:kCGPathEOFillStroke
+                                                      zoomMode:kCGPathEOFillStroke];
+
+    DrawnPoly* coreTextPreDrawn = [self drawZoomTextWithContext:context
+                                                         string:@"CoreText"
+                                                           font:parchmentFont
+                                                         bounds:bounds
+                                                     startPoint:CGPointMake(bounds.size.width * .15, bounds.size.height * .35)
+                                                        toPoint:CGPointMake(bounds.size.width * .3, bounds.size.height * .15)
+                                                              r:1
+                                                              g:.1
+                                                              b:.5
+                                                      frontMode:kCGPathFillStroke
+                                                       zoomMode:kCGPathFill];
+
+    // Add all path objects to an array
+    [allText addObject:coreGraphicsPreDrawn];
+    [allText addObject:winOBJCPreDrawn];
+    [allText addObject:coreTextPreDrawn];
+
+    return allText;
+}
+
+- (void)drawDemoIntoContext:(CGContextRef)context withFrame:(CGRect)bounds {
+    CGContextScaleCTM(context, 1.0f, -1.0f);
+    CGContextTranslateCTM(context, bounds.size.width * .05, -bounds.size.height * 1.1);
+    CGContextSaveGState(context);
+
     CGContextSetLineWidth(context, 1.0);
 
-    NSString* string = @"WinOBJC";
-    drawZoomText(context,
-                 @"CoreGraphics",
-                 gillFont,
-                 bounds,
-                 CGPointMake(bounds.size.width * .1, bounds.size.height * .75),
-                 CGPointMake(bounds.size.width * .4, -bounds.size.height * .15),
-                 .5,
-                 .1,
-                 1,
-                 kCGPathFillStroke,
-                 kCGPathFillStroke);
+    // Only create the paths one time since the sorting and recreation of every path is expensive
+    // Cannot be done in init as a context is needed
+    if (_allZoomText == nil) {
+        _allZoomText = [self createAllZoomText:context bounds:bounds];
+    }
 
-    drawZoomText(context,
-                 @"WinOBJC",
-                 arialFont,
-                 bounds,
-                 CGPointMake(bounds.size.width * .2, bounds.size.height * .55),
-                 CGPointMake(bounds.size.width * .35, bounds.size.height * .05),
-                 1,
-                 1,
-                 1,
-                 kCGPathEOFillStroke,
-                 kCGPathEOFillStroke);
-    drawZoomText(context,
-                 @"CoreText",
-                 parchmentFont,
-                 bounds,
-                 CGPointMake(bounds.size.width * .15, bounds.size.height * .35),
-                 CGPointMake(bounds.size.width * .3, bounds.size.height * .15),
-                 1,
-                 .1,
-                 .5,
-                 kCGPathFillStroke,
-                 kCGPathFill);
+    // Calculate the scale to transform the paths by since they've only been created once
+    CGAffineTransform windowScale = CGAffineTransformIdentity;
+    windowScale =
+        CGAffineTransformScale(windowScale, bounds.size.width / _originalBounds.width, bounds.size.height / _originalBounds.height);
+    windowScale =
+        CGAffineTransformTranslate(windowScale, bounds.size.width - _originalBounds.width, bounds.size.height - _originalBounds.height);
+    for (int i = 0; i < _allZoomText.count; i++) {
+        CGContextSaveGState(context);
+        DrawnPoly* thePolygons = [_allZoomText objectAtIndex:i];
+        CGContextTranslateCTM(context, thePolygons->_startPoint.x, thePolygons->_startPoint.y);
+
+        // Draw each "zoom" text effect
+        NSMutableArray* polyArray = thePolygons->_polyPaths;
+        for (int j = 0; j < polyArray.count; j++) {
+            struct PolyPathWithColors individualPoly;
+            NSValue* polyText = [polyArray objectAtIndex:j];
+            [polyText getValue:&individualPoly];
+            CGContextAddPath(context, CGPathCreateMutableCopyByTransformingPath(individualPoly.path, &windowScale));
+            CGContextSetRGBFillColor(context, individualPoly.r, individualPoly.g, individualPoly.b, 1);
+            CGContextDrawPath(context, thePolygons->_zoomMode);
+        }
+
+        // Draw the actual text on top of the effect
+        CGContextSetRGBFillColor(context, 1, 1, 1, 1);
+        CGContextAddPath(context, CGPathCreateMutableCopyByTransformingPath(thePolygons->_frontPath, &windowScale));
+        CGContextDrawPath(context, thePolygons->_frontMode);
+        CGContextRestoreGState(context);
+    }
 }
 
 static void CGPathApplyCallback(void* info, const CGPathElement* element) {
@@ -192,6 +290,7 @@ static void CGPathApplyCallback(void* info, const CGPathElement* element) {
     // Get the ending point of each path segment
     switch (element->type) {
         case kCGPathElementMoveToPoint:
+            connectingPoint = CGPointZero;
         case kCGPathElementAddLineToPoint:
             pointToDraw = element->points[0];
             break;

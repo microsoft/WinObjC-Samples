@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <Package xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10" xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest" xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10" IgnorableNamespaces="uap mp">
-	<Identity Name="04290f2e-91ab-4b02-a7b2-861de064dd72" Publisher="CN=islandwood" Version="1.0.0.0" />
-	<mp:PhoneIdentity PhoneProductId="04290f2e-91ab-4b02-a7b2-861de064dd72" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
+	<Identity Name="67601f1d-095b-4504-ae15-765053c3c778" Publisher="CN=islandwood" Version="1.0.0.0" />
+	<mp:PhoneIdentity PhoneProductId="67601f1d-095b-4504-ae15-765053c3c778" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
 	<Properties>
 		<DisplayName>CGCT</DisplayName>
 		<PublisherDisplayName>henryfox</PublisherDisplayName>

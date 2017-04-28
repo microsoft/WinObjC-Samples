@@ -2,9 +2,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26228.4
 MinimumVisualStudioVersion = 15.0.26206.0
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CGCT", "CGCT", "{D2C5C276-FD9A-4092-BAE2-C0821B85A343}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CGCT", "CGCT", "{8628F200-C202-49EF-AA82-E50FAD8426C4}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CGCT", "CGCT.vsimporter\CGCT-WinStore10\CGCT.vcxproj", "{21FC9A3B-49C6-4D2D-86EA-528741C47FCC}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CGCT", "CGCT.vsimporter\CGCT-WinStore10\CGCT.vcxproj", "{DF5AAEB9-1471-42A8-AD5A-DF785019D528}"
 EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
@@ -16,23 +16,23 @@ Global
 		Release|Win32 = Release|Win32
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{21FC9A3B-49C6-4D2D-86EA-528741C47FCC}.Debug|ARM.ActiveCfg = Debug|ARM
-		{21FC9A3B-49C6-4D2D-86EA-528741C47FCC}.Debug|ARM.Build.0 = Debug|ARM
-		{21FC9A3B-49C6-4D2D-86EA-528741C47FCC}.Debug|ARM.Deploy.0 = Debug|ARM
-		{21FC9A3B-49C6-4D2D-86EA-528741C47FCC}.Debug|Win32.ActiveCfg = Debug|Win32
-		{21FC9A3B-49C6-4D2D-86EA-528741C47FCC}.Debug|Win32.Build.0 = Debug|Win32
-		{21FC9A3B-49C6-4D2D-86EA-528741C47FCC}.Debug|Win32.Deploy.0 = Debug|Win32
-		{21FC9A3B-49C6-4D2D-86EA-528741C47FCC}.Release|ARM.ActiveCfg = Release|ARM
-		{21FC9A3B-49C6-4D2D-86EA-528741C47FCC}.Release|ARM.Build.0 = Release|ARM
-		{21FC9A3B-49C6-4D2D-86EA-528741C47FCC}.Release|ARM.Deploy.0 = Release|ARM
-		{21FC9A3B-49C6-4D2D-86EA-528741C47FCC}.Release|Win32.ActiveCfg = Release|Win32
-		{21FC9A3B-49C6-4D2D-86EA-528741C47FCC}.Release|Win32.Build.0 = Release|Win32
-		{21FC9A3B-49C6-4D2D-86EA-528741C47FCC}.Release|Win32.Deploy.0 = Release|Win32
+		{DF5AAEB9-1471-42A8-AD5A-DF785019D528}.Debug|ARM.ActiveCfg = Debug|ARM
+		{DF5AAEB9-1471-42A8-AD5A-DF785019D528}.Debug|ARM.Build.0 = Debug|ARM
+		{DF5AAEB9-1471-42A8-AD5A-DF785019D528}.Debug|ARM.Deploy.0 = Debug|ARM
+		{DF5AAEB9-1471-42A8-AD5A-DF785019D528}.Debug|Win32.ActiveCfg = Debug|Win32
+		{DF5AAEB9-1471-42A8-AD5A-DF785019D528}.Debug|Win32.Build.0 = Debug|Win32
+		{DF5AAEB9-1471-42A8-AD5A-DF785019D528}.Debug|Win32.Deploy.0 = Debug|Win32
+		{DF5AAEB9-1471-42A8-AD5A-DF785019D528}.Release|ARM.ActiveCfg = Release|ARM
+		{DF5AAEB9-1471-42A8-AD5A-DF785019D528}.Release|ARM.Build.0 = Release|ARM
+		{DF5AAEB9-1471-42A8-AD5A-DF785019D528}.Release|ARM.Deploy.0 = Release|ARM
+		{DF5AAEB9-1471-42A8-AD5A-DF785019D528}.Release|Win32.ActiveCfg = Release|Win32
+		{DF5AAEB9-1471-42A8-AD5A-DF785019D528}.Release|Win32.Build.0 = Release|Win32
+		{DF5AAEB9-1471-42A8-AD5A-DF785019D528}.Release|Win32.Deploy.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{21FC9A3B-49C6-4D2D-86EA-528741C47FCC} = {D2C5C276-FD9A-4092-BAE2-C0821B85A343}
+		{DF5AAEB9-1471-42A8-AD5A-DF785019D528} = {8628F200-C202-49EF-AA82-E50FAD8426C4}
 	EndGlobalSection
 EndGlobal
