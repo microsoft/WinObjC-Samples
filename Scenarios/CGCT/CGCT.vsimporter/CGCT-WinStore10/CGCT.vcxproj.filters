@@ -1,26 +1,23 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <Filter Include="Common">
-      <UniqueIdentifier>{c5a9ab5e-d860-4328-8094-07cd1e277229}</UniqueIdentifier>
+      <UniqueIdentifier>{50db2a70-7372-4672-b351-0fcbd6e701ca}</UniqueIdentifier>
     </Filter>
     <Filter Include="Assets">
-      <UniqueIdentifier>{3fe72059-bf8f-46ea-8d84-9d15fa4deccc}</UniqueIdentifier>
+      <UniqueIdentifier>{13b2546d-eb61-48c2-9809-b419fa263e04}</UniqueIdentifier>
     </Filter>
     <Filter Include="CGCT">
-      <UniqueIdentifier>{74FA4026-373E-411D-9011-0278D80EFD9B}</UniqueIdentifier>
+      <UniqueIdentifier>{058D6C7F-4233-4B2A-A159-236A4972219D}</UniqueIdentifier>
     </Filter>
     <Filter Include="CGCT\Base">
-      <UniqueIdentifier>{D0D31913-5C90-40F0-ADD4-892EB30215B4}</UniqueIdentifier>
+      <UniqueIdentifier>{3129016E-F349-4B21-80C6-78D07276D9A7}</UniqueIdentifier>
     </Filter>
     <Filter Include="CGCT\Supporting Files">
-      <UniqueIdentifier>{4D7C1913-529E-4769-905A-377CFBA670B2}</UniqueIdentifier>
+      <UniqueIdentifier>{996B0D86-9C94-4013-9BD6-B50699BDA1F4}</UniqueIdentifier>
     </Filter>
     <Filter Include="Xcode Variable Files">
-      <UniqueIdentifier>{55857CA3-AC96-4E33-95D7-AEFAA496024F}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="CGCT\Images">
-      <UniqueIdentifier>{e7c87276-9f5a-4e9a-8657-052cd62a121b}</UniqueIdentifier>
+      <UniqueIdentifier>{99C5D3CC-2102-46F2-A800-AFDE11AB2EEC}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -57,6 +54,18 @@
     <ClInclude Include="..\..\CGCT\CGView.h">
       <Filter>CGCT</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\CGCT\DemoScenario.h">
+      <Filter>CGCT</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CGCT\DemoScenarioImages.h">
+      <Filter>CGCT</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CGCT\DemoScenarioIntro.h">
+      <Filter>CGCT</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CGCT\DemoScenarioText.h">
+      <Filter>CGCT</Filter>
+    </ClInclude>
     <ClInclude Include="..\..\CGCT\ViewController.h">
       <Filter>CGCT</Filter>
     </ClInclude>
@@ -66,6 +75,18 @@
     <ClangCompile Include="..\..\CGCT\CGView.m">
       <Filter>CGCT</Filter>
     </ClangCompile>
+    <ClangCompile Include="..\..\CGCT\DemoScenario.m">
+      <Filter>CGCT</Filter>
+    </ClangCompile>
+    <ClangCompile Include="..\..\CGCT\DemoScenarioImages.m">
+      <Filter>CGCT</Filter>
+    </ClangCompile>
+    <ClangCompile Include="..\..\CGCT\DemoScenarioIntro.m">
+      <Filter>CGCT</Filter>
+    </ClangCompile>
+    <ClangCompile Include="..\..\CGCT\DemoScenarioText.m">
+      <Filter>CGCT</Filter>
+    </ClangCompile>
     <ClangCompile Include="..\..\CGCT\ViewController.m">
       <Filter>CGCT</Filter>
     </ClangCompile>
@@ -73,6 +94,18 @@
       <Filter>CGCT\Supporting Files</Filter>
     </ClangCompile>
     <SBInfoPlistCopy Include="..\..\CGCT\Info.plist" />
+    <SBResourceCopy Include="..\..\CGCT\Images\checkered.png">
+      <Filter>CGCT</Filter>
+    </SBResourceCopy>
+    <SBResourceCopy Include="..\..\CGCT\Images\denim.png">
+      <Filter>CGCT</Filter>
+    </SBResourceCopy>
+    <SBResourceCopy Include="..\..\CGCT\Images\plaid.png">
+      <Filter>CGCT</Filter>
+    </SBResourceCopy>
+    <SBResourceCopy Include="..\..\CGCT\Images\sunset.png">
+      <Filter>CGCT</Filter>
+    </SBResourceCopy>
     <StoryboardCompile Include="..\..\CGCT\Base.lproj\LaunchScreen.storyboard">
       <Filter>CGCT\Base</Filter>
     </StoryboardCompile>
@@ -85,59 +118,5 @@
     <Text Include="CGCT-Release-xcvars.txt">
       <Filter>Xcode Variable Files</Filter>
     </Text>
-  </ItemGroup>
-  <ItemGroup>
-    <ApplicationDefinition Include="App.xaml" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="App.xaml.cpp" />
-    <ClCompile Include="pch.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="pch.h" />
-    <ClInclude Include="App.xaml.h" />
-    <ClInclude Include="..\..\CGCT\DemoScenarioIntro.h">
-      <Filter>CGCT</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\CGCT\DemoScenario.h">
-      <Filter>CGCT</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\CGCT\DemoScenarioText.h">
-      <Filter>CGCT</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\CGCT\DemoScenarioImages.h">
-      <Filter>CGCT</Filter>
-    </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="project.json" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClangCompile Include="..\..\CGCT\DemoScenarioIntro.m">
-      <Filter>CGCT</Filter>
-    </ClangCompile>
-    <ClangCompile Include="..\..\CGCT\DemoScenario.m">
-      <Filter>CGCT</Filter>
-    </ClangCompile>
-    <ClangCompile Include="..\..\CGCT\DemoScenarioText.m">
-      <Filter>CGCT</Filter>
-    </ClangCompile>
-    <ClangCompile Include="..\..\CGCT\DemoScenarioImages.m">
-      <Filter>CGCT</Filter>
-    </ClangCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <Image Include="..\..\CGCT\Images\denim.png">
-      <Filter>CGCT\Images</Filter>
-    </Image>
-    <Image Include="..\..\CGCT\Images\plaid.png">
-      <Filter>CGCT\Images</Filter>
-    </Image>
-    <Image Include="..\..\CGCT\Images\checkered.png">
-      <Filter>CGCT\Images</Filter>
-    </Image>
-    <Image Include="..\..\CGCT\Images\sunset.png">
-      <Filter>CGCT\Images</Filter>
-    </Image>
   </ItemGroup>
 </Project>
