@@ -10,6 +10,12 @@
 		8B31DED61EA82B3600C7AD41 /* DemoScenario.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B31DED31EA82B3600C7AD41 /* DemoScenario.m */; };
 		8B31DED71EA82B3600C7AD41 /* DemoScenarioIntro.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B31DED51EA82B3600C7AD41 /* DemoScenarioIntro.m */; };
 		8B31DEDC1EAFE51100C7AD41 /* DemoScenarioText.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B31DEDB1EAFE51100C7AD41 /* DemoScenarioText.m */; };
+		8B3C52C01EB3D61E00D720FD /* DemoScenarioImages.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B3C52B81EB3D61E00D720FD /* DemoScenarioImages.m */; };
+		8B3C52C11EB3D61E00D720FD /* DemoScenarioTextToPath.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B3C52BA1EB3D61E00D720FD /* DemoScenarioTextToPath.m */; };
+		8B3C52C31EB3D61E00D720FD /* checkered.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B3C52BC1EB3D61E00D720FD /* checkered.png */; };
+		8B3C52C41EB3D61E00D720FD /* denim.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B3C52BD1EB3D61E00D720FD /* denim.png */; };
+		8B3C52C51EB3D61E00D720FD /* plaid.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B3C52BE1EB3D61E00D720FD /* plaid.png */; };
+		8B3C52C61EB3D61E00D720FD /* sunset.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B3C52BF1EB3D61E00D720FD /* sunset.png */; };
 		8B7845151E9D5CFC0063CB12 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B7845141E9D5CFC0063CB12 /* main.m */; };
 		8B7845181E9D5CFC0063CB12 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B7845171E9D5CFC0063CB12 /* AppDelegate.m */; };
 		8B78451B1E9D5CFC0063CB12 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B78451A1E9D5CFC0063CB12 /* ViewController.m */; };
@@ -26,6 +32,14 @@
 		8B31DED51EA82B3600C7AD41 /* DemoScenarioIntro.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoScenarioIntro.m; sourceTree = "<group>"; };
 		8B31DEDA1EAFE51100C7AD41 /* DemoScenarioText.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoScenarioText.h; sourceTree = "<group>"; };
 		8B31DEDB1EAFE51100C7AD41 /* DemoScenarioText.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoScenarioText.m; sourceTree = "<group>"; };
+		8B3C52B71EB3D61E00D720FD /* DemoScenarioImages.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoScenarioImages.h; sourceTree = "<group>"; };
+		8B3C52B81EB3D61E00D720FD /* DemoScenarioImages.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoScenarioImages.m; sourceTree = "<group>"; };
+		8B3C52B91EB3D61E00D720FD /* DemoScenarioTextToPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoScenarioTextToPath.h; sourceTree = "<group>"; };
+		8B3C52BA1EB3D61E00D720FD /* DemoScenarioTextToPath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoScenarioTextToPath.m; sourceTree = "<group>"; };
+		8B3C52BC1EB3D61E00D720FD /* checkered.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = checkered.png; path = Images/checkered.png; sourceTree = "<group>"; };
+		8B3C52BD1EB3D61E00D720FD /* denim.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = denim.png; path = Images/denim.png; sourceTree = "<group>"; };
+		8B3C52BE1EB3D61E00D720FD /* plaid.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = plaid.png; path = Images/plaid.png; sourceTree = "<group>"; };
+		8B3C52BF1EB3D61E00D720FD /* sunset.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = sunset.png; path = Images/sunset.png; sourceTree = "<group>"; };
 		8B7845101E9D5CFC0063CB12 /* CGCT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CGCT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B7845141E9D5CFC0063CB12 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8B7845161E9D5CFC0063CB12 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -70,6 +84,14 @@
 		8B7845121E9D5CFC0063CB12 /* CGCT */ = {
 			isa = PBXGroup;
 			children = (
+				8B3C52B71EB3D61E00D720FD /* DemoScenarioImages.h */,
+				8B3C52B81EB3D61E00D720FD /* DemoScenarioImages.m */,
+				8B3C52B91EB3D61E00D720FD /* DemoScenarioTextToPath.h */,
+				8B3C52BA1EB3D61E00D720FD /* DemoScenarioTextToPath.m */,
+				8B3C52BC1EB3D61E00D720FD /* checkered.png */,
+				8B3C52BD1EB3D61E00D720FD /* denim.png */,
+				8B3C52BE1EB3D61E00D720FD /* plaid.png */,
+				8B3C52BF1EB3D61E00D720FD /* sunset.png */,
 				8B31DEDA1EAFE51100C7AD41 /* DemoScenarioText.h */,
 				8B31DEDB1EAFE51100C7AD41 /* DemoScenarioText.m */,
 				8B31DED21EA82B3600C7AD41 /* DemoScenario.h */,
@@ -157,9 +179,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B3C52C41EB3D61E00D720FD /* denim.png in Resources */,
 				8B7845231E9D5CFD0063CB12 /* LaunchScreen.storyboard in Resources */,
+				8B3C52C51EB3D61E00D720FD /* plaid.png in Resources */,
 				8B7845201E9D5CFD0063CB12 /* Assets.xcassets in Resources */,
 				8B78451E1E9D5CFD0063CB12 /* Main.storyboard in Resources */,
+				8B3C52C31EB3D61E00D720FD /* checkered.png in Resources */,
+				8B3C52C61EB3D61E00D720FD /* sunset.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -170,12 +196,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B3C52C11EB3D61E00D720FD /* DemoScenarioTextToPath.m in Sources */,
 				8B78451B1E9D5CFC0063CB12 /* ViewController.m in Sources */,
 				8B31DED71EA82B3600C7AD41 /* DemoScenarioIntro.m in Sources */,
 				8B31DED61EA82B3600C7AD41 /* DemoScenario.m in Sources */,
 				8B7845181E9D5CFC0063CB12 /* AppDelegate.m in Sources */,
 				8B31DEDC1EAFE51100C7AD41 /* DemoScenarioText.m in Sources */,
 				8B7845151E9D5CFC0063CB12 /* main.m in Sources */,
+				8B3C52C01EB3D61E00D720FD /* DemoScenarioImages.m in Sources */,
 				8BBD62561EA026DA004C8109 /* CGView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

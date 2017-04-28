@@ -122,9 +122,9 @@ static void drawTextWithImagePattern(
     NSRange fontRange = [textBox rangeOfString:@"font"];
     NSRange masterRange = [textBox rangeOfString:@"MASTER"];
 
-    CTFontRef mainFont = CTFontCreateWithName(@"Times New Roman", bounds.size.height * .04, NULL);
-    CTFontRef fontRangeFont = CTFontCreateWithName(@"Blackadder ITC", bounds.size.height * .04, NULL);
-    CTFontRef masterRangeFont = CTFontCreateWithName(@"Magneto Bold", bounds.size.height * .04, NULL);
+    CTFontRef mainFont = CTFontCreateWithName(CFSTR("Times New Roman"), bounds.size.height * .04, NULL);
+    CTFontRef fontRangeFont = CTFontCreateWithName(CFSTR("Blackadder ITC"), bounds.size.height * .04, NULL);
+    CTFontRef masterRangeFont = CTFontCreateWithName(CFSTR("Magneto Bold"), bounds.size.height * .04, NULL);
     CFAutorelease(mainFont);
     CFAutorelease(fontRangeFont);
     CFAutorelease(masterRangeFont);
