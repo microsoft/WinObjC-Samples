@@ -35,7 +35,50 @@
     CGPathDrawingMode _frontMode;
     CGPoint _startPoint;
 }
+@end
 
+@interface ThreeDPoly : NSObject
+- (id)initWithAngle:(CGFloat)angle pointToDraw:(CGPoint)firstPoint connectingPoint:(CGPoint)secondPoint;
+@end
+
+@implementation ThreeDPoly {
+@public
+    CGFloat grayScale;
+    CGPoint point1;
+    CGPoint point2;
+}
+- (id)initWithAngle:(CGFloat)angle pointToDraw:(CGPoint)firstPoint connectingPoint:(CGPoint)secondPoint {
+    if (self = [super init]) {
+        grayScale = angle;
+        point1 = firstPoint;
+        point2 = secondPoint;
+    }
+    return self;
+}
+@end
+
+@interface PolyPathWithColors : NSObject
+- (id)initWithPath:(CGPathRef)polyPath r:(CGFloat)red g:(CGFloat)green b:(CGFloat)blue;
+@end
+
+// A single polygon object with its own set of colors to be drawn with
+@implementation PolyPathWithColors {
+@public
+    CGPathRef path;
+    CGFloat r;
+    CGFloat g;
+    CGFloat b;
+}
+
+- (id)initWithPath:(CGPathRef)polyPath r:(CGFloat)red g:(CGFloat)green b:(CGFloat)blue {
+    if (self = [super init]) {
+        path = polyPath;
+        r = red;
+        g = green;
+        b = blue;
+    }
+    return self;
+}
 @end
 
 @implementation DemoScenarioTextToPath {
@@ -60,22 +103,6 @@
     return [UIColor colorWithRed:.6 green:.85 blue:1 alpha:1];
 }
 
-static CGPoint connectingPoint;
-
-static struct ThreeDPoly {
-    CGFloat grayScale;
-    CGPoint point1;
-    CGPoint point2;
-};
-
-// A single polygon object with its own set of colors to be drawn with
-static struct PolyPathWithColors {
-    CGPathRef path;
-    CGFloat r;
-    CGFloat g;
-    CGFloat b;
-};
-
 // Create a pre-calculated set of characters with zoomed text
 - (DrawnPoly*)drawZoomTextWithContext:(CGContextRef)context
                                string:(NSString*)string
@@ -88,6 +115,7 @@ static struct PolyPathWithColors {
                                     b:(CGFloat)b
                             frontMode:(CGPathDrawingMode)frontMode
                              zoomMode:(CGPathDrawingMode)zoomMode {
+    connectingPoint = CGPointZero;
     if (_originalBounds.width == 0) {
         _originalBounds.width = bounds.size.width;
     }
@@ -110,7 +138,6 @@ static struct PolyPathWithColors {
             CGPathAddPath(allGlyphPaths, NULL, path);
             boundingPath = CGPathGetPathBoundingBox(path);
 
-            connectingPoint = CGPointZero;
             CGPathApply(path, (__bridge void*)threeDPoints, CGPathApplyCallback);
             CGPathRelease(path);
         }
@@ -119,21 +146,17 @@ static struct PolyPathWithColors {
     // Sort which zoom polygon to draw first from vertical perspective
     for (int polyIndex1 = 0; polyIndex1 < [threeDPoints count]; polyIndex1++) {
         for (int polyIndex2 = 1; polyIndex2 < [threeDPoints count]; polyIndex2++) {
-            struct ThreeDPoly poly1;
-            struct ThreeDPoly poly2;
-            NSValue* val1 = [threeDPoints objectAtIndex:polyIndex1];
-            NSValue* val2 = [threeDPoints objectAtIndex:polyIndex2];
-            [val1 getValue:&poly1];
-            [val2 getValue:&poly2];
+            ThreeDPoly* poly1 = [threeDPoints objectAtIndex:polyIndex1];
+            ThreeDPoly* poly2 = [threeDPoints objectAtIndex:polyIndex2];
             if (toPoint.y < 0) {
-                if (poly2.point1.y < poly1.point1.y || poly2.point2.y < poly1.point2.y) {
-                    [threeDPoints replaceObjectAtIndex:polyIndex1 withObject:val2];
-                    [threeDPoints replaceObjectAtIndex:polyIndex2 withObject:val1];
+                if (poly2->point1.y < poly1->point1.y || poly2->point2.y < poly1->point2.y) {
+                    [threeDPoints replaceObjectAtIndex:polyIndex1 withObject:poly2];
+                    [threeDPoints replaceObjectAtIndex:polyIndex2 withObject:poly1];
                 }
             } else {
-                if (poly2.point1.y > poly1.point1.y || poly2.point2.y > poly1.point2.y) {
-                    [threeDPoints replaceObjectAtIndex:polyIndex1 withObject:val2];
-                    [threeDPoints replaceObjectAtIndex:polyIndex2 withObject:val1];
+                if (poly2->point1.y > poly1->point1.y || poly2->point2.y > poly1->point2.y) {
+                    [threeDPoints replaceObjectAtIndex:polyIndex1 withObject:poly2];
+                    [threeDPoints replaceObjectAtIndex:polyIndex2 withObject:poly1];
                 }
             }
         }
@@ -142,15 +165,11 @@ static struct PolyPathWithColors {
     // Sort which zoom polygon to draw first from a horizontal perspective.
     for (int i = 0; i < [threeDPoints count]; i++) {
         for (int j = 1; j < [threeDPoints count]; j++) {
-            struct ThreeDPoly poly1;
-            struct ThreeDPoly poly2;
-            NSValue* val1 = [threeDPoints objectAtIndex:i];
-            NSValue* val2 = [threeDPoints objectAtIndex:j];
-            [val1 getValue:&poly1];
-            [val2 getValue:&poly2];
-            if (fabs((startPoint.x + toPoint.x) / 2.0 - poly1.point1.x) > fabs((startPoint.x + toPoint.x) / 2.0 - poly2.point1.x)) {
-                [threeDPoints replaceObjectAtIndex:i withObject:val2];
-                [threeDPoints replaceObjectAtIndex:j withObject:val1];
+            ThreeDPoly* poly1 = [threeDPoints objectAtIndex:i];
+            ThreeDPoly* poly2 = [threeDPoints objectAtIndex:j];
+            if (fabs((startPoint.x + toPoint.x) / 2.0 - poly1->point1.x) > fabs((startPoint.x + toPoint.x) / 2.0 - poly2->point1.x)) {
+                [threeDPoints replaceObjectAtIndex:i withObject:poly2];
+                [threeDPoints replaceObjectAtIndex:j withObject:poly1];
             }
         }
     }
@@ -159,24 +178,19 @@ static struct PolyPathWithColors {
     poly->_polyPaths = [[NSMutableArray alloc] init];
     // Draw the polygons to a path
     for (int k = 0; k < [threeDPoints count]; k++) {
-        struct PolyPathWithColors finalPolyPath;
-        struct ThreeDPoly polyToDraw;
-        NSValue* valPoly = [threeDPoints objectAtIndex:k];
-        [valPoly getValue:&polyToDraw];
+        ThreeDPoly* polyToDraw = [threeDPoints objectAtIndex:k];
 
         CGMutablePathRef polyPath = CGPathCreateMutable();
-        CGPathMoveToPoint(polyPath, NULL, (polyToDraw.point1.x + toPoint.x) / 2.0, (polyToDraw.point1.y + toPoint.y) / 2.0);
-        CGPathAddLineToPoint(polyPath, NULL, (polyToDraw.point2.x + toPoint.x) / 2.0, (polyToDraw.point2.y + toPoint.y) / 2.0);
-        CGPathAddLineToPoint(polyPath, NULL, polyToDraw.point2.x, polyToDraw.point2.y);
-        CGPathAddLineToPoint(polyPath, NULL, polyToDraw.point1.x, polyToDraw.point1.y);
+        CGPathMoveToPoint(polyPath, NULL, (polyToDraw->point1.x + toPoint.x) / 2.0, (polyToDraw->point1.y + toPoint.y) / 2.0);
+        CGPathAddLineToPoint(polyPath, NULL, (polyToDraw->point2.x + toPoint.x) / 2.0, (polyToDraw->point2.y + toPoint.y) / 2.0);
+        CGPathAddLineToPoint(polyPath, NULL, polyToDraw->point2.x, polyToDraw->point2.y);
+        CGPathAddLineToPoint(polyPath, NULL, polyToDraw->point1.x, polyToDraw->point1.y);
         CGPathCloseSubpath(polyPath);
 
-        finalPolyPath.path = polyPath;
-        finalPolyPath.r = r * polyToDraw.grayScale;
-        finalPolyPath.g = g * polyToDraw.grayScale;
-        finalPolyPath.b = b * polyToDraw.grayScale;
-
-        [poly->_polyPaths addObject:[NSValue valueWithBytes:&finalPolyPath objCType:@encode(struct PolyPathWithColors)]];
+        [poly->_polyPaths addObject:[[PolyPathWithColors alloc] initWithPath:polyPath
+                                                                           r:r * polyToDraw->grayScale
+                                                                           g:g * polyToDraw->grayScale
+                                                                           b:b * polyToDraw->grayScale]];
     }
 
     poly->_frontPath = allGlyphPaths;
@@ -269,11 +283,9 @@ static struct PolyPathWithColors {
         // Draw each "zoom" text effect
         NSMutableArray* polyArray = thePolygons->_polyPaths;
         for (int j = 0; j < polyArray.count; j++) {
-            struct PolyPathWithColors individualPoly;
-            NSValue* polyText = [polyArray objectAtIndex:j];
-            [polyText getValue:&individualPoly];
-            CGContextAddPath(context, CGPathCreateMutableCopyByTransformingPath(individualPoly.path, &windowScale));
-            CGContextSetRGBFillColor(context, individualPoly.r, individualPoly.g, individualPoly.b, 1);
+            PolyPathWithColors* individualPoly = [polyArray objectAtIndex:j];
+            CGContextAddPath(context, CGPathCreateMutableCopyByTransformingPath(individualPoly->path, &windowScale));
+            CGContextSetRGBFillColor(context, individualPoly->r, individualPoly->g, individualPoly->b, 1);
             CGContextDrawPath(context, thePolygons->_zoomMode);
         }
 
@@ -285,8 +297,10 @@ static struct PolyPathWithColors {
     }
 }
 
+static CGPoint connectingPoint;
 static void CGPathApplyCallback(void* info, const CGPathElement* element) {
     CGPoint pointToDraw;
+
     // Get the ending point of each path segment
     switch (element->type) {
         case kCGPathElementMoveToPoint:
@@ -311,8 +325,8 @@ static void CGPathApplyCallback(void* info, const CGPathElement* element) {
         angle = (1 - fabs(angle - M_PI_2) / M_PI_2);
 
         // Create a Poly struct to be drawn later and add it to our mutable array
-        struct ThreeDPoly threeD = { angle, pointToDraw, connectingPoint };
-        [(__bridge NSMutableArray*)info addObject:[NSValue valueWithBytes:&threeD objCType:@encode(struct ThreeDPoly)]];
+        ThreeDPoly* threeD = [[ThreeDPoly alloc] initWithAngle:angle pointToDraw:pointToDraw connectingPoint:connectingPoint];
+        [(__bridge NSMutableArray*)info addObject:threeD];
     }
     connectingPoint = pointToDraw;
 }
