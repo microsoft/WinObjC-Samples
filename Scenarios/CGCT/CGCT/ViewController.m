@@ -20,6 +20,7 @@
 #import "DemoScenarioIntro.h"
 #import "DemoScenarioText.h"
 #import "DemoScenarioImages.h"
+#import "DemoScenarioTextToPath.h"
 
 #define VC_WIDTH self.view.bounds.size.width
 #define VC_HEIGHT self.view.bounds.size.height
@@ -84,6 +85,7 @@
     [_demoList addObject:[[DemoScenarioIntro alloc] init]];
     [_demoList addObject:[[DemoScenarioText alloc] init]];
     [_demoList addObject:[[DemoScenarioImages alloc] init]];
+    [_demoList addObject:[[DemoScenarioTextToPath alloc] init]];
 }
 
 - (void)viewWillAppear:(BOOL)animated {

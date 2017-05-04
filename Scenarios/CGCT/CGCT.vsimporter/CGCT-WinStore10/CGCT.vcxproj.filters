@@ -2,22 +2,22 @@
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <Filter Include="Common">
-      <UniqueIdentifier>{50db2a70-7372-4672-b351-0fcbd6e701ca}</UniqueIdentifier>
+      <UniqueIdentifier>{836d9455-3238-405c-9a30-47a2b7d48948}</UniqueIdentifier>
     </Filter>
     <Filter Include="Assets">
-      <UniqueIdentifier>{13b2546d-eb61-48c2-9809-b419fa263e04}</UniqueIdentifier>
+      <UniqueIdentifier>{a3bd584f-db5c-4a0a-954c-7a5a0532f668}</UniqueIdentifier>
     </Filter>
     <Filter Include="CGCT">
-      <UniqueIdentifier>{058D6C7F-4233-4B2A-A159-236A4972219D}</UniqueIdentifier>
+      <UniqueIdentifier>{86EA432B-155B-485C-9C74-AF1AABB87013}</UniqueIdentifier>
     </Filter>
     <Filter Include="CGCT\Base">
-      <UniqueIdentifier>{3129016E-F349-4B21-80C6-78D07276D9A7}</UniqueIdentifier>
+      <UniqueIdentifier>{373DBF55-F85D-40A0-A3D2-A76D1632460B}</UniqueIdentifier>
     </Filter>
     <Filter Include="CGCT\Supporting Files">
-      <UniqueIdentifier>{996B0D86-9C94-4013-9BD6-B50699BDA1F4}</UniqueIdentifier>
+      <UniqueIdentifier>{F19F5970-1DF3-45A7-978C-C77E0A654858}</UniqueIdentifier>
     </Filter>
     <Filter Include="Xcode Variable Files">
-      <UniqueIdentifier>{99C5D3CC-2102-46F2-A800-AFDE11AB2EEC}</UniqueIdentifier>
+      <UniqueIdentifier>{19818447-E095-46F1-8D43-48DEF0CAEED3}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -66,6 +66,9 @@
     <ClInclude Include="..\..\CGCT\DemoScenarioText.h">
       <Filter>CGCT</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\CGCT\DemoScenarioTextToPath.h">
+      <Filter>CGCT</Filter>
+    </ClInclude>
     <ClInclude Include="..\..\CGCT\ViewController.h">
       <Filter>CGCT</Filter>
     </ClInclude>
@@ -85,6 +88,9 @@
       <Filter>CGCT</Filter>
     </ClangCompile>
     <ClangCompile Include="..\..\CGCT\DemoScenarioText.m">
+      <Filter>CGCT</Filter>
+    </ClangCompile>
+    <ClangCompile Include="..\..\CGCT\DemoScenarioTextToPath.m">
       <Filter>CGCT</Filter>
     </ClangCompile>
     <ClangCompile Include="..\..\CGCT\ViewController.m">
