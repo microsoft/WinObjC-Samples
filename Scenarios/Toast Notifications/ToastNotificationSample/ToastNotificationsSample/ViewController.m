@@ -263,17 +263,20 @@ static NSString * const kLabelInitialText = @"Press the button to generate a toa
     // Add the notification foreground activation event
     [notification addActivatedEvent:^void(WUNToastNotification * sender, RTObject * args)
     {
-    	// Cast the callback block args to their proper type
-    	WUNToastActivatedEventArgs* toastArgs = rt_dynamic_cast([WUNToastActivatedEventArgs class], args);
+		[[NSOperationQueue mainQueue] addOperationWithBlock:^{
+    		// Cast the callback block args to their proper type
+    		WUNToastActivatedEventArgs* toastArgs = rt_dynamic_cast([WUNToastActivatedEventArgs class], args);
     
-    	// Get the event info and args
-    	NSLog(@"Notification tag: %@", sender.tag);
-    	NSLog(@"Notification group: %@", sender.group);
-    	NSLog(@"Notification args: %@", toastArgs.arguments);
+    		// Get the event info and args
+    		NSLog(@"Notification tag: %@", sender.tag);
+    		NSLog(@"Notification group: %@", sender.group);
+    		NSLog(@"Notification args: %@", toastArgs.arguments);
     
-    	// Update button label
-    	NSString *timeDateString = [self getTimeDateString];
-    	self.actionNotificationLabel.text = [NSString stringWithFormat:@"App activated by toast with tag %@ and group %@ at %@", sender.tag, sender.group, timeDateString];
+    		// Update button label
+    		NSString *timeDateString = [self getTimeDateString];
+		
+			self.actionNotificationLabel.text = [NSString stringWithFormat:@"App activated by toast with tag %@ and group %@ at %@", sender.tag, sender.group, timeDateString];
+		}];
     }];
     
     // Provide tag and group to the notification
